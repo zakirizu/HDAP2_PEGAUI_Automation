@@ -4,7 +4,7 @@ Feature: Application Login
 #Feature is collection of Scenarios
 
 ##This example is to write the Plan Gherkin Language
-
+#This is from Legion
   @hcm
   Scenario: Login to the HDAP Application
     Given I want to write a step with precondition
