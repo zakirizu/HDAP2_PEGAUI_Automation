@@ -59,9 +59,10 @@ Feature: Application Login
   |	Z					|	R					|
   
   
-  
+  #test
   #Sending the Data directly on to single step
   
+  @DataAtStepLevel
   Scenario: Testing the APSRTC Application
   Given Launch the APSRTC Applicaiton
   Then 	Enter the Student data in the form
