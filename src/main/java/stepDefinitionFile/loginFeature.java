@@ -138,20 +138,15 @@ public void launch_the_apsrtc_applicaiton() {
     System.out.println("Launch the APSRTC Application");
 }
 @Then("Enter the Student data in the form")
-public void enter_the_student_data_in_the_form(io.cucumber.datatable.DataTable dataTable) {
-    // Write code here that turns the phrase above into concrete actions
-    // For automatic transformation, change DataTable to one of
-    // E, List<E>, List<List<E>>, List<Map<K,V>>, Map<K,V> or
-    // Map<K, List<V>>. E,K,V must be a String, Integer, Float,
-    // Double, Byte, Short, Long, BigInteger or BigDecimal.
-    //
-    // For other transformations you can register a DataTableType.
-    throw new io.cucumber.java.PendingException();
+public void enter_the_student_data_in_the_form(List<String> data) {
+System.out.println(data.get(0));
+System.out.println(data.get(1));
+System.out.println(data.get(2));
+System.out.println(data.get(3));
 }
 @Then("Click on the submit button")
 public void click_on_the_submit_button() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
+    System.out.println("Clicling on the Submit BUtton");
 }
 	
 	
