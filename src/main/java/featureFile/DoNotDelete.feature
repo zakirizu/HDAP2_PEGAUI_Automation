@@ -1,6 +1,14 @@
 @tag
 Feature: Application Login
 
+    #BackGround - Steps present in this will run before every scenarios ,
+    # The scope of the background is only for this feature, I mean the backgroung will run before every scenario present only in the feature
+
+	Background:
+Given 			Clear the Cache
+When  		Open the WebBrowers
+And 				Default Zoom Settings
+
   #Feature is collection of Scenarios
   ##This example is to write the Plan Gherkin Language
   #This is from Legion
@@ -13,6 +21,7 @@ Feature: Application Login
     And 				some other action
     And 				yet another action
     Then 			I validate the outcomes
+
 
   #Direclty passing the values into the Stepdefinition
   @addition @smoke     												@All
@@ -66,9 +75,18 @@ Feature: Application Login
       | India         |
     Then 			Click on the submit button
     
+
     
     
     
+    
+    
+    
+    
+    
+    
+    
+     #**********************RUNNING THE TEST CASES INCLUDING AND EXCLUDING via TEST RUNNER FILE******************   
     #If you want to run only specific test cases , Then we can give the tags like Smoke, Sanity and Regression 
     #If you want run smoke and sanity , then include these tags in the test scenario also include the tags by using or in the test runner
     #Run  with or & And 

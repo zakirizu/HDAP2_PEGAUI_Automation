@@ -11,12 +11,30 @@ import io.cucumber.java.en.When;
 
 public class loginFeature {
 
+	
+	//Background
+	@Given("Clear the Cache")
+	public void clear_the_cache() {
+		System.out.println("Background:Clearing the cache");
+	}
+	
+	@When("Open the WebBrowers")
+	public void openTheBrowsers() {
+		System.out.println("Background:Open the WebBrowers");
+	}
+	
+	@When("Default Zoom Settings")
+	public void defaultZoomSettings() {
+		System.out.println("Background:Default Zoom Settings");
+	}
+	
+	
 	@Given("I want to write a step with precondition")
 	public void i_want_to_write_a_step_with_precondition() {
 	    // Write code here that turns the phrase above into concrete actions
-		System.out.println("i_want_to_write_a_step_with_precondition");
-	    
+		System.out.println("i_want_to_write_a_step_with_precondition");	    
 	}
+	
 	@Given("some other precondition")
 	public void some_other_precondition() {
 	    // Write code here that turns the phrase above into concrete actions
