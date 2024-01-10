@@ -1,0 +1,30 @@
+22:18:00.482 [main] INFO  utils.PropertiesFileReader - Reading the Data from ProperyFile.Getting Value for Key: Env
+22:18:00.484 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: Env, VALUE: QA
+22:18:00.484 [main] INFO  utils.PropertiesFileReader - Reading the Data from ProperyFile.Getting Value for Key: browserType
+22:18:00.485 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: browserType, VALUE: chrome
+22:18:00.485 [main] INFO  utils.PropertiesFileReader - Reading the Data from ProperyFile.Getting Value for Key: zoom
+22:18:00.485 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: zoom, VALUE: null
+22:18:00.485 [main] INFO  utils.BaseClass - Browser Type is set to: chrome
+22:18:00.485 [main] INFO  utils.BaseClass - Intializing the Browser type: chrome
+22:18:03.781 [main] INFO  utils.PropertiesFileReader - Reading the Data from ProperyFile.Getting Value for Key: highLightElement
+22:18:03.782 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: highLightElement, VALUE: YES
+22:19:50.207 [main] INFO  utils.PropertiesFileReader - Reading the Data from ProperyFile.Getting Value for Key: Env
+22:19:50.211 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: Env, VALUE: QA
+22:19:50.211 [main] INFO  utils.PropertiesFileReader - Reading the Data from ProperyFile.Getting Value for Key: browserType
+22:19:50.212 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: browserType, VALUE: chrome
+22:19:50.212 [main] INFO  utils.PropertiesFileReader - Reading the Data from ProperyFile.Getting Value for Key: zoom
+22:19:50.212 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: zoom, VALUE: null
+22:19:50.212 [main] INFO  utils.BaseClass - Browser Type is set to: chrome
+22:19:50.212 [main] INFO  utils.BaseClass - Intializing the Browser type: chrome
+22:19:52.208 [main] INFO  utils.PropertiesFileReader - Reading the Data from ProperyFile.Getting Value for Key: highLightElement
+22:19:52.209 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: highLightElement, VALUE: YES
+22:21:32.127 [main] INFO  utils.PropertiesFileReader - Reading the Data from ProperyFile.Getting Value for Key: Env
+22:21:32.129 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: Env, VALUE: QA
+22:21:32.130 [main] INFO  utils.PropertiesFileReader - Reading the Data from ProperyFile.Getting Value for Key: browserType
+22:21:32.130 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: browserType, VALUE: chrome
+22:21:32.130 [main] INFO  utils.PropertiesFileReader - Reading the Data from ProperyFile.Getting Value for Key: zoom
+22:21:32.130 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: zoom, VALUE: null
+22:21:32.130 [main] INFO  utils.BaseClass - Browser Type is set to: chrome
+22:21:32.131 [main] INFO  utils.BaseClass - Intializing the Browser type: chrome
+22:21:33.959 [main] INFO  utils.PropertiesFileReader - Reading the Data from ProperyFile.Getting Value for Key: highLightElement
+22:21:33.959 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: highLightElement, VALUE: YES

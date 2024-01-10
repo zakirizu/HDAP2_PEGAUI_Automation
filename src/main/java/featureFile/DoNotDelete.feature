@@ -2,6 +2,12 @@
 Feature: Application Login
 
 
+
+
+	##**************Order of Execution*************
+	#Before Hook-> Back Ground->Scenario->After Hook
+	#Before Hook (Specific to that Tag if present)-> Before Hook(Common to all. No Tag defined)->BackGround->SCENARIO-> AfterHook(Common to all)->AfterHook(Specific to that Tag)
+
 	  #***********Hooks***********
 	  # The difference between background and hooks is that . 
 	  #Hooks code will run before every scenaios that is present in all the feature files. - Scope is to all features

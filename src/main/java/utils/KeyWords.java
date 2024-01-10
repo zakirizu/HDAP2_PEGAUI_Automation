@@ -42,7 +42,7 @@ public class KeyWords {
 	 @ Developer ID		: 163054
 	 @ Can Be Used For	: To enter any String value into the text Box. First it will clear the value in the text box and enter data into it.
 	*/	
-	public static  void sendKeys(WebElement ele, String value) {
+	public   void sendKeys(WebElement ele, String value) {
 
 		String title=null;
 		try 
@@ -176,7 +176,7 @@ public class KeyWords {
 	 @ Developer ID		: 163054
 	 @ Can Be Used For	: To Click on the target Element
 	*/	
-	public  static void clickElement(WebElement ele) {
+	public   void clickElement(WebElement ele) {
 		String title=driver.getTitle();
 		try 
 		{
@@ -491,7 +491,7 @@ public class KeyWords {
 	 @ Can Be Used For	: To Wait until the target Element is NOT Displayed. This is Defined in MilliSeconds
 	 @ Can Be Configured: ROW_MDM_Automation\Resources\propertyFile.properties (Property: implicitWait)
 	*/
-	public static void Element_Is_Displayed(WebElement ele) {
+	public  void Element_Is_Displayed(WebElement ele) {
 		String title=driver.getTitle();
 		try 
 		{
@@ -641,7 +641,7 @@ public class KeyWords {
 	 @ Can Be Configured: ROW_MDM_Automation\Resources\propertyFile.properties (Property: shortWait)
 	*/
 		
-	public static void shortWait() throws InterruptedException {
+	public  void shortWait() throws InterruptedException {
 		String x = utils.PropertiesFileReader.getProperty("shortWait");
 		int i = Integer.parseInt(x);
 		myLogger.info("Short Wait Start---. Waiting for Seconds: "+i);	
@@ -757,7 +757,7 @@ public class KeyWords {
 	 @ Can Be Used For	: To Perform Double Click on the Target WebElement
 	*/
 	
-	public static void doubleClick(WebElement ele) {
+	public  void doubleClick(WebElement ele) {
 		Actions ac = new Actions(driver);
 		String title=null;
 		try 
@@ -804,7 +804,7 @@ public class KeyWords {
 	 @ Can Be Used For	: To Move to the Target WebElement
 	*/
 	
-	public static void moveToWebElement(WebElement ele) {
+	public  void moveToWebElement(WebElement ele) {
 		Actions ac = new Actions(driver);
 		String title=null;
 		try 
@@ -851,7 +851,7 @@ public class KeyWords {
 	 @ Developer ID		: 163054
 	 @ Can Be Used For	: To Move to the Target WebElement
 	*/	
-	public static void dragAndDrop() {
+	public  void dragAndDrop() {
 		WebElement From = null;
 		WebElement To = null;
 		Actions ac = new Actions(driver);	    

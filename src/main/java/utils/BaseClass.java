@@ -1,18 +1,14 @@
 package utils;
-
 import java.io.File;
 import java.io.IOException;
 import java.time.Duration;
 import org.apache.commons.io.FileUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebDriver.Options;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import factory.Constants;
@@ -20,11 +16,11 @@ import factory.Constants;
 
 public class BaseClass {
 
-	public static Logger mylogger = LogManager.getLogger(BaseClass.class.getName());
 	public static WebDriver driver;
-	public static String browserType = null;
-	public static String zoomPercent = null;
-	static String scrReports = Constants.SCREENSHOT;
+	public static Logger mylogger 			= LogManager.getLogger(BaseClass.class.getName());	
+	public static String browserType 		= null;
+	public static String zoomPercent 		= null;
+	static String scrReports 						= Constants.SCREENSHOT;
 	
 	
 	public static WebDriver initializeDriver() {
@@ -61,6 +57,8 @@ public class BaseClass {
 		return driver;
 }
 
+	
+	
 
 	public static String takeScreenShot(String testCaseName) throws IOException {
 	    TakesScreenshot ts 	= ((TakesScreenshot) driver);
