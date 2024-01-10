@@ -1,13 +1,15 @@
 package stepDefinitionFile;
 import org.openqa.selenium.WebDriver;
+import factory.CommonBusinesFuncts;
 import io.cucumber.java.en.Given;
 import pages.RequestGroup_Pg;
 import utils.KeyWords;
 
 public class RequestGroup_SD {
 	
-	public static WebDriver driver 				= Z_HooksCucumbers.Hookdriver;	
+	public static WebDriver driver 				= HooksCucumbers.Hookdriver;	
 	KeyWords        			 	keys			 			= new KeyWords(driver);
+	CommonBusinesFuncts     cbus		= new CommonBusinesFuncts(driver);
 	RequestGroup_Pg 		rgPage 				= new RequestGroup_Pg(driver);
 	
 	

@@ -2,18 +2,21 @@ package stepDefinitionFile;
 
 import org.openqa.selenium.WebDriver;
 
+import factory.CommonBusinesFuncts;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import utils.BaseClass;
 
-public class Z_HooksCucumbers {
+public class HooksCucumbers {
 	public static WebDriver Hookdriver;
 	
 	
 	// This code will run before every scenarios across all the Scen and feature files
 	@Before
-	public void beforeHookCode() {
-		Hookdriver = BaseClass.initializeDriver();		
+	public void beforeHookCode() throws InterruptedException {
+		Hookdriver = BaseClass.initializeDriver();	
+		CommonBusinesFuncts cb = new CommonBusinesFuncts(Hookdriver);
+		cb.loginApplicaiton();		
 		System.out.println("Hook Loplala Driver: "+Hookdriver);
 		}
 	

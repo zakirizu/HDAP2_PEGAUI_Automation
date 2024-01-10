@@ -1,25 +1,25 @@
-package stepDefinitionFile;
+package factory;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-
 import utils.KeyWords;
 import utils.PropertiesFileReader;
-import utils.BaseClass;
 
-public class Z_CommonBusinessFunctions extends BaseClass{
-	
+
+public class CommonBusinesFuncts {
 	public static WebDriver driver ;
+	public static Logger mylogger 	= LogManager.getLogger(CommonBusinesFuncts.class.getName());	
 	static KeyWords keyWord 			= new KeyWords(driver);
-	static Logger myLogger 				= LogManager.getLogger(Z_CommonBusinessFunctions.class.getName());
+	static Logger myLogger 				= LogManager.getLogger(CommonBusinesFuncts.class.getName());
 	String Environment 						= PropertiesFileReader.getProperty("Env");
+	String browserType						= PropertiesFileReader.getProperty("browserType");
 	
-	
-	
-	
+	public CommonBusinesFuncts(WebDriver driver) {
+		this.driver = driver;
+	}
 	public  void loginApplicaiton() throws InterruptedException {
 		
 		try 

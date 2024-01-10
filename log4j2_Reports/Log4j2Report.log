@@ -28,3 +28,67 @@
 22:21:32.131 [main] INFO  utils.BaseClass - Intializing the Browser type: chrome
 22:21:33.959 [main] INFO  utils.PropertiesFileReader - Reading the Data from ProperyFile.Getting Value for Key: highLightElement
 22:21:33.959 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: highLightElement, VALUE: YES
+22:57:45.350 [main] INFO  utils.PropertiesFileReader - Reading the Data from ProperyFile.Getting Value for Key: highLightElement
+22:57:45.353 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: highLightElement, VALUE: YES
+22:57:45.356 [main] INFO  utils.PropertiesFileReader - Reading the Data from ProperyFile.Getting Value for Key: Env
+22:57:45.357 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: Env, VALUE: QA
+22:57:45.357 [main] INFO  utils.PropertiesFileReader - Reading the Data from ProperyFile.Getting Value for Key: browserType
+22:57:45.357 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: browserType, VALUE: chrome
+22:58:22.686 [main] INFO  utils.PropertiesFileReader - Reading the Data from ProperyFile.Getting Value for Key: highLightElement
+22:58:22.688 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: highLightElement, VALUE: YES
+22:58:22.691 [main] INFO  utils.PropertiesFileReader - Reading the Data from ProperyFile.Getting Value for Key: Env
+22:58:22.692 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: Env, VALUE: QA
+22:58:22.692 [main] INFO  utils.PropertiesFileReader - Reading the Data from ProperyFile.Getting Value for Key: browserType
+22:58:22.692 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: browserType, VALUE: chrome
+22:59:11.074 [main] INFO  utils.PropertiesFileReader - Reading the Data from ProperyFile.Getting Value for Key: highLightElement
+22:59:11.076 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: highLightElement, VALUE: YES
+22:59:11.079 [main] INFO  utils.PropertiesFileReader - Reading the Data from ProperyFile.Getting Value for Key: Env
+22:59:11.079 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: Env, VALUE: QA
+22:59:11.079 [main] INFO  utils.PropertiesFileReader - Reading the Data from ProperyFile.Getting Value for Key: browserType
+22:59:11.080 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: browserType, VALUE: chrome
+23:02:01.909 [main] INFO  utils.PropertiesFileReader - Reading the Data from ProperyFile.Getting Value for Key: highLightElement
+23:02:01.911 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: highLightElement, VALUE: YES
+23:02:01.914 [main] INFO  utils.PropertiesFileReader - Reading the Data from ProperyFile.Getting Value for Key: Env
+23:02:01.914 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: Env, VALUE: QA
+23:02:01.914 [main] INFO  utils.PropertiesFileReader - Reading the Data from ProperyFile.Getting Value for Key: browserType
+23:02:01.914 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: browserType, VALUE: chrome
+23:02:37.820 [main] INFO  utils.PropertiesFileReader - Reading the Data from ProperyFile.Getting Value for Key: highLightElement
+23:02:37.823 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: highLightElement, VALUE: YES
+23:02:37.825 [main] INFO  utils.PropertiesFileReader - Reading the Data from ProperyFile.Getting Value for Key: Env
+23:02:37.826 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: Env, VALUE: QA
+23:02:37.826 [main] INFO  utils.PropertiesFileReader - Reading the Data from ProperyFile.Getting Value for Key: browserType
+23:02:37.826 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: browserType, VALUE: chrome
+23:03:29.096 [main] INFO  utils.PropertiesFileReader - Reading the Data from ProperyFile.Getting Value for Key: highLightElement
+23:03:29.098 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: highLightElement, VALUE: YES
+23:03:29.101 [main] INFO  utils.PropertiesFileReader - Reading the Data from ProperyFile.Getting Value for Key: Env
+23:03:29.101 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: Env, VALUE: QA
+23:03:29.101 [main] INFO  utils.PropertiesFileReader - Reading the Data from ProperyFile.Getting Value for Key: browserType
+23:03:29.101 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: browserType, VALUE: chrome
+23:04:01.364 [main] INFO  utils.PropertiesFileReader - Reading the Data from ProperyFile.Getting Value for Key: highLightElement
+23:04:01.366 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: highLightElement, VALUE: YES
+23:04:01.369 [main] INFO  utils.PropertiesFileReader - Reading the Data from ProperyFile.Getting Value for Key: Env
+23:04:01.369 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: Env, VALUE: QA
+23:04:01.369 [main] INFO  utils.PropertiesFileReader - Reading the Data from ProperyFile.Getting Value for Key: browserType
+23:04:01.369 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: browserType, VALUE: chrome
+23:04:43.344 [main] INFO  utils.PropertiesFileReader - Reading the Data from ProperyFile.Getting Value for Key: Env
+23:04:43.346 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: Env, VALUE: QA
+23:04:43.346 [main] INFO  utils.PropertiesFileReader - Reading the Data from ProperyFile.Getting Value for Key: browserType
+23:04:43.346 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: browserType, VALUE: chrome
+23:04:43.346 [main] INFO  utils.PropertiesFileReader - Reading the Data from ProperyFile.Getting Value for Key: zoom
+23:04:43.346 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: zoom, VALUE: null
+23:04:43.346 [main] INFO  utils.BaseClass - Browser Type is set to: chrome
+23:04:43.346 [main] INFO  utils.BaseClass - Intializing the Browser type: chrome
+23:04:45.198 [main] INFO  utils.PropertiesFileReader - Reading the Data from ProperyFile.Getting Value for Key: highLightElement
+23:04:45.198 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: highLightElement, VALUE: YES
+23:04:45.200 [main] INFO  utils.PropertiesFileReader - Reading the Data from ProperyFile.Getting Value for Key: Env
+23:04:45.200 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: Env, VALUE: QA
+23:04:45.200 [main] INFO  utils.PropertiesFileReader - Reading the Data from ProperyFile.Getting Value for Key: browserType
+23:04:45.201 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: browserType, VALUE: chrome
+23:04:45.201 [main] INFO  factory.CommonBusinesFuncts - Error While Initializing the BrowserType : chrome. Environment:QA
+23:04:45.201 [main] INFO  utils.PropertiesFileReader - Reading the Data from ProperyFile.Getting Value for Key: QA_URL
+23:04:45.201 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: QA_URL, VALUE: http://ctvt-qa.cotiviti.com/prweb/6sBcNkXjGEgMJA_jo8jQNA%28%28*/!STANDARD
+23:04:45.511 [main] INFO  factory.CommonBusinesFuncts - Error While Initializing the BrowserType : chrome. Environment:QA
+23:04:45.518 [main] INFO  utils.PropertiesFileReader - Reading the Data from ProperyFile.Getting Value for Key: Env
+23:04:45.519 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: Env, VALUE: QA
+23:04:45.519 [main] INFO  utils.PropertiesFileReader - Reading the Data from ProperyFile.Getting Value for Key: browserType
+23:04:45.519 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: browserType, VALUE: chrome
