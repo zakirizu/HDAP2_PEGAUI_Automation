@@ -18,16 +18,6 @@ public class loginFeature {
 		System.out.println("Background:Clearing the cache");
 	}
 	
-	@When("Open the WebBrowers")
-	public void openTheBrowsers() {
-		System.out.println("Background:Open the WebBrowers");
-	}
-	
-	@When("Default Zoom Settings")
-	public void defaultZoomSettings() {
-		System.out.println("Background:Default Zoom Settings");
-	}
-	
 	
 	@Given("I want to write a step with precondition")
 	public void i_want_to_write_a_step_with_precondition() {

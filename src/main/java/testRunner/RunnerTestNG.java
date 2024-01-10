@@ -10,7 +10,7 @@ features="src/main/java/featureFile",
 glue="stepDefinitionFile" ,
 monochrome=true,
 dryRun= false,
-tags="@All or @Smoke",
+tags="@DataAtStepLevel or  @testAfterHook",
 plugin= {"pretty","html:cucumberReports/cucumber.html","json:cucumberReports/cucumber.json"}
 )
 public class RunnerTestNG extends AbstractTestNGCucumberTests {

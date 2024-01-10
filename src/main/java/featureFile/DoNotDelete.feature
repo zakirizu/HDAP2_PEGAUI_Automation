@@ -1,19 +1,26 @@
 @tag
 Feature: Application Login
 
-    #BackGround - Steps present in this will run before every scenarios ,
+
+	  #Hooks***********
+	  # The difference between background and hooks is that . 
+	  #Hooks code will run before every scenaios that is present in all the feature files. - Scope is to all features
+	  #Background code will run before only those scenaios that is present in that feature file. - Scope is only that feature
+	  # The code of background will run only for the that particular in which you have written the 
+
+    #BackGround*********************
+    # - Steps present in this will run before every scenarios ,
     # The scope of the background is only for this feature, I mean the backgroung will run before every scenario present only in the feature
 
 	Background:
 Given 			Clear the Cache
-When  		Open the WebBrowers
-And 				Default Zoom Settings
+
 
   #Feature is collection of Scenarios
   ##This example is to write the Plan Gherkin Language
   #This is from Legion
   #This is From Legion Again
-  @hcm     												@All
+  @hcm     	@testAfterHook											@All
   Scenario: Login to the HDAP Application
     Given 			I want to write a step with precondition
     And 				some other precondition
@@ -30,6 +37,7 @@ And 				Default Zoom Settings
     Then 		Add 2 and 3
     Then 		Print the values of sum
 
+#****************Scenario Outline********************
   #Parametrizing the variables, In this case we need to pass the variable with syntax: "<variableName>"
   #By this method we can only send the value as String. As we are passing the values in : ""
   #To over come this we will be using the
