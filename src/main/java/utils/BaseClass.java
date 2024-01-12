@@ -26,7 +26,6 @@ public class BaseClass {
 	public static WebDriver initializeDriver() {
 		browserType 		= PropertiesFileReader.getProperty("browserType");
 		zoomPercent 		= PropertiesFileReader.getProperty("zoom");
-		mylogger.info("Browser Type is set to: "+browserType);
 		try 
 		{
 			if(browserType.equalsIgnoreCase("chrome"))

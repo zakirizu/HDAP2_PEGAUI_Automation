@@ -16,7 +16,7 @@ public class PropertiesFileReader {
 	
 	public static String getProperty(String key)
 	{
-		mylogger.info("Reading the Data from ProperyFile.Getting Value for Key: "+key);
+		
 		try 
 		{
 			locationPath 	= System.getProperty("user.dir")+"\\Resources\\propertyFile.properties";

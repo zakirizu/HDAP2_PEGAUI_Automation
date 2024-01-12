@@ -6,6 +6,7 @@ import factory.CommonBusinesFuncts;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import utils.BaseClass;
+import utils.KeyWords;
 
 public class HooksCucumbers {
 	public static WebDriver Hookdriver;
@@ -16,8 +17,9 @@ public class HooksCucumbers {
 	public void beforeHookCode() throws InterruptedException {
 		Hookdriver = BaseClass.initializeDriver();	
 		CommonBusinesFuncts cb = new CommonBusinesFuncts(Hookdriver);
-		cb.loginApplicaiton();		
-		System.out.println("Hook Loplala Driver: "+Hookdriver);
+		KeyWords keyWord 			= new KeyWords(Hookdriver);
+		keyWord.loginApplicaiton();	
+		
 		}
 	
 	@After

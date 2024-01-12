@@ -13,6 +13,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -20,12 +21,15 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
+import factory.CommonBusinesFuncts;
+
 public class KeyWords {
-	static JavascriptExecutor js;
-	static String highLigtElement 	= 	PropertiesFileReader.getProperty("highLightElement");
-	public static Logger myLogger 	=	LogManager.getLogger(KeyWords.class.getName());	
-	public static WebDriver driver;	
-	
+	static JavascriptExecutor 		js;
+	public static WebDriver 		driver;	
+	static String highLigtElement 		= 	PropertiesFileReader.getProperty("highLightElement");
+	public static Logger myLogger 	=	LogManager.getLogger(KeyWords.class.getName());		
+	String Environment 						= PropertiesFileReader.getProperty("Env");
+	String browserType						= PropertiesFileReader.getProperty("browserType");
 	
 	@SuppressWarnings("static-access")
 	public  KeyWords (WebDriver driver)
@@ -34,6 +38,82 @@ public class KeyWords {
 		PageFactory.initElements(driver, this);	
 		js 	= 	(JavascriptExecutor) driver;
 	}
+	
+	
+	
+	//*	
+	public  void loginApplicaiton() throws InterruptedException {
+		
+		try 
+		{
+			if(Environment.equalsIgnoreCase("QA"))
+				{
+				driver.get(utils.PropertiesFileReader.getProperty("QA_URL"));			
+				shortWait();
+				sendKeys(getUserName_txtBox(), PropertiesFileReader.getProperty("QA_UserID"));
+				sendKeys(passWord_txtBox, PropertiesFileReader.getProperty("QA_Pwd"));
+				shortWait();
+				clickElement(getLogin_Button());
+					
+				}
+			else if(Environment.equalsIgnoreCase("UAT"))
+				{
+				driver.get(utils.PropertiesFileReader.getProperty("UAT_URL"));		
+				sendKeys(getUserName_txtBox(), PropertiesFileReader.getProperty("UAT_UserID"));
+				sendKeys(passWord_txtBox, PropertiesFileReader.getProperty("UAT_Pwd"));
+				clickElement(getLogin_Button());
+					
+				}
+			else if(Environment.equalsIgnoreCase("PROD"))
+				{
+				driver.get(utils.PropertiesFileReader.getProperty("PROD_URL"));		
+				sendKeys(getUserName_txtBox(), PropertiesFileReader.getProperty("PROD_UserID"));
+				sendKeys(passWord_txtBox, PropertiesFileReader.getProperty("PROD_Pwd"));
+				clickElement(getLogin_Button());
+							 	
+				}	
+		}
+		
+		catch(Exception e)
+		{
+			myLogger.info("Error While Initializing the BrowserType : "+browserType +". Environment:"+Environment);
+			e.printStackTrace();			
+		}
+		
+		
+		}
+	
+	//WebElemets
+	
+	@FindBy(xpath = "//input[@id='txtUserID']")
+	public static WebElement UserName_txtBox;
+	public static WebElement getUserName_txtBox() {
+		return UserName_txtBox;
+	}
+			
+	@FindBy(xpath = "//button[@id='sub']")
+	public static WebElement Login_Button;
+	public static WebElement getLogin_Button() {
+		return Login_Button;
+	}
+	
+	@FindBy(xpath = "//input[@id='txtPassword']")
+	public static WebElement passWord_txtBox;
+	public static WebElement getPassWord_txtBox() {
+		return passWord_txtBox;
+	}
+	
+	
+	
+	//*
+	
+	
+	
+	
+	
+	
+	
+
 	/*
 	 @ Created Date		: 12-June-2023
 	 @ KEYWORD			: sendKeys

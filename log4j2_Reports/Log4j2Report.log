@@ -92,3 +92,223 @@
 23:04:45.519 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: Env, VALUE: QA
 23:04:45.519 [main] INFO  utils.PropertiesFileReader - Reading the Data from ProperyFile.Getting Value for Key: browserType
 23:04:45.519 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: browserType, VALUE: chrome
+23:15:07.304 [main] INFO  utils.PropertiesFileReader - Reading the Data from ProperyFile.Getting Value for Key: Env
+23:15:07.307 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: Env, VALUE: QA
+23:15:07.307 [main] INFO  utils.PropertiesFileReader - Reading the Data from ProperyFile.Getting Value for Key: browserType
+23:15:07.308 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: browserType, VALUE: chrome
+23:15:07.308 [main] INFO  utils.PropertiesFileReader - Reading the Data from ProperyFile.Getting Value for Key: zoom
+23:15:07.309 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: zoom, VALUE: null
+23:15:07.309 [main] INFO  utils.BaseClass - Browser Type is set to: chrome
+23:15:07.309 [main] INFO  utils.BaseClass - Intializing the Browser type: chrome
+23:15:10.944 [main] INFO  utils.PropertiesFileReader - Reading the Data from ProperyFile.Getting Value for Key: highLightElement
+23:15:10.945 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: highLightElement, VALUE: YES
+23:15:10.947 [main] INFO  utils.PropertiesFileReader - Reading the Data from ProperyFile.Getting Value for Key: Env
+23:15:10.947 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: Env, VALUE: QA
+23:15:10.947 [main] INFO  utils.PropertiesFileReader - Reading the Data from ProperyFile.Getting Value for Key: browserType
+23:15:10.948 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: browserType, VALUE: chrome
+23:15:10.948 [main] INFO  factory.CommonBusinesFuncts - Error While Initializing the BrowserType : chrome. Environment:QA
+23:15:10.948 [main] INFO  utils.PropertiesFileReader - Reading the Data from ProperyFile.Getting Value for Key: QA_URL
+23:15:10.948 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: QA_URL, VALUE: https://cotvti-row-dt4.pega.net/prweb/app/default/4sQ1uGB36iO1QZw4xl3BL6CyZUv6LdMq*/!STANDARD
+23:15:14.473 [main] INFO  utils.PropertiesFileReader - Reading the Data from ProperyFile.Getting Value for Key: shortWait
+23:15:14.474 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: shortWait, VALUE: 2000
+23:15:14.474 [main] INFO  utils.KeyWords - Short Wait Start---. Waiting for Seconds: 2000
+23:15:16.480 [main] INFO  utils.KeyWords - Short Wait End---. Waited for Seconds: 2000
+23:15:16.480 [main] INFO  utils.PropertiesFileReader - Reading the Data from ProperyFile.Getting Value for Key: QA_UserID
+23:15:16.481 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: QA_UserID, VALUE: zakirshaik
+23:15:16.482 [main] INFO  utils.KeyWords - Exception occured while Entered text: zakirshaik in textbox WebElement: null On Page: null
+23:18:38.542 [main] INFO  utils.PropertiesFileReader - Reading the Data from ProperyFile.Getting Value for Key: Env
+23:18:38.544 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: Env, VALUE: QA
+23:18:38.544 [main] INFO  utils.PropertiesFileReader - Reading the Data from ProperyFile.Getting Value for Key: browserType
+23:18:38.545 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: browserType, VALUE: chrome
+23:18:38.545 [main] INFO  utils.PropertiesFileReader - Reading the Data from ProperyFile.Getting Value for Key: zoom
+23:18:38.545 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: zoom, VALUE: null
+23:18:38.545 [main] INFO  utils.BaseClass - Browser Type is set to: chrome
+23:18:38.545 [main] INFO  utils.BaseClass - Intializing the Browser type: chrome
+23:18:40.346 [main] INFO  utils.PropertiesFileReader - Reading the Data from ProperyFile.Getting Value for Key: Env
+23:18:40.346 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: Env, VALUE: QA
+23:18:40.346 [main] INFO  utils.PropertiesFileReader - Reading the Data from ProperyFile.Getting Value for Key: browserType
+23:18:40.346 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: browserType, VALUE: chrome
+23:18:40.347 [main] INFO  utils.PropertiesFileReader - Reading the Data from ProperyFile.Getting Value for Key: highLightElement
+23:18:40.348 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: highLightElement, VALUE: YES
+23:18:40.349 [main] INFO  factory.CommonBusinesFuncts - Error While Initializing the BrowserType : chrome. Environment:QA
+23:18:40.350 [main] INFO  utils.PropertiesFileReader - Reading the Data from ProperyFile.Getting Value for Key: QA_URL
+23:18:40.350 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: QA_URL, VALUE: https://cotvti-row-dt4.pega.net/prweb/app/default/4sQ1uGB36iO1QZw4xl3BL6CyZUv6LdMq*/!STANDARD
+23:18:43.827 [main] INFO  utils.PropertiesFileReader - Reading the Data from ProperyFile.Getting Value for Key: shortWait
+23:18:43.828 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: shortWait, VALUE: 2000
+23:18:43.828 [main] INFO  utils.KeyWords - Short Wait Start---. Waiting for Seconds: 2000
+23:18:45.837 [main] INFO  utils.KeyWords - Short Wait End---. Waited for Seconds: 2000
+23:18:45.837 [main] INFO  utils.PropertiesFileReader - Reading the Data from ProperyFile.Getting Value for Key: QA_UserID
+23:18:45.838 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: QA_UserID, VALUE: zakirshaik
+23:18:45.839 [main] INFO  utils.KeyWords - Exception occured while Entered text: zakirshaik in textbox WebElement: null On Page: null
+23:19:35.388 [main] INFO  utils.PropertiesFileReader - Reading the Data from ProperyFile.Getting Value for Key: Env
+23:19:35.390 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: Env, VALUE: QA
+23:19:35.390 [main] INFO  utils.PropertiesFileReader - Reading the Data from ProperyFile.Getting Value for Key: browserType
+23:19:35.391 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: browserType, VALUE: chrome
+23:19:35.391 [main] INFO  utils.PropertiesFileReader - Reading the Data from ProperyFile.Getting Value for Key: zoom
+23:19:35.391 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: zoom, VALUE: null
+23:19:35.391 [main] INFO  utils.BaseClass - Browser Type is set to: chrome
+23:19:35.391 [main] INFO  utils.BaseClass - Intializing the Browser type: chrome
+23:19:37.160 [main] INFO  utils.PropertiesFileReader - Reading the Data from ProperyFile.Getting Value for Key: Env
+23:19:37.160 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: Env, VALUE: QA
+23:19:37.160 [main] INFO  utils.PropertiesFileReader - Reading the Data from ProperyFile.Getting Value for Key: browserType
+23:19:37.160 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: browserType, VALUE: chrome
+23:19:37.161 [main] INFO  utils.PropertiesFileReader - Reading the Data from ProperyFile.Getting Value for Key: highLightElement
+23:19:37.162 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: highLightElement, VALUE: YES
+23:19:37.163 [main] INFO  factory.CommonBusinesFuncts - Error While Initializing the BrowserType : chrome. Environment:QA
+23:19:37.164 [main] INFO  utils.PropertiesFileReader - Reading the Data from ProperyFile.Getting Value for Key: QA_URL
+23:19:37.164 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: QA_URL, VALUE: https://cotvti-row-dt4.pega.net/prweb/app/hdap/4sQ1uGB36iO1QZw4xl3BL6CyZUv6LdMq*/!STANDARD?pzuiactionrrr=CXtpbn1oTUQwZkRNMmlwenZ2dmRHeVpLUVpqVDQ0N3A2V3BsMDBCQW5Nc1lUdWU5cHRUMTR3aW5rNGdkMzlpcnptOEtZYzJHSEc4Rjh5MktFZEJhNEw2L21JNUxJVFVzWi9yRnRzb0Q1QkZtOVc3aGhqSVgwMW9OckNGZWtSbkxsWmh0Q2M3MzlFalpXR2VpSklIeGNObllKRUh2ZzhCazAyUkZUeldvZzZueVdkK2M9*
+23:19:41.020 [main] INFO  utils.PropertiesFileReader - Reading the Data from ProperyFile.Getting Value for Key: shortWait
+23:19:41.023 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: shortWait, VALUE: 2000
+23:19:41.024 [main] INFO  utils.KeyWords - Short Wait Start---. Waiting for Seconds: 2000
+23:19:43.033 [main] INFO  utils.KeyWords - Short Wait End---. Waited for Seconds: 2000
+23:19:43.033 [main] INFO  utils.PropertiesFileReader - Reading the Data from ProperyFile.Getting Value for Key: QA_UserID
+23:19:43.033 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: QA_UserID, VALUE: zakirshaik
+23:19:43.034 [main] INFO  utils.KeyWords - Exception occured while Entered text: zakirshaik in textbox WebElement: null On Page: null
+23:22:18.949 [main] INFO  utils.PropertiesFileReader - Reading the Data from ProperyFile.Getting Value for Key: Env
+23:22:18.951 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: Env, VALUE: QA
+23:22:18.952 [main] INFO  utils.PropertiesFileReader - Reading the Data from ProperyFile.Getting Value for Key: browserType
+23:22:18.952 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: browserType, VALUE: chrome
+23:22:18.952 [main] INFO  utils.PropertiesFileReader - Reading the Data from ProperyFile.Getting Value for Key: zoom
+23:22:18.952 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: zoom, VALUE: null
+23:22:18.953 [main] INFO  utils.BaseClass - Browser Type is set to: chrome
+23:22:18.953 [main] INFO  utils.BaseClass - Intializing the Browser type: chrome
+23:22:20.687 [main] INFO  utils.PropertiesFileReader - Reading the Data from ProperyFile.Getting Value for Key: Env
+23:22:20.688 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: Env, VALUE: QA
+23:22:20.688 [main] INFO  utils.PropertiesFileReader - Reading the Data from ProperyFile.Getting Value for Key: browserType
+23:22:20.688 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: browserType, VALUE: chrome
+23:22:20.689 [main] INFO  utils.PropertiesFileReader - Reading the Data from ProperyFile.Getting Value for Key: highLightElement
+23:22:20.691 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: highLightElement, VALUE: YES
+23:22:20.693 [main] INFO  factory.CommonBusinesFuncts - Error While Initializing the BrowserType : chrome. Environment:QA
+23:22:20.693 [main] INFO  utils.PropertiesFileReader - Reading the Data from ProperyFile.Getting Value for Key: QA_URL
+23:22:20.693 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: QA_URL, VALUE: https://cotvti-row-dt4.pega.net/prweb/app/hdap/4sQ1uGB36iO1QZw4xl3BL6CyZUv6LdMq*/!STANDARD?pzuiactionrrr=CXtpbn1oTUQwZkRNMmlwenZ2dmRHeVpLUVpqVDQ0N3A2V3BsMDBCQW5Nc1lUdWU5cHRUMTR3aW5rNGdkMzlpcnptOEtZYzJHSEc4Rjh5MktFZEJhNEw2L21JNUxJVFVzWi9yRnRzb0Q1QkZtOVc3aGhqSVgwMW9OckNGZWtSbkxsWmh0Q2M3MzlFalpXR2VpSklIeGNObllKRUh2ZzhCazAyUkZUeldvZzZueVdkK2M9*
+23:22:24.598 [main] INFO  utils.PropertiesFileReader - Reading the Data from ProperyFile.Getting Value for Key: shortWait
+23:22:24.598 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: shortWait, VALUE: 2000
+23:22:24.598 [main] INFO  utils.KeyWords - Short Wait Start---. Waiting for Seconds: 2000
+23:22:26.601 [main] INFO  utils.KeyWords - Short Wait End---. Waited for Seconds: 2000
+23:22:26.601 [main] INFO  utils.PropertiesFileReader - Reading the Data from ProperyFile.Getting Value for Key: QA_UserID
+23:22:26.602 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: QA_UserID, VALUE: zakirshaik
+23:22:26.603 [main] INFO  utils.KeyWords - Exception occured while Entered text: zakirshaik in textbox WebElement: null On Page: null
+23:23:55.027 [main] INFO  utils.PropertiesFileReader - Reading the Data from ProperyFile.Getting Value for Key: Env
+23:23:55.030 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: Env, VALUE: QA
+23:23:55.030 [main] INFO  utils.PropertiesFileReader - Reading the Data from ProperyFile.Getting Value for Key: browserType
+23:23:55.030 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: browserType, VALUE: chrome
+23:23:55.030 [main] INFO  utils.PropertiesFileReader - Reading the Data from ProperyFile.Getting Value for Key: zoom
+23:23:55.031 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: zoom, VALUE: null
+23:23:55.031 [main] INFO  utils.BaseClass - Browser Type is set to: chrome
+23:23:55.031 [main] INFO  utils.BaseClass - Intializing the Browser type: chrome
+23:23:56.800 [main] INFO  utils.PropertiesFileReader - Reading the Data from ProperyFile.Getting Value for Key: Env
+23:23:56.800 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: Env, VALUE: QA
+23:23:56.801 [main] INFO  utils.PropertiesFileReader - Reading the Data from ProperyFile.Getting Value for Key: browserType
+23:23:56.801 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: browserType, VALUE: chrome
+23:23:56.802 [main] INFO  utils.PropertiesFileReader - Reading the Data from ProperyFile.Getting Value for Key: highLightElement
+23:23:56.802 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: highLightElement, VALUE: YES
+23:23:56.813 [main] INFO  factory.CommonBusinesFuncts - Error While Initializing the BrowserType : chrome. Environment:QA
+23:23:56.813 [main] INFO  utils.PropertiesFileReader - Reading the Data from ProperyFile.Getting Value for Key: QA_URL
+23:23:56.814 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: QA_URL, VALUE: https://cotvti-row-dt4.pega.net/prweb/app/hdap/4sQ1uGB36iO1QZw4xl3BL6CyZUv6LdMq*/!STANDARD?pzuiactionrrr=CXtpbn1oTUQwZkRNMmlwenZ2dmRHeVpLUVpqVDQ0N3A2V3BsMDBCQW5Nc1lUdWU5cHRUMTR3aW5rNGdkMzlpcnptOEtZYzJHSEc4Rjh5MktFZEJhNEw2L21JNUxJVFVzWi9yRnRzb0Q1QkZtOVc3aGhqSVgwMW9OckNGZWtSbkxsWmh0Q2M3MzlFalpXR2VpSklIeGNObllKRUh2ZzhCazAyUkZUeldvZzZueVdkK2M9*
+23:24:00.597 [main] INFO  utils.PropertiesFileReader - Reading the Data from ProperyFile.Getting Value for Key: shortWait
+23:24:00.598 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: shortWait, VALUE: 2000
+23:24:00.598 [main] INFO  utils.KeyWords - Short Wait Start---. Waiting for Seconds: 2000
+23:24:02.606 [main] INFO  utils.KeyWords - Short Wait End---. Waited for Seconds: 2000
+23:24:02.606 [main] INFO  utils.PropertiesFileReader - Reading the Data from ProperyFile.Getting Value for Key: QA_UserID
+23:24:02.606 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: QA_UserID, VALUE: zakirshaik
+23:24:02.623 [main] INFO  utils.KeyWords - Exception occured while Entered text: zakirshaik in textbox WebElement: [[ChromeDriver: chrome on windows (38f5fde9cf9c10ca8803d674ed6af2b0)] -> xpath: //input[@id='txtUserID']] On Page: null
+23:25:18.515 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: Env, VALUE: QA
+23:25:18.517 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: browserType, VALUE: chrome
+23:25:18.517 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: zoom, VALUE: null
+23:25:18.517 [main] INFO  utils.BaseClass - Browser Type is set to: chrome
+23:25:18.518 [main] INFO  utils.BaseClass - Intializing the Browser type: chrome
+23:25:20.299 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: Env, VALUE: QA
+23:25:20.299 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: browserType, VALUE: chrome
+23:25:20.301 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: highLightElement, VALUE: YES
+23:25:20.311 [main] INFO  factory.CommonBusinesFuncts - Error While Initializing the BrowserType : chrome. Environment:QA
+23:25:20.311 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: QA_URL, VALUE: https://cotvti-row-dt4.pega.net/prweb/app/hdap/4sQ1uGB36iO1QZw4xl3BL6CyZUv6LdMq*/!STANDARD?pzuiactionrrr=CXtpbn1oTUQwZkRNMmlwenZ2dmRHeVpLUVpqVDQ0N3A2V3BsMDBCQW5Nc1lUdWU5cHRUMTR3aW5rNGdkMzlpcnptOEtZYzJHSEc4Rjh5MktFZEJhNEw2L21JNUxJVFVzWi9yRnRzb0Q1QkZtOVc3aGhqSVgwMW9OckNGZWtSbkxsWmh0Q2M3MzlFalpXR2VpSklIeGNObllKRUh2ZzhCazAyUkZUeldvZzZueVdkK2M9*
+23:25:23.298 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: shortWait, VALUE: 2000
+23:25:23.298 [main] INFO  utils.KeyWords - Short Wait Start---. Waiting for Seconds: 2000
+23:25:25.310 [main] INFO  utils.KeyWords - Short Wait End---. Waited for Seconds: 2000
+23:25:25.310 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: QA_UserID, VALUE: zakirshaik
+23:25:25.329 [main] INFO  utils.KeyWords - Exception occured while Entered text: zakirshaik in textbox WebElement: [[ChromeDriver: chrome on windows (623830274e2b48e28946cbef7a092cba)] -> xpath: //input[@id='txtUserID']] On Page: null
+23:27:46.639 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: Env, VALUE: QA
+23:27:46.641 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: browserType, VALUE: chrome
+23:27:46.642 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: zoom, VALUE: null
+23:27:46.642 [main] INFO  utils.BaseClass - Intializing the Browser type: chrome
+23:27:48.425 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: Env, VALUE: QA
+23:27:48.425 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: browserType, VALUE: chrome
+23:27:48.426 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: highLightElement, VALUE: YES
+23:27:48.435 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: QA_URL, VALUE: https://cotvti-row-dt4.pega.net/prweb/app/hdap/4sQ1uGB36iO1QZw4xl3BL6CyZUv6LdMq*/!STANDARD?pzuiactionrrr=CXtpbn1oTUQwZkRNMmlwenZ2dmRHeVpLUVpqVDQ0N3A2V3BsMDBCQW5Nc1lUdWU5cHRUMTR3aW5rNGdkMzlpcnptOEtZYzJHSEc4Rjh5MktFZEJhNEw2L21JNUxJVFVzWi9yRnRzb0Q1QkZtOVc3aGhqSVgwMW9OckNGZWtSbkxsWmh0Q2M3MzlFalpXR2VpSklIeGNObllKRUh2ZzhCazAyUkZUeldvZzZueVdkK2M9*
+23:27:52.133 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: shortWait, VALUE: 2000
+23:27:52.133 [main] INFO  utils.KeyWords - Short Wait Start---. Waiting for Seconds: 2000
+23:27:54.148 [main] INFO  utils.KeyWords - Short Wait End---. Waited for Seconds: 2000
+23:27:54.149 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: QA_UserID, VALUE: zakirshaik
+23:27:54.171 [main] INFO  utils.KeyWords - Exception occured while Entered text: zakirshaik in textbox WebElement: [[ChromeDriver: chrome on windows (48a8d681421eadeb98dd79937abc52ff)] -> xpath: //input[@id='txtUserID']] On Page: null
+12:43:39.843 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: Env, VALUE: QA
+12:43:39.846 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: browserType, VALUE: chrome
+12:43:39.847 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: zoom, VALUE: null
+12:43:39.847 [main] INFO  utils.BaseClass - Intializing the Browser type: chrome
+12:43:45.584 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: highLightElement, VALUE: YES
+12:43:45.586 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: Env, VALUE: QA
+12:43:45.587 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: browserType, VALUE: chrome
+12:43:45.622 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: QA_URL, VALUE: https://cotvti-row-dt4.pega.net/prweb/app/hdap/4sQ1uGB36iO1QZw4xl3BL6CyZUv6LdMq*/!STANDARD?pzuiactionrrr=CXtpbn1oTUQwZkRNMmlwenZ2dmRHeVpLUVpqVDQ0N3A2V3BsMDBCQW5Nc1lUdWU5cHRUMTR3aW5rNGdkMzlpcnptOEtZYzJHSEc4Rjh5MktFZEJhNEw2L21JNUxJVFVzWi9yRnRzb0Q1QkZtOVc3aGhqSVgwMW9OckNGZWtSbkxsWmh0Q2M3MzlFalpXR2VpSklIeGNObllKRUh2ZzhCazAyUkZUeldvZzZueVdkK2M9*
+12:43:48.095 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: shortWait, VALUE: 2000
+12:43:48.096 [main] INFO  utils.KeyWords - Short Wait Start---. Waiting for Seconds: 2000
+12:43:50.098 [main] INFO  utils.KeyWords - Short Wait End---. Waited for Seconds: 2000
+12:43:50.100 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: QA_UserID, VALUE: zakirshaik
+12:43:50.158 [main] INFO  utils.KeyWords - Entering text:zakirshaik. In textbox WebElement: [[ChromeDriver: chrome on windows (2b059530cf9221cf6fd403018d11334b)] -> xpath: //input[@id='txtUserID']] On Page: Login Page
+12:43:50.396 [main] INFO  utils.KeyWords - Entered text:zakirshaik. In textbox WebElement: [[ChromeDriver: chrome on windows (2b059530cf9221cf6fd403018d11334b)] -> xpath: //input[@id='txtUserID']] On Page: Login Page
+12:43:50.397 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: QA_Pwd, VALUE: rizu@123
+12:43:50.445 [main] INFO  utils.KeyWords - Entering text:rizu@123. In textbox WebElement: [[ChromeDriver: chrome on windows (2b059530cf9221cf6fd403018d11334b)] -> xpath: //input[@id='txtPassword']] On Page: Login Page
+12:43:50.708 [main] INFO  utils.KeyWords - Entered text:rizu@123. In textbox WebElement: [[ChromeDriver: chrome on windows (2b059530cf9221cf6fd403018d11334b)] -> xpath: //input[@id='txtPassword']] On Page: Login Page
+12:43:50.710 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: shortWait, VALUE: 2000
+12:43:50.711 [main] INFO  utils.KeyWords - Short Wait Start---. Waiting for Seconds: 2000
+12:43:52.716 [main] INFO  utils.KeyWords - Short Wait End---. Waited for Seconds: 2000
+12:43:52.853 [main] INFO  utils.KeyWords - Clicking on Element :[[ChromeDriver: chrome on windows (2b059530cf9221cf6fd403018d11334b)] -> xpath: //button[@id='sub']] On Page: Login Page
+12:44:17.257 [main] INFO  utils.KeyWords - Clicked on Element :Proxy element for: DefaultElementLocator 'By.xpath: //button[@id='sub']' On Page: Login Page
+12:44:17.263 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: Env, VALUE: QA
+12:44:17.265 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: browserType, VALUE: chrome
+13:20:23.601 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: Env, VALUE: QA
+13:20:23.604 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: browserType, VALUE: chrome
+13:20:23.605 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: zoom, VALUE: null
+13:20:23.606 [main] INFO  utils.BaseClass - Intializing the Browser type: chrome
+13:20:27.279 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: highLightElement, VALUE: YES
+13:20:27.281 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: Env, VALUE: QA
+13:20:27.282 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: browserType, VALUE: chrome
+13:20:27.330 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: QA_URL, VALUE: https://cotvti-row-dt4.pega.net/prweb/app/hdap/4sQ1uGB36iO1QZw4xl3BL6CyZUv6LdMq*/!STANDARD?pzuiactionrrr=CXtpbn1oTUQwZkRNMmlwenZ2dmRHeVpLUVpqVDQ0N3A2V3BsMDBCQW5Nc1lUdWU5cHRUMTR3aW5rNGdkMzlpcnptOEtZYzJHSEc4Rjh5MktFZEJhNEw2L21JNUxJVFVzWi9yRnRzb0Q1QkZtOVc3aGhqSVgwMW9OckNGZWtSbkxsWmh0Q2M3MzlFalpXR2VpSklIeGNObllKRUh2ZzhCazAyUkZUeldvZzZueVdkK2M9*
+13:20:30.033 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: shortWait, VALUE: 2000
+13:20:30.034 [main] INFO  utils.KeyWords - Short Wait Start---. Waiting for Seconds: 2000
+13:20:32.035 [main] INFO  utils.KeyWords - Short Wait End---. Waited for Seconds: 2000
+13:20:32.036 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: QA_UserID, VALUE: zakirshaik
+13:20:32.097 [main] INFO  utils.KeyWords - Entering text:zakirshaik. In textbox WebElement: [[ChromeDriver: chrome on windows (498a23bb5ad4bf32e649bdb81e78878e)] -> xpath: //input[@id='txtUserID']] On Page: Login Page
+13:20:32.381 [main] INFO  utils.KeyWords - Entered text:zakirshaik. In textbox WebElement: [[ChromeDriver: chrome on windows (498a23bb5ad4bf32e649bdb81e78878e)] -> xpath: //input[@id='txtUserID']] On Page: Login Page
+13:20:32.382 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: QA_Pwd, VALUE: rizu@123
+13:20:32.440 [main] INFO  utils.KeyWords - Entering text:rizu@123. In textbox WebElement: [[ChromeDriver: chrome on windows (498a23bb5ad4bf32e649bdb81e78878e)] -> xpath: //input[@id='txtPassword']] On Page: Login Page
+13:20:32.795 [main] INFO  utils.KeyWords - Entered text:rizu@123. In textbox WebElement: [[ChromeDriver: chrome on windows (498a23bb5ad4bf32e649bdb81e78878e)] -> xpath: //input[@id='txtPassword']] On Page: Login Page
+13:20:32.797 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: shortWait, VALUE: 2000
+13:20:32.798 [main] INFO  utils.KeyWords - Short Wait Start---. Waiting for Seconds: 2000
+13:20:34.813 [main] INFO  utils.KeyWords - Short Wait End---. Waited for Seconds: 2000
+13:20:34.944 [main] INFO  utils.KeyWords - Clicking on Element :[[ChromeDriver: chrome on windows (498a23bb5ad4bf32e649bdb81e78878e)] -> xpath: //button[@id='sub']] On Page: Login Page
+13:20:59.738 [main] INFO  utils.KeyWords - Clicked on Element :Proxy element for: DefaultElementLocator 'By.xpath: //button[@id='sub']' On Page: Login Page
+13:20:59.744 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: Env, VALUE: QA
+13:20:59.745 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: browserType, VALUE: chrome
+19:26:08.930 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: Env, VALUE: QA
+19:26:08.933 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: browserType, VALUE: chrome
+19:26:08.933 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: zoom, VALUE: null
+19:26:08.933 [main] INFO  utils.BaseClass - Intializing the Browser type: chrome
+19:26:12.151 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: highLightElement, VALUE: YES
+19:26:12.152 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: Env, VALUE: QA
+19:26:12.152 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: browserType, VALUE: chrome
+19:26:12.166 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: QA_URL, VALUE: https://cotvti-row-dt4.pega.net/prweb/app/hdap/4sQ1uGB36iO1QZw4xl3BL6CyZUv6LdMq*/!STANDARD?pzuiactionrrr=CXtpbn1oTUQwZkRNMmlwenZ2dmRHeVpLUVpqVDQ0N3A2V3BsMDBCQW5Nc1lUdWU5cHRUMTR3aW5rNGdkMzlpcnptOEtZYzJHSEc4Rjh5MktFZEJhNEw2L21JNUxJVFVzWi9yRnRzb0Q1QkZtOVc3aGhqSVgwMW9OckNGZWtSbkxsWmh0Q2M3MzlFalpXR2VpSklIeGNObllKRUh2ZzhCazAyUkZUeldvZzZueVdkK2M9*
+19:26:14.854 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: shortWait, VALUE: 2000
+19:26:14.855 [main] INFO  utils.KeyWords - Short Wait Start---. Waiting for Seconds: 2000
+19:26:16.858 [main] INFO  utils.KeyWords - Short Wait End---. Waited for Seconds: 2000
+19:26:16.858 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: QA_UserID, VALUE: zakirshaik
+19:26:16.883 [main] INFO  utils.KeyWords - Entering text:zakirshaik. In textbox WebElement: [[ChromeDriver: chrome on windows (0d706c5e613a5f4d775dffa6b056a4ff)] -> xpath: //input[@id='txtUserID']] On Page: Login Page
+19:26:17.000 [main] INFO  utils.KeyWords - Entered text:zakirshaik. In textbox WebElement: [[ChromeDriver: chrome on windows (0d706c5e613a5f4d775dffa6b056a4ff)] -> xpath: //input[@id='txtUserID']] On Page: Login Page
+19:26:17.001 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: QA_Pwd, VALUE: rizu@123
+19:26:17.019 [main] INFO  utils.KeyWords - Entering text:rizu@123. In textbox WebElement: [[ChromeDriver: chrome on windows (0d706c5e613a5f4d775dffa6b056a4ff)] -> xpath: //input[@id='txtPassword']] On Page: Login Page
+19:26:17.126 [main] INFO  utils.KeyWords - Entered text:rizu@123. In textbox WebElement: [[ChromeDriver: chrome on windows (0d706c5e613a5f4d775dffa6b056a4ff)] -> xpath: //input[@id='txtPassword']] On Page: Login Page
+19:26:17.126 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: shortWait, VALUE: 2000
+19:26:17.126 [main] INFO  utils.KeyWords - Short Wait Start---. Waiting for Seconds: 2000
+19:26:19.141 [main] INFO  utils.KeyWords - Short Wait End---. Waited for Seconds: 2000
+19:26:19.187 [main] INFO  utils.KeyWords - Clicking on Element :[[ChromeDriver: chrome on windows (0d706c5e613a5f4d775dffa6b056a4ff)] -> xpath: //button[@id='sub']] On Page: Login Page
+19:26:43.172 [main] INFO  utils.KeyWords - Clicked on Element :Proxy element for: DefaultElementLocator 'By.xpath: //button[@id='sub']' On Page: Login Page
+19:26:43.173 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: Env, VALUE: QA
+19:26:43.173 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: browserType, VALUE: chrome
