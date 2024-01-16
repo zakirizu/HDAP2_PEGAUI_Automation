@@ -72,6 +72,8 @@ public class KeyWords {
 				clickElement(getLogin_Button());
 							 	
 				}	
+			
+			
 		}
 		
 		catch(Exception e)
@@ -260,6 +262,7 @@ public class KeyWords {
 		String title=driver.getTitle();
 		try 
 		{
+		System.out.println("Currently On Page: "+title);	
 		
 		if(!ele.isDisplayed())
 		{
@@ -662,7 +665,7 @@ public class KeyWords {
 	 @ Developer ID		: 163054
 	 @ Can Be Used For	: To Switch Frame By Using WebElement of the Frame
 	*/
-	public static void switchFrameByWebElement(WebElement ele) {
+	public void switchFrameByWebElement(WebElement ele) {
 		String title=null;
 		String frameTitle = null;
 		title = driver.getTitle();
