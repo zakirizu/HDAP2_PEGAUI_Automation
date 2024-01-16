@@ -17,7 +17,7 @@ public class RequestGroup_Pg {
 		@FindBy(xpath="//span[@class='menu-item-title' and text()='Work']")
 		private  WebElement workTab;
 		
-		@FindBy(xpath="(//*[text()='My Workbasket'])[2]")
+		@FindBy(xpath="//div[@data-layout-id='202312150041260633']")
 		private  WebElement myWorkBasket;
 		
 		@FindBy(xpath="//iframe[@id='PegaGadget0Ifr']")
