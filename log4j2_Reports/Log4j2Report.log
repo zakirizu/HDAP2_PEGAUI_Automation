@@ -505,3 +505,79 @@
 10:54:48.766 [main] INFO  utils.KeyWords - Medium Wait End---. Waited for Seconds: 6000
 10:55:08.838 [main] INFO  utils.KeyWords - Clicking on Element :Proxy element for: DefaultElementLocator 'By.xpath: //span[@class='menu-item-title' and text()='Work']' On Page: Retrieval portal
 10:55:48.876 [main] INFO  utils.KeyWords - Exception occured while Clicking on Element :Proxy element for: DefaultElementLocator 'By.xpath: //span[@class='menu-item-title' and text()='Work']' On Page: Retrieval portal
+18:54:07.088 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: Env, VALUE: QA
+18:54:07.090 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: browserType, VALUE: chrome
+18:54:07.090 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: zoom, VALUE: null
+18:54:07.091 [main] INFO  utils.BaseClass - Intializing the Browser type: chrome
+18:54:11.168 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: highLightElement, VALUE: YES
+18:54:11.169 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: Env, VALUE: QA
+18:54:11.169 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: browserType, VALUE: chrome
+18:54:11.179 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: QA_URL, VALUE: https://cotvti-row-dt4.pega.net/prweb/app/hdap/4sQ1uGB36iO1QZw4xl3BL6CyZUv6LdMq*/!STANDARD?pzuiactionrrr=CXtpbn1oTUQwZkRNMmlwenZ2dmRHeVpLUVpqVDQ0N3A2V3BsMDBCQW5Nc1lUdWU5cHRUMTR3aW5rNGdkMzlpcnptOEtZYzJHSEc4Rjh5MktFZEJhNEw2L21JNUxJVFVzWi9yRnRzb0Q1QkZtOVc3aGhqSVgwMW9OckNGZWtSbkxsWmh0Q2M3MzlFalpXR2VpSklIeGNObllKRUh2ZzhCazAyUkZUeldvZzZueVdkK2M9*
+18:54:13.648 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: shortWait, VALUE: 2000
+18:54:13.650 [main] INFO  utils.KeyWords - Short Wait Start---. Waiting for Seconds: 2000
+18:54:15.658 [main] INFO  utils.KeyWords - Short Wait End---. Waited for Seconds: 2000
+18:54:15.658 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: QA_UserID, VALUE: QA_Retrieval
+18:54:15.698 [main] INFO  utils.KeyWords - Entering text:QA_Retrieval. In textbox WebElement: [[ChromeDriver: chrome on windows (c0fb61bbad1b5f11b7d49ccb3c7b33c2)] -> xpath: //input[@id='txtUserID']] On Page: Login Page
+18:54:15.898 [main] INFO  utils.KeyWords - Entered text:QA_Retrieval. In textbox WebElement: [[ChromeDriver: chrome on windows (c0fb61bbad1b5f11b7d49ccb3c7b33c2)] -> xpath: //input[@id='txtUserID']] On Page: Login Page
+18:54:15.901 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: QA_Pwd, VALUE: rest@123
+18:54:15.927 [main] INFO  utils.KeyWords - Entering text:rest@123. In textbox WebElement: [[ChromeDriver: chrome on windows (c0fb61bbad1b5f11b7d49ccb3c7b33c2)] -> xpath: //input[@id='txtPassword']] On Page: Login Page
+18:54:16.064 [main] INFO  utils.KeyWords - Entered text:rest@123. In textbox WebElement: [[ChromeDriver: chrome on windows (c0fb61bbad1b5f11b7d49ccb3c7b33c2)] -> xpath: //input[@id='txtPassword']] On Page: Login Page
+18:54:16.065 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: shortWait, VALUE: 2000
+18:54:16.066 [main] INFO  utils.KeyWords - Short Wait Start---. Waiting for Seconds: 2000
+18:54:18.073 [main] INFO  utils.KeyWords - Short Wait End---. Waited for Seconds: 2000
+18:54:18.148 [main] INFO  utils.KeyWords - Clicking on Element :[[ChromeDriver: chrome on windows (c0fb61bbad1b5f11b7d49ccb3c7b33c2)] -> xpath: //button[@id='sub']] On Page: Login Page
+18:54:40.960 [main] INFO  utils.KeyWords - Clicked on Element :Proxy element for: DefaultElementLocator 'By.xpath: //button[@id='sub']' On Page: Login Page
+18:54:40.962 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: Env, VALUE: QA
+18:54:40.963 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: browserType, VALUE: chrome
+18:54:40.967 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: implicitWait, VALUE: 20000
+18:54:40.972 [main] INFO  stepDefinitionFile.RequestGroup_SD - Setting the ZOOM Percentage to: 80%
+18:54:40.973 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: shortWait, VALUE: 2000
+18:54:40.973 [main] INFO  utils.KeyWords - Short Wait Start---. Waiting for Seconds: 2000
+18:54:42.986 [main] INFO  utils.KeyWords - Short Wait End---. Waited for Seconds: 2000
+18:54:43.054 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: shortWait, VALUE: 2000
+18:54:43.054 [main] INFO  utils.KeyWords - Short Wait Start---. Waiting for Seconds: 2000
+18:54:45.061 [main] INFO  utils.KeyWords - Short Wait End---. Waited for Seconds: 2000
+18:54:45.099 [main] INFO  utils.KeyWords - Switching to Frame By WebElement: [[ChromeDriver: chrome on windows (c0fb61bbad1b5f11b7d49ccb3c7b33c2)] -> xpath: //iframe[@id='PegaGadget0Ifr']] On Page: Retrieval portal
+18:55:05.178 [main] INFO  utils.KeyWords - Switched to Frame By WebElement:Proxy element for: DefaultElementLocator 'By.xpath: //iframe[@id='PegaGadget0Ifr']' Frame title: Retrieval portal
+18:55:05.256 [main] INFO  utils.KeyWords - Clicking on Element :[[ChromeDriver: chrome on windows (c0fb61bbad1b5f11b7d49ccb3c7b33c2)] -> xpath: //span[@class='menu-item-title' and text()='Work']] On Page: Retrieval portal
+18:55:05.546 [main] INFO  utils.KeyWords - Clicked on Element :[[ChromeDriver: chrome on windows (c0fb61bbad1b5f11b7d49ccb3c7b33c2)] -> xpath: //span[@class='menu-item-title' and text()='Work']] On Page: Retrieval portal
+18:55:07.064 [main] INFO  utils.KeyWords - Clicking on Element :[[ChromeDriver: chrome on windows (c0fb61bbad1b5f11b7d49ccb3c7b33c2)] -> xpath: //div[@data-layout-id='202312150041260633']] On Page: Retrieval portal
+18:55:07.292 [main] INFO  utils.KeyWords - Clicked on Element :[[ChromeDriver: chrome on windows (c0fb61bbad1b5f11b7d49ccb3c7b33c2)] -> xpath: //div[@data-layout-id='202312150041260633']] On Page: Retrieval portal
+20:08:24.579 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: Env, VALUE: QA
+20:08:24.581 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: browserType, VALUE: chrome
+20:08:24.582 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: zoom, VALUE: null
+20:08:24.582 [main] INFO  utils.BaseClass - Intializing the Browser type: chrome
+20:08:28.460 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: highLightElement, VALUE: YES
+20:08:28.460 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: Env, VALUE: QA
+20:08:28.461 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: browserType, VALUE: chrome
+20:08:28.473 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: QA_URL, VALUE: https://cotvti-row-dt4.pega.net/prweb/app/hdap/4sQ1uGB36iO1QZw4xl3BL6CyZUv6LdMq*/!STANDARD?pzuiactionrrr=CXtpbn1oTUQwZkRNMmlwenZ2dmRHeVpLUVpqVDQ0N3A2V3BsMDBCQW5Nc1lUdWU5cHRUMTR3aW5rNGdkMzlpcnptOEtZYzJHSEc4Rjh5MktFZEJhNEw2L21JNUxJVFVzWi9yRnRzb0Q1QkZtOVc3aGhqSVgwMW9OckNGZWtSbkxsWmh0Q2M3MzlFalpXR2VpSklIeGNObllKRUh2ZzhCazAyUkZUeldvZzZueVdkK2M9*
+20:08:31.442 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: shortWait, VALUE: 2000
+20:08:31.442 [main] INFO  utils.KeyWords - Short Wait Start---. Waiting for Seconds: 2000
+20:08:33.447 [main] INFO  utils.KeyWords - Short Wait End---. Waited for Seconds: 2000
+20:08:33.448 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: QA_UserID, VALUE: QA_Retrieval
+20:08:33.486 [main] INFO  utils.KeyWords - Entering text:QA_Retrieval. In textbox WebElement: [[ChromeDriver: chrome on windows (7077deeaf6e13663c961c181243369ed)] -> xpath: //input[@id='txtUserID']] On Page: Login Page
+20:08:33.659 [main] INFO  utils.KeyWords - Entered text:QA_Retrieval. In textbox WebElement: [[ChromeDriver: chrome on windows (7077deeaf6e13663c961c181243369ed)] -> xpath: //input[@id='txtUserID']] On Page: Login Page
+20:08:33.659 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: QA_Pwd, VALUE: rest@123
+20:08:33.679 [main] INFO  utils.KeyWords - Entering text:rest@123. In textbox WebElement: [[ChromeDriver: chrome on windows (7077deeaf6e13663c961c181243369ed)] -> xpath: //input[@id='txtPassword']] On Page: Login Page
+20:08:33.820 [main] INFO  utils.KeyWords - Entered text:rest@123. In textbox WebElement: [[ChromeDriver: chrome on windows (7077deeaf6e13663c961c181243369ed)] -> xpath: //input[@id='txtPassword']] On Page: Login Page
+20:08:33.820 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: shortWait, VALUE: 2000
+20:08:33.820 [main] INFO  utils.KeyWords - Short Wait Start---. Waiting for Seconds: 2000
+20:08:35.828 [main] INFO  utils.KeyWords - Short Wait End---. Waited for Seconds: 2000
+20:08:35.905 [main] INFO  utils.KeyWords - Clicking on Element :[[ChromeDriver: chrome on windows (7077deeaf6e13663c961c181243369ed)] -> xpath: //button[@id='sub']] On Page: Login Page
+20:08:59.349 [main] INFO  utils.KeyWords - Clicked on Element :Proxy element for: DefaultElementLocator 'By.xpath: //button[@id='sub']' On Page: Login Page
+20:08:59.352 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: Env, VALUE: QA
+20:08:59.353 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: browserType, VALUE: chrome
+20:08:59.355 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: implicitWait, VALUE: 20000
+20:08:59.361 [main] INFO  stepDefinitionFile.RequestGroup_SD - Setting the ZOOM Percentage to: 80%
+20:08:59.362 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: shortWait, VALUE: 2000
+20:08:59.363 [main] INFO  utils.KeyWords - Short Wait Start---. Waiting for Seconds: 2000
+20:09:01.375 [main] INFO  utils.KeyWords - Short Wait End---. Waited for Seconds: 2000
+20:09:01.469 [main] INFO  utils.PropertiesFileReader - Successfully Read the Data from Property File. KEY: shortWait, VALUE: 2000
+20:09:01.470 [main] INFO  utils.KeyWords - Short Wait Start---. Waiting for Seconds: 2000
+20:09:03.474 [main] INFO  utils.KeyWords - Short Wait End---. Waited for Seconds: 2000
+20:09:03.512 [main] INFO  utils.KeyWords - Switching to Frame By WebElement: [[ChromeDriver: chrome on windows (7077deeaf6e13663c961c181243369ed)] -> xpath: //iframe[@id='PegaGadget0Ifr']] On Page: Retrieval portal
+20:09:23.656 [main] INFO  utils.KeyWords - Switched to Frame By WebElement:Proxy element for: DefaultElementLocator 'By.xpath: //iframe[@id='PegaGadget0Ifr']' Frame title: Retrieval portal
+20:09:23.734 [main] INFO  utils.KeyWords - Clicking on Element :[[ChromeDriver: chrome on windows (7077deeaf6e13663c961c181243369ed)] -> xpath: //span[@class='menu-item-title' and text()='Work']] On Page: Retrieval portal
+20:09:24.007 [main] INFO  utils.KeyWords - Clicked on Element :[[ChromeDriver: chrome on windows (7077deeaf6e13663c961c181243369ed)] -> xpath: //span[@class='menu-item-title' and text()='Work']] On Page: Retrieval portal
+20:09:25.326 [main] INFO  utils.KeyWords - Clicking on Element :[[ChromeDriver: chrome on windows (7077deeaf6e13663c961c181243369ed)] -> xpath: //div[@data-layout-id='202312150041260633']] On Page: Retrieval portal
+20:09:25.508 [main] INFO  utils.KeyWords - Clicked on Element :[[ChromeDriver: chrome on windows (7077deeaf6e13663c961c181243369ed)] -> xpath: //div[@data-layout-id='202312150041260633']] On Page: Retrieval portal
