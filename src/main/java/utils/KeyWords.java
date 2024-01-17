@@ -1,5 +1,7 @@
 package utils;
 
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
 import java.time.Duration;
 import java.util.Iterator;
 import java.util.Set;
@@ -46,6 +48,19 @@ public class KeyWords {
 		
 		try 
 		{
+			myLogger.info("Setting the ZOOM Percentage to: 80%");			
+			shortWait();
+			Robot robot = new Robot();
+			robot.keyPress(KeyEvent.VK_CONTROL);
+			robot.keyPress(KeyEvent.VK_SUBTRACT);	
+			robot.keyRelease(KeyEvent.VK_CONTROL);
+			robot.keyRelease(KeyEvent.VK_SUBTRACT);				
+			robot.keyPress(KeyEvent.VK_CONTROL);
+			robot.keyPress(KeyEvent.VK_SUBTRACT);	
+			robot.keyRelease(KeyEvent.VK_CONTROL);
+			robot.keyRelease(KeyEvent.VK_SUBTRACT);	
+			shortWait();			
+			
 			if(Environment.equalsIgnoreCase("QA"))
 				{
 				driver.get(utils.PropertiesFileReader.getProperty("QA_URL"));			
