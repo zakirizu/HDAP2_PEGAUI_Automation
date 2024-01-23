@@ -8,6 +8,8 @@ import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import factory.CommonBusinesFuncts;
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import pages.ConfigureRequestGroupTask_Pg;
 import pages.RequestGroup_Pg;
 import utils.KeyWords;
 import utils.PropertiesFileReader;
@@ -18,27 +20,45 @@ public class ConfigureRequestGroupTask_SD {
 	KeyWords        			 		    keys			 	=   new KeyWords(driver);
 	CommonBusinesFuncts      cbus				=   new CommonBusinesFuncts(driver);
 	RequestGroup_Pg 			   rgpage 			=   new RequestGroup_Pg(driver);
+	ConfigureRequestGroupTask_Pg crgpage = new ConfigureRequestGroupTask_Pg(driver);
 	int 										waitTime  		=  Integer.parseInt(PropertiesFileReader.getProperty("implicitWait"));	
 	static Logger 	myLogger 						= LogManager.getLogger(ConfigureRequestGroupTask_SD.class.getName());
 
 	
 	
-	
+	@Given("Launch the application URL")
+	public void LaunchTheApplicationURL() {
+		driver.manage().timeouts().implicitlyWait(Duration.ofMillis(waitTime));
+		keys.switchFrameByWebElement(rgpage.getIframeHomePage());
+		
+	}
 
 	
 	@Given("Click on the Work Tab")
-	public void dummycode1() {
-		System.out.println("Dummy Code 1");
+	public void Click_On_The_WorkTab() {
 		keys.clickElement(rgpage.getWorkTab());	
 	}
 	
-	@Given("Click on the My WorkBasket Header")
-	public void dummycode2() {
-		System.out.println("Create RG Screen is displayed");
+	@Then("Click on the My WorkBasket Header")
+	public void Click_On_My_Workbasket_Header() {
 		keys.clickElement(rgpage.getMyWorkBasket());	
-	
 	}
 	
+	@Then("Switch to the RG Frame")
+	public void Switch_To_Frame() {
+		keys.switchToDefaultContent();
+		keys.switchFrameByWebElement(crgpage.getRGTabFrame());	
+	}
+	
+	@Then("Click on the First Available RG")
+	public void Click_on_the_First_Available_RG() {
+		keys.clickElement(crgpage.getFirstRGfromWB());	
+	}
+	
+	@Then("Hold For half min")
+	public void Hold_For_Half_min() throws InterruptedException {
+		keys.shortWait();
+	}
 	
 	
 	

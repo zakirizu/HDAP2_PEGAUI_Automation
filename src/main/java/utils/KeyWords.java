@@ -48,18 +48,7 @@ public class KeyWords {
 		
 		try 
 		{
-			myLogger.info("Setting the ZOOM Percentage to: 80%");			
-			shortWait();
-			Robot robot = new Robot();
-			robot.keyPress(KeyEvent.VK_CONTROL);
-			robot.keyPress(KeyEvent.VK_SUBTRACT);	
-			robot.keyRelease(KeyEvent.VK_CONTROL);
-			robot.keyRelease(KeyEvent.VK_SUBTRACT);				
-			robot.keyPress(KeyEvent.VK_CONTROL);
-			robot.keyPress(KeyEvent.VK_SUBTRACT);	
-			robot.keyRelease(KeyEvent.VK_CONTROL);
-			robot.keyRelease(KeyEvent.VK_SUBTRACT);	
-			shortWait();			
+				
 			
 			if(Environment.equalsIgnoreCase("QA"))
 				{
@@ -630,7 +619,7 @@ public class KeyWords {
 	 @ Developer ID		: 163054
 	 @ Can Be Used For	: To Select value in the DropDownList BY VISIBLE TEXT(Text Displyed on UI of the DDL).
 	*/
-	public static void switchToDefaultContent() {		
+	public  void switchToDefaultContent() {		
 		String title=null;
 		title = driver.getTitle();
 		try 

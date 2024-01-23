@@ -14,10 +14,13 @@ public class ConfigureRequestGroupTask_Pg {
 			PageFactory.initElements(driver, this);
 		}
 	
+		@FindBy(xpath="//iframe[@id='PegaGadget0Ifr']")
+		private WebElement iframeHomePage;
+		
 		@FindBy(xpath="//tbody[@id='gridTableBody']//tr[@data-test-id='-R1']//a")
 		private  WebElement firstRGfromWB;
 		
-		@FindBy(xpath="//iframe[@id='PegaGadget1Ifr']")
+		@FindBy(xpath="//iframe[@id='PegaGadget0Ifr']")
 		private  WebElement RGTabFrame;
 		
 		@FindBy(xpath="//div[@class='panelOverFlowClass']//span//button[@title='Add Task']")
@@ -28,8 +31,7 @@ public class ConfigureRequestGroupTask_Pg {
 		
 		@FindBy(xpath="//div[@class='content-item content-field item-1 flex flex-row dataValueWrite']//a[@title='Select  Configure Request Group  ']")
 		private  WebElement configureRequestGroupBtn;
-		
-		
+				
 		
 		public WebDriver getDriver() {
 			return driver;
@@ -53,6 +55,10 @@ public class ConfigureRequestGroupTask_Pg {
 
 		public WebElement getConfigureRequestGroupBtn() {
 			return configureRequestGroupBtn;
+		}
+
+		public WebElement getIframeHomePage() {
+			return iframeHomePage;
 		}
 		
 		
