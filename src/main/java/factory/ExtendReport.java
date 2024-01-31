@@ -25,8 +25,7 @@ public class ExtendReport {
 		extent.setSystemInfo("Application", "ROW");
 		extent.setSystemInfo("Manager Name", "Yedire, Srinivasulu");
 		extent.setSystemInfo("Tester Name", "Zakir Hussain Shaik");
-		extent.setSystemInfo("Environment", Env);
-		
+		extent.setSystemInfo("Environment", Env);		
 		return extent;
 		
 	}
