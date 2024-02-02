@@ -2,8 +2,6 @@
 Feature: Application Login
 
 
-
-
 	##**************Order of Execution*************
 	#Before Hook-> Back Ground->Scenario->After Hook
 	#Before Hook (Specific to that Tag if present)-> Before Hook(Common to all. No Tag defined)->BackGround->SCENARIO-> AfterHook(Common to all)->AfterHook(Specific to that Tag)
@@ -20,8 +18,6 @@ Feature: Application Login
 
 	Background:
 Given 			Clear the Cache
-
-
   #Feature is collection of Scenarios
   ##This example is to write the Plan Gherkin Language
   #This is from Legion
@@ -42,6 +38,7 @@ Given 			Clear the Cache
     Given 		Here we are sending text as "Addition" and "Subratcion"
     Then 		Add 2 and 3
     Then 		Print the values of sum
+    
 
 #****************Scenario Outline********************
   #Parametrizing the variables, In this case we need to pass the variable with syntax: "<variableName>"
@@ -58,6 +55,8 @@ Given 			Clear the Cache
       | Zakir    | Rizu     |
       | Zoya     | Amyrah   |
       | Younus   | Ameena   |
+      
+      
 
   #ScOutline with Regular Expression
   #Regular Expression- By this way we can send anything in the Variable
@@ -77,6 +76,8 @@ Given 			Clear the Cache
       |       16 					|       26 					|
       | Z        					| R        					|
 
+
+
   #test
   #Sending the Data directly on to single step
   @DataAtStepLevel 													@All
@@ -90,15 +91,7 @@ Given 			Clear the Cache
     Then 			Click on the submit button
     
 
-
-    
-    
-    
-    
-    
-    
-    
-    
+   
     
      #**********************RUNNING THE TEST CASES INCLUDING AND EXCLUDING via TEST RUNNER FILE******************   
     #If you want to run only specific test cases , Then we can give the tags like Smoke, Sanity and Regression 
@@ -107,14 +100,3 @@ Given 			Clear the Cache
     # <Or> means this will run the test cases with either of the tags to that test cases
     # <And> meand this will run test cases should have both the test cases for sure
     # <Not> This will skip all the test cases which are having that tag for that test case
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    

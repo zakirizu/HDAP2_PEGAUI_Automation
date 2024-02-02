@@ -62,8 +62,7 @@ public class DoNotDelete {
 	@Given("Here we are sending text as {string} and {string}")
 	public void Here_we_are_perfroming_addiion(String x, String y) {
 		System.out.println("This is the frist Text: "+x);
-		System.out.println("This is the frist Text: "+y);  
-	    
+		System.out.println("This is the frist Text: "+y); 
 	}
 	
 

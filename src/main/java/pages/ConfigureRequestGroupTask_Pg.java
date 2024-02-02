@@ -14,6 +14,10 @@ public class ConfigureRequestGroupTask_Pg {
 			PageFactory.initElements(driver, this);
 		}
 	
+		
+		@FindBy(xpath = "(//*[text()='Request Group Settings'])[2]")
+		private WebElement requestGroupSettingsTab;
+		
 		@FindBy(xpath="//iframe[@id='PegaGadget0Ifr']")
 		private WebElement iframeHomePage;
 		
@@ -35,6 +39,12 @@ public class ConfigureRequestGroupTask_Pg {
 		
 		public WebDriver getDriver() {
 			return driver;
+		}
+		
+		
+		
+		public WebElement getRequestGroupSettingsTab() {
+			return requestGroupSettingsTab;
 		}
 
 		public WebElement getFirstRGfromWB() {

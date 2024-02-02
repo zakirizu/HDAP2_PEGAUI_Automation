@@ -7,6 +7,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import factory.CommonBusinesFuncts;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import pages.ConfigureRequestGroupTask_Pg;
@@ -26,13 +27,13 @@ public class ConfigureRequestGroupTask_SD {
 
 	
 	
+	
 	@Given("Launch the application URL")
 	public void LaunchTheApplicationURL() {
 		driver.manage().timeouts().implicitlyWait(Duration.ofMillis(waitTime));
 		keys.switchFrameByWebElement(rgpage.getIframeHomePage());
 		
 	}
-
 	
 	@Given("Click on the Work Tab")
 	public void Click_On_The_WorkTab() {
@@ -60,7 +61,10 @@ public class ConfigureRequestGroupTask_SD {
 		keys.shortWait();
 	}
 	
-	
+	@And("Click on the Request Group Settings Tab")
+	public void Click_on_the_Request_Group_Settings_Tab() {
+		keys.clickElement(crgpage.getRequestGroupSettingsTab());
+	}
 	
 	
 	

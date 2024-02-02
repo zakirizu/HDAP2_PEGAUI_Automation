@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Jan 19 16:11:09 IST 2024</td>
+<td>Started on:</td><td>Thu Feb 01 16:38:04 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>75 seconds (75022 ms)</td>
+<tr><td>Total time:</td><td>135 seconds (135560 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,17 +67,32 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='testRunner.RunnerTestNG.runScenario()'><b>runScenario</b><br>Test class: testRunner.RunnerTestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Confiiuring the Data values in RG", "Request Group Scenarios"</td>
-<td></td>
-<td>74</td>
+<td title='testRunner.RunnerTestNG.runScenario()'><b>runScenario</b><br>Test class: testRunner.RunnerTestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate whether user is able to add the Special Instrcutions", "Request Group Scenarios"</td>
+<td><div><pre>java.lang.AssertionError: Not Able Click WebElement:Proxy element for: DefaultElementLocator &apos;By.xpath: (//*[text()=&apos;Request Group Settings&apos;])[2]&apos;On Page: Retrieval portal expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertTrue(Assert.java:45)
+	at utils.KeyWords.clickElement(KeyWords.java:296)
+	at stepDefinitionFile.ConfigureRequestGroupTask_SD.Click_on_the_Request_Group_Settings_Tab(ConfigureRequestGroupTask_SD.java:66)
+	at ?.Click on the Request Group Settings Tab(file:///C:/Users/shaik.hussain/git/HDAP2_PEGAUI_Automation/src/main/java/featureFile/ConfigureRequestGroupTask.feature:22)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1769827821", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1769827821'><pre>java.lang.AssertionError: Not Able Click WebElement:Proxy element for: DefaultElementLocator &apos;By.xpath: (//*[text()=&apos;Request Group Settings&apos;])[2]&apos;On Page: Retrieval portal expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertTrue(Assert.java:45)
+	at utils.KeyWords.clickElement(KeyWords.java:296)
+	at stepDefinitionFile.ConfigureRequestGroupTask_SD.Click_on_the_Request_Group_Settings_Tab(ConfigureRequestGroupTask_SD.java:66)
+	at ?.Click on the Request Group Settings Tab(file:///C:/Users/shaik.hussain/git/HDAP2_PEGAUI_Automation/src/main/java/featureFile/ConfigureRequestGroupTask.feature:22)
+</pre></div></td>
+<td>135</td>
 <td>testRunner.RunnerTestNG@7d4f9aae</td></tr>
 </table><p>
 </body>
