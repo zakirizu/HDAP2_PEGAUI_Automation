@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-02-01T16:38:04 IST" name="Default suite" finished-at="2024-02-01T16:40:20 IST" duration-ms="135560">
+  <suite started-at="2024-02-08T13:30:36 IST" name="Default suite" finished-at="2024-02-08T13:32:00 IST" duration-ms="84180">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.RunnerTestNG@7d4f9aae]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2024-02-01T16:38:04 IST" name="Default test" finished-at="2024-02-01T16:40:20 IST" duration-ms="135560">
+    <test started-at="2024-02-08T13:30:36 IST" name="Default test" finished-at="2024-02-08T13:32:00 IST" duration-ms="84180">
       <class name="testRunner.RunnerTestNG">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:testRunner.RunnerTestNG@7d4f9aae]" started-at="2024-02-01T16:38:04 IST" name="setUpClass" finished-at="2024-02-01T16:38:05 IST" duration-ms="457" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:testRunner.RunnerTestNG@7d4f9aae]" started-at="2024-02-08T13:30:36 IST" name="setUpClass" finished-at="2024-02-08T13:30:37 IST" duration-ms="830" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@50b46e24]]>
+                <![CDATA[org.testng.TestRunner@1e12a5a6]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.RunnerTestNG@7d4f9aae]" started-at="2024-02-01T16:38:05 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-02-01T16:40:20 IST" duration-ms="135028" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.RunnerTestNG@7d4f9aae]" started-at="2024-02-08T13:30:37 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-02-08T13:32:00 IST" duration-ms="83195" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Validate whether user is able to add the Special Instrcutions"]]>
+                <![CDATA["Validate whether user is able to Open a RG"]]>
               </value>
             </param>
             <param index="1">
@@ -34,25 +34,10 @@
               </value>
             </param>
           </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Not Able Click WebElement:Proxy element for: DefaultElementLocator 'By.xpath: (//*[text()='Request Group Settings'])[2]'On Page: Retrieval portal expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Not Able Click WebElement:Proxy element for: DefaultElementLocator 'By.xpath: (//*[text()='Request Group Settings'])[2]'On Page: Retrieval portal expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:99)
-at org.testng.Assert.failNotEquals(Assert.java:1037)
-at org.testng.Assert.assertTrue(Assert.java:45)
-at utils.KeyWords.clickElement(KeyWords.java:296)
-at stepDefinitionFile.ConfigureRequestGroupTask_SD.Click_on_the_Request_Group_Settings_Tab(ConfigureRequestGroupTask_SD.java:66)
-at ✽.Click on the Request Group Settings Tab(file:///C:/Users/shaik.hussain/git/HDAP2_PEGAUI_Automation/src/main/java/featureFile/ConfigureRequestGroupTask.feature:22)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:testRunner.RunnerTestNG@7d4f9aae]" started-at="2024-02-01T16:40:20 IST" name="tearDownClass" finished-at="2024-02-01T16:40:20 IST" duration-ms="49" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:testRunner.RunnerTestNG@7d4f9aae]" started-at="2024-02-08T13:32:00 IST" name="tearDownClass" finished-at="2024-02-08T13:32:00 IST" duration-ms="110" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

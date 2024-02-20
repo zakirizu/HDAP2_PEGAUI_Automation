@@ -35,8 +35,13 @@ public class ConfigureRequestGroupTask_SD {
 		
 	}
 	
+	@Then("Click ont he MyWorkbasekt")
+	public void Click_On_the_My_Workbasekt() {
+		keys.clickElement(null);
+	}
+	
 	@Given("Click on the Work Tab")
-	public void Click_On_The_WorkTab() {
+	public void Click_on_the_Work_Tab() {
 		keys.clickElement(rgpage.getWorkTab());	
 	}
 	
