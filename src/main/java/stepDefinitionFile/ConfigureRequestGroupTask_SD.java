@@ -72,6 +72,17 @@ public class ConfigureRequestGroupTask_SD {
 	}
 	
 	
+	@And("Click on the Add Task Button")
+	public void Click_on_the_Add_Task_Button() {
+	
+	}
+	
+	
+	@And("click on UploadMR Button")
+	public void click_on_UploadMR_Button() {
+		keys.clickElement(crgpage.getUploadMRButton());
+		
+	}
 	
 
 }

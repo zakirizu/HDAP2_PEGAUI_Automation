@@ -14,6 +14,27 @@ public class ConfigureRequestGroupTask_Pg {
 			PageFactory.initElements(driver, this);
 		}
 	
+		/*---SYNTAX TO ADD THE WEBELEMENT------------
+		 * 
+			@FindBy(xpath="//tagName")
+		private  WebElement ElementName;		
+		public WebElement getelementName() {
+			return ElementName;
+		}
+		
+		 */
+		
+		
+		@FindBy(xpath="//button[text()='Upload MR']")
+	private  WebElement UploadMRButton;		
+	public WebElement getUploadMRButton() {
+		return UploadMRButton;
+	}
+		
+		
+		
+		
+		
 		
 		@FindBy(xpath = "(//*[text()='Request Group Settings'])[2]")
 		private WebElement requestGroupSettingsTab;
@@ -35,7 +56,15 @@ public class ConfigureRequestGroupTask_Pg {
 		
 		@FindBy(xpath="//div[@class='content-item content-field item-1 flex flex-row dataValueWrite']//a[@title='Select  Configure Request Group  ']")
 		private  WebElement configureRequestGroupBtn;
-				
+		
+		
+		@FindBy(xpath="(//button[@title='Close'])[2]")
+		private  WebElement closeButton;
+		
+
+
+
+			
 		
 		public WebDriver getDriver() {
 			return driver;
@@ -70,6 +99,7 @@ public class ConfigureRequestGroupTask_Pg {
 		public WebElement getIframeHomePage() {
 			return iframeHomePage;
 		}
+
 		
 		
 		
