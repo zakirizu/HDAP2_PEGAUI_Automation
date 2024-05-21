@@ -18,15 +18,14 @@ public class HooksCucumbers {
 		Hookdriver = BaseClass.initializeDriver();	
 		CommonBusinesFuncts cb = new CommonBusinesFuncts(Hookdriver);
 		KeyWords keyWord 			= new KeyWords(Hookdriver);
-		keyWord.loginApplicaiton();	
 		
+		keyWord.loginApplicaiton();		
 		}
 	
 	@After
 	public void afterHookCode() throws InterruptedException {
 		Thread.sleep(2000);
-		Hookdriver.quit();
-		
+		Hookdriver.quit();	
 	}
 	
 	

@@ -1,5 +1,7 @@
 package utils;
 
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
 import java.time.Duration;
 import java.util.Iterator;
 import java.util.Set;
@@ -46,6 +48,8 @@ public class KeyWords {
 		
 		try 
 		{
+				
+			
 			if(Environment.equalsIgnoreCase("QA"))
 				{
 				driver.get(utils.PropertiesFileReader.getProperty("QA_URL"));			
@@ -72,6 +76,8 @@ public class KeyWords {
 				clickElement(getLogin_Button());
 							 	
 				}	
+			
+			
 		}
 		
 		catch(Exception e)
@@ -260,6 +266,7 @@ public class KeyWords {
 		String title=driver.getTitle();
 		try 
 		{
+		System.out.println("Currently On Page: "+title);	
 		
 		if(!ele.isDisplayed())
 		{
@@ -612,7 +619,7 @@ public class KeyWords {
 	 @ Developer ID		: 163054
 	 @ Can Be Used For	: To Select value in the DropDownList BY VISIBLE TEXT(Text Displyed on UI of the DDL).
 	*/
-	public static void switchToDefaultContent() {		
+	public  void switchToDefaultContent() {		
 		String title=null;
 		title = driver.getTitle();
 		try 
@@ -662,7 +669,7 @@ public class KeyWords {
 	 @ Developer ID		: 163054
 	 @ Can Be Used For	: To Switch Frame By Using WebElement of the Frame
 	*/
-	public static void switchFrameByWebElement(WebElement ele) {
+	public void switchFrameByWebElement(WebElement ele) {
 		String title=null;
 		String frameTitle = null;
 		title = driver.getTitle();
