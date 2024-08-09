@@ -52,9 +52,9 @@ Given 			Clear the Cache
 
     Examples: 
       | userName | passWord |
-      | Zakir    | Rizu     |
-      | Zoya     | Amyrah   |
-      | Younus   | Ameena   |
+      | Zakir    | Rizu     					|
+      | Zoya     | Amyrah   			|
+      | Younus   | Ameena   	|
       
       
 

@@ -17,22 +17,19 @@ import utils.PropertiesFileReader;
 
 public class ConfigureRequestGroupTask_SD {
 	
-	public static WebDriver     driver 			=   HooksCucumbers.Hookdriver;	
-	KeyWords        			 		    keys			 	=   new KeyWords(driver);
-	CommonBusinesFuncts      cbus				=   new CommonBusinesFuncts(driver);
-	RequestGroup_Pg 			   rgpage 			=   new RequestGroup_Pg(driver);
+	public static WebDriver     driver 				=   HooksCucumbers.Hookdriver;	
+	KeyWords        			 		    keys			 		=   new KeyWords(driver);
+	CommonBusinesFuncts      cbus					=   new CommonBusinesFuncts(driver);
+	RequestGroup_Pg 			   rgpage 				=   new RequestGroup_Pg(driver);
 	ConfigureRequestGroupTask_Pg crgpage = new ConfigureRequestGroupTask_Pg(driver);
-	int 										waitTime  		=  Integer.parseInt(PropertiesFileReader.getProperty("implicitWait"));	
-	static Logger 	myLogger 						= LogManager.getLogger(ConfigureRequestGroupTask_SD.class.getName());
+	int 										waitTime  			=  Integer.parseInt(PropertiesFileReader.getProperty("implicitWait"));	
+	static Logger 	myLogger 							= LogManager.getLogger(ConfigureRequestGroupTask_SD.class.getName());
 
-	
-	
-	
+
 	@Given("Launch the application URL")
 	public void LaunchTheApplicationURL() {
 		driver.manage().timeouts().implicitlyWait(Duration.ofMillis(waitTime));
 		keys.switchFrameByWebElement(rgpage.getIframeHomePage());
-		
 	}
 	
 	@Then("Click ont he MyWorkbasekt")

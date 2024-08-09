@@ -56,6 +56,7 @@ public class ConfigureRequestGroupTask_Pg {
 		
 		@FindBy(xpath="//div[@class='content-item content-field item-1 flex flex-row dataValueWrite']//a[@title='Select  Configure Request Group  ']")
 		private  WebElement configureRequestGroupBtn;
+
 		
 		
 		@FindBy(xpath="(//button[@title='Close'])[2]")
@@ -64,8 +65,6 @@ public class ConfigureRequestGroupTask_Pg {
 
 
 
-			
-		
 		public WebDriver getDriver() {
 			return driver;
 		}
@@ -100,23 +99,6 @@ public class ConfigureRequestGroupTask_Pg {
 			return iframeHomePage;
 		}
 
-		
-		
-		
-		
-	
-	
-		
-		
-		
-		
-		
-		
-		
-	
-	
-	
-	
-	
+
 
 }

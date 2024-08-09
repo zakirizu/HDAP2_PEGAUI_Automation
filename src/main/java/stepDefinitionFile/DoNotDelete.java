@@ -46,7 +46,7 @@ public class DoNotDelete {
 	    // Write code here that turns the phrase above into concrete actions
 	   
 	}
-	@Then("I validate the outcomes")
+	@Then("I validate the outcomes zakirz")
 	public void i_validate_the_outcomes() {
 	    // Write code here that turns the phrase above into concrete actions
 	    

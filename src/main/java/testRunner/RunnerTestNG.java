@@ -15,3 +15,4 @@ plugin				= 	{"pretty","html:cucumberReports/cucumber.html","json:cucumberReport
 )
 public class RunnerTestNG extends AbstractTestNGCucumberTests {
 }
+

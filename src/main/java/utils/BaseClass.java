@@ -30,8 +30,6 @@ public class BaseClass {
 		zoomPercent 		= PropertiesFileReader.getProperty("zoom");
 		try 
 		{
-			
-			
 			mylogger.info("Setting the ZOOM Percentage to: 80%");			
 			Thread.sleep(5000);
 			Robot robot = new Robot();
