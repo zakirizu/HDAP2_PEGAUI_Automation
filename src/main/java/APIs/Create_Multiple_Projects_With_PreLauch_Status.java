@@ -1,4 +1,4 @@
-package HDAP_APIs;
+package APIs;
 import static io.restassured.RestAssured.given;
 
 import org.testng.annotations.DataProvider;
@@ -33,7 +33,7 @@ public class Create_Multiple_Projects_With_PreLauch_Status {
 		//	JsonPath js =
 					given()//.log().all()
 					.header("Content-Type","application/json")
-					.body(HDAP_PayLoads.ChaseRequest_PayLoads.payLoad_With_Single_Matching_RG(intendedUse, accountID, subAccountID, cotivitClaimNumber))
+					.body(APIs_PayLoads.ChaseRequest_PayLoads.payLoad_With_Single_Matching_RG(intendedUse, accountID, subAccountID, cotivitClaimNumber))
 					
 					.when()
 					.post(resource)
