@@ -6,11 +6,11 @@ import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions
 (
-features			=	"src/main/java/featureFile",
+features				=	"src/main/java/featureFile",
 glue					=	"stepDefinitionFile" ,
 monochrome	=	true,
-dryRun			= 	false,
-tags					=	"@All",
+dryRun				= 	false,
+tags						=	"@CreateRG",
 plugin				= 	{"pretty","html:cucumberReports/cucumber.html","json:cucumberReports/cucumber.json"}
 )
 public class RunnerTestNG extends AbstractTestNGCucumberTests {

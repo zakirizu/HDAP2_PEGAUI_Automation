@@ -1,15 +1,15 @@
 package HDAP_APIs;
 import static io.restassured.RestAssured.given;
 import org.testng.annotations.Test;
-import factory.PropertiesData;
 import io.restassured.RestAssured;
+import utils.PropertiesFileReader;
 
 public class Create_PreLaunch_Requests {
-	static String endPoint 			= PropertiesData.getAPIProperty("chaseRequest_url");
-	static String resource			 	= PropertiesData.getAPIProperty("chaseRequest_resource");
-	static String intendedUse		= PropertiesData.getAPIProperty("intendedUse");
-	static String accountID			= PropertiesData.getAPIProperty("AccountID");
-	static String subAccountID		= PropertiesData.getAPIProperty("SubAccountID");
+	static String endPoint 			= PropertiesFileReader.getAPIProperty("chaseRequest_url");
+	static String resource			 	= PropertiesFileReader.getAPIProperty("chaseRequest_resource");
+	static String intendedUse		= PropertiesFileReader.getAPIProperty("intendedUse");
+	static String accountID			= PropertiesFileReader.getAPIProperty("AccountID");
+	static String subAccountID		= PropertiesFileReader.getAPIProperty("SubAccountID");
 	
 	@Test(invocationCount = 2)
 	public  static void ChaseRequest_With_Single_Matching_RG() throws InterruptedException

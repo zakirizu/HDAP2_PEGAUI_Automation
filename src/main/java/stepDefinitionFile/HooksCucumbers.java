@@ -17,8 +17,7 @@ public class HooksCucumbers {
 	public void beforeHookCode() throws InterruptedException {
 		Hookdriver = BaseClass.initializeDriver();	
 		CommonBusinesFuncts cb = new CommonBusinesFuncts(Hookdriver);
-		KeyWords keyWord 			= new KeyWords(Hookdriver);
-		
+		KeyWords keyWord 			= new KeyWords(Hookdriver);		
 		keyWord.loginApplicaiton();		
 		}
 	

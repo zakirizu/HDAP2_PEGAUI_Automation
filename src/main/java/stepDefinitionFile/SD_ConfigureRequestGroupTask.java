@@ -10,20 +10,20 @@ import factory.CommonBusinesFuncts;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
-import pages.ConfigureRequestGroupTask_Pg;
-import pages.RequestGroup_Pg;
+import pages.PG_ConfigureRequestGroupTask;
+import pages.PG_RequestGroup;
 import utils.KeyWords;
 import utils.PropertiesFileReader;
 
-public class ConfigureRequestGroupTask_SD {
+public class SD_ConfigureRequestGroupTask {
 	
 	public static WebDriver     driver 			=   HooksCucumbers.Hookdriver;	
 	KeyWords        			 		    keys			 	=   new KeyWords(driver);
 	CommonBusinesFuncts      cbus				=   new CommonBusinesFuncts(driver);
-	RequestGroup_Pg 			   rgpage 			=   new RequestGroup_Pg(driver);
-	ConfigureRequestGroupTask_Pg crgpage = new ConfigureRequestGroupTask_Pg(driver);
-	int 										waitTime  		=  Integer.parseInt(PropertiesFileReader.getProperty("implicitWait"));	
-	static Logger 	myLogger 						= LogManager.getLogger(ConfigureRequestGroupTask_SD.class.getName());
+	PG_RequestGroup 			   rgpage 			=   new PG_RequestGroup(driver);
+	PG_ConfigureRequestGroupTask crgpage = new PG_ConfigureRequestGroupTask(driver);
+	int 										waitTime  		=  Integer.parseInt(PropertiesFileReader.getUIProperty("implicitWait"));	
+	static Logger 	myLogger 						= LogManager.getLogger(SD_ConfigureRequestGroupTask.class.getName());
 
 	
 	
@@ -31,7 +31,7 @@ public class ConfigureRequestGroupTask_SD {
 	@Given("Launch the application URL")
 	public void LaunchTheApplicationURL() {
 		driver.manage().timeouts().implicitlyWait(Duration.ofMillis(waitTime));
-		keys.switchFrameByWebElement(rgpage.getIframeHomePage());
+	
 	}
 	
 	

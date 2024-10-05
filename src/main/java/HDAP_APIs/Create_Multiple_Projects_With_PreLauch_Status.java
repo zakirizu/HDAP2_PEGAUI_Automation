@@ -3,21 +3,21 @@ import static io.restassured.RestAssured.given;
 
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import factory.PropertiesData;
 import io.restassured.RestAssured;
+import utils.PropertiesFileReader;
 
 public class Create_Multiple_Projects_With_PreLauch_Status {
 
-	static String intendedUse		= PropertiesData.getAPIProperty("intendedUse");
-	static String accountID			= PropertiesData.getAPIProperty("AccountID");
+	static String intendedUse		= PropertiesFileReader.getAPIProperty("intendedUse");
+	static String accountID			= PropertiesFileReader.getAPIProperty("AccountID");
 	
 	
 	@Test(dataProvider = "projectNames")
 	public  static void ChaseRequest_With_Single_Matching_RG(String accID, String intdUse) throws InterruptedException
 	{
-			String endPoint 					= PropertiesData.getAPIProperty("chaseRequest_url");
-			String resource			 		= PropertiesData.getAPIProperty("chaseRequest_resource");
-			String subAccountID		= PropertiesData.getAPIProperty("SubAccountID");
+			String endPoint 				= PropertiesFileReader.getAPIProperty("chaseRequest_url");
+			String resource			 		= PropertiesFileReader.getAPIProperty("chaseRequest_resource");
+			String subAccountID		= PropertiesFileReader.getAPIProperty("SubAccountID");
 			String intendedUse			= intdUse;
 			String accountID				= accID;		
 		    String cotivitClaimNumber = factory.ReUsableMethods.getUniqueRandomInteger();

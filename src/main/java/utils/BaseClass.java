@@ -3,7 +3,6 @@ import java.awt.Robot;
 import java.awt.event.KeyEvent;
 import java.io.File;
 import java.io.IOException;
-import java.time.Duration;
 import org.apache.commons.io.FileUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -15,9 +14,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import factory.Constants;
 
-
 public class BaseClass {
-
 	public static WebDriver driver;
 	public static Logger mylogger 			= LogManager.getLogger(BaseClass.class.getName());	
 	public static String browserType 		= null;
@@ -26,26 +23,10 @@ public class BaseClass {
 	
 	
 	public static WebDriver initializeDriver() {
-		browserType 		= PropertiesFileReader.getProperty("browserType");
-		zoomPercent 		= PropertiesFileReader.getProperty("zoom");
+		browserType 		= PropertiesFileReader.getUIProperty("browserType");
+		zoomPercent 		= PropertiesFileReader.getUIProperty("zoom");
 		try 
 		{
-			
-			
-			mylogger.info("Setting the ZOOM Percentage to: 80%");			
-			Thread.sleep(5000);
-			Robot robot = new Robot();
-			robot.keyPress(KeyEvent.VK_CONTROL);
-			robot.keyPress(KeyEvent.VK_SUBTRACT);	
-			robot.keyRelease(KeyEvent.VK_CONTROL);
-			robot.keyRelease(KeyEvent.VK_SUBTRACT);				
-			robot.keyPress(KeyEvent.VK_CONTROL);
-			robot.keyPress(KeyEvent.VK_SUBTRACT);	
-			robot.keyRelease(KeyEvent.VK_CONTROL);
-			robot.keyRelease(KeyEvent.VK_SUBTRACT);	
-		
-			
-			
 			if(browserType.equalsIgnoreCase("chrome"))
 				{
 					mylogger.info("Intializing the Browser type: "+browserType);
@@ -63,6 +44,18 @@ public class BaseClass {
 				}
 			
 			driver.manage().window().maximize();
+			mylogger.info("Setting the ZOOM Percentage to: 80%");			
+			Thread.sleep(6000);
+			Robot robot = new Robot();
+			robot.keyPress(KeyEvent.VK_CONTROL);
+			robot.keyPress(KeyEvent.VK_SUBTRACT);	
+			robot.keyRelease(KeyEvent.VK_CONTROL);
+			robot.keyRelease(KeyEvent.VK_SUBTRACT);				
+			robot.keyPress(KeyEvent.VK_CONTROL);
+			robot.keyPress(KeyEvent.VK_SUBTRACT);	
+			robot.keyRelease(KeyEvent.VK_CONTROL);
+			robot.keyRelease(KeyEvent.VK_SUBTRACT);	
+		
 				
 		}
 		

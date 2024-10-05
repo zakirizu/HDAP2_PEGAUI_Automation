@@ -1,48 +1,72 @@
 package utils;
 
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.Properties;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 public class PropertiesFileReader {
-	static Logger mylogger = LogManager.getLogger(PropertiesFileReader.class.getName());
-	public static FileInputStream fis;
+	static FileInputStream fis;
 	static String locationPath;
-	static Properties prop;
-	public static String value=null;
+	static String value=null;
+	public static void main(String[] args) throws IOException {		
+		String test = getUIProperty("highLightElement");
+		System.out.println(test);
+	}
+	public static String getAPIProperty(String key) {
+		try {
+			
+			locationPath = System.getProperty("user.dir")+"\\Resources\\propertyFile_API.properties";
+			FileInputStream fis = new FileInputStream(locationPath);
+			Properties prop = new Properties();
+			prop.load(fis);
+			 value = prop.getProperty(key);
+			}
+			catch(FileNotFoundException fnfe)
+			{
+				fnfe.printStackTrace();
+				System.out.println("user is not able to find the file at location: "+locationPath);
+			}
+			catch(IOException ioe)
+			{
+				ioe.printStackTrace();
+			}
+			finally {
+				// fis.close();
+			}
+		return value;
+		
+	}
 
 	
-	
-	public static String getProperty(String key)
-	{
-		
-		try 
-		{
-			locationPath 	= System.getProperty("user.dir")+"\\Resources\\propertyFile.properties";
-			fis 			= new FileInputStream(locationPath);
-			prop 			= new Properties();
-			prop.load(fis);
-			value 			= prop.getProperty(key);
-			mylogger.info("Successfully Read the Data from Property File. KEY: "+key+ ", VALUE: "+value);
+	public static String getUIProperty(String key) {
+		try {
 			
-		}
-		catch(Exception e)
-		{
-			mylogger.info("Exception Occured while Reading the data from the Properties File");
-			mylogger.info("Key not Presnent in the Properties File: "+key);
-			e.printStackTrace();
-		}
-		
+			locationPath = System.getProperty("user.dir")+"\\Resources\\propertyFile_UI.properties";
+			FileInputStream fis = new FileInputStream(locationPath);
+			Properties prop = new Properties();
+			prop.load(fis);
+			 value = prop.getProperty(key);
+			}
+			catch(FileNotFoundException fnfe)
+			{
+				fnfe.printStackTrace();
+				System.out.println("user is not able to find the file at location: "+locationPath);
+			}
+			catch(IOException ioe)
+			{
+				ioe.printStackTrace();
+			}
+			finally {
+				// fis.close();
+			}
 		return value;
-	
-		
-		
 		
 	}
 	
 	
 	
 	
-
 }

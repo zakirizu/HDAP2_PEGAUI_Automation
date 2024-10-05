@@ -28,10 +28,10 @@ import factory.CommonBusinesFuncts;
 public class KeyWords {
 	static JavascriptExecutor 		js;
 	public static WebDriver 		driver;	
-	static String highLigtElement 		= 	PropertiesFileReader.getProperty("highLightElement");
+	static String highLigtElement 		= 	PropertiesFileReader.getUIProperty("highLightElement");
 	public static Logger myLogger 	=	LogManager.getLogger(KeyWords.class.getName());		
-	String Environment 						= PropertiesFileReader.getProperty("Env");
-	String browserType						= PropertiesFileReader.getProperty("browserType");
+	String Environment 						= PropertiesFileReader.getUIProperty("Env");
+	String browserType						= PropertiesFileReader.getUIProperty("browserType");
 	
 	@SuppressWarnings("static-access")
 	public  KeyWords (WebDriver driver)
@@ -48,33 +48,30 @@ public class KeyWords {
 		
 		try 
 		{
-				
-			
 			if(Environment.equalsIgnoreCase("QA"))
 				{
-				driver.get(utils.PropertiesFileReader.getProperty("QA_URL"));			
+				driver.get(utils.PropertiesFileReader.getUIProperty("QA_URL"));			
 				shortWait();
-				sendKeys(getUserName_txtBox(), PropertiesFileReader.getProperty("QA_UserID"));
-				sendKeys(passWord_txtBox, PropertiesFileReader.getProperty("QA_Pwd"));
+				sendKeys(getUserName_txtBox(), PropertiesFileReader.getUIProperty("QA_UserID"));
+				sendKeys(passWord_txtBox, PropertiesFileReader.getUIProperty("QA_Pwd"));
 				shortWait();
 				clickElement(getLogin_Button());
 					
 				}
 			else if(Environment.equalsIgnoreCase("UAT"))
 				{
-				driver.get(utils.PropertiesFileReader.getProperty("UAT_URL"));		
-				sendKeys(getUserName_txtBox(), PropertiesFileReader.getProperty("UAT_UserID"));
-				sendKeys(passWord_txtBox, PropertiesFileReader.getProperty("UAT_Pwd"));
+				driver.get(utils.PropertiesFileReader.getUIProperty("UAT_URL"));		
+				sendKeys(getUserName_txtBox(), PropertiesFileReader.getUIProperty("UAT_UserID"));
+				sendKeys(passWord_txtBox, PropertiesFileReader.getUIProperty("UAT_Pwd"));
 				clickElement(getLogin_Button());
 					
 				}
 			else if(Environment.equalsIgnoreCase("PROD"))
 				{
-				driver.get(utils.PropertiesFileReader.getProperty("PROD_URL"));		
-				sendKeys(getUserName_txtBox(), PropertiesFileReader.getProperty("PROD_UserID"));
-				sendKeys(passWord_txtBox, PropertiesFileReader.getProperty("PROD_Pwd"));
-				clickElement(getLogin_Button());
-							 	
+				driver.get(utils.PropertiesFileReader.getUIProperty("PROD_URL"));		
+				sendKeys(getUserName_txtBox(), PropertiesFileReader.getUIProperty("PROD_UserID"));
+				sendKeys(passWord_txtBox, PropertiesFileReader.getUIProperty("PROD_Pwd"));
+				clickElement(getLogin_Button());							 	
 				}	
 			
 			
@@ -452,7 +449,7 @@ public class KeyWords {
 			String 	title		=driver.getTitle();		
 		try 
 		{
-			String 	secString	= utils.PropertiesFileReader.getProperty("explicitWait");
+			String 	secString	= utils.PropertiesFileReader.getUIProperty("explicitWait");
 			int 	sec 		= Integer.parseInt(secString);
 			WebDriverWait wait 	= new WebDriverWait(driver, Duration.ofSeconds(sec));
 			wait.until(ExpectedConditions.visibilityOf(ele));
@@ -495,7 +492,7 @@ public class KeyWords {
 			String 	title		=driver.getTitle();		
 		try 
 		{
-			String 	secString	= utils.PropertiesFileReader.getProperty("explicitWait");
+			String 	secString	= utils.PropertiesFileReader.getUIProperty("explicitWait");
 			int 	sec 		= Integer.parseInt(secString);
 			WebDriverWait wait 	= new WebDriverWait(driver, Duration.ofSeconds(sec));
 			wait.until(ExpectedConditions.invisibilityOf(ele));
@@ -729,7 +726,7 @@ public class KeyWords {
 	*/
 		
 	public  void shortWait() throws InterruptedException {
-		String x = utils.PropertiesFileReader.getProperty("shortWait");
+		String x = utils.PropertiesFileReader.getUIProperty("shortWait");
 		int i = Integer.parseInt(x);
 		myLogger.info("Short Wait Start---. Waiting for Seconds: "+i);	
 		Thread.sleep(i);
@@ -746,7 +743,7 @@ public class KeyWords {
 	 @ Can Be Configured: ROW_MDM_Automation\Resources\propertyFile.properties (Property: mediumWait)
 	*/	
 	public static  void mediumWait() throws InterruptedException {
-		String x = utils.PropertiesFileReader.getProperty("mediumWait");
+		String x = utils.PropertiesFileReader.getUIProperty("mediumWait");
 		int i = Integer.parseInt(x);
 		myLogger.info("Medium Wait Start---. Waiting for Seconds: "+i);	
 		Thread.sleep(i);
@@ -763,7 +760,7 @@ public class KeyWords {
 	 @ Can Be Configured: ROW_MDM_Automation\Resources\propertyFile.properties (Property: longWait)
 	*/
 	public static void longWait() throws InterruptedException {
-		String x = utils.PropertiesFileReader.getProperty("longWait");
+		String x = utils.PropertiesFileReader.getUIProperty("longWait");
 		int i = Integer.parseInt(x);
 		myLogger.info("- Long Wait Start---.Waiting for Seconds: "+i);	
 		Thread.sleep(i);
@@ -780,7 +777,7 @@ public class KeyWords {
 	 @ Can Be Configured: ROW_MDM_Automation\Resources\propertyFile.properties (Property: explicitWait)
 	*/
 	public static void explicitWait() throws InterruptedException {
-		String x = utils.PropertiesFileReader.getProperty("longWait");
+		String x = utils.PropertiesFileReader.getUIProperty("longWait");
 		int i = Integer.parseInt(x);
 		myLogger.info("Long Wait Start---.Waiting for Seconds: "+i);	
 		Thread.sleep(i);
