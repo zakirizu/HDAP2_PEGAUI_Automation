@@ -1,8 +1,6 @@
 package stepDefinitionFile;
 
 import org.openqa.selenium.WebDriver;
-
-import factory.CommonBusinesFuncts;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import utils.BaseClass;
@@ -16,7 +14,7 @@ public class HooksCucumbers {
 	@Before
 	public void beforeHookCode() throws InterruptedException {
 		Hookdriver = BaseClass.initializeDriver();	
-		CommonBusinesFuncts cb = new CommonBusinesFuncts(Hookdriver);
+	//	SD_Common_Business_Functions cb = new SD_Common_Business_Functions(Hookdriver);
 		KeyWords keyWord 			= new KeyWords(Hookdriver);		
 		keyWord.loginApplicaiton();		
 		}

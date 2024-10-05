@@ -1,12 +1,12 @@
 Feature: Request Group Scenarios
 
 Background:
-Given 	Launch the application URL
+#if needed include the code here
 
 @ZR  @Sanity @regression
  Scenario:  Validate whether user is able to Open a RG
 Given    Search for the RG ID "RG-1994"
-Then     Swith to the Frame
+Then 		Switch to the RG Frame
 
 
 

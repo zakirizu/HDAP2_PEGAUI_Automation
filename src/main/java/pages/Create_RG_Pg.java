@@ -5,10 +5,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class PG_Create_RG {
+public class Create_RG_Pg {
 	//Template Start	
 		public  WebDriver driver;		
-		public PG_Create_RG(WebDriver driver)
+		public Create_RG_Pg(WebDriver driver)
 		{
 			this.driver = driver;
 			PageFactory.initElements(driver, this);

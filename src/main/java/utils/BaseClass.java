@@ -3,6 +3,8 @@ import java.awt.Robot;
 import java.awt.event.KeyEvent;
 import java.io.File;
 import java.io.IOException;
+import java.time.Duration;
+
 import org.apache.commons.io.FileUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -19,12 +21,14 @@ public class BaseClass {
 	public static Logger mylogger 			= LogManager.getLogger(BaseClass.class.getName());	
 	public static String browserType 		= null;
 	public static String zoomPercent 		= null;
+	
 	static String scrReports 						= Constants.SCREENSHOT;
 	
 	
 	public static WebDriver initializeDriver() {
 		browserType 		= PropertiesFileReader.getUIProperty("browserType");
 		zoomPercent 		= PropertiesFileReader.getUIProperty("zoom");
+		int waitTime  			=  Integer.parseInt(PropertiesFileReader.getUIProperty("implicitWait"));	
 		try 
 		{
 			if(browserType.equalsIgnoreCase("chrome"))
@@ -44,19 +48,8 @@ public class BaseClass {
 				}
 			
 			driver.manage().window().maximize();
-			mylogger.info("Setting the ZOOM Percentage to: 80%");			
-			Thread.sleep(6000);
-			Robot robot = new Robot();
-			robot.keyPress(KeyEvent.VK_CONTROL);
-			robot.keyPress(KeyEvent.VK_SUBTRACT);	
-			robot.keyRelease(KeyEvent.VK_CONTROL);
-			robot.keyRelease(KeyEvent.VK_SUBTRACT);				
-			robot.keyPress(KeyEvent.VK_CONTROL);
-			robot.keyPress(KeyEvent.VK_SUBTRACT);	
-			robot.keyRelease(KeyEvent.VK_CONTROL);
-			robot.keyRelease(KeyEvent.VK_SUBTRACT);	
-		
-				
+			driver.manage().timeouts().implicitlyWait(Duration.ofMillis(waitTime));
+	
 		}
 		
 		catch(Exception e)

@@ -23,9 +23,9 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
-import factory.CommonBusinesFuncts;
 
 public class KeyWords {
+	
 	static JavascriptExecutor 		js;
 	public static WebDriver 		driver;	
 	static String highLigtElement 		= 	PropertiesFileReader.getUIProperty("highLightElement");
@@ -74,6 +74,17 @@ public class KeyWords {
 				clickElement(getLogin_Button());							 	
 				}	
 			
+			myLogger.info("Setting the ZOOM Percentage to: 80%");			
+			Thread.sleep(6000);
+			Robot robot = new Robot();
+			robot.keyPress(KeyEvent.VK_CONTROL);
+			robot.keyPress(KeyEvent.VK_SUBTRACT);	
+			robot.keyRelease(KeyEvent.VK_CONTROL);
+			robot.keyRelease(KeyEvent.VK_SUBTRACT);				
+			robot.keyPress(KeyEvent.VK_CONTROL);
+			robot.keyPress(KeyEvent.VK_SUBTRACT);	
+			robot.keyRelease(KeyEvent.VK_CONTROL);
+			robot.keyRelease(KeyEvent.VK_SUBTRACT);	
 			
 		}
 		
@@ -131,7 +142,7 @@ public class KeyWords {
 		try 
 		{
 		title = driver.getTitle();	
-		
+		System.out.print("****************Currently On Page---------------->: "+title);	
 		if(highLigtElement.equalsIgnoreCase("yes"))
 		{
 			myLogger.info("Entering text:"+value+". In textbox WebElement: "+ele +" On Page: "+title);				
@@ -172,7 +183,7 @@ public class KeyWords {
 		try 
 		{
 		title = driver.getTitle();	
-		
+		System.out.print("****************Currently On Page---------------->: "+title);	
 		if(highLigtElement.equalsIgnoreCase("yes"))
 		{
 			myLogger.info("Entering text:"+value+". In textbox WebElement: "+ele +" On Page: "+title);				
@@ -214,10 +225,11 @@ public class KeyWords {
 
 	public static String getTextOfWebElement(WebElement ele) {
 		String title=driver.getTitle();
+		System.out.print("****************Currently On Page---------------->: "+title);	
 		String text =null;
 		try 
 		{
-		
+			
 		if(!ele.isDisplayed())
 		{
 			myLogger.info("Not able to find Element :"+ele +". Refreshing the page");
@@ -263,7 +275,7 @@ public class KeyWords {
 		String title=driver.getTitle();
 		try 
 		{
-		System.out.println("Currently On Page: "+title);	
+		System.out.print("****************Currently On Page---------------->: "+title);		
 		
 		if(!ele.isDisplayed())
 		{

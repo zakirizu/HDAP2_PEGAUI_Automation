@@ -1,38 +1,51 @@
 package stepDefinitionFile;
-import java.awt.AWTException;
-import java.awt.Robot;
-import java.awt.event.KeyEvent;
-import java.time.Duration;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
-import factory.CommonBusinesFuncts;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
-import pages.PG_ConfigureRequestGroupTask;
-import pages.PG_RequestGroup;
+import pages.Common_Business_Functions_Pg;
+import pages.RequestGroup_Pg;
 import utils.KeyWords;
 import utils.PropertiesFileReader;
 
-public class SD_ConfigureRequestGroupTask {
+
+
+/**
+ * Common functions that can be used across the Create RG 
+ * 
+ * Function that will take input as Request ID and Open that RG
+ * Function that will take input as task name and create that task
+ * Give an RG I should be able to filter with RG ID on Work List
+ * Give an RG I should be able to filter with RG ID on Work List
+ * Give an RG I should be able to filter with RG ID on Work Basket
+ * Give an RG I should be able to filter with RG ID on Work Basket
+ * 
+ * 
+ * 
+ * 
+ * 
+ * */
+
+
+
+
+
+
+public class Common_Business_Functions_Sd {
 	
 	public static WebDriver     driver 			=   HooksCucumbers.Hookdriver;	
 	KeyWords        			 		    keys			 	=   new KeyWords(driver);
-	CommonBusinesFuncts      cbus				=   new CommonBusinesFuncts(driver);
-	PG_RequestGroup 			   rgpage 			=   new PG_RequestGroup(driver);
-	PG_ConfigureRequestGroupTask crgpage = new PG_ConfigureRequestGroupTask(driver);
 	int 										waitTime  		=  Integer.parseInt(PropertiesFileReader.getUIProperty("implicitWait"));	
-	static Logger 	myLogger 						= LogManager.getLogger(SD_ConfigureRequestGroupTask.class.getName());
+	static Logger 	myLogger 						= LogManager.getLogger(Common_Business_Functions_Sd.class.getName());
+	
+	
+	//Create Pages for only the elements which you are using here
+	RequestGroup_Pg 			   rgpage 			=   new RequestGroup_Pg(driver);
+	Common_Business_Functions_Pg crgpage = new Common_Business_Functions_Pg(driver);
 
-	
-	
-	
-	@Given("Launch the application URL")
-	public void LaunchTheApplicationURL() {
-		driver.manage().timeouts().implicitlyWait(Duration.ofMillis(waitTime));
-	
-	}
+
 	
 	
 	@Then("Search for the RG ID {string}")
