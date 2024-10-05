@@ -79,9 +79,9 @@ public class BaseClass {
 
 	public static String takeScreenShot(String testCaseName) throws IOException {
 	    TakesScreenshot ts 	= ((TakesScreenshot) driver);
-		File source 		= ts.getScreenshotAs(OutputType.FILE);
-		File file 			= new File(scrReports+testCaseName+".png");
-		File desFile 		= new File(scrReports);
+		File source 					= ts.getScreenshotAs(OutputType.FILE);
+		File file 						= new File(scrReports+testCaseName+".png");
+		File desFile 				= new File(scrReports);
 		FileUtils.copyFile(source, file);		
 		return scrReports+testCaseName+".png";		
 	}

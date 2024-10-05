@@ -32,17 +32,26 @@ public class ConfigureRequestGroupTask_SD {
 	public void LaunchTheApplicationURL() {
 		driver.manage().timeouts().implicitlyWait(Duration.ofMillis(waitTime));
 		keys.switchFrameByWebElement(rgpage.getIframeHomePage());
-		
 	}
 	
-	@Then("Click ont he MyWorkbasekt")
-	public void Click_On_the_My_Workbasekt() {
-		keys.clickElement(null);
+	
+	@Then("Search for the RG ID {string}")
+	public void searchFoRGID(String value) {
+		keys.clickElement(crgpage.getSearchButtonTab());
+		keys.sendKeys(crgpage.getRequestGroupIDSearchTextBox(), value);
+		keys.clickElement(crgpage.getSearchButtonInSearchSection());
 	}
+	
 	
 	@Given("Click on the Work Tab")
 	public void Click_on_the_Work_Tab() {
 		keys.clickElement(rgpage.getWorkTab());	
+	}
+	
+	
+	@Then("Click on the My WorkList Header")
+	public void Click_On_My_WorkList_Header() {
+			keys.clickElement(rgpage.getmyWorkList());	
 	}
 	
 	@Then("Click on the My WorkBasket Header")
@@ -56,6 +65,13 @@ public class ConfigureRequestGroupTask_SD {
 		keys.switchFrameByWebElement(crgpage.getRGTabFrame());	
 	}
 	
+	@Then("Switch to the Second Frame")
+	public void Switch_To_SecondFrame() {
+		keys.switchToDefaultContent();
+		keys.switchFrameByWebElement(crgpage.getSecondFrame());	
+	}
+	
+
 	@Then("Click on the First Available RG")
 	public void Click_on_the_First_Available_RG() {
 		keys.clickElement(crgpage.getFirstRGfromWB());	

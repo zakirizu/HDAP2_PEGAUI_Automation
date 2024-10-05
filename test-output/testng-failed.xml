@@ -3,13 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testRunner.RunnerTestNG">
+      <class name="HDAP_APIs.Create_Multiple_Projects_With_PreLauch_Status">
         <methods>
-          <include name="setUpClass"/>
-          <include name="runScenario" invocation-numbers="0"/>
-          <include name="tearDownClass"/>
+          <include name="ChaseRequest_With_Single_Matching_RG" invocation-numbers="0 3"/>
         </methods>
-      </class> <!-- testRunner.RunnerTestNG -->
+      </class> <!-- HDAP_APIs.Create_Multiple_Projects_With_PreLauch_Status -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -31,9 +31,38 @@ public class ConfigureRequestGroupTask_Pg {
 		return UploadMRButton;
 	}
 		
-		
-		
-		
+	@FindBy(xpath="//li[@title='Search']//span[text()='Search']")
+	private  WebElement searchButtonTab;		
+	public WebElement getSearchButtonTab() {
+	return searchButtonTab;
+	}
+	
+	@FindBy(xpath="//input[@name='$PAdvancedSearchCriteriaPage$pRequestGroupID']")
+	private  WebElement RequestGroupIDSearchTextBox;		
+	public WebElement getRequestGroupIDSearchTextBox() {
+	return RequestGroupIDSearchTextBox;
+	}
+	
+	@FindBy(xpath="//button[@name='RequestGroupSearch_pyDisplayHarness_10']")
+	private  WebElement SearchButtonInSearchSection;		
+	public WebElement getSearchButtonInSearchSection() {
+	return SearchButtonInSearchSection;
+	}
+	
+	@FindBy(xpath="//tr[contains(@id,'$PpySearchResults$ppxResults$l')]//td[1]//a")
+	private  WebElement FirstSearchResult;		
+	public WebElement getFirstSearchResult() {
+	return FirstSearchResult;
+	}
+	
+	@FindBy(xpath="//iframe[@name='PegaGadget1Ifr']")
+	private  WebElement SecondFrame;		
+	public WebElement getSecondFrame() {
+	return SecondFrame;
+	}
+			
+	
+	
 		
 		
 		@FindBy(xpath = "(//*[text()='Request Group Settings'])[2]")

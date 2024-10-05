@@ -23,8 +23,12 @@ public class RequestGroup_Pg {
 		@FindBy(xpath="//iframe[@id='PegaGadget0Ifr']")
 		private WebElement iframeHomePage;
 		
+		@FindBy(xpath="//*[text()='My Worklist']")
+		private WebElement myWorkList;
 		
-
+		public  WebElement getmyWorkList() {
+			return myWorkList;
+		}
 		
 		
 		
