@@ -4,11 +4,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import io.cucumber.java.Scenario;
 
 public class Create_RG_Pg {
 	//Template Start	
 		public  WebDriver driver;		
-		public Create_RG_Pg(WebDriver driver)
+		public Create_RG_Pg(WebDriver driver, Scenario s)
 		{
 			this.driver = driver;
 			PageFactory.initElements(driver, this);

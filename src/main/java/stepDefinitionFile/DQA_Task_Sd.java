@@ -10,16 +10,15 @@ import utils.KeyWords;
 
 
 public class DQA_Task_Sd {
-	DependencyInjection di;
-	public DQA_Task_Sd(DependencyInjection di)
+	DependencyInjection obj;
+	public DQA_Task_Sd(DependencyInjection obj)
 	{
-		this.di = di;
+		this.obj = obj;
 	}
-	KeyWords        			 		    keys			 =   new KeyWords(di.driver);
 	static Logger 						myLogger 	= LogManager.getLogger(DQA_Task_Sd.class.getName());
 	
 	//Create Pages Here where ever your elements are present
-   Create_RG_Pg					createRg 		= new Create_RG_Pg(di.driver);
+   
 	
 
 

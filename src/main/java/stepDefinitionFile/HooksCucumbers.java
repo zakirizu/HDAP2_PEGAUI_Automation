@@ -1,6 +1,15 @@
 package stepDefinitionFile;
+import java.io.File;
+import java.time.Duration;
+
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.chrome.ChromeDriver;
+
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
+import io.cucumber.java.Scenario;
 import utils.DependencyInjection;
 
 
@@ -20,11 +29,11 @@ public class HooksCucumbers {
 	//	keyWord.loginApplicaiton();		
 		}
 	
-	@After
-	public void afterHookCode() throws InterruptedException {
-		Thread.sleep(2000);
-		//di.driver.close();
-	}
+
+
+		
+		
+	
 	
 	
 	@Before("@testAfterHook")

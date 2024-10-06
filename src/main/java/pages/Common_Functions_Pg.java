@@ -6,10 +6,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import io.cucumber.java.Scenario;
+
 public class Common_Functions_Pg {
 	//Template Start	
 		public  WebDriver driver;		
-		public Common_Functions_Pg(WebDriver driver)
+		public Common_Functions_Pg(WebDriver driver, Scenario s)
 		{
 			this.driver = driver;
 			PageFactory.initElements(driver, this);

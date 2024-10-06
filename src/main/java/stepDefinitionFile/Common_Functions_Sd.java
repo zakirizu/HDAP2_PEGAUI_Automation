@@ -1,10 +1,21 @@
 package stepDefinitionFile;
+import java.io.File;
 import java.text.SimpleDateFormat;
+import java.time.Duration;
 import java.util.Date;
 import java.util.concurrent.ThreadLocalRandom;
+import org.apache.commons.io.FileUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.BeforeTest;
+import factory.Constants;
+import io.cucumber.java.*;
+import io.cucumber.java.Before;
+import io.cucumber.java.Scenario;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import pages.Common_Functions_Pg;
@@ -24,14 +35,16 @@ import utils.KeyWords;
  * 
  * */
 public class Common_Functions_Sd {
-    public WebDriver driver;
-    public DependencyInjection di;
-    KeyWords keys;
-    Common_Functions_Pg commo;  
+	Scenario scn;
+    public WebDriver driver = null;   
+    //KeyWords keys;
+    //Common_Functions_Pg commo;  
+	
 
-	public Common_Functions_Sd(DependencyInjection di)
+    public DependencyInjection obj;
+	public Common_Functions_Sd(DependencyInjection obj)
 	{
-		this.di = di;
+		this.obj = obj;
 	}
 	
 	static Logger 					myLogger 		= LogManager.getLogger(Common_Functions_Sd.class.getName());
@@ -40,67 +53,99 @@ public class Common_Functions_Sd {
 		
 	@Then("Launch the Application")
 	public void te() throws InterruptedException {		
-		di.driver = BaseClass.initializeDriver();
-		keys = new KeyWords(di.driver);
-		commo = new Common_Functions_Pg(di.driver);
-		keys.loginApplicaiton();
+		driver = BaseClass.initializeDriver();
+		obj.setDriver(driver);
+		obj.initializePageObject(driver, scn);
+		System.out.println("ZR-"+driver);
+		//keys = new KeyWords(driver);
+		obj.getKeyWords().loginApplicaiton();
+	//	keys.loginApplicaiton();
+		
 	}
 	
 			
 	@Then("^Search for the User RG ID (.+)$")
 	public void searchFoRGID(String value) throws InterruptedException {
+		obj.getKeyWords().switchFrameByWebElement(obj.getPagecommon().getFramefirstFrame());
+		obj.getKeyWords().clickElement(obj.getPagecommon().getSearchButtonTab());
+		obj.getKeyWords().sendKeys(obj.getPagecommon().getRequestGroupIDSearchTextBox(), value);
+		obj.getKeyWords().clickElement(obj.getPagecommon().getSearchButtonInSearchSection());
+		obj.getKeyWords().clickElement(obj.getPagecommon().getclickFirstRG());		
+		/*
 		keys.switchFrameByWebElement(commo.getFramefirstFrame());
 		keys.clickElement(commo.getSearchButtonTab());
 		keys.sendKeys(commo.getRequestGroupIDSearchTextBox(), value);
 		keys.clickElement(commo.getSearchButtonInSearchSection());
 		keys.clickElement(commo.getclickFirstRG());
+		*/
 		}
 	
 	
 	@Then("^Add the task (.+)$")
 	public void addTask(String value) throws InterruptedException {
-		keys.switchToDefaultContent();
-		keys.switchFrameByWebElement(commo.getSecondFrame());
-		keys.clickElement(commo.getAddTaskBtn());
-		keys.clickElement(commo.dynamic_AddTask(value));
-		keys.clickElement(commo.getbtn_addTasks());
+		obj.getKeyWords().switchToDefaultContent();
+		obj.getKeyWords().switchFrameByWebElement(obj.getPagecommon().getSecondFrame());
+		obj.getKeyWords().clickElement(obj.getPagecommon().getAddTaskBtn());
+		obj.getKeyWords().clickElement(obj.getPagecommon().dynamic_AddTask(value));
+		obj.getKeyWords().clickElement(obj.getPagecommon().getbtn_addTasks());
 		Thread.sleep(5000);
 		}
 	
+	
+	@Before
+	public void SetUp(Scenario s)
+	{
+		this.scn = s;
+	}
+	
+	@After
+	public void afterScenarios(Scenario s) throws InterruptedException {
+		if(s.isFailed())
+		{
+	
+			TakesScreenshot  scrShot  = ((TakesScreenshot) driver);
+			byte[] data = scrShot.getScreenshotAs(OutputType.BYTES);
+			//scn.embed(data,"iamge/png");
+			
+		}
+		driver.quit();
+		
+
+		}
 
 	@Then("Switch to the RG Frame")
 	public void Switch_To_Frame() {
-		keys.switchToDefaultContent();
-		keys.switchFrameByWebElement(commo.getRGTabFrame());	
+		obj.getKeyWords().switchToDefaultContent();
+		obj.getKeyWords().switchFrameByWebElement(obj.getPagecommon().getRGTabFrame());	
 	}
 	
 	@Then("Switch to the Second Frame")
 	public void Switch_To_SecondFrame() {
-		keys.switchToDefaultContent();
-		keys.switchFrameByWebElement(commo.getSecondFrame());	
+		obj.getKeyWords().switchToDefaultContent();
+		obj.getKeyWords().switchFrameByWebElement(obj.getPagecommon().getSecondFrame());	
 	}
 	
 
 	@Then("Click on the First Available RG")
 	public void Click_on_the_First_Available_RG() {
-		keys.clickElement(commo.getFirstRGfromWB());	
+		obj.getKeyWords().clickElement(obj.getPagecommon().getFirstRGfromWB());	
 	}
 	
 	@Then("Hold For half min")
 	public void Hold_For_Half_min() throws InterruptedException {
-		keys.shortWait();
+		obj.getKeyWords().shortWait();
 	}
 	
 	@And("Click on the Request Group Settings Tab")
 	public void Click_on_the_Request_Group_Settings_Tab() {
-		keys.clickElement(commo.getRequestGroupSettingsTab());
+		obj.getKeyWords().clickElement(obj.getPagecommon().getRequestGroupSettingsTab());
 	}
 	
 	
 
 	@And("click on UploadMR Button")
 	public void click_on_UploadMR_Button() {
-		keys.clickElement(commo.getUploadMRButton());		
+		obj.getKeyWords().clickElement(obj.getPagecommon().getUploadMRButton());		
 	}
 	
 	public static String getUniqueRandomText() {

@@ -19,7 +19,7 @@ public class zz_Template {
 	static Logger 						myLogger 	= LogManager.getLogger(zz_Template.class.getName());
 	
 	//Create Pages Here where ever your elements are present
-   Create_RG_Pg					createRg 		= new Create_RG_Pg(di.driver);
+   Create_RG_Pg					createRg 		= new Create_RG_Pg(di.driver, null);
 	
 
 
