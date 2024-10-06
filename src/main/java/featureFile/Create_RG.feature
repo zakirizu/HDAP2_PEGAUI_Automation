@@ -1,7 +1,7 @@
 Feature: Request Group Scenarios
 
 Background:
-#We Can Include the back Ground here
+
 
 
 @Feature_RET-  @Regression  @CreateRG

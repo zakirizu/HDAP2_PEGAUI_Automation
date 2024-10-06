@@ -51,22 +51,4 @@ public class Create_RG_Pg {
 			return test;
 		}
 
-		
-		
-
-	
-	
-		
-		
-		
-		
-		
-		
-		
-	
-	
-	
-	
-	
-
 }

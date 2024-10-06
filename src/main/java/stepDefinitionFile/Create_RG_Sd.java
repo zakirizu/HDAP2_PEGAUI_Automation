@@ -5,20 +5,26 @@ import org.openqa.selenium.WebDriver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import pages.Create_RG_Pg;
+import utils.DependencyInjection;
 import utils.KeyWords;
 
 
 public class Create_RG_Sd {
+	public DependencyInjection di;	
+	public Create_RG_Sd(DependencyInjection di)
+	{
+		this.di = di;
+	}
 	
-	public static WebDriver     driver 			=   HooksCucumbers.Hookdriver;	
-	KeyWords        			 		    keys			 	=   new KeyWords(driver);
+	KeyWords        			 		    keys			 	=   new KeyWords(di.driver);
 	static Logger 						myLogger 	= LogManager.getLogger(Create_RG_Sd.class.getName());
-	
+		
 	//Create Pages for only the elements which you are using here
-	Create_RG_Pg					createRg 		= new Create_RG_Pg(driver);
+	Create_RG_Pg					createRg 		= new Create_RG_Pg(di.driver);
 	
 	@Given("Click on CreateRGButton")
 	public void Click_on_CreateRGButton() {		
+		keys.switchToDefaultContent();
 		keys.clickElement(createRg.getBtn_createRG());
 	}
 	

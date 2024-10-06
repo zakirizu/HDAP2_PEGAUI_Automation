@@ -1,14 +1,15 @@
 package pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class Common_Business_Functions_Pg {
+public class Common_Functions_Pg {
 	//Template Start	
 		public  WebDriver driver;		
-		public Common_Business_Functions_Pg(WebDriver driver)
+		public Common_Functions_Pg(WebDriver driver)
 		{
 			this.driver = driver;
 			PageFactory.initElements(driver, this);
@@ -24,13 +25,45 @@ public class Common_Business_Functions_Pg {
 		
 		 */
 		
+		@FindBy(xpath="(//div[@aria-label=\"My Worklist\"]/following::a[@aria-label=\"RG ID Actions\"])[1]")
+		private  WebElement RGID_MyWorkList_KebabMenu;		
 		
-		@FindBy(xpath="//button[text()='Upload MR']")
-	private  WebElement UploadMRButton;		
+		@FindBy(xpath="//div[@aria-label=\"My Workbasket\"]/following::a[@aria-label=\"RG ID Actions\"]")
+		private  WebElement RGID_MyWorkBasket_KebabMenu;	
+		
+		@FindBy(xpath="//table[@pl_prop='pySearchResults.pxResults']//tr[2]//td[1]//a	")
+		private  WebElement clickFirstRG;		
+		public WebElement getclickFirstRG() {
+			return clickFirstRG;
+		}
+		
+		
+		
+		@FindBy(xpath="//iframe[@id='PegaGadget0Ifr']")
+		private  WebElement firstFrame;		
+		public WebElement getFramefirstFrame() {
+			return firstFrame;
+		}
+		
+
+		public WebElement dynamic_AddTask(String x) {
+			WebElement ele = driver.findElement(By.xpath("(//a[text()='"+x+"'])[1]"));
+			return ele;
+		}
+		
+		
+	@FindBy(xpath="//button[text()='Upload MR']") 	private  WebElement UploadMRButton;		
 	public WebElement getUploadMRButton() {
 		return UploadMRButton;
 	}
-		
+	
+	@FindBy(xpath="//span//button[@title='Add tasks']") 	private  WebElement btn_addTasks;		
+	public WebElement getbtn_addTasks() {
+		return btn_addTasks;
+	}
+	
+	
+	
 	@FindBy(xpath="//li[@title='Search']//span[text()='Search']")
 	private  WebElement searchButtonTab;		
 	public WebElement getSearchButtonTab() {
@@ -77,7 +110,7 @@ public class Common_Business_Functions_Pg {
 		@FindBy(xpath="//iframe[@id='PegaGadget0Ifr']")
 		private  WebElement RGTabFrame;
 		
-		@FindBy(xpath="//div[@class='panelOverFlowClass']//span//button[@title='Add Task']")
+		@FindBy(xpath="//div[@class='panelOverFlowClass']//span//button[@title='Add task']")
 		private  WebElement addTaskBtn;
 		
 		@FindBy(xpath="//input[@placeholder='Search for action']")
@@ -90,17 +123,10 @@ public class Common_Business_Functions_Pg {
 		@FindBy(xpath="(//button[@title='Close'])[2]")
 		private  WebElement closeButton;
 		
-
-
-
-			
-		
 		public WebDriver getDriver() {
 			return driver;
 		}
-		
-		
-		
+				
 		public WebElement getRequestGroupSettingsTab() {
 			return requestGroupSettingsTab;
 		}
@@ -129,23 +155,17 @@ public class Common_Business_Functions_Pg {
 			return iframeHomePage;
 		}
 
-		
-		
-		
-		
-	
-	
-		
-		
-		
-		
-		
-		
-		
-	
-	
-	
-	
-	
+		public WebElement getRGID_MyWorkList_KebabMenu() {
+			return RGID_MyWorkList_KebabMenu;
+		}
+
+		public WebElement getRGID_MyWorkBasket_KebabMenu() {
+			return RGID_MyWorkBasket_KebabMenu;
+		}
+
+		public WebElement getCloseButton() {
+			return closeButton;
+		}
+
 
 }

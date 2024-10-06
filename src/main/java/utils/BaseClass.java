@@ -20,9 +20,7 @@ public class BaseClass {
 	public static WebDriver driver;
 	public static Logger mylogger 			= LogManager.getLogger(BaseClass.class.getName());	
 	public static String browserType 		= null;
-	public static String zoomPercent 		= null;
-	
-	static String scrReports 						= Constants.SCREENSHOT;
+	public static String zoomPercent 		= null;	static String scrReports 						= Constants.SCREENSHOT;
 	
 	
 	public static WebDriver initializeDriver() {

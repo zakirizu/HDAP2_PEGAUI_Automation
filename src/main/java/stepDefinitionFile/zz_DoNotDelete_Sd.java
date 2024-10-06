@@ -1,4 +1,4 @@
-package pages;
+package stepDefinitionFile;
 
 import java.util.List;
 
@@ -9,7 +9,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class DoNotDelete_Pg {
+public class zz_DoNotDelete_Sd {
 
 	
 	//Background

@@ -20,6 +20,35 @@
 
   <dependencies>
 
+	 <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
+	<dependency>
+	    <groupId>io.cucumber</groupId>
+	    <artifactId>cucumber-java</artifactId>
+	    <version>7.19.0</version>
+	</dependency>
+
+	<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-testng -->
+	<dependency>
+	    <groupId>io.cucumber</groupId>
+	    <artifactId>cucumber-testng</artifactId>
+	    <version>7.19.0</version>
+	</dependency>
+
+      <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+           <artifactId>selenium-java</artifactId>
+           <version>4.25.0</version>
+      </dependency>  
+
+		<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-picocontainer -->
+		<dependency>
+		    <groupId>io.cucumber</groupId>
+		    <artifactId>cucumber-picocontainer</artifactId>
+		    <version>7.20.0</version>
+		</dependency>
+  	
+
+	
 <!-- https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
 <dependency>
     <groupId>io.rest-assured</groupId>
@@ -34,21 +63,6 @@
     <version>7.10.2</version>
 </dependency>
   
-	<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-testng -->
-	<dependency>
-	    <groupId>io.cucumber</groupId>
-	    <artifactId>cucumber-testng</artifactId>
-	    <version>7.19.0</version>
-	</dependency>
-
-  
-	 <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
-	<dependency>
-	    <groupId>io.cucumber</groupId>
-	    <artifactId>cucumber-java</artifactId>
-	    <version>7.19.0</version>
-	</dependency>
- 
 
  	<!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
 	<dependency>
@@ -82,14 +96,7 @@
 	    <artifactId>poi-ooxml</artifactId>
 	    <version>5.3.0</version>
 	</dependency>
-  
-  
-      <dependency>
-            <groupId>org.seleniumhq.selenium</groupId>
-           <artifactId>selenium-java</artifactId>
-           <version>4.25.0</version>
-      </dependency>  
-  
+
   
 	  <!-- https://mvnrepository.com/artifact/org.testng/testng -->
 	<dependency>

@@ -1,25 +1,22 @@
 Feature: DQA Task Related Scenarios
 
 Background:
-#We Can Include the back Ground here
-
-
-@Feature_RET-  @Regression  @CreateRG
- Scenario:  Valdiate Whether User is able to create an RG with Single Contact
-Given 		Click on CreateRGButton
-Then 		Switch to CreateRG Fame
-And     	Click on NextButton
+Given Launch the Application
 
 
 
+@DQATask
+ Scenario Outline:  Valdiate Whether User is able to perform DQA Task
+ Given 		Search for the User RG ID <RequestGroupID>
+ Given 		Add the task <Task>
+ Given 		Click on CreateRGButton
+
+Examples: 
+      | RequestGroupID 						| Task 																														|
+      | RET-9642869539    						| Exception Request     													|
+      | RET-9642869539    						| DQA															    													|
 
 
-
-
-
-    
-    
-    
     
     
     
