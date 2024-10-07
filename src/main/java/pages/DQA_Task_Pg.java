@@ -5,10 +5,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class RequestGroup_Pg {
+import io.cucumber.java.Scenario;
+
+public class DQA_Task_Pg {
 	//Template Start	
 		public  WebDriver driver;		
-		public RequestGroup_Pg(WebDriver driver)
+		public DQA_Task_Pg(WebDriver driver, Scenario s)
 		{
 			this.driver = driver;
 			PageFactory.initElements(driver, this);
@@ -23,8 +25,12 @@ public class RequestGroup_Pg {
 		@FindBy(xpath="//iframe[@id='PegaGadget0Ifr']")
 		private WebElement iframeHomePage;
 		
+		@FindBy(xpath="//*[text()='My Worklist']")
+		private WebElement myWorkList;
 		
-
+		public  WebElement getmyWorkList() {
+			return myWorkList;
+		}
 		
 		
 		

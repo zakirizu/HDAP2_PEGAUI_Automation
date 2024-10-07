@@ -23,15 +23,15 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
-import factory.CommonBusinesFuncts;
 
 public class KeyWords {
+	
 	static JavascriptExecutor 		js;
 	public static WebDriver 		driver;	
-	static String highLigtElement 		= 	PropertiesFileReader.getProperty("highLightElement");
+	static String highLigtElement 		= 	PropertiesFileReader.getUIProperty("highLightElement");
 	public static Logger myLogger 	=	LogManager.getLogger(KeyWords.class.getName());		
-	String Environment 						= PropertiesFileReader.getProperty("Env");
-	String browserType						= PropertiesFileReader.getProperty("browserType");
+	String Environment 						= PropertiesFileReader.getUIProperty("Env");
+	String browserType						= PropertiesFileReader.getUIProperty("browserType");
 	
 	@SuppressWarnings("static-access")
 	public  KeyWords (WebDriver driver)
@@ -48,35 +48,40 @@ public class KeyWords {
 		
 		try 
 		{
-				
-			
 			if(Environment.equalsIgnoreCase("QA"))
 				{
-				driver.get(utils.PropertiesFileReader.getProperty("QA_URL"));			
-				shortWait();
-				sendKeys(getUserName_txtBox(), PropertiesFileReader.getProperty("QA_UserID"));
-				sendKeys(passWord_txtBox, PropertiesFileReader.getProperty("QA_Pwd"));
-				shortWait();
+				driver.get(utils.PropertiesFileReader.getUIProperty("QA_URL"));			
+				sendKeys(getUserName_txtBox(), PropertiesFileReader.getUIProperty("QA_UserID"));
+				sendKeys(passWord_txtBox, PropertiesFileReader.getUIProperty("QA_Pwd"));
 				clickElement(getLogin_Button());
 					
 				}
 			else if(Environment.equalsIgnoreCase("UAT"))
 				{
-				driver.get(utils.PropertiesFileReader.getProperty("UAT_URL"));		
-				sendKeys(getUserName_txtBox(), PropertiesFileReader.getProperty("UAT_UserID"));
-				sendKeys(passWord_txtBox, PropertiesFileReader.getProperty("UAT_Pwd"));
+				driver.get(utils.PropertiesFileReader.getUIProperty("UAT_URL"));		
+				sendKeys(getUserName_txtBox(), PropertiesFileReader.getUIProperty("UAT_UserID"));
+				sendKeys(passWord_txtBox, PropertiesFileReader.getUIProperty("UAT_Pwd"));
 				clickElement(getLogin_Button());
 					
 				}
 			else if(Environment.equalsIgnoreCase("PROD"))
 				{
-				driver.get(utils.PropertiesFileReader.getProperty("PROD_URL"));		
-				sendKeys(getUserName_txtBox(), PropertiesFileReader.getProperty("PROD_UserID"));
-				sendKeys(passWord_txtBox, PropertiesFileReader.getProperty("PROD_Pwd"));
-				clickElement(getLogin_Button());
-							 	
+				driver.get(utils.PropertiesFileReader.getUIProperty("PROD_URL"));		
+				sendKeys(getUserName_txtBox(), PropertiesFileReader.getUIProperty("PROD_UserID"));
+				sendKeys(passWord_txtBox, PropertiesFileReader.getUIProperty("PROD_Pwd"));
+				clickElement(getLogin_Button());							 	
 				}	
 			
+			myLogger.info("Setting the ZOOM Percentage to: 80%");			
+			Robot robot = new Robot();
+			robot.keyPress(KeyEvent.VK_CONTROL);
+			robot.keyPress(KeyEvent.VK_SUBTRACT);	
+			robot.keyRelease(KeyEvent.VK_CONTROL);
+			robot.keyRelease(KeyEvent.VK_SUBTRACT);				
+			robot.keyPress(KeyEvent.VK_CONTROL);
+			robot.keyPress(KeyEvent.VK_SUBTRACT);	
+			robot.keyRelease(KeyEvent.VK_CONTROL);
+			robot.keyRelease(KeyEvent.VK_SUBTRACT);	
 			
 		}
 		
@@ -134,7 +139,6 @@ public class KeyWords {
 		try 
 		{
 		title = driver.getTitle();	
-		
 		if(highLigtElement.equalsIgnoreCase("yes"))
 		{
 			myLogger.info("Entering text:"+value+". In textbox WebElement: "+ele +" On Page: "+title);				
@@ -175,7 +179,6 @@ public class KeyWords {
 		try 
 		{
 		title = driver.getTitle();	
-		
 		if(highLigtElement.equalsIgnoreCase("yes"))
 		{
 			myLogger.info("Entering text:"+value+". In textbox WebElement: "+ele +" On Page: "+title);				
@@ -220,7 +223,7 @@ public class KeyWords {
 		String text =null;
 		try 
 		{
-		
+			
 		if(!ele.isDisplayed())
 		{
 			myLogger.info("Not able to find Element :"+ele +". Refreshing the page");
@@ -266,8 +269,6 @@ public class KeyWords {
 		String title=driver.getTitle();
 		try 
 		{
-		System.out.println("Currently On Page: "+title);	
-		
 		if(!ele.isDisplayed())
 		{
 			myLogger.info("Not able to find Element :"+ele +". Refreshing the page");
@@ -452,7 +453,7 @@ public class KeyWords {
 			String 	title		=driver.getTitle();		
 		try 
 		{
-			String 	secString	= utils.PropertiesFileReader.getProperty("explicitWait");
+			String 	secString	= utils.PropertiesFileReader.getUIProperty("explicitWait");
 			int 	sec 		= Integer.parseInt(secString);
 			WebDriverWait wait 	= new WebDriverWait(driver, Duration.ofSeconds(sec));
 			wait.until(ExpectedConditions.visibilityOf(ele));
@@ -495,7 +496,7 @@ public class KeyWords {
 			String 	title		=driver.getTitle();		
 		try 
 		{
-			String 	secString	= utils.PropertiesFileReader.getProperty("explicitWait");
+			String 	secString	= utils.PropertiesFileReader.getUIProperty("explicitWait");
 			int 	sec 		= Integer.parseInt(secString);
 			WebDriverWait wait 	= new WebDriverWait(driver, Duration.ofSeconds(sec));
 			wait.until(ExpectedConditions.invisibilityOf(ele));
@@ -671,15 +672,13 @@ public class KeyWords {
 	*/
 	public void switchFrameByWebElement(WebElement ele) {
 		String title=null;
-		String frameTitle = null;
 		title = driver.getTitle();
 		
 		try 
 			{	
 				myLogger.info("Switching to Frame By WebElement: "+ele +" On Page: "+title);	
 				driver.switchTo().frame(ele);
-				frameTitle = driver.getTitle();
-				myLogger.info("Switched to Frame By WebElement:"+ele +" Frame title: "+frameTitle);	
+				myLogger.info("Switched to Frame By WebElement:"+ele +" Frame title: "+title);	
 			}
 		
 		catch(Exception e)
@@ -701,13 +700,11 @@ public class KeyWords {
 	public static void switchFrameByNameorID(String nameORid) {
 
 		String title=null;
-		String frameTitle = null;
 		title = driver.getTitle();
 		try 
 		{	myLogger.info("Switching to Frame By nameORid:"+nameORid +" On Page: "+title);				
 			driver.switchTo().frame(nameORid);
-			frameTitle = driver.getTitle();
-			myLogger.info("Switched to Frame By nameORid:"+nameORid +" Frame title: "+frameTitle);	
+			myLogger.info("Switched to Frame By nameORid:"+nameORid +" Frame title: "+title);	
 		}
 		catch(Exception e)
 		{
@@ -729,7 +726,7 @@ public class KeyWords {
 	*/
 		
 	public  void shortWait() throws InterruptedException {
-		String x = utils.PropertiesFileReader.getProperty("shortWait");
+		String x = utils.PropertiesFileReader.getUIProperty("shortWait");
 		int i = Integer.parseInt(x);
 		myLogger.info("Short Wait Start---. Waiting for Seconds: "+i);	
 		Thread.sleep(i);
@@ -746,7 +743,7 @@ public class KeyWords {
 	 @ Can Be Configured: ROW_MDM_Automation\Resources\propertyFile.properties (Property: mediumWait)
 	*/	
 	public static  void mediumWait() throws InterruptedException {
-		String x = utils.PropertiesFileReader.getProperty("mediumWait");
+		String x = utils.PropertiesFileReader.getUIProperty("mediumWait");
 		int i = Integer.parseInt(x);
 		myLogger.info("Medium Wait Start---. Waiting for Seconds: "+i);	
 		Thread.sleep(i);
@@ -763,7 +760,7 @@ public class KeyWords {
 	 @ Can Be Configured: ROW_MDM_Automation\Resources\propertyFile.properties (Property: longWait)
 	*/
 	public static void longWait() throws InterruptedException {
-		String x = utils.PropertiesFileReader.getProperty("longWait");
+		String x = utils.PropertiesFileReader.getUIProperty("longWait");
 		int i = Integer.parseInt(x);
 		myLogger.info("- Long Wait Start---.Waiting for Seconds: "+i);	
 		Thread.sleep(i);
@@ -780,7 +777,7 @@ public class KeyWords {
 	 @ Can Be Configured: ROW_MDM_Automation\Resources\propertyFile.properties (Property: explicitWait)
 	*/
 	public static void explicitWait() throws InterruptedException {
-		String x = utils.PropertiesFileReader.getProperty("longWait");
+		String x = utils.PropertiesFileReader.getUIProperty("longWait");
 		int i = Integer.parseInt(x);
 		myLogger.info("Long Wait Start---.Waiting for Seconds: "+i);	
 		Thread.sleep(i);
