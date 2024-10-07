@@ -51,10 +51,8 @@ public class KeyWords {
 			if(Environment.equalsIgnoreCase("QA"))
 				{
 				driver.get(utils.PropertiesFileReader.getUIProperty("QA_URL"));			
-				shortWait();
 				sendKeys(getUserName_txtBox(), PropertiesFileReader.getUIProperty("QA_UserID"));
 				sendKeys(passWord_txtBox, PropertiesFileReader.getUIProperty("QA_Pwd"));
-				shortWait();
 				clickElement(getLogin_Button());
 					
 				}
@@ -75,7 +73,6 @@ public class KeyWords {
 				}	
 			
 			myLogger.info("Setting the ZOOM Percentage to: 80%");			
-			Thread.sleep(6000);
 			Robot robot = new Robot();
 			robot.keyPress(KeyEvent.VK_CONTROL);
 			robot.keyPress(KeyEvent.VK_SUBTRACT);	
@@ -142,7 +139,6 @@ public class KeyWords {
 		try 
 		{
 		title = driver.getTitle();	
-		System.out.print("****************Currently On Page---------------->: "+title);	
 		if(highLigtElement.equalsIgnoreCase("yes"))
 		{
 			myLogger.info("Entering text:"+value+". In textbox WebElement: "+ele +" On Page: "+title);				
@@ -183,7 +179,6 @@ public class KeyWords {
 		try 
 		{
 		title = driver.getTitle();	
-		System.out.print("****************Currently On Page---------------->: "+title);	
 		if(highLigtElement.equalsIgnoreCase("yes"))
 		{
 			myLogger.info("Entering text:"+value+". In textbox WebElement: "+ele +" On Page: "+title);				
@@ -225,7 +220,6 @@ public class KeyWords {
 
 	public static String getTextOfWebElement(WebElement ele) {
 		String title=driver.getTitle();
-		System.out.print("****************Currently On Page---------------->: "+title);	
 		String text =null;
 		try 
 		{
@@ -275,8 +269,6 @@ public class KeyWords {
 		String title=driver.getTitle();
 		try 
 		{
-		System.out.print("****************Currently On Page---------------->: "+title);		
-		
 		if(!ele.isDisplayed())
 		{
 			myLogger.info("Not able to find Element :"+ele +". Refreshing the page");
@@ -680,15 +672,13 @@ public class KeyWords {
 	*/
 	public void switchFrameByWebElement(WebElement ele) {
 		String title=null;
-		String frameTitle = null;
 		title = driver.getTitle();
 		
 		try 
 			{	
 				myLogger.info("Switching to Frame By WebElement: "+ele +" On Page: "+title);	
 				driver.switchTo().frame(ele);
-				frameTitle = driver.getTitle();
-				myLogger.info("Switched to Frame By WebElement:"+ele +" Frame title: "+frameTitle);	
+				myLogger.info("Switched to Frame By WebElement:"+ele +" Frame title: "+title);	
 			}
 		
 		catch(Exception e)
@@ -710,13 +700,11 @@ public class KeyWords {
 	public static void switchFrameByNameorID(String nameORid) {
 
 		String title=null;
-		String frameTitle = null;
 		title = driver.getTitle();
 		try 
 		{	myLogger.info("Switching to Frame By nameORid:"+nameORid +" On Page: "+title);				
 			driver.switchTo().frame(nameORid);
-			frameTitle = driver.getTitle();
-			myLogger.info("Switched to Frame By nameORid:"+nameORid +" Frame title: "+frameTitle);	
+			myLogger.info("Switched to Frame By nameORid:"+nameORid +" Frame title: "+title);	
 		}
 		catch(Exception e)
 		{

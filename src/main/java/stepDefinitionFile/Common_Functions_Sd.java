@@ -56,28 +56,18 @@ public class Common_Functions_Sd {
 		driver = BaseClass.initializeDriver();
 		obj.setDriver(driver);
 		obj.initializePageObject(driver, scn);
-		System.out.println("ZR-"+driver);
-		//keys = new KeyWords(driver);
 		obj.getKeyWords().loginApplicaiton();
-	//	keys.loginApplicaiton();
-		
 	}
 	
 			
 	@Then("^Search for the User RG ID (.+)$")
 	public void searchFoRGID(String value) throws InterruptedException {
+		//obj.driver.switchTo().frame(obj.getPagecommon().getFramefirstFrame());
 		obj.getKeyWords().switchFrameByWebElement(obj.getPagecommon().getFramefirstFrame());
 		obj.getKeyWords().clickElement(obj.getPagecommon().getSearchButtonTab());
 		obj.getKeyWords().sendKeys(obj.getPagecommon().getRequestGroupIDSearchTextBox(), value);
 		obj.getKeyWords().clickElement(obj.getPagecommon().getSearchButtonInSearchSection());
 		obj.getKeyWords().clickElement(obj.getPagecommon().getclickFirstRG());		
-		/*
-		keys.switchFrameByWebElement(commo.getFramefirstFrame());
-		keys.clickElement(commo.getSearchButtonTab());
-		keys.sendKeys(commo.getRequestGroupIDSearchTextBox(), value);
-		keys.clickElement(commo.getSearchButtonInSearchSection());
-		keys.clickElement(commo.getclickFirstRG());
-		*/
 		}
 	
 	
@@ -88,29 +78,6 @@ public class Common_Functions_Sd {
 		obj.getKeyWords().clickElement(obj.getPagecommon().getAddTaskBtn());
 		obj.getKeyWords().clickElement(obj.getPagecommon().dynamic_AddTask(value));
 		obj.getKeyWords().clickElement(obj.getPagecommon().getbtn_addTasks());
-		Thread.sleep(5000);
-		}
-	
-	
-	@Before
-	public void SetUp(Scenario s)
-	{
-		this.scn = s;
-	}
-	
-	@After
-	public void afterScenarios(Scenario s) throws InterruptedException {
-		if(s.isFailed())
-		{
-	
-			TakesScreenshot  scrShot  = ((TakesScreenshot) driver);
-			byte[] data = scrShot.getScreenshotAs(OutputType.BYTES);
-			//scn.embed(data,"iamge/png");
-			
-		}
-		driver.quit();
-		
-
 		}
 
 	@Then("Switch to the RG Frame")
@@ -164,4 +131,29 @@ public class Common_Functions_Sd {
 		return temp;
 	
 	}
+	
+	
+	
+	
+	/**********************************************************************************************************/
+	/************************************HOOK OPERATIONS*****************************************************/
+	/**********************************************************************************************************/
+	@Before
+	public void SetUp(Scenario s)
+	{
+		this.scn = s;
+	}
+	
+	@After
+	public void afterScenarios(Scenario s) throws InterruptedException {
+		if(s.isFailed())
+		{
+			TakesScreenshot  scrShot  = ((TakesScreenshot) driver);
+			byte[] data = scrShot.getScreenshotAs(OutputType.BYTES);
+			//scn.embed(data,"iamge/png");	
+		}
+		driver.quit();
+		}
+
+
 }

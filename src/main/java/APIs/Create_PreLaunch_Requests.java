@@ -15,7 +15,7 @@ public class Create_PreLaunch_Requests {
 	public  static void ChaseRequest_With_Single_Matching_RG() throws InterruptedException
 	{
 		    String cotivitClaimNumber = stepDefinitionFile.Common_Functions_Sd.getUniqueRandomInteger();
-			System.out.println("*******************************Creating Chase Request Matching Single RG with Below Combination*****************************");
+			System.out.println("*******************************Creating Chase Request Matching With Single RG with Below Combination*****************************");
 			System.out.println("Intended Use-------------------------->" +intendedUse);
 			System.out.println("Account ID---------------------------->" +accountID);
 			System.out.println("Sub Account ID----------------------->" +subAccountID);

@@ -22,7 +22,7 @@ public class Create_Multiple_Projects_With_PreLauch_Status {
 			String accountID				= accID;		
 		    String cotivitClaimNumber = stepDefinitionFile.Common_Functions_Sd.getUniqueRandomInteger();
 		    
-			System.out.println("*******************************Creating Chase Request Matching Single RG with Below Combination*****************************");
+			System.out.println("*******************************Creating Chase Multiple Projects and Each ChaseRequest with Below Combination*****************************");
 			System.out.println("Intended Use-------------------------->" +intendedUse);
 			System.out.println("Account ID---------------------------->" +accountID);
 			System.out.println("Sub Account ID----------------------->" +subAccountID);

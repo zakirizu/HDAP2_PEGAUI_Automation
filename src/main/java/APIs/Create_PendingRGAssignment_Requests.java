@@ -17,7 +17,7 @@ public class Create_PendingRGAssignment_Requests {
 		
 		
 		    String cotivitClaimNumber = stepDefinitionFile.Common_Functions_Sd.getUniqueRandomInteger();
-		    System.out.println("*******************************Creating Chase Request NO Matching Single RG with Below Combination*****************************");
+		    System.out.println("*******************************Creating Chase Request with NO Matching Single RG with Below Combination*****************************");
 			System.out.println("Intended Use------------------------->" +intendedUse);
 			System.out.println("Account ID---------------------------->" +accountID);
 			System.out.println("Sub Account ID----------------------->" +subAccountID);
