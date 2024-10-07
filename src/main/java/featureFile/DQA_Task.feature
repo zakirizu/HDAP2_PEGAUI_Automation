@@ -28,7 +28,7 @@ Examples:
       | RET-9642869539    						| Update Request Group Settings					   									|
       | RET-9642869539    						| Generate Request Document							   									|
       | RET-9642869539    						| Update Contact Details													   									|
-       | RET-9642869539    					| Update Processes For Rules								    									|
+      | RET-9642869539    						| Update Processes For Rules								    									|
       | RET-9642869539    						| Upload Medical Record														  								|
       | RET-9642869539    						| Verify and Confirm Dates												 									|
       | RET-9642869539    						| Resolve No Patients/No Records														|
