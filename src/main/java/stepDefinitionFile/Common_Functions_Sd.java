@@ -1,5 +1,7 @@
 package stepDefinitionFile;
+import org.openqa.selenium.io.FileHandler;
 import java.io.File;
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.util.Date;
@@ -62,7 +64,8 @@ public class Common_Functions_Sd {
 			
 	@Then("^Search for the User RG ID (.+)$")
 	public void searchFoRGID(String value) throws InterruptedException {
-		//obj.driver.switchTo().frame(obj.getPagecommon().getFramefirstFrame());
+		obj.getKeyWords().clickElement(obj.getPagecommon().getSearchButtonTab()); // Delete this code
+		
 		obj.getKeyWords().switchFrameByWebElement(obj.getPagecommon().getFramefirstFrame());
 		obj.getKeyWords().clickElement(obj.getPagecommon().getSearchButtonTab());
 		obj.getKeyWords().sendKeys(obj.getPagecommon().getRequestGroupIDSearchTextBox(), value);
@@ -145,15 +148,28 @@ public class Common_Functions_Sd {
 	}
 	
 	@After
-	public void afterScenarios(Scenario s) throws InterruptedException {
-		if(s.isFailed())
-		{
-			TakesScreenshot  scrShot  = ((TakesScreenshot) driver);
-			byte[] data = scrShot.getScreenshotAs(OutputType.BYTES);
-			//scn.embed(data,"iamge/png");	
-		}
-		driver.quit();
-		}
+	public void afterScenarios(Scenario scenario) throws InterruptedException {
+		if (scenario.isFailed()) {
+            // Take a screenshot
+  
+            try {
+                final byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+                scenario.attach(screenshot, "image/png", "Failed Scenario Screenshot");
+                driver.close();
+                /* Define the destination of the screenshot
+                String screenshotName = scenario.getName().replaceAll(" ", "_");
+                File destinationPath = new File("target/screenshots/" + screenshotName + ".png");
+                FileHandler.copy(screenshot, destinationPath);
+                
+                // Attach screenshot to the report
+                scenario.attach(FileHandler.readAllBytes(destinationPath.getPath()), "image/png", screenshotName);
+                */
+                
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+        driver.quit();  // Closing the browser after scenario
 
-
+}
 }

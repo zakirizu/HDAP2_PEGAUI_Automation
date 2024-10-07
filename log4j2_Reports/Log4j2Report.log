@@ -3460,3 +3460,12 @@
 11:28:00.370 [main] INFO  utils.KeyWords - Switched to Default Contend From Frame On Page: Retrieval portal
 11:28:00.404 [main] INFO  utils.KeyWords - Clicking on Element :[[ChromeDriver: chrome on windows (b5b27e612fadbbcfc17c350c242bee6f)] -> xpath: //button[text()='Create RG']] On Page: Retrieval portal
 11:28:00.489 [main] INFO  utils.KeyWords - Clicked on Element :[[ChromeDriver: chrome on windows (b5b27e612fadbbcfc17c350c242bee6f)] -> xpath: //button[text()='Create RG']] On Page: Retrieval portal
+19:06:47.224 [main] INFO  utils.BaseClass - Intializing the Browser type: chrome
+19:06:54.090 [main] INFO  utils.KeyWords - Entering text:QA_Retrieval. In textbox WebElement: [[ChromeDriver: chrome on windows (7ec694e153c0c71fef05cf85f4195b13)] -> xpath: //input[@id='txtUserID']] On Page: Login Page
+19:06:54.276 [main] INFO  utils.KeyWords - Entered text:QA_Retrieval. In textbox WebElement: [[ChromeDriver: chrome on windows (7ec694e153c0c71fef05cf85f4195b13)] -> xpath: //input[@id='txtUserID']] On Page: Login Page
+19:06:54.314 [main] INFO  utils.KeyWords - Entering text:rules@123. In textbox WebElement: [[ChromeDriver: chrome on windows (7ec694e153c0c71fef05cf85f4195b13)] -> xpath: //input[@id='txtPassword']] On Page: Login Page
+19:06:54.550 [main] INFO  utils.KeyWords - Entered text:rules@123. In textbox WebElement: [[ChromeDriver: chrome on windows (7ec694e153c0c71fef05cf85f4195b13)] -> xpath: //input[@id='txtPassword']] On Page: Login Page
+19:06:54.615 [main] INFO  utils.KeyWords - Clicking on Element :[[ChromeDriver: chrome on windows (7ec694e153c0c71fef05cf85f4195b13)] -> xpath: //button[@id='sub']] On Page: Login Page
+19:07:31.410 [main] INFO  utils.KeyWords - Clicked on Element :Proxy element for: DefaultElementLocator 'By.xpath: //button[@id='sub']' On Page: Login Page
+19:07:31.410 [main] INFO  utils.KeyWords - Setting the ZOOM Percentage to: 80%
+19:08:31.767 [main] INFO  utils.KeyWords - Exception occured while Clicking on Element :Proxy element for: DefaultElementLocator 'By.xpath: //li[@title='Search']//span[text()='Search']' On Page: Retrieval portal
