@@ -3469,3 +3469,70 @@
 19:07:31.410 [main] INFO  utils.KeyWords - Clicked on Element :Proxy element for: DefaultElementLocator 'By.xpath: //button[@id='sub']' On Page: Login Page
 19:07:31.410 [main] INFO  utils.KeyWords - Setting the ZOOM Percentage to: 80%
 19:08:31.767 [main] INFO  utils.KeyWords - Exception occured while Clicking on Element :Proxy element for: DefaultElementLocator 'By.xpath: //li[@title='Search']//span[text()='Search']' On Page: Retrieval portal
+19:12:05.081 [main] INFO  utils.BaseClass - Intializing the Browser type: chrome
+19:12:12.532 [main] INFO  utils.KeyWords - Entering text:QA_Retrieval. In textbox WebElement: [[ChromeDriver: chrome on windows (03560168808dbdbfd46372c04db190e6)] -> xpath: //input[@id='txtUserID']] On Page: Login Page
+19:12:12.677 [main] INFO  utils.KeyWords - Entered text:QA_Retrieval. In textbox WebElement: [[ChromeDriver: chrome on windows (03560168808dbdbfd46372c04db190e6)] -> xpath: //input[@id='txtUserID']] On Page: Login Page
+19:12:12.694 [main] INFO  utils.KeyWords - Entering text:rules@123. In textbox WebElement: [[ChromeDriver: chrome on windows (03560168808dbdbfd46372c04db190e6)] -> xpath: //input[@id='txtPassword']] On Page: Login Page
+19:12:12.811 [main] INFO  utils.KeyWords - Entered text:rules@123. In textbox WebElement: [[ChromeDriver: chrome on windows (03560168808dbdbfd46372c04db190e6)] -> xpath: //input[@id='txtPassword']] On Page: Login Page
+19:12:12.852 [main] INFO  utils.KeyWords - Clicking on Element :[[ChromeDriver: chrome on windows (03560168808dbdbfd46372c04db190e6)] -> xpath: //button[@id='sub']] On Page: Login Page
+19:12:50.641 [main] INFO  utils.KeyWords - Clicked on Element :Proxy element for: DefaultElementLocator 'By.xpath: //button[@id='sub']' On Page: Login Page
+19:12:50.641 [main] INFO  utils.KeyWords - Setting the ZOOM Percentage to: 80%
+19:12:50.773 [main] INFO  utils.KeyWords - Switching to Frame By WebElement: [[ChromeDriver: chrome on windows (03560168808dbdbfd46372c04db190e6)] -> xpath: //iframe[@id='PegaGadget0Ifr']] On Page: Retrieval portal
+19:13:20.813 [main] INFO  utils.KeyWords - Switched to Frame By WebElement:Proxy element for: DefaultElementLocator 'By.xpath: //iframe[@id='PegaGadget0Ifr']' Frame title: Retrieval portal
+19:13:20.859 [main] INFO  utils.KeyWords - Clicking on Element :[[ChromeDriver: chrome on windows (03560168808dbdbfd46372c04db190e6)] -> xpath: //li[@title='Search']//span[text()='Search']] On Page: Retrieval portal
+19:13:21.005 [main] INFO  utils.KeyWords - Clicked on Element :[[ChromeDriver: chrome on windows (03560168808dbdbfd46372c04db190e6)] -> xpath: //li[@title='Search']//span[text()='Search']] On Page: Retrieval portal
+19:13:24.156 [main] INFO  utils.KeyWords - Entering text:RET-9642869539. In textbox WebElement: [[ChromeDriver: chrome on windows (03560168808dbdbfd46372c04db190e6)] -> xpath: //input[@name='$PAdvancedSearchCriteriaPage$pRequestGroupID']] On Page: Retrieval portal
+19:13:24.303 [main] INFO  utils.KeyWords - Entered text:RET-9642869539. In textbox WebElement: [[ChromeDriver: chrome on windows (03560168808dbdbfd46372c04db190e6)] -> xpath: //input[@name='$PAdvancedSearchCriteriaPage$pRequestGroupID']] On Page: Retrieval portal
+19:13:24.330 [main] INFO  utils.KeyWords - Clicking on Element :[[ChromeDriver: chrome on windows (03560168808dbdbfd46372c04db190e6)] -> xpath: //button[@name='RequestGroupSearch_pyDisplayHarness_10']] On Page: Retrieval portal
+19:13:24.415 [main] INFO  utils.KeyWords - Clicked on Element :[[ChromeDriver: chrome on windows (03560168808dbdbfd46372c04db190e6)] -> xpath: //button[@name='RequestGroupSearch_pyDisplayHarness_10']] On Page: Retrieval portal
+19:13:25.285 [main] INFO  utils.KeyWords - Clicking on Element :[[ChromeDriver: chrome on windows (03560168808dbdbfd46372c04db190e6)] -> xpath: //table[@pl_prop='pySearchResults.pxResults']//tr[2]//td[1]//a	] On Page: Retrieval portal
+19:13:25.398 [main] INFO  utils.KeyWords - Clicked on Element :[[ChromeDriver: chrome on windows (03560168808dbdbfd46372c04db190e6)] -> xpath: //table[@pl_prop='pySearchResults.pxResults']//tr[2]//td[1]//a	] On Page: Retrieval portal
+19:13:25.405 [main] INFO  utils.KeyWords - Switching to Default Contend From Frame On Page: Retrieval portal
+19:13:25.407 [main] INFO  utils.KeyWords - Switched to Default Contend From Frame On Page: Retrieval portal
+19:13:25.421 [main] INFO  utils.KeyWords - Switching to Frame By WebElement: [[ChromeDriver: chrome on windows (03560168808dbdbfd46372c04db190e6)] -> xpath: //iframe[@name='PegaGadget1Ifr']] On Page: Retrieval portal
+19:13:59.211 [main] INFO  utils.KeyWords - Switched to Frame By WebElement:Proxy element for: DefaultElementLocator 'By.xpath: //iframe[@name='PegaGadget1Ifr']' Frame title: Retrieval portal
+19:13:59.257 [main] INFO  utils.KeyWords - Clicking on Element :[[ChromeDriver: chrome on windows (03560168808dbdbfd46372c04db190e6)] -> xpath: //div[@class='panelOverFlowClass']//span//button[@title='Add task']] On Page: Retrieval portal
+19:13:59.669 [main] INFO  utils.KeyWords - Clicked on Element :[[ChromeDriver: chrome on windows (03560168808dbdbfd46372c04db190e6)] -> xpath: //div[@class='panelOverFlowClass']//span//button[@title='Add task']] On Page: Retrieval portal
+19:14:00.456 [main] INFO  utils.KeyWords - Clicking on Element :[[ChromeDriver: chrome on windows (03560168808dbdbfd46372c04db190e6)] -> xpath: (//a[text()='Exception Request'])[1]] On Page: Retrieval portal
+19:14:00.644 [main] INFO  utils.KeyWords - Clicked on Element :[[ChromeDriver: chrome on windows (03560168808dbdbfd46372c04db190e6)] -> xpath: (//a[text()='Exception Request'])[1]] On Page: Retrieval portal
+19:14:00.729 [main] INFO  utils.KeyWords - Clicking on Element :[[ChromeDriver: chrome on windows (03560168808dbdbfd46372c04db190e6)] -> xpath: //span//button[@title='Add tasks']] On Page: Retrieval portal
+19:14:01.022 [main] INFO  utils.KeyWords - Clicked on Element :[[ChromeDriver: chrome on windows (03560168808dbdbfd46372c04db190e6)] -> xpath: //span//button[@title='Add tasks']] On Page: Retrieval portal
+19:14:01.033 [main] INFO  utils.KeyWords - Switching to Default Contend From Frame On Page: Retrieval portal
+19:14:01.039 [main] INFO  utils.KeyWords - Switched to Default Contend From Frame On Page: Retrieval portal
+19:14:01.112 [main] INFO  utils.KeyWords - Clicking on Element :[[ChromeDriver: chrome on windows (03560168808dbdbfd46372c04db190e6)] -> xpath: //button[text()='Create RG']] On Page: Retrieval portal
+19:14:01.305 [main] INFO  utils.KeyWords - Clicked on Element :[[ChromeDriver: chrome on windows (03560168808dbdbfd46372c04db190e6)] -> xpath: //button[text()='Create RG']] On Page: Retrieval portal
+19:17:28.204 [main] INFO  utils.BaseClass - Intializing the Browser type: chrome
+19:17:34.263 [main] INFO  utils.KeyWords - Entering text:null. In textbox WebElement: [[ChromeDriver: chrome on windows (a8cfaaeb5ea747012734e41a59ba2c0c)] -> xpath: //input[@id='txtUserID']] On Page: Login Page
+19:17:34.416 [main] INFO  utils.KeyWords - Exception occured while Entered text: null in textbox WebElement: [[ChromeDriver: chrome on windows (a8cfaaeb5ea747012734e41a59ba2c0c)] -> xpath: //input[@id='txtUserID']] On Page: Login Page
+19:20:59.320 [main] INFO  utils.BaseClass - Intializing the Browser type: chrome
+19:21:04.188 [main] INFO  utils.KeyWords - Entering text:QA_Retrieval. In textbox WebElement: [[ChromeDriver: chrome on windows (0237233580ff679db6793573abd3743b)] -> xpath: //input[@id='txtUserID']] On Page: Login Page
+19:21:04.325 [main] INFO  utils.KeyWords - Entered text:QA_Retrieval. In textbox WebElement: [[ChromeDriver: chrome on windows (0237233580ff679db6793573abd3743b)] -> xpath: //input[@id='txtUserID']] On Page: Login Page
+19:21:04.344 [main] INFO  utils.KeyWords - Entering text:rules@123. In textbox WebElement: [[ChromeDriver: chrome on windows (0237233580ff679db6793573abd3743b)] -> xpath: //input[@id='txtPassword']] On Page: Login Page
+19:21:04.473 [main] INFO  utils.KeyWords - Entered text:rules@123. In textbox WebElement: [[ChromeDriver: chrome on windows (0237233580ff679db6793573abd3743b)] -> xpath: //input[@id='txtPassword']] On Page: Login Page
+19:21:04.513 [main] INFO  utils.KeyWords - Clicking on Element :[[ChromeDriver: chrome on windows (0237233580ff679db6793573abd3743b)] -> xpath: //button[@id='sub']] On Page: Login Page
+19:21:43.397 [main] INFO  utils.KeyWords - Clicked on Element :Proxy element for: DefaultElementLocator 'By.xpath: //button[@id='sub']' On Page: Login Page
+19:21:43.398 [main] INFO  utils.KeyWords - Setting the ZOOM Percentage to: 80%
+19:21:43.490 [main] INFO  utils.KeyWords - Switching to Frame By WebElement: [[ChromeDriver: chrome on windows (0237233580ff679db6793573abd3743b)] -> xpath: //iframe[@id='PegaGadget0Ifr']] On Page: Retrieval portal
+19:22:13.548 [main] INFO  utils.KeyWords - Switched to Frame By WebElement:Proxy element for: DefaultElementLocator 'By.xpath: //iframe[@id='PegaGadget0Ifr']' Frame title: Retrieval portal
+19:22:13.595 [main] INFO  utils.KeyWords - Clicking on Element :[[ChromeDriver: chrome on windows (0237233580ff679db6793573abd3743b)] -> xpath: //li[@title='Search']//span[text()='Search']] On Page: Retrieval portal
+19:22:13.740 [main] INFO  utils.KeyWords - Clicked on Element :[[ChromeDriver: chrome on windows (0237233580ff679db6793573abd3743b)] -> xpath: //li[@title='Search']//span[text()='Search']] On Page: Retrieval portal
+19:22:16.940 [main] INFO  utils.KeyWords - Entering text:RET-9642869539. In textbox WebElement: [[ChromeDriver: chrome on windows (0237233580ff679db6793573abd3743b)] -> xpath: //input[@name='$PAdvancedSearchCriteriaPage$pRequestGroupID']] On Page: Retrieval portal
+19:22:17.098 [main] INFO  utils.KeyWords - Entered text:RET-9642869539. In textbox WebElement: [[ChromeDriver: chrome on windows (0237233580ff679db6793573abd3743b)] -> xpath: //input[@name='$PAdvancedSearchCriteriaPage$pRequestGroupID']] On Page: Retrieval portal
+19:22:17.126 [main] INFO  utils.KeyWords - Clicking on Element :[[ChromeDriver: chrome on windows (0237233580ff679db6793573abd3743b)] -> xpath: //button[@name='RequestGroupSearch_pyDisplayHarness_10']] On Page: Retrieval portal
+19:22:17.216 [main] INFO  utils.KeyWords - Clicked on Element :[[ChromeDriver: chrome on windows (0237233580ff679db6793573abd3743b)] -> xpath: //button[@name='RequestGroupSearch_pyDisplayHarness_10']] On Page: Retrieval portal
+19:22:18.176 [main] INFO  utils.KeyWords - Clicking on Element :[[ChromeDriver: chrome on windows (0237233580ff679db6793573abd3743b)] -> xpath: //table[@pl_prop='pySearchResults.pxResults']//tr[2]//td[1]//a	] On Page: Retrieval portal
+19:22:18.288 [main] INFO  utils.KeyWords - Clicked on Element :[[ChromeDriver: chrome on windows (0237233580ff679db6793573abd3743b)] -> xpath: //table[@pl_prop='pySearchResults.pxResults']//tr[2]//td[1]//a	] On Page: Retrieval portal
+19:22:18.294 [main] INFO  utils.KeyWords - Switching to Default Contend From Frame On Page: Retrieval portal
+19:22:18.298 [main] INFO  utils.KeyWords - Switched to Default Contend From Frame On Page: Retrieval portal
+19:22:18.314 [main] INFO  utils.KeyWords - Switching to Frame By WebElement: [[ChromeDriver: chrome on windows (0237233580ff679db6793573abd3743b)] -> xpath: //iframe[@name='PegaGadget1Ifr']] On Page: Retrieval portal
+19:22:51.915 [main] INFO  utils.KeyWords - Switched to Frame By WebElement:Proxy element for: DefaultElementLocator 'By.xpath: //iframe[@name='PegaGadget1Ifr']' Frame title: Retrieval portal
+19:22:51.962 [main] INFO  utils.KeyWords - Clicking on Element :[[ChromeDriver: chrome on windows (0237233580ff679db6793573abd3743b)] -> xpath: //div[@class='panelOverFlowClass']//span//button[@title='Add task']] On Page: Retrieval portal
+19:22:52.082 [main] INFO  utils.KeyWords - Clicked on Element :[[ChromeDriver: chrome on windows (0237233580ff679db6793573abd3743b)] -> xpath: //div[@class='panelOverFlowClass']//span//button[@title='Add task']] On Page: Retrieval portal
+19:22:52.878 [main] INFO  utils.KeyWords - Clicking on Element :[[ChromeDriver: chrome on windows (0237233580ff679db6793573abd3743b)] -> xpath: (//a[text()='Exception Request'])[1]] On Page: Retrieval portal
+19:22:52.964 [main] INFO  utils.KeyWords - Clicked on Element :[[ChromeDriver: chrome on windows (0237233580ff679db6793573abd3743b)] -> xpath: (//a[text()='Exception Request'])[1]] On Page: Retrieval portal
+19:22:53.001 [main] INFO  utils.KeyWords - Clicking on Element :[[ChromeDriver: chrome on windows (0237233580ff679db6793573abd3743b)] -> xpath: //span//button[@title='Add tasks']] On Page: Retrieval portal
+19:22:53.116 [main] INFO  utils.KeyWords - Clicked on Element :[[ChromeDriver: chrome on windows (0237233580ff679db6793573abd3743b)] -> xpath: //span//button[@title='Add tasks']] On Page: Retrieval portal
+19:22:53.126 [main] INFO  utils.KeyWords - Switching to Default Contend From Frame On Page: Retrieval portal
+19:22:53.128 [main] INFO  utils.KeyWords - Switched to Default Contend From Frame On Page: Retrieval portal
+19:22:53.158 [main] INFO  utils.KeyWords - Clicking on Element :[[ChromeDriver: chrome on windows (0237233580ff679db6793573abd3743b)] -> xpath: //button[text()='Create RG']] On Page: Retrieval portal
+19:22:53.241 [main] INFO  utils.KeyWords - Clicked on Element :[[ChromeDriver: chrome on windows (0237233580ff679db6793573abd3743b)] -> xpath: //button[text()='Create RG']] On Page: Retrieval portal

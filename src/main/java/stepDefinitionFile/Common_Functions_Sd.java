@@ -64,8 +64,7 @@ public class Common_Functions_Sd {
 			
 	@Then("^Search for the User RG ID (.+)$")
 	public void searchFoRGID(String value) throws InterruptedException {
-		obj.getKeyWords().clickElement(obj.getPagecommon().getSearchButtonTab()); // Delete this code
-		
+
 		obj.getKeyWords().switchFrameByWebElement(obj.getPagecommon().getFramefirstFrame());
 		obj.getKeyWords().clickElement(obj.getPagecommon().getSearchButtonTab());
 		obj.getKeyWords().sendKeys(obj.getPagecommon().getRequestGroupIDSearchTextBox(), value);
