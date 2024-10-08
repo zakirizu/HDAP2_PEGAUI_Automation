@@ -3,7 +3,7 @@ Feature: DQA Task Related Scenarios
 Background:
 Given Launch the Application
 
-@Mas
+@Mask
  Scenario Outline:  Valdiate Whether User is able to perform DQA Task
  Given 		Search for the User RG ID <RequestGroupID>
  Given 		Add the task <Task>

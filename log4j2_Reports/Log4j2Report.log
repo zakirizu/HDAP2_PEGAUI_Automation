@@ -3536,3 +3536,6 @@
 19:22:53.128 [main] INFO  utils.KeyWords - Switched to Default Contend From Frame On Page: Retrieval portal
 19:22:53.158 [main] INFO  utils.KeyWords - Clicking on Element :[[ChromeDriver: chrome on windows (0237233580ff679db6793573abd3743b)] -> xpath: //button[text()='Create RG']] On Page: Retrieval portal
 19:22:53.241 [main] INFO  utils.KeyWords - Clicked on Element :[[ChromeDriver: chrome on windows (0237233580ff679db6793573abd3743b)] -> xpath: //button[text()='Create RG']] On Page: Retrieval portal
+13:26:05.060 [main] INFO  utils.BaseClass - Intializing the Browser type: chrome
+13:26:13.633 [main] INFO  utils.KeyWords - Entering text:null. In textbox WebElement: [[ChromeDriver: chrome on windows (263a269ded60107c0dfdf1827ec08d59)] -> xpath: //input[@id='txtUserID']] On Page: Login Page
+13:26:13.719 [main] INFO  utils.KeyWords - Exception occured while Entered text: null in textbox WebElement: [[ChromeDriver: chrome on windows (263a269ded60107c0dfdf1827ec08d59)] -> xpath: //input[@id='txtUserID']] On Page: Login Page

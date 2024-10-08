@@ -1,6 +1,7 @@
 Feature: Request Group Scenarios
 
 Background:
+Given Launch the Application
 
 
 
