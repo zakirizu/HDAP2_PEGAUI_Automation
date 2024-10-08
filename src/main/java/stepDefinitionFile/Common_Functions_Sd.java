@@ -37,21 +37,14 @@ import utils.KeyWords;
  * 
  * */
 public class Common_Functions_Sd {
+	static Logger 					myLogger 		= LogManager.getLogger(Common_Functions_Sd.class.getName());
 	Scenario scn;
     public WebDriver driver = null;   
-    //KeyWords keys;
-    //Common_Functions_Pg commo;  
-	
-
     public DependencyInjection obj;
 	public Common_Functions_Sd(DependencyInjection obj)
 	{
 		this.obj = obj;
 	}
-	
-	static Logger 					myLogger 		= LogManager.getLogger(Common_Functions_Sd.class.getName());
-	//Create Pages for only the elements which you are using here
-
 		
 	@Then("Launch the Application")
 	public void te() throws InterruptedException {		
@@ -148,26 +141,25 @@ public class Common_Functions_Sd {
 	
 	@After
 	public void afterScenarios(Scenario scenario) throws InterruptedException {
+		
+		
 		if (scenario.isFailed()) {
-            // Take a screenshot
-  
-            try {
+           try {
                 final byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
                 scenario.attach(screenshot, "image/png", "Failed Scenario Screenshot");
                 driver.close();
-                /* Define the destination of the screenshot
-                String screenshotName = scenario.getName().replaceAll(" ", "_");
-                File destinationPath = new File("target/screenshots/" + screenshotName + ".png");
-                FileHandler.copy(screenshot, destinationPath);
-                
-                // Attach screenshot to the report
-                scenario.attach(FileHandler.readAllBytes(destinationPath.getPath()), "image/png", screenshotName);
-                */
-                
-            } catch (Exception e) {
+            } 
+            catch (Exception e) {
                 e.printStackTrace();
             }
+    
         }
+	       else
+           { 
+	                final byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+	                scenario.attach(screenshot, "image/png", "Failed Scenario Screenshot");
+	                driver.close();
+           }
         driver.quit();  // Closing the browser after scenario
 
 }
