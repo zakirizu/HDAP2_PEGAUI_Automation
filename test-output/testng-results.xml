@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="11" passed="10" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-10-08T13:26:04 IST" name="Default suite" finished-at="2024-10-08T13:26:14 IST" duration-ms="10094">
+  <suite started-at="2024-10-09T08:47:43 IST" name="Default suite" finished-at="2024-10-09T09:01:34 IST" duration-ms="831447">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.RunnerTestNG@43f02ef2]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2024-10-08T13:26:04 IST" name="Default test" finished-at="2024-10-08T13:26:14 IST" duration-ms="10094">
+    <test started-at="2024-10-09T08:47:43 IST" name="Default test" finished-at="2024-10-09T09:01:34 IST" duration-ms="831447">
       <class name="testRunner.RunnerTestNG">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:testRunner.RunnerTestNG@43f02ef2]" started-at="2024-10-08T13:26:04 IST" name="setUpClass" finished-at="2024-10-08T13:26:04 IST" duration-ms="479" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:testRunner.RunnerTestNG@43f02ef2]" started-at="2024-10-09T08:47:43 IST" name="setUpClass" finished-at="2024-10-09T08:47:45 IST" duration-ms="1576" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@59b32539]]>
+                <![CDATA[org.testng.TestRunner@61c42e54]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.RunnerTestNG@43f02ef2]" started-at="2024-10-08T13:26:04 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-10-08T13:26:14 IST" duration-ms="9534" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.RunnerTestNG@43f02ef2]" started-at="2024-10-09T08:47:45 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-10-09T08:50:45 IST" duration-ms="180542" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -36,24 +36,183 @@
           </params>
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[Not Able to Enter Text in WebElement:[[ChromeDriver: chrome on windows (263a269ded60107c0dfdf1827ec08d59)] -> xpath: //input[@id='txtUserID']]On Page: Login Page expected [true] but found [false]]]>
+              <![CDATA[Not Able Click WebElement:Proxy element for: DefaultElementLocator 'By.xpath: //li[@title='Search']//span[text()='Search']'On Page: Retrieval portal expected [true] but found [false]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Not Able to Enter Text in WebElement:[[ChromeDriver: chrome on windows (263a269ded60107c0dfdf1827ec08d59)] -> xpath: //input[@id='txtUserID']]On Page: Login Page expected [true] but found [false]
+              <![CDATA[java.lang.AssertionError: Not Able Click WebElement:Proxy element for: DefaultElementLocator 'By.xpath: //li[@title='Search']//span[text()='Search']'On Page: Retrieval portal expected [true] but found [false]
 at org.testng.Assert.fail(Assert.java:111)
 at org.testng.Assert.failNotEquals(Assert.java:1578)
 at org.testng.Assert.assertTrue(Assert.java:57)
-at utils.KeyWords.sendKeys(KeyWords.java:162)
-at utils.KeyWords.loginApplicaiton(KeyWords.java:54)
-at stepDefinitionFile.Common_Functions_Sd.te(Common_Functions_Sd.java:61)
-at ✽.Launch the Application(file:///C:/Users/shaik.hussain/git/HDAP2_PEGAUI_Automation/src/main/java/featureFile/DQA_Task.feature:4)
+at utils.KeyWords.clickElement(KeyWords.java:297)
+at stepDefinitionFile.Common_Functions_Sd.searchFoRGID(Common_Functions_Sd.java:68)
+at ✽.Search for the User RG ID RET-9642869539(file:///C:/Users/shaik.hussain/git/HDAP2_PEGAUI_Automation/src/main/java/featureFile/DQA_Task.feature:17)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:testRunner.RunnerTestNG@43f02ef2]" started-at="2024-10-08T13:26:14 IST" name="tearDownClass" finished-at="2024-10-08T13:26:14 IST" duration-ms="43" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.RunnerTestNG@43f02ef2]" started-at="2024-10-09T08:50:45 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-10-09T08:51:50 IST" duration-ms="65106" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Valdiate Whether User is able to perform DQA Task"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["DQA Task Related Scenarios"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.RunnerTestNG@43f02ef2]" started-at="2024-10-09T08:51:50 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-10-09T08:52:55 IST" duration-ms="64761" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Valdiate Whether User is able to perform DQA Task"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["DQA Task Related Scenarios"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.RunnerTestNG@43f02ef2]" started-at="2024-10-09T08:52:55 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-10-09T08:54:00 IST" duration-ms="64574" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Valdiate Whether User is able to perform DQA Task"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["DQA Task Related Scenarios"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.RunnerTestNG@43f02ef2]" started-at="2024-10-09T08:54:00 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-10-09T08:55:06 IST" duration-ms="66562" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Valdiate Whether User is able to perform DQA Task"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["DQA Task Related Scenarios"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.RunnerTestNG@43f02ef2]" started-at="2024-10-09T08:55:06 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-10-09T08:56:12 IST" duration-ms="65489" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Valdiate Whether User is able to perform DQA Task"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["DQA Task Related Scenarios"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.RunnerTestNG@43f02ef2]" started-at="2024-10-09T08:56:12 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-10-09T08:57:17 IST" duration-ms="65154" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Valdiate Whether User is able to perform DQA Task"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["DQA Task Related Scenarios"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.RunnerTestNG@43f02ef2]" started-at="2024-10-09T08:57:17 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-10-09T08:58:21 IST" duration-ms="64012" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Valdiate Whether User is able to perform DQA Task"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["DQA Task Related Scenarios"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.RunnerTestNG@43f02ef2]" started-at="2024-10-09T08:58:21 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-10-09T08:59:26 IST" duration-ms="65181" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Valdiate Whether User is able to perform DQA Task"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["DQA Task Related Scenarios"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.RunnerTestNG@43f02ef2]" started-at="2024-10-09T08:59:26 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-10-09T09:00:30 IST" duration-ms="64366" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Valdiate Whether User is able to perform DQA Task"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["DQA Task Related Scenarios"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.RunnerTestNG@43f02ef2]" started-at="2024-10-09T09:00:30 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-10-09T09:01:34 IST" duration-ms="63766" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Valdiate Whether User is able to perform DQA Task"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["DQA Task Related Scenarios"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:testRunner.RunnerTestNG@43f02ef2]" started-at="2024-10-09T09:01:34 IST" name="tearDownClass" finished-at="2024-10-09T09:01:34 IST" duration-ms="252" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

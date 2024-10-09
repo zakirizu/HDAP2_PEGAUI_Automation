@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>10/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Oct 08 13:26:04 IST 2024</td>
+<td>Started on:</td><td>Wed Oct 09 08:47:43 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>10 seconds (10094 ms)</td>
+<tr><td>Total time:</td><td>831 seconds (831447 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -77,25 +77,82 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='testRunner.RunnerTestNG.runScenario()'><b>runScenario</b><br>Test class: testRunner.RunnerTestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Valdiate Whether User is able to perform DQA Task", "DQA Task Related Scenarios"</td>
-<td><div><pre>java.lang.AssertionError: Not Able to Enter Text in WebElement:[[ChromeDriver: chrome on windows (263a269ded60107c0dfdf1827ec08d59)] -&gt; xpath: //input[@id=&apos;txtUserID&apos;]]On Page: Login Page expected [true] but found [false]
+<td><div><pre>java.lang.AssertionError: Not Able Click WebElement:Proxy element for: DefaultElementLocator &apos;By.xpath: //li[@title=&apos;Search&apos;]//span[text()=&apos;Search&apos;]&apos;On Page: Retrieval portal expected [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1578)
 	at org.testng.Assert.assertTrue(Assert.java:57)
-	at utils.KeyWords.sendKeys(KeyWords.java:162)
-	at utils.KeyWords.loginApplicaiton(KeyWords.java:54)
-	at stepDefinitionFile.Common_Functions_Sd.te(Common_Functions_Sd.java:61)
-	at ?.Launch the Application(file:///C:/Users/shaik.hussain/git/HDAP2_PEGAUI_Automation/src/main/java/featureFile/DQA_Task.feature:4)
-</pre></div><a href='#' onClick='toggleBox("stack-trace723310524", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace723310524'><pre>java.lang.AssertionError: Not Able to Enter Text in WebElement:[[ChromeDriver: chrome on windows (263a269ded60107c0dfdf1827ec08d59)] -&gt; xpath: //input[@id=&apos;txtUserID&apos;]]On Page: Login Page expected [true] but found [false]
+	at utils.KeyWords.clickElement(KeyWords.java:297)
+	at stepDefinitionFile.Common_Functions_Sd.searchFoRGID(Common_Functions_Sd.java:68)
+	at ?.Search for the User RG ID RET-9642869539(file:///C:/Users/shaik.hussain/git/HDAP2_PEGAUI_Automation/src/main/java/featureFile/DQA_Task.feature:17)
+</pre></div><a href='#' onClick='toggleBox("stack-trace390010388", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace390010388'><pre>java.lang.AssertionError: Not Able Click WebElement:Proxy element for: DefaultElementLocator &apos;By.xpath: //li[@title=&apos;Search&apos;]//span[text()=&apos;Search&apos;]&apos;On Page: Retrieval portal expected [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1578)
 	at org.testng.Assert.assertTrue(Assert.java:57)
-	at utils.KeyWords.sendKeys(KeyWords.java:162)
-	at utils.KeyWords.loginApplicaiton(KeyWords.java:54)
-	at stepDefinitionFile.Common_Functions_Sd.te(Common_Functions_Sd.java:61)
-	at ?.Launch the Application(file:///C:/Users/shaik.hussain/git/HDAP2_PEGAUI_Automation/src/main/java/featureFile/DQA_Task.feature:4)
+	at utils.KeyWords.clickElement(KeyWords.java:297)
+	at stepDefinitionFile.Common_Functions_Sd.searchFoRGID(Common_Functions_Sd.java:68)
+	at ?.Search for the User RG ID RET-9642869539(file:///C:/Users/shaik.hussain/git/HDAP2_PEGAUI_Automation/src/main/java/featureFile/DQA_Task.feature:17)
 </pre></div></td>
-<td>9</td>
+<td>180</td>
+<td>testRunner.RunnerTestNG@43f02ef2</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testRunner.RunnerTestNG.runScenario()'><b>runScenario</b><br>Test class: testRunner.RunnerTestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Valdiate Whether User is able to perform DQA Task", "DQA Task Related Scenarios"</td>
+<td></td>
+<td>63</td>
+<td>testRunner.RunnerTestNG@43f02ef2</td></tr>
+<tr>
+<td title='testRunner.RunnerTestNG.runScenario()'><b>runScenario</b><br>Test class: testRunner.RunnerTestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Valdiate Whether User is able to perform DQA Task", "DQA Task Related Scenarios"</td>
+<td></td>
+<td>65</td>
+<td>testRunner.RunnerTestNG@43f02ef2</td></tr>
+<tr>
+<td title='testRunner.RunnerTestNG.runScenario()'><b>runScenario</b><br>Test class: testRunner.RunnerTestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Valdiate Whether User is able to perform DQA Task", "DQA Task Related Scenarios"</td>
+<td></td>
+<td>64</td>
+<td>testRunner.RunnerTestNG@43f02ef2</td></tr>
+<tr>
+<td title='testRunner.RunnerTestNG.runScenario()'><b>runScenario</b><br>Test class: testRunner.RunnerTestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Valdiate Whether User is able to perform DQA Task", "DQA Task Related Scenarios"</td>
+<td></td>
+<td>65</td>
+<td>testRunner.RunnerTestNG@43f02ef2</td></tr>
+<tr>
+<td title='testRunner.RunnerTestNG.runScenario()'><b>runScenario</b><br>Test class: testRunner.RunnerTestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Valdiate Whether User is able to perform DQA Task", "DQA Task Related Scenarios"</td>
+<td></td>
+<td>66</td>
+<td>testRunner.RunnerTestNG@43f02ef2</td></tr>
+<tr>
+<td title='testRunner.RunnerTestNG.runScenario()'><b>runScenario</b><br>Test class: testRunner.RunnerTestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Valdiate Whether User is able to perform DQA Task", "DQA Task Related Scenarios"</td>
+<td></td>
+<td>65</td>
+<td>testRunner.RunnerTestNG@43f02ef2</td></tr>
+<tr>
+<td title='testRunner.RunnerTestNG.runScenario()'><b>runScenario</b><br>Test class: testRunner.RunnerTestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Valdiate Whether User is able to perform DQA Task", "DQA Task Related Scenarios"</td>
+<td></td>
+<td>64</td>
+<td>testRunner.RunnerTestNG@43f02ef2</td></tr>
+<tr>
+<td title='testRunner.RunnerTestNG.runScenario()'><b>runScenario</b><br>Test class: testRunner.RunnerTestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Valdiate Whether User is able to perform DQA Task", "DQA Task Related Scenarios"</td>
+<td></td>
+<td>64</td>
+<td>testRunner.RunnerTestNG@43f02ef2</td></tr>
+<tr>
+<td title='testRunner.RunnerTestNG.runScenario()'><b>runScenario</b><br>Test class: testRunner.RunnerTestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Valdiate Whether User is able to perform DQA Task", "DQA Task Related Scenarios"</td>
+<td></td>
+<td>64</td>
+<td>testRunner.RunnerTestNG@43f02ef2</td></tr>
+<tr>
+<td title='testRunner.RunnerTestNG.runScenario()'><b>runScenario</b><br>Test class: testRunner.RunnerTestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Valdiate Whether User is able to perform DQA Task", "DQA Task Related Scenarios"</td>
+<td></td>
+<td>65</td>
 <td>testRunner.RunnerTestNG@43f02ef2</td></tr>
 </table><p>
 </body>

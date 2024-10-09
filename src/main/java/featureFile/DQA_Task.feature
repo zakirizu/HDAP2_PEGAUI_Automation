@@ -1,5 +1,4 @@
 Feature: DQA Task Related Scenarios
-
 Background:
 Given Launch the Application
 

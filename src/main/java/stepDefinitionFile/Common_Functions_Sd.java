@@ -1,5 +1,7 @@
 package stepDefinitionFile;
 import org.openqa.selenium.io.FileHandler;
+import org.openqa.selenium.support.FindBy;
+
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -9,9 +11,11 @@ import java.util.concurrent.ThreadLocalRandom;
 import org.apache.commons.io.FileUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.BeforeTest;
 import factory.Constants;
@@ -37,6 +41,7 @@ import utils.KeyWords;
  * 
  * */
 public class Common_Functions_Sd {
+	
 	static Logger 					myLogger 		= LogManager.getLogger(Common_Functions_Sd.class.getName());
 	Scenario scn;
     public WebDriver driver = null;   
@@ -57,8 +62,9 @@ public class Common_Functions_Sd {
 			
 	@Then("^Search for the User RG ID (.+)$")
 	public void searchFoRGID(String value) throws InterruptedException {
-
-		obj.getKeyWords().switchFrameByWebElement(obj.getPagecommon().getFramefirstFrame());
+		
+	//	obj.getKeyWords().switchFrameByWebElement(obj.getPagecommon().getFramefirstFrame());
+		getDynamicFrame("0");//if not working delete this code
 		obj.getKeyWords().clickElement(obj.getPagecommon().getSearchButtonTab());
 		obj.getKeyWords().sendKeys(obj.getPagecommon().getRequestGroupIDSearchTextBox(), value);
 		obj.getKeyWords().clickElement(obj.getPagecommon().getSearchButtonInSearchSection());
@@ -69,7 +75,8 @@ public class Common_Functions_Sd {
 	@Then("^Add the task (.+)$")
 	public void addTask(String value) throws InterruptedException {
 		obj.getKeyWords().switchToDefaultContent();
-		obj.getKeyWords().switchFrameByWebElement(obj.getPagecommon().getSecondFrame());
+		getDynamicFrame("1");//if not working delete this code
+		//obj.getKeyWords().switchFrameByWebElement(obj.getPagecommon().getSecondFrame());
 		obj.getKeyWords().clickElement(obj.getPagecommon().getAddTaskBtn());
 		obj.getKeyWords().clickElement(obj.getPagecommon().dynamic_AddTask(value));
 		obj.getKeyWords().clickElement(obj.getPagecommon().getbtn_addTasks());
@@ -129,6 +136,14 @@ public class Common_Functions_Sd {
 	
 	
 	
+
+	public void getDynamicFrame(String id) throws InterruptedException {
+		WebElement ele = driver.findElement(By.xpath("//iframe[@id='PegaGadget"+id+"Ifr']"));
+		driver.switchTo().frame(ele);
+		Thread.sleep(3000);
+	}
+	
+	
 	
 	/**********************************************************************************************************/
 	/************************************HOOK OPERATIONS*****************************************************/
@@ -146,7 +161,7 @@ public class Common_Functions_Sd {
 		if (scenario.isFailed()) {
            try {
                 final byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
-                scenario.attach(screenshot, "image/png", "Failed Scenario Screenshot");
+                scenario.attach(screenshot, "image/png", "FAILED Scenario Screenshot");
                 driver.close();
             } 
             catch (Exception e) {
@@ -157,7 +172,7 @@ public class Common_Functions_Sd {
 	       else
            { 
 	                final byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
-	                scenario.attach(screenshot, "image/png", "Failed Scenario Screenshot");
+	                scenario.attach(screenshot, "image/png", "PASSED  Scenario Screenshot");
 	                driver.close();
            }
         driver.quit();  // Closing the browser after scenario

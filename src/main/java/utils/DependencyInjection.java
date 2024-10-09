@@ -39,10 +39,10 @@ public class DependencyInjection {
 	
 	public void initializePageObject(WebDriver driver, Scenario s) {
 		
-		 pagecommon		= new  Common_Functions_Pg(driver, s);
-		 pageCreateRG		=  new Create_RG_Pg(driver, s);
-		 pageDQATask 		= new DQA_Task_Pg(driver, s);
-		 pageProjectLaunches_Pg = new ProjectLaunches_Pg(driver, s);
+		 pagecommon									= new  Common_Functions_Pg(driver, s);
+		 pageCreateRG									=  new Create_RG_Pg(driver, s);
+		 pageDQATask 									= new DQA_Task_Pg(driver, s);
+		 pageProjectLaunches_Pg 			= new ProjectLaunches_Pg(driver, s);
 		 
 		 keys 							= new KeyWords(driver);
 		
