@@ -51,7 +51,7 @@ public class KeyWords {
 			if(Environment.equalsIgnoreCase("QA"))
 				{
 				driver.get(utils.PropertiesFileReader.getUIProperty("QA_URL"));			
-				sendKeys(getUserName_txtBox(), PropertiesFileReader.getUIProperty("QA_UserID"));
+				sendKeys(getUserName_txtBox(), PropertiesFileReader.getUIProperty("hhQA_UserID"));
 				sendKeys(passWord_txtBox, PropertiesFileReader.getUIProperty("QA_Pwd"));
 				clickElement(getLogin_Button());
 					

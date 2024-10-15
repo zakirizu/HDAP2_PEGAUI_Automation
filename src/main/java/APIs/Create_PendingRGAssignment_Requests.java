@@ -11,12 +11,12 @@ public class Create_PendingRGAssignment_Requests {
 	static String intendedUse		= PropertiesFileReader.getAPIProperty("intendedUse");
 	static String accountID			= PropertiesFileReader.getAPIProperty("AccountID");
 	static String subAccountID		= PropertiesFileReader.getAPIProperty("SubAccountID");
+	
+	
 	@Test(invocationCount = 10)
 	public  static void ChaseRequest_With_No_Matching_RG() throws InterruptedException
 	{
-		
-		
-		    String cotivitClaimNumber = stepDefinitionFile.Common_Functions_Sd.getUniqueRandomInteger();
+				    String cotivitClaimNumber = stepDefinitionFile.Common_Functions_Sd.getUniqueRandomInteger();
 		    System.out.println("*******************************Creating Chase Request with NO Matching Single RG with Below Combination*****************************");
 			System.out.println("Intended Use------------------------->" +intendedUse);
 			System.out.println("Account ID---------------------------->" +accountID);
