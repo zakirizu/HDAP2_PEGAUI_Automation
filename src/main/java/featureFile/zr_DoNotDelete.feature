@@ -94,10 +94,16 @@ Given 			Clear the Cache
     
 #Reading the data from Excel Sheet
 
- @ReadDataFromExcel
- 
+ @ReadDataFromExcel222 
  Scenario Outline: Testing where user is able to read data from the Excel Sheet
  Given Read ExcelData from <SheetName> and <TestCaseID>
+ Examples:
+ 
+| SheetName | TestCaseID |
+ |alphaSheet |TestCasesID1|
+  |betaSheet |TestCasesID10|
+  |realTime| HighLightElement|
+ 
    
     
      #**********************RUNNING THE TEST CASES INCLUDING AND EXCLUDING via TEST RUNNER FILE******************   

@@ -23,6 +23,8 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
+import pages.Common_Functions_Pg;
+
 
 public class KeyWords {
 	
@@ -48,17 +50,20 @@ public class KeyWords {
 		
 		try 
 		{
+			myLogger.info("Setting the ZOOM Percentage to: 80%");				
+			
+			
 			if(Environment.equalsIgnoreCase("QA"))
 				{
 				driver.get(utils.PropertiesFileReader.getUIProperty("QA_URL"));			
-				sendKeys(getUserName_txtBox(), PropertiesFileReader.getUIProperty("hhQA_UserID"));
+				sendKeys(UserName_txtBox, PropertiesFileReader.getUIProperty("QA_UserID"));
 				sendKeys(passWord_txtBox, PropertiesFileReader.getUIProperty("QA_Pwd"));
-				clickElement(getLogin_Button());
-					
+				clickElement(getLogin_Button());			
 				}
 			else if(Environment.equalsIgnoreCase("UAT"))
 				{
-				driver.get(utils.PropertiesFileReader.getUIProperty("UAT_URL"));		
+				driver.get(utils.PropertiesFileReader.getUIProperty("UAT_URL"));	
+				js.executeScript("document.body.style.zoom='80%'");
 				sendKeys(getUserName_txtBox(), PropertiesFileReader.getUIProperty("UAT_UserID"));
 				sendKeys(passWord_txtBox, PropertiesFileReader.getUIProperty("UAT_Pwd"));
 				clickElement(getLogin_Button());
@@ -67,13 +72,25 @@ public class KeyWords {
 			else if(Environment.equalsIgnoreCase("PROD"))
 				{
 				driver.get(utils.PropertiesFileReader.getUIProperty("PROD_URL"));		
+				js.executeScript("document.body.style.zoom='80%'");
 				sendKeys(getUserName_txtBox(), PropertiesFileReader.getUIProperty("PROD_UserID"));
 				sendKeys(passWord_txtBox, PropertiesFileReader.getUIProperty("PROD_Pwd"));
 				clickElement(getLogin_Button());							 	
 				}	
-			
-			myLogger.info("Setting the ZOOM Percentage to: 80%");			
+			//clickElement(title);
+			title.click();
 			Robot robot = new Robot();
+			System.out.println("WAITING FOR ZR");
+		//	Thread.sleep(8000);
+			  for(int i=0; i<2; i++){ 
+					robot.keyPress(KeyEvent.VK_CONTROL);
+					robot.keyPress(KeyEvent.VK_SUBTRACT);	
+					robot.keyRelease(KeyEvent.VK_CONTROL);
+					robot.keyRelease(KeyEvent.VK_SUBTRACT);	
+					Thread.sleep(1500);
+				
+			}
+			/* 
 			robot.keyPress(KeyEvent.VK_CONTROL);
 			robot.keyPress(KeyEvent.VK_SUBTRACT);	
 			robot.keyRelease(KeyEvent.VK_CONTROL);
@@ -82,6 +99,7 @@ public class KeyWords {
 			robot.keyPress(KeyEvent.VK_SUBTRACT);	
 			robot.keyRelease(KeyEvent.VK_CONTROL);
 			robot.keyRelease(KeyEvent.VK_SUBTRACT);	
+			*/
 			
 		}
 		
@@ -114,7 +132,15 @@ public class KeyWords {
 		return passWord_txtBox;
 	}
 	
+	@FindBy(xpath="//li[@title='Search']//span[text()='Search']")
+	private  WebElement searchButtonTab;		
+	public WebElement getSearchButtonTab() {
+	return searchButtonTab;
+	}
 	
+	
+	@FindBy(xpath="//img[@title='Cotiviti One Retrieval']")
+	private  WebElement title;		
 	
 	//*
 	

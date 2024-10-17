@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.concurrent.ThreadLocalRandom;
 import org.apache.commons.io.FileUtils;
 import org.apache.logging.log4j.LogManager;
@@ -19,6 +20,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.BeforeTest;
 import factory.Constants;
+import factory.ReadDataFromExcel;
 import io.cucumber.java.*;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
@@ -114,6 +116,12 @@ public class Common_Functions_Sd {
 	@Given("^Read ExcelData from (.+) and (.+)$")
 	public void ReadExcelSheetDataFromSheet(String SheetName, String TestCaseID) {
 		
+		HashMap<String,String> testData = ReadDataFromExcel.getExcelData(SheetName, TestCaseID);
+		
+		for(String k : testData.keySet())
+		{
+			System.out.println(k     +"->" +testData.get(k) );
+		}
 		
 		
 	}
