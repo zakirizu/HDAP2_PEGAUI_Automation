@@ -92,7 +92,12 @@ Given 			Clear the Cache
       | India         |
     Then 			Click on the submit button
     
+#Reading the data from Excel Sheet
 
+ @ReadDataFromExcel
+ 
+ Scenario Outline: Testing where user is able to read data from the Excel Sheet
+ Given Read ExcelData from <SheetName> and <TestCaseID>
    
     
      #**********************RUNNING THE TEST CASES INCLUDING AND EXCLUDING via TEST RUNNER FILE******************   

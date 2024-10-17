@@ -23,6 +23,7 @@ import io.cucumber.java.*;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import pages.Common_Functions_Pg;
 import utils.BaseClass;
@@ -109,7 +110,13 @@ public class Common_Functions_Sd {
 	public void Click_on_the_Request_Group_Settings_Tab() {
 		obj.getKeyWords().clickElement(obj.getPagecommon().getRequestGroupSettingsTab());
 	}
-	
+
+	@Given("^Read ExcelData from (.+) and (.+)$")
+	public void ReadExcelSheetDataFromSheet(String SheetName, String TestCaseID) {
+		
+		
+		
+	}
 	
 
 	@And("click on UploadMR Button")
@@ -132,10 +139,7 @@ public class Common_Functions_Sd {
 		String temp = Integer.toString(rand);
 		return temp;
 	
-	}
-	
-	
-	
+	}	
 
 	public void getDynamicFrame(String id) throws InterruptedException {
 		WebElement ele = driver.findElement(By.xpath("//iframe[@id='PegaGadget"+id+"Ifr']"));
