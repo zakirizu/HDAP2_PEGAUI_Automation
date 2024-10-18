@@ -1,5 +1,9 @@
 package utils;
+import java.util.HashMap;
+
 import org.openqa.selenium.WebDriver;
+
+import factory.ReadDataFromExcel;
 import io.cucumber.java.Scenario;
 import pages.*;
 
@@ -9,10 +13,9 @@ public class DependencyInjection {
 	Common_Functions_Pg pagecommon;
 	Create_RG_Pg                   pageCreateRG;
 	DQA_Task_Pg						pageDQATask;
-	ProjectLaunches_Pg			pageProjectLaunches_Pg;
-	
+	ProjectLaunches_Pg		pageProjectLaunches_Pg;	
 	KeyWords 							keys;
-	
+		
 	
 	public WebDriver getDriver() {
 		return driver;
@@ -31,20 +34,19 @@ public class DependencyInjection {
 		return pageProjectLaunches_Pg;
 	}
 	
-	public KeyWords getKeyWords() {
+	public KeyWords keyWords() {
 		return keys;
 	}
 	
-	
-	
+
+		
 	public void initializePageObject(WebDriver driver, Scenario s) {
 		
 		 pagecommon									= new  Common_Functions_Pg(driver, s);
 		 pageCreateRG									=  new Create_RG_Pg(driver, s);
 		 pageDQATask 									= new DQA_Task_Pg(driver, s);
-		 pageProjectLaunches_Pg 			= new ProjectLaunches_Pg(driver, s);
-		 
-		 keys 							= new KeyWords(driver);
+		 pageProjectLaunches_Pg 			= new ProjectLaunches_Pg(driver, s);		 
+		 keys 														= new KeyWords(driver);
 		
 	}
 	public void setDriver(WebDriver driver) {

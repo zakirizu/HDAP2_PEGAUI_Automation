@@ -3,6 +3,7 @@ package utils;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
 import java.time.Duration;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
@@ -23,11 +24,12 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
+import factory.ReadDataFromExcel;
 import pages.Common_Functions_Pg;
 
 
 public class KeyWords {
-	
+	HashMap<String,String> testData;
 	static JavascriptExecutor 		js;
 	public static WebDriver 		driver;	
 	static String highLigtElement 		= 	PropertiesFileReader.getUIProperty("highLightElement");
@@ -42,15 +44,12 @@ public class KeyWords {
 		PageFactory.initElements(driver, this);	
 		js 	= 	(JavascriptExecutor) driver;
 	}
-	
-	
-	
-	//*	
+
 	public  void loginApplicaiton() throws InterruptedException {
 		
 		try 
 		{
-			myLogger.info("Setting the ZOOM Percentage to: 80%");				
+				
 			
 			
 			if(Environment.equalsIgnoreCase("QA"))
@@ -77,29 +76,16 @@ public class KeyWords {
 				sendKeys(passWord_txtBox, PropertiesFileReader.getUIProperty("PROD_Pwd"));
 				clickElement(getLogin_Button());							 	
 				}	
-			//clickElement(title);
 			title.click();
 			Robot robot = new Robot();
-			System.out.println("WAITING FOR ZR");
-		//	Thread.sleep(8000);
-			  for(int i=0; i<2; i++){ 
+			  for(int i=0; i<3; i++){ 
 					robot.keyPress(KeyEvent.VK_CONTROL);
 					robot.keyPress(KeyEvent.VK_SUBTRACT);	
 					robot.keyRelease(KeyEvent.VK_CONTROL);
 					robot.keyRelease(KeyEvent.VK_SUBTRACT);	
-					Thread.sleep(1500);
-				
+					Thread.sleep(1500);			
 			}
-			/* 
-			robot.keyPress(KeyEvent.VK_CONTROL);
-			robot.keyPress(KeyEvent.VK_SUBTRACT);	
-			robot.keyRelease(KeyEvent.VK_CONTROL);
-			robot.keyRelease(KeyEvent.VK_SUBTRACT);				
-			robot.keyPress(KeyEvent.VK_CONTROL);
-			robot.keyPress(KeyEvent.VK_SUBTRACT);	
-			robot.keyRelease(KeyEvent.VK_CONTROL);
-			robot.keyRelease(KeyEvent.VK_SUBTRACT);	
-			*/
+
 			
 		}
 		
@@ -140,12 +126,19 @@ public class KeyWords {
 	
 	
 	@FindBy(xpath="//img[@title='Cotiviti One Retrieval']")
-	private  WebElement title;		
+	private  WebElement title;
+	public WebElement getTitleIcon() {
+	return title;
+	}
+	
 	
 	//*
 	
 	
-	
+	public HashMap<String, String> getTestData( String TestCaseID) {
+		testData = ReadDataFromExcel.getExcelData("createRG", TestCaseID);
+		return testData;				
+	}
 	
 	
 	
@@ -336,7 +329,7 @@ public class KeyWords {
 	 @ Can Be Used For	: To Select value in the DropDownList BY VISIBLE TEXT(Text Displyed on UI of the DDL).
 	*/
 
-	public static void SelectByVisibleText(WebElement ele, String visibleText) {
+	public void SelectByVisibleText(WebElement ele, String visibleText) {
 		String title = driver.getTitle();
 		try 
 		{
@@ -379,7 +372,7 @@ public class KeyWords {
 	 @ Can Be Used For	: To Select value in the DropDownList BY VALUE(VALUE attribute is present in the HTML tag of select Class).
 	*/
 
-	public static void selectByValue(WebElement ele, String value) {
+	public  void selectByValue(WebElement ele, String value) {
 		String title = driver.getTitle();
 		try 
 		{

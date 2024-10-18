@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.concurrent.ThreadLocalRandom;
 import org.apache.commons.io.FileUtils;
 import org.apache.logging.log4j.LogManager;
@@ -15,6 +16,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.BeforeTest;
 import factory.Constants;
+import factory.ReadDataFromExcel;
 import io.cucumber.java.*;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
@@ -40,10 +42,6 @@ import utils.KeyWords;
 public class ProjectLaunches_Sd {
 	Scenario scn;
     public WebDriver driver = null;   
-    //KeyWords keys;
-    //Common_Functions_Pg commo;  
-	
-
     public DependencyInjection obj;
 	public ProjectLaunches_Sd(DependencyInjection obj)
 	{
@@ -51,15 +49,19 @@ public class ProjectLaunches_Sd {
 	}
 	
 	static Logger 					myLogger 		= LogManager.getLogger(ProjectLaunches_Sd.class.getName());
-	//Create Pages for only the elements which you are using here
 
-	
+	//Add this piece of code to read data from Excel Sheet. Change the Sheet Name
+		HashMap<String,String> testData;	
+		@Then("^Read ExcelData from projectLaunchSheet  for  (.+)$")
+		public HashMap<String, String> ReadExcelSheetDataFromSheet( String TestCaseID) {		
+			testData = ReadDataFromExcel.getExcelData("preLaunch", TestCaseID);
+			return testData;		
+		}
 	
 	@Given("User Clicks on the Project Launches Tab")
-	public void UserClicksontheProjectLaunchesTab() {
-		
-		obj.getKeyWords().clickElement(obj.getProjectLaunches_Pg().getTab_ProjectLaunches());
-		obj.getKeyWords().sendKeys(null, null);
+	public void UserClicksontheProjectLaunchesTab() {		
+		obj.keyWords().clickElement(obj.getProjectLaunches_Pg().getTab_ProjectLaunches());
+		obj.keyWords().sendKeys(null, null);
 	}
 	
 	

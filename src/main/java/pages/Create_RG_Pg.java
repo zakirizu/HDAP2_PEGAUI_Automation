@@ -70,7 +70,7 @@ public class Create_RG_Pg {
 		@FindBy(xpath = "//select[@id='364c75d1']")
 		private WebElement Timezone_ddl;
 		
-		@FindBy(xpath = "//div[text()='Next >>']")
+		@FindBy(xpath = "//button[@title='Complete this assignment']")
 		private WebElement Contacts_Nextbtn;
 		
 		
@@ -81,7 +81,7 @@ public class Create_RG_Pg {
 		@FindBy(xpath = "//select[@id='af741cb3']")
 		private WebElement TimezoneRequestGroupSetting_ddl;
 		
-		@FindBy(xpath = "//select[@id='91c190b1']")
+		@FindBy(xpath = "//textarea[@id='91c190b1']")
 		private WebElement Instruction_Txtbox ;
 		
 		@FindBy(xpath = "//input[@id='a1ed4d32']")
@@ -340,8 +340,12 @@ public class Create_RG_Pg {
 		@FindBy(xpath = "//button[@title='Complete this assignment']")
 		private WebElement btn_Next;
 		
-		@FindBy(xpath = "test")
-		private WebElement test;
+		@FindBy(xpath = "//h2[text()='Customer account summary']")
+		private WebElement customerAccSummary;
+		
+		public WebElement getcustomerAccSummary_btn() {
+			return customerAccSummary;
+		}
 		
 		
 		public WebElement getBtn_createRG() {
@@ -354,10 +358,6 @@ public class Create_RG_Pg {
 
 		public WebElement getBtn_Next() {
 			return btn_Next;
-		}
-
-		public WebElement getTest() {
-			return test;
 		}
 
 		public WebElement getNext_btn() {
@@ -429,9 +429,7 @@ public class Create_RG_Pg {
 			return Next_Review_Txtbox;
 		}
 
-		public WebElement getRetrival_Method_ddl() {
-			return RetrivalMethod_ddl;
-		}
+
 
 		public WebElement getOwner_Txtbox() {
 			return Owner_Txtbox;

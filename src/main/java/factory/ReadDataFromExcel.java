@@ -42,8 +42,10 @@ public class ReadDataFromExcel {
 					
 					for(int j=1; j<lastColumn-1; j++)						
 					{
-						String k = targetKeyRow.getCell(j).getStringCellValue();
-						String v = targetValueRow.getCell(j).getStringCellValue();
+						String ktemp = targetKeyRow.getCell(j).getStringCellValue();			
+						String k = ktemp.replaceAll("\"","");
+						String vtemp = targetValueRow.getCell(j).getStringCellValue();
+						String v = vtemp.replaceAll("\"","");
 						hmap.put(k, v);
 					}
 					mylogger.info("Successfully Read the Data from the Excel Sheet for TestCaseID: "+tcID);

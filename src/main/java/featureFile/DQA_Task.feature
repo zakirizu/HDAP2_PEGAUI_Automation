@@ -4,6 +4,7 @@ Given Launch the Application
 
 @MaskZR
  Scenario Outline:  Valdiate Whether User is able to perform DQA Task
+ Given   Read ExcelData from DQATaskSheet  for  <TestCaseID>
  Given 		Search for the User RG ID <RequestGroupID>
 Given 		Add the task <Task>
 Given Read ExcelData from <SheetName> and <TestCaseID>

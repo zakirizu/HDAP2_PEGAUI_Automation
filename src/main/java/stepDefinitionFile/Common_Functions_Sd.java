@@ -6,6 +6,7 @@ import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.concurrent.ThreadLocalRandom;
@@ -59,7 +60,7 @@ public class Common_Functions_Sd {
 		driver = BaseClass.initializeDriver();
 		obj.setDriver(driver);
 		obj.initializePageObject(driver, scn);
-		obj.getKeyWords().loginApplicaiton();
+		obj.keyWords().loginApplicaiton();
 	}
 	
 			
@@ -68,68 +69,61 @@ public class Common_Functions_Sd {
 		
 	//	obj.getKeyWords().switchFrameByWebElement(obj.getPagecommon().getFramefirstFrame());
 		getDynamicFrame("0");//if not working delete this code
-		obj.getKeyWords().clickElement(obj.getPagecommon().getSearchButtonTab());
-		obj.getKeyWords().sendKeys(obj.getPagecommon().getRequestGroupIDSearchTextBox(), value);
-		obj.getKeyWords().clickElement(obj.getPagecommon().getSearchButtonInSearchSection());
-		obj.getKeyWords().clickElement(obj.getPagecommon().getclickFirstRG());		
+		obj.keyWords().clickElement(obj.getPagecommon().getSearchButtonTab());
+		obj.keyWords().sendKeys(obj.getPagecommon().getRequestGroupIDSearchTextBox(), value);
+		obj.keyWords().clickElement(obj.getPagecommon().getSearchButtonInSearchSection());
+		obj.keyWords().clickElement(obj.getPagecommon().getclickFirstRG());		
 		}
 	
 	
 	@Then("^Add the task (.+)$")
 	public void addTask(String value) throws InterruptedException {
-		obj.getKeyWords().switchToDefaultContent();
+		obj.keyWords().switchToDefaultContent();
 		getDynamicFrame("1");//if not working delete this code
 		//obj.getKeyWords().switchFrameByWebElement(obj.getPagecommon().getSecondFrame());
-		obj.getKeyWords().clickElement(obj.getPagecommon().getAddTaskBtn());
-		obj.getKeyWords().clickElement(obj.getPagecommon().dynamic_AddTask(value));
-		obj.getKeyWords().clickElement(obj.getPagecommon().getbtn_addTasks());
+		obj.keyWords().clickElement(obj.getPagecommon().getAddTaskBtn());
+		obj.keyWords().clickElement(obj.getPagecommon().dynamic_AddTask(value));
+		obj.keyWords().clickElement(obj.getPagecommon().getbtn_addTasks());
 		}
 
 	@Then("Switch to the RG Frame")
 	public void Switch_To_Frame() {
-		obj.getKeyWords().switchToDefaultContent();
-		obj.getKeyWords().switchFrameByWebElement(obj.getPagecommon().getRGTabFrame());	
+		obj.keyWords().switchToDefaultContent();
+		obj.keyWords().switchFrameByWebElement(obj.getPagecommon().getRGTabFrame());	
 	}
 	
 	@Then("Switch to the Second Frame")
 	public void Switch_To_SecondFrame() {
-		obj.getKeyWords().switchToDefaultContent();
-		obj.getKeyWords().switchFrameByWebElement(obj.getPagecommon().getSecondFrame());	
+		obj.keyWords().switchToDefaultContent();
+		obj.keyWords().switchFrameByWebElement(obj.getPagecommon().getSecondFrame());	
 	}
 	
 
 	@Then("Click on the First Available RG")
 	public void Click_on_the_First_Available_RG() {
-		obj.getKeyWords().clickElement(obj.getPagecommon().getFirstRGfromWB());	
+		obj.keyWords().clickElement(obj.getPagecommon().getFirstRGfromWB());	
 	}
 	
 	@Then("Hold For half min")
 	public void Hold_For_Half_min() throws InterruptedException {
-		obj.getKeyWords().shortWait();
+		obj.keyWords().shortWait();
 	}
 	
 	@And("Click on the Request Group Settings Tab")
 	public void Click_on_the_Request_Group_Settings_Tab() {
-		obj.getKeyWords().clickElement(obj.getPagecommon().getRequestGroupSettingsTab());
+		obj.keyWords().clickElement(obj.getPagecommon().getRequestGroupSettingsTab());
 	}
 
 	@Given("^Read ExcelData from (.+) and (.+)$")
-	public void ReadExcelSheetDataFromSheet(String SheetName, String TestCaseID) {
-		
+	public HashMap<String, String> ReadExcelSheetDataFromSheet(String SheetName, String TestCaseID) {		
 		HashMap<String,String> testData = ReadDataFromExcel.getExcelData(SheetName, TestCaseID);
-		
-		for(String k : testData.keySet())
-		{
-			System.out.println(k     +"->" +testData.get(k) );
-		}
-		
-		
+		 return testData;		
 	}
 	
 
 	@And("click on UploadMR Button")
 	public void click_on_UploadMR_Button() {
-		obj.getKeyWords().clickElement(obj.getPagecommon().getUploadMRButton());		
+		obj.keyWords().clickElement(obj.getPagecommon().getUploadMRButton());		
 	}
 	
 	public static String getUniqueRandomText() {
@@ -149,11 +143,33 @@ public class Common_Functions_Sd {
 	
 	}	
 
+	/*
+	 *Desgined By: Shaik Zakir Hussain
+	 * This function can be used to enter data into the Next Review Date.
+	 * Input: Days
+	 * Outputs: Current Date + Number of Input dates given
+	 */
+	
+	
+	public static String getNextReviewDate(int x)
+	{
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+		Calendar c = Calendar.getInstance();
+		c.setTime(new Date()); // Using today's date
+		c.add(Calendar.DATE, x); // Adding 5 days
+		String date = sdf.format(c.getTime());
+		return date;
+	}
+	
+	
+	
 	public void getDynamicFrame(String id) throws InterruptedException {
 		WebElement ele = driver.findElement(By.xpath("//iframe[@id='PegaGadget"+id+"Ifr']"));
 		driver.switchTo().frame(ele);
-		Thread.sleep(3000);
+		Thread.sleep(2000);
 	}
+	
+	
 	
 	
 	

@@ -23,7 +23,6 @@ Given 			Clear the Cache
   #Feature is collection of Scenarios
   ##This example is to write the Plan Gherkin Language
   #This is from Legion
-  #This is From Legion Again
   @hcm     	@testAfterHook											@All
   Scenario: Login to the HDAP Application
     Given 			I want to write a step with precondition
