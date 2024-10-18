@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Oct 18 08:14:30 IST 2024</td>
+<td>Started on:</td><td>Fri Oct 18 17:47:57 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>91 seconds (91127 ms)</td>
+<tr><td>Total time:</td><td>82 seconds (82552 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,8 +67,8 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td><b>Attribute(s)</b></td>
 <td width="30%"><b>Exception</b></td>
@@ -77,8 +77,23 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='testRunner.RunnerTestNG.runScenario()'><b>runScenario</b><br>Test class: testRunner.RunnerTestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Valdiate Whether User is able to create an RG with Single Contact", "Request Group Scenarios"</td>
-<td></td>
-<td>90</td>
+<td><div><pre>java.lang.AssertionError: Not Able Click WebElement:[[ChromeDriver: chrome on windows (d060a1cfb8bd3194f6c13556227f5fd1)] -&gt; xpath: //button[@title=&apos;Complete this assignment&apos;]]On Page: Retrieval portal expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at utils.KeyWords.clickElement(KeyWords.java:316)
+	at stepDefinitionFile.Create_RG_Sd.AddaSingleContact(Create_RG_Sd.java:75)
+	at ?.Under Contact section Add a Single Contact(file:///C:/Users/shaik.hussain/git/HDAP2_PEGAUI_Automation/src/main/java/featureFile/Create_RG.feature:12)
+</pre></div><a href='#' onClick='toggleBox("stack-trace2039926996", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2039926996'><pre>java.lang.AssertionError: Not Able Click WebElement:[[ChromeDriver: chrome on windows (d060a1cfb8bd3194f6c13556227f5fd1)] -&gt; xpath: //button[@title=&apos;Complete this assignment&apos;]]On Page: Retrieval portal expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at utils.KeyWords.clickElement(KeyWords.java:316)
+	at stepDefinitionFile.Create_RG_Sd.AddaSingleContact(Create_RG_Sd.java:75)
+	at ?.Under Contact section Add a Single Contact(file:///C:/Users/shaik.hussain/git/HDAP2_PEGAUI_Automation/src/main/java/featureFile/Create_RG.feature:12)
+</pre></div></td>
+<td>81</td>
 <td>testRunner.RunnerTestNG@43f02ef2</td></tr>
 </table><p>
 </body>

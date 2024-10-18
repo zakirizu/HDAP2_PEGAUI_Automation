@@ -67,7 +67,8 @@ public class Create_RG_Sd {
 		Thread.sleep(2000);
 		obj.keyWords().sendKeys(obj.getPageCreateRG().getFax_txtbox(),testData.get("fax"));		
 		Thread.sleep(2000);
-		obj.keyWords().selectByValue(obj.getPageCreateRG().getPreferred_method_txtbox(), testData.get("preferredMethod"));		
+		obj.keyWords().selectByValue(obj.getPageCreateRG().getPreferred_method_txtbox(), testData.get("preferredMethod"));	
+		Thread.sleep(2000);
 		obj.keyWords().selectByValue(obj.getPageCreateRG().getTimezone_ddl(), testData.get("timeZoneContact"));	
 		Thread.sleep(6000);
 		obj.keyWords().clickElement(obj.getPageCreateRG().getcustomerAccSummary_btn());
