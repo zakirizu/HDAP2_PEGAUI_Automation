@@ -6902,3 +6902,572 @@
 17:49:18.028 [main] INFO  utils.KeyWords - Clicked on Element :[[ChromeDriver: chrome on windows (d060a1cfb8bd3194f6c13556227f5fd1)] -> xpath: //h2[text()='Customer account summary']] On Page: Retrieval portal
 17:49:18.109 [main] INFO  utils.KeyWords - Clicking on Element :[[ChromeDriver: chrome on windows (d060a1cfb8bd3194f6c13556227f5fd1)] -> xpath: //button[@title='Complete this assignment']] On Page: Retrieval portal
 17:49:18.503 [main] INFO  utils.KeyWords - Exception occured while Clicking on Element :[[ChromeDriver: chrome on windows (d060a1cfb8bd3194f6c13556227f5fd1)] -> xpath: //button[@title='Complete this assignment']] On Page: Retrieval portal
+17:53:32.033 [main] INFO  utils.BaseClass - Intializing the Browser type: chrome
+17:53:38.710 [main] INFO  utils.KeyWords - Entering text:QA_Retrieval. In textbox WebElement: [[ChromeDriver: chrome on windows (56b028daa046e6a63ee2bc7128ad188c)] -> xpath: //input[@id='txtUserID']] On Page: Login Page
+17:53:38.974 [main] INFO  utils.KeyWords - Entered text:QA_Retrieval. In textbox WebElement: [[ChromeDriver: chrome on windows (56b028daa046e6a63ee2bc7128ad188c)] -> xpath: //input[@id='txtUserID']] On Page: Login Page
+17:53:39.012 [main] INFO  utils.KeyWords - Entering text:rules@123. In textbox WebElement: [[ChromeDriver: chrome on windows (56b028daa046e6a63ee2bc7128ad188c)] -> xpath: //input[@id='txtPassword']] On Page: Login Page
+17:53:39.171 [main] INFO  utils.KeyWords - Entered text:rules@123. In textbox WebElement: [[ChromeDriver: chrome on windows (56b028daa046e6a63ee2bc7128ad188c)] -> xpath: //input[@id='txtPassword']] On Page: Login Page
+17:53:39.228 [main] INFO  utils.KeyWords - Clicking on Element :[[ChromeDriver: chrome on windows (56b028daa046e6a63ee2bc7128ad188c)] -> xpath: //button[@id='sub']] On Page: Login Page
+17:54:17.241 [main] INFO  utils.KeyWords - Clicked on Element :Proxy element for: DefaultElementLocator 'By.xpath: //button[@id='sub']' On Page: Login Page
+17:54:22.094 [main] INFO  factory.ReadDataFromExcel - RECOMMENDED: PLEASE MAKE THE TEST DATA SHEET TO READ ONLY MODE.
+17:54:22.094 [main] INFO  factory.ReadDataFromExcel - Reading Data from the Excel Sheet for TestCaseID: happyPath
+17:54:22.479 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+17:54:22.488 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
+17:54:22.495 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet3.xml.rels
+17:54:22.495 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet4.xml.rels
+17:54:22.495 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+17:54:23.540 [main] DEBUG org.apache.poi.ooxml.POIXMLFactory - using default POIXMLDocumentPart for http://schemas.openxmlformats.org/officeDocument/2006/relationships/printerSettings
+17:54:23.540 [main] DEBUG org.apache.poi.ooxml.POIXMLFactory - using default POIXMLDocumentPart for http://schemas.openxmlformats.org/officeDocument/2006/relationships/printerSettings
+17:54:23.875 [main] INFO  factory.ReadDataFromExcel - Exception Ouccred while Reading data from Excel Sheet:C:\Users\shaik.hussain\git\HDAP2_PEGAUI_Automation\Input_TestData\ExcelSheet_TestData_UI.xlsx
+17:54:23.891 [main] INFO  utils.KeyWords - Switching to Default Contend From Frame On Page: Retrieval portal
+17:54:23.906 [main] INFO  utils.KeyWords - Switched to Default Contend From Frame On Page: Retrieval portal
+17:54:23.995 [main] INFO  utils.KeyWords - Clicking on Element :[[ChromeDriver: chrome on windows (56b028daa046e6a63ee2bc7128ad188c)] -> xpath: //button[text()='Create RG']] On Page: Retrieval portal
+17:54:24.193 [main] INFO  utils.KeyWords - Clicked on Element :[[ChromeDriver: chrome on windows (56b028daa046e6a63ee2bc7128ad188c)] -> xpath: //button[text()='Create RG']] On Page: Retrieval portal
+17:54:26.666 [main] INFO  utils.KeyWords - Clicking on Element :[[ChromeDriver: chrome on windows (56b028daa046e6a63ee2bc7128ad188c)] -> xpath: //button[@title='Complete this assignment']] On Page: Retrieval portal
+17:54:26.893 [main] INFO  utils.KeyWords - Clicked on Element :[[ChromeDriver: chrome on windows (56b028daa046e6a63ee2bc7128ad188c)] -> xpath: //button[@title='Complete this assignment']] On Page: Retrieval portal
+17:54:29.394 [main] INFO  utils.KeyWords - Clicking on Element :[[ChromeDriver: chrome on windows (56b028daa046e6a63ee2bc7128ad188c)] -> xpath: //button[text()='Add Contact']] On Page: Retrieval portal
+17:54:29.576 [main] INFO  utils.KeyWords - Clicked on Element :[[ChromeDriver: chrome on windows (56b028daa046e6a63ee2bc7128ad188c)] -> xpath: //button[text()='Add Contact']] On Page: Retrieval portal
+17:54:31.373 [main] INFO  utils.KeyWords - Drop Down List Element is Visible :[[ChromeDriver: chrome on windows (56b028daa046e6a63ee2bc7128ad188c)] -> xpath: //select[@id='80e67c33']] On Page: Retrieval portal
+17:54:31.397 [main] INFO  utils.KeyWords - Selecting drop down list value : Primary in DropDownList :[[ChromeDriver: chrome on windows (56b028daa046e6a63ee2bc7128ad188c)] -> xpath: //select[@id='80e67c33']] On Page: Retrieval portal
+17:54:31.843 [main] INFO  utils.KeyWords - Drop down list selected with Value of :Primary On Page: Retrieval portal
+17:54:31.895 [main] INFO  utils.KeyWords - Drop Down List Element is Visible :[[ChromeDriver: chrome on windows (56b028daa046e6a63ee2bc7128ad188c)] -> xpath: //select[@id='c1a346d0']] On Page: Retrieval portal
+17:54:31.923 [main] INFO  utils.KeyWords - Selecting drop down list value : Billing in DropDownList :[[ChromeDriver: chrome on windows (56b028daa046e6a63ee2bc7128ad188c)] -> xpath: //select[@id='c1a346d0']] On Page: Retrieval portal
+17:54:32.333 [main] INFO  utils.KeyWords - Drop down list selected with Value of :Billing On Page: Retrieval portal
+17:54:32.392 [main] INFO  utils.KeyWords - Entering text:Phi Automation Team. In textbox WebElement: [[ChromeDriver: chrome on windows (56b028daa046e6a63ee2bc7128ad188c)] -> xpath: //input[@id='45da4e1f']] On Page: Retrieval portal
+17:54:32.960 [main] INFO  utils.KeyWords - Entered text:Phi Automation Team. In textbox WebElement: [[ChromeDriver: chrome on windows (56b028daa046e6a63ee2bc7128ad188c)] -> xpath: //input[@id='45da4e1f']] On Page: Retrieval portal
+17:54:33.005 [main] INFO  utils.KeyWords - Entering text:Testing Team. In textbox WebElement: [[ChromeDriver: chrome on windows (56b028daa046e6a63ee2bc7128ad188c)] -> xpath: //input[@id='6da723dd']] On Page: Retrieval portal
+17:54:33.768 [main] INFO  utils.KeyWords - Entered text:Testing Team. In textbox WebElement: [[ChromeDriver: chrome on windows (56b028daa046e6a63ee2bc7128ad188c)] -> xpath: //input[@id='6da723dd']] On Page: Retrieval portal
+17:54:33.856 [main] INFO  utils.KeyWords - Entering text:phiteam@test.com. In textbox WebElement: [[ChromeDriver: chrome on windows (56b028daa046e6a63ee2bc7128ad188c)] -> xpath: //input[@id='5aea26b5']] On Page: Retrieval portal
+17:54:34.384 [main] INFO  utils.KeyWords - Entered text:phiteam@test.com. In textbox WebElement: [[ChromeDriver: chrome on windows (56b028daa046e6a63ee2bc7128ad188c)] -> xpath: //input[@id='5aea26b5']] On Page: Retrieval portal
+17:54:34.426 [main] INFO  utils.KeyWords - Entering text:9642869555. In textbox WebElement: [[ChromeDriver: chrome on windows (56b028daa046e6a63ee2bc7128ad188c)] -> xpath: //input[@id='d0a169f1']] On Page: Retrieval portal
+17:54:34.817 [main] INFO  utils.KeyWords - Entered text:9642869555. In textbox WebElement: [[ChromeDriver: chrome on windows (56b028daa046e6a63ee2bc7128ad188c)] -> xpath: //input[@id='d0a169f1']] On Page: Retrieval portal
+17:54:36.883 [main] INFO  utils.KeyWords - Entering text:8. In textbox WebElement: [[ChromeDriver: chrome on windows (56b028daa046e6a63ee2bc7128ad188c)] -> xpath: //input[@id='edf46543']] On Page: Retrieval portal
+17:54:37.342 [main] INFO  utils.KeyWords - Entered text:8. In textbox WebElement: [[ChromeDriver: chrome on windows (56b028daa046e6a63ee2bc7128ad188c)] -> xpath: //input[@id='edf46543']] On Page: Retrieval portal
+17:54:39.410 [main] INFO  utils.KeyWords - Entering text:8529637415. In textbox WebElement: [[ChromeDriver: chrome on windows (56b028daa046e6a63ee2bc7128ad188c)] -> xpath: //input[@id='95a33135']] On Page: Retrieval portal
+17:54:39.899 [main] INFO  utils.KeyWords - Entered text:8529637415. In textbox WebElement: [[ChromeDriver: chrome on windows (56b028daa046e6a63ee2bc7128ad188c)] -> xpath: //input[@id='95a33135']] On Page: Retrieval portal
+17:54:41.949 [main] INFO  utils.KeyWords - Drop Down List Element is Visible :[[ChromeDriver: chrome on windows (56b028daa046e6a63ee2bc7128ad188c)] -> xpath: //select[@id='89268613']] On Page: Retrieval portal
+17:54:41.982 [main] INFO  utils.KeyWords - Selecting drop down list value : Fax in DropDownList :[[ChromeDriver: chrome on windows (56b028daa046e6a63ee2bc7128ad188c)] -> xpath: //select[@id='89268613']] On Page: Retrieval portal
+17:54:42.377 [main] INFO  utils.KeyWords - Drop down list selected with Value of :Fax On Page: Retrieval portal
+17:54:44.433 [main] INFO  utils.KeyWords - Drop Down List Element is Visible :[[ChromeDriver: chrome on windows (56b028daa046e6a63ee2bc7128ad188c)] -> xpath: //select[@id='364c75d1']] On Page: Retrieval portal
+17:54:44.467 [main] INFO  utils.KeyWords - Selecting drop down list value : US/Alaska in DropDownList :[[ChromeDriver: chrome on windows (56b028daa046e6a63ee2bc7128ad188c)] -> xpath: //select[@id='364c75d1']] On Page: Retrieval portal
+17:54:44.816 [main] INFO  utils.KeyWords - Drop down list selected with Value of :US/Alaska On Page: Retrieval portal
+17:54:50.925 [main] INFO  utils.KeyWords - Clicking on Element :[[ChromeDriver: chrome on windows (56b028daa046e6a63ee2bc7128ad188c)] -> xpath: //h2[text()='Customer account summary']] On Page: Retrieval portal
+17:54:51.268 [main] INFO  utils.KeyWords - Clicked on Element :[[ChromeDriver: chrome on windows (56b028daa046e6a63ee2bc7128ad188c)] -> xpath: //h2[text()='Customer account summary']] On Page: Retrieval portal
+17:54:51.364 [main] INFO  utils.KeyWords - Clicking on Element :[[ChromeDriver: chrome on windows (56b028daa046e6a63ee2bc7128ad188c)] -> xpath: //button[@title='Complete this assignment']] On Page: Retrieval portal
+17:54:51.756 [main] INFO  utils.KeyWords - Clicked on Element :[[ChromeDriver: chrome on windows (56b028daa046e6a63ee2bc7128ad188c)] -> xpath: //button[@title='Complete this assignment']] On Page: Retrieval portal
+17:54:55.657 [main] INFO  utils.KeyWords - Entering text:Vinay Automation . In textbox WebElement: [[ChromeDriver: chrome on windows (56b028daa046e6a63ee2bc7128ad188c)] -> xpath: //input[@id='e12165d4']] On Page: Retrieval portal
+17:54:56.233 [main] INFO  utils.KeyWords - Entered text:Vinay Automation . In textbox WebElement: [[ChromeDriver: chrome on windows (56b028daa046e6a63ee2bc7128ad188c)] -> xpath: //input[@id='e12165d4']] On Page: Retrieval portal
+17:54:56.262 [main] INFO  utils.KeyWords - Drop Down List Element is Visible :[[ChromeDriver: chrome on windows (56b028daa046e6a63ee2bc7128ad188c)] -> xpath: //select[@id='af741cb3']] On Page: Retrieval portal
+17:54:56.278 [main] INFO  utils.KeyWords - Selecting drop down list value : US/Alaska in DropDownList :[[ChromeDriver: chrome on windows (56b028daa046e6a63ee2bc7128ad188c)] -> xpath: //select[@id='af741cb3']] On Page: Retrieval portal
+17:54:56.657 [main] INFO  utils.KeyWords - Drop down list selected with Value of :US/Alaska On Page: Retrieval portal
+17:54:56.746 [main] INFO  utils.KeyWords - Entering text:Automated Instructions . In textbox WebElement: [[ChromeDriver: chrome on windows (56b028daa046e6a63ee2bc7128ad188c)] -> xpath: //textarea[@id='91c190b1']] On Page: Retrieval portal
+17:54:57.243 [main] INFO  utils.KeyWords - Entered text:Automated Instructions . In textbox WebElement: [[ChromeDriver: chrome on windows (56b028daa046e6a63ee2bc7128ad188c)] -> xpath: //textarea[@id='91c190b1']] On Page: Retrieval portal
+17:54:57.298 [main] INFO  utils.KeyWords - Entering text:19/10/2024. In textbox WebElement: [[ChromeDriver: chrome on windows (56b028daa046e6a63ee2bc7128ad188c)] -> xpath: //input[@id='a1ed4d32']] On Page: Retrieval portal
+17:54:58.059 [main] INFO  utils.KeyWords - Entered text:19/10/2024. In textbox WebElement: [[ChromeDriver: chrome on windows (56b028daa046e6a63ee2bc7128ad188c)] -> xpath: //input[@id='a1ed4d32']] On Page: Retrieval portal
+17:55:00.111 [main] INFO  utils.KeyWords - Selecting Drop down list with VisbleText : None in DropDownList :[[ChromeDriver: chrome on windows (56b028daa046e6a63ee2bc7128ad188c)] -> xpath: //select[@id='a4b25490']] On Page: Retrieval portal
+17:55:00.613 [main] INFO  utils.KeyWords - Selected Drop down list selected with Visible Text of :None On Page: Retrieval portal
+17:55:00.654 [main] INFO  utils.KeyWords - Entering text:Zakirshaik. In textbox WebElement: [[ChromeDriver: chrome on windows (56b028daa046e6a63ee2bc7128ad188c)] -> xpath: //input[@id='63add1cc']] On Page: Retrieval portal
+17:55:01.136 [main] INFO  utils.KeyWords - Entered text:Zakirshaik. In textbox WebElement: [[ChromeDriver: chrome on windows (56b028daa046e6a63ee2bc7128ad188c)] -> xpath: //input[@id='63add1cc']] On Page: Retrieval portal
+17:58:10.600 [main] INFO  utils.BaseClass - Intializing the Browser type: chrome
+17:58:16.781 [main] INFO  utils.KeyWords - Entering text:QA_Retrieval. In textbox WebElement: [[ChromeDriver: chrome on windows (6499cf1ae74cb9cc3e091d841378f7db)] -> xpath: //input[@id='txtUserID']] On Page: Login Page
+17:58:16.978 [main] INFO  utils.KeyWords - Entered text:QA_Retrieval. In textbox WebElement: [[ChromeDriver: chrome on windows (6499cf1ae74cb9cc3e091d841378f7db)] -> xpath: //input[@id='txtUserID']] On Page: Login Page
+17:58:17.007 [main] INFO  utils.KeyWords - Entering text:rules@123. In textbox WebElement: [[ChromeDriver: chrome on windows (6499cf1ae74cb9cc3e091d841378f7db)] -> xpath: //input[@id='txtPassword']] On Page: Login Page
+17:58:17.194 [main] INFO  utils.KeyWords - Entered text:rules@123. In textbox WebElement: [[ChromeDriver: chrome on windows (6499cf1ae74cb9cc3e091d841378f7db)] -> xpath: //input[@id='txtPassword']] On Page: Login Page
+17:58:17.248 [main] INFO  utils.KeyWords - Clicking on Element :[[ChromeDriver: chrome on windows (6499cf1ae74cb9cc3e091d841378f7db)] -> xpath: //button[@id='sub']] On Page: Login Page
+17:58:55.417 [main] INFO  utils.KeyWords - Clicked on Element :Proxy element for: DefaultElementLocator 'By.xpath: //button[@id='sub']' On Page: Login Page
+17:59:00.254 [main] INFO  factory.ReadDataFromExcel - RECOMMENDED: PLEASE MAKE THE TEST DATA SHEET TO READ ONLY MODE.
+17:59:00.254 [main] INFO  factory.ReadDataFromExcel - Reading Data from the Excel Sheet for TestCaseID: happyPath
+17:59:00.626 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+17:59:00.642 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
+17:59:00.644 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet3.xml.rels
+17:59:00.644 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet4.xml.rels
+17:59:00.644 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+17:59:01.771 [main] DEBUG org.apache.poi.ooxml.POIXMLFactory - using default POIXMLDocumentPart for http://schemas.openxmlformats.org/officeDocument/2006/relationships/printerSettings
+17:59:01.777 [main] DEBUG org.apache.poi.ooxml.POIXMLFactory - using default POIXMLDocumentPart for http://schemas.openxmlformats.org/officeDocument/2006/relationships/printerSettings
+17:59:02.125 [main] INFO  factory.ReadDataFromExcel - Exception Ouccred while Reading data from Excel Sheet:C:\Users\shaik.hussain\git\HDAP2_PEGAUI_Automation\Input_TestData\ExcelSheet_TestData_UI.xlsx
+17:59:02.153 [main] INFO  utils.KeyWords - Switching to Default Contend From Frame On Page: Retrieval portal
+17:59:02.153 [main] INFO  utils.KeyWords - Switched to Default Contend From Frame On Page: Retrieval portal
+17:59:02.250 [main] INFO  utils.KeyWords - Clicking on Element :[[ChromeDriver: chrome on windows (6499cf1ae74cb9cc3e091d841378f7db)] -> xpath: //button[text()='Create RG']] On Page: Retrieval portal
+17:59:02.446 [main] INFO  utils.KeyWords - Clicked on Element :[[ChromeDriver: chrome on windows (6499cf1ae74cb9cc3e091d841378f7db)] -> xpath: //button[text()='Create RG']] On Page: Retrieval portal
+17:59:04.757 [main] INFO  utils.KeyWords - Clicking on Element :[[ChromeDriver: chrome on windows (6499cf1ae74cb9cc3e091d841378f7db)] -> xpath: //button[@title='Complete this assignment']] On Page: Retrieval portal
+17:59:04.957 [main] INFO  utils.KeyWords - Clicked on Element :[[ChromeDriver: chrome on windows (6499cf1ae74cb9cc3e091d841378f7db)] -> xpath: //button[@title='Complete this assignment']] On Page: Retrieval portal
+17:59:07.292 [main] INFO  utils.KeyWords - Clicking on Element :[[ChromeDriver: chrome on windows (6499cf1ae74cb9cc3e091d841378f7db)] -> xpath: //button[text()='Add Contact']] On Page: Retrieval portal
+17:59:07.544 [main] INFO  utils.KeyWords - Clicked on Element :[[ChromeDriver: chrome on windows (6499cf1ae74cb9cc3e091d841378f7db)] -> xpath: //button[text()='Add Contact']] On Page: Retrieval portal
+17:59:09.742 [main] INFO  utils.KeyWords - Drop Down List Element is Visible :[[ChromeDriver: chrome on windows (6499cf1ae74cb9cc3e091d841378f7db)] -> xpath: //select[@id='80e67c33']] On Page: Retrieval portal
+17:59:09.762 [main] INFO  utils.KeyWords - Selecting drop down list value : Primary in DropDownList :[[ChromeDriver: chrome on windows (6499cf1ae74cb9cc3e091d841378f7db)] -> xpath: //select[@id='80e67c33']] On Page: Retrieval portal
+17:59:10.109 [main] INFO  utils.KeyWords - Drop down list selected with Value of :Primary On Page: Retrieval portal
+17:59:10.158 [main] INFO  utils.KeyWords - Drop Down List Element is Visible :[[ChromeDriver: chrome on windows (6499cf1ae74cb9cc3e091d841378f7db)] -> xpath: //select[@id='c1a346d0']] On Page: Retrieval portal
+17:59:10.174 [main] INFO  utils.KeyWords - Selecting drop down list value : Billing in DropDownList :[[ChromeDriver: chrome on windows (6499cf1ae74cb9cc3e091d841378f7db)] -> xpath: //select[@id='c1a346d0']] On Page: Retrieval portal
+17:59:10.626 [main] INFO  utils.KeyWords - Drop down list selected with Value of :Billing On Page: Retrieval portal
+17:59:10.682 [main] INFO  utils.KeyWords - Entering text:Phi Automation Team. In textbox WebElement: [[ChromeDriver: chrome on windows (6499cf1ae74cb9cc3e091d841378f7db)] -> xpath: //input[@id='45da4e1f']] On Page: Retrieval portal
+17:59:11.173 [main] INFO  utils.KeyWords - Entered text:Phi Automation Team. In textbox WebElement: [[ChromeDriver: chrome on windows (6499cf1ae74cb9cc3e091d841378f7db)] -> xpath: //input[@id='45da4e1f']] On Page: Retrieval portal
+17:59:11.214 [main] INFO  utils.KeyWords - Entering text:Testing Team. In textbox WebElement: [[ChromeDriver: chrome on windows (6499cf1ae74cb9cc3e091d841378f7db)] -> xpath: //input[@id='6da723dd']] On Page: Retrieval portal
+17:59:11.690 [main] INFO  utils.KeyWords - Entered text:Testing Team. In textbox WebElement: [[ChromeDriver: chrome on windows (6499cf1ae74cb9cc3e091d841378f7db)] -> xpath: //input[@id='6da723dd']] On Page: Retrieval portal
+17:59:11.784 [main] INFO  utils.KeyWords - Entering text:phiteam@test.com. In textbox WebElement: [[ChromeDriver: chrome on windows (6499cf1ae74cb9cc3e091d841378f7db)] -> xpath: //input[@id='5aea26b5']] On Page: Retrieval portal
+17:59:12.273 [main] INFO  utils.KeyWords - Entered text:phiteam@test.com. In textbox WebElement: [[ChromeDriver: chrome on windows (6499cf1ae74cb9cc3e091d841378f7db)] -> xpath: //input[@id='5aea26b5']] On Page: Retrieval portal
+17:59:12.302 [main] INFO  utils.KeyWords - Entering text:9642869555. In textbox WebElement: [[ChromeDriver: chrome on windows (6499cf1ae74cb9cc3e091d841378f7db)] -> xpath: //input[@id='d0a169f1']] On Page: Retrieval portal
+17:59:12.841 [main] INFO  utils.KeyWords - Entered text:9642869555. In textbox WebElement: [[ChromeDriver: chrome on windows (6499cf1ae74cb9cc3e091d841378f7db)] -> xpath: //input[@id='d0a169f1']] On Page: Retrieval portal
+17:59:14.904 [main] INFO  utils.KeyWords - Entering text:8. In textbox WebElement: [[ChromeDriver: chrome on windows (6499cf1ae74cb9cc3e091d841378f7db)] -> xpath: //input[@id='edf46543']] On Page: Retrieval portal
+17:59:15.323 [main] INFO  utils.KeyWords - Entered text:8. In textbox WebElement: [[ChromeDriver: chrome on windows (6499cf1ae74cb9cc3e091d841378f7db)] -> xpath: //input[@id='edf46543']] On Page: Retrieval portal
+17:59:17.383 [main] INFO  utils.KeyWords - Entering text:8529637415. In textbox WebElement: [[ChromeDriver: chrome on windows (6499cf1ae74cb9cc3e091d841378f7db)] -> xpath: //input[@id='95a33135']] On Page: Retrieval portal
+17:59:17.955 [main] INFO  utils.KeyWords - Entered text:8529637415. In textbox WebElement: [[ChromeDriver: chrome on windows (6499cf1ae74cb9cc3e091d841378f7db)] -> xpath: //input[@id='95a33135']] On Page: Retrieval portal
+17:59:20.023 [main] INFO  utils.KeyWords - Drop Down List Element is Visible :[[ChromeDriver: chrome on windows (6499cf1ae74cb9cc3e091d841378f7db)] -> xpath: //select[@id='89268613']] On Page: Retrieval portal
+17:59:20.056 [main] INFO  utils.KeyWords - Selecting drop down list value : Fax in DropDownList :[[ChromeDriver: chrome on windows (6499cf1ae74cb9cc3e091d841378f7db)] -> xpath: //select[@id='89268613']] On Page: Retrieval portal
+17:59:20.507 [main] INFO  utils.KeyWords - Drop down list selected with Value of :Fax On Page: Retrieval portal
+17:59:22.563 [main] INFO  utils.KeyWords - Drop Down List Element is Visible :[[ChromeDriver: chrome on windows (6499cf1ae74cb9cc3e091d841378f7db)] -> xpath: //select[@id='364c75d1']] On Page: Retrieval portal
+17:59:22.608 [main] INFO  utils.KeyWords - Selecting drop down list value : US/Alaska in DropDownList :[[ChromeDriver: chrome on windows (6499cf1ae74cb9cc3e091d841378f7db)] -> xpath: //select[@id='364c75d1']] On Page: Retrieval portal
+17:59:22.954 [main] INFO  utils.KeyWords - Drop down list selected with Value of :US/Alaska On Page: Retrieval portal
+17:59:29.036 [main] INFO  utils.KeyWords - Clicking on Element :[[ChromeDriver: chrome on windows (6499cf1ae74cb9cc3e091d841378f7db)] -> xpath: //h2[text()='Customer account summary']] On Page: Retrieval portal
+17:59:29.334 [main] INFO  utils.KeyWords - Clicked on Element :[[ChromeDriver: chrome on windows (6499cf1ae74cb9cc3e091d841378f7db)] -> xpath: //h2[text()='Customer account summary']] On Page: Retrieval portal
+17:59:29.420 [main] INFO  utils.KeyWords - Clicking on Element :[[ChromeDriver: chrome on windows (6499cf1ae74cb9cc3e091d841378f7db)] -> xpath: //button[@title='Complete this assignment']] On Page: Retrieval portal
+17:59:29.778 [main] INFO  utils.KeyWords - Clicked on Element :[[ChromeDriver: chrome on windows (6499cf1ae74cb9cc3e091d841378f7db)] -> xpath: //button[@title='Complete this assignment']] On Page: Retrieval portal
+17:59:33.458 [main] INFO  utils.KeyWords - Entering text:Vinay Automation . In textbox WebElement: [[ChromeDriver: chrome on windows (6499cf1ae74cb9cc3e091d841378f7db)] -> xpath: //input[@id='e12165d4']] On Page: Retrieval portal
+17:59:33.906 [main] INFO  utils.KeyWords - Entered text:Vinay Automation . In textbox WebElement: [[ChromeDriver: chrome on windows (6499cf1ae74cb9cc3e091d841378f7db)] -> xpath: //input[@id='e12165d4']] On Page: Retrieval portal
+17:59:33.943 [main] INFO  utils.KeyWords - Drop Down List Element is Visible :[[ChromeDriver: chrome on windows (6499cf1ae74cb9cc3e091d841378f7db)] -> xpath: //select[@id='af741cb3']] On Page: Retrieval portal
+17:59:33.962 [main] INFO  utils.KeyWords - Selecting drop down list value : US/Alaska in DropDownList :[[ChromeDriver: chrome on windows (6499cf1ae74cb9cc3e091d841378f7db)] -> xpath: //select[@id='af741cb3']] On Page: Retrieval portal
+17:59:34.386 [main] INFO  utils.KeyWords - Drop down list selected with Value of :US/Alaska On Page: Retrieval portal
+17:59:34.444 [main] INFO  utils.KeyWords - Entering text:Automated Instructions . In textbox WebElement: [[ChromeDriver: chrome on windows (6499cf1ae74cb9cc3e091d841378f7db)] -> xpath: //textarea[@id='91c190b1']] On Page: Retrieval portal
+17:59:35.113 [main] INFO  utils.KeyWords - Entered text:Automated Instructions . In textbox WebElement: [[ChromeDriver: chrome on windows (6499cf1ae74cb9cc3e091d841378f7db)] -> xpath: //textarea[@id='91c190b1']] On Page: Retrieval portal
+17:59:35.153 [main] INFO  utils.KeyWords - Entering text:19/10/2024. In textbox WebElement: [[ChromeDriver: chrome on windows (6499cf1ae74cb9cc3e091d841378f7db)] -> xpath: //input[@id='a1ed4d32']] On Page: Retrieval portal
+17:59:35.637 [main] INFO  utils.KeyWords - Entered text:19/10/2024. In textbox WebElement: [[ChromeDriver: chrome on windows (6499cf1ae74cb9cc3e091d841378f7db)] -> xpath: //input[@id='a1ed4d32']] On Page: Retrieval portal
+17:59:37.698 [main] INFO  utils.KeyWords - Selecting Drop down list with VisbleText : None in DropDownList :[[ChromeDriver: chrome on windows (6499cf1ae74cb9cc3e091d841378f7db)] -> xpath: //select[@id='a4b25490']] On Page: Retrieval portal
+17:59:38.170 [main] INFO  utils.KeyWords - Selected Drop down list selected with Visible Text of :None On Page: Retrieval portal
+17:59:38.236 [main] INFO  utils.KeyWords - Entering text:Zakirshaik. In textbox WebElement: [[ChromeDriver: chrome on windows (6499cf1ae74cb9cc3e091d841378f7db)] -> xpath: //input[@id='63add1cc']] On Page: Retrieval portal
+17:59:38.736 [main] INFO  utils.KeyWords - Entered text:Zakirshaik. In textbox WebElement: [[ChromeDriver: chrome on windows (6499cf1ae74cb9cc3e091d841378f7db)] -> xpath: //input[@id='63add1cc']] On Page: Retrieval portal
+18:07:39.946 [main] INFO  utils.BaseClass - Intializing the Browser type: chrome
+18:07:46.279 [main] INFO  utils.KeyWords - Entering text:QA_Retrieval. In textbox WebElement: [[ChromeDriver: chrome on windows (f3cede4b6eabd92af6c80eead2ec3dfb)] -> xpath: //input[@id='txtUserID']] On Page: Login Page
+18:07:46.561 [main] INFO  utils.KeyWords - Entered text:QA_Retrieval. In textbox WebElement: [[ChromeDriver: chrome on windows (f3cede4b6eabd92af6c80eead2ec3dfb)] -> xpath: //input[@id='txtUserID']] On Page: Login Page
+18:07:46.580 [main] INFO  utils.KeyWords - Entering text:rules@123. In textbox WebElement: [[ChromeDriver: chrome on windows (f3cede4b6eabd92af6c80eead2ec3dfb)] -> xpath: //input[@id='txtPassword']] On Page: Login Page
+18:07:46.825 [main] INFO  utils.KeyWords - Entered text:rules@123. In textbox WebElement: [[ChromeDriver: chrome on windows (f3cede4b6eabd92af6c80eead2ec3dfb)] -> xpath: //input[@id='txtPassword']] On Page: Login Page
+18:07:46.878 [main] INFO  utils.KeyWords - Clicking on Element :[[ChromeDriver: chrome on windows (f3cede4b6eabd92af6c80eead2ec3dfb)] -> xpath: //button[@id='sub']] On Page: Login Page
+18:08:24.808 [main] INFO  utils.KeyWords - Clicked on Element :Proxy element for: DefaultElementLocator 'By.xpath: //button[@id='sub']' On Page: Login Page
+18:08:29.670 [main] INFO  factory.ReadDataFromExcel - RECOMMENDED: PLEASE MAKE THE TEST DATA SHEET TO READ ONLY MODE.
+18:08:29.670 [main] INFO  factory.ReadDataFromExcel - Reading Data from the Excel Sheet for TestCaseID: happyPath
+18:08:30.030 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+18:08:30.041 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
+18:08:30.047 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet3.xml.rels
+18:08:30.047 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet4.xml.rels
+18:08:30.047 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+18:08:31.154 [main] DEBUG org.apache.poi.ooxml.POIXMLFactory - using default POIXMLDocumentPart for http://schemas.openxmlformats.org/officeDocument/2006/relationships/printerSettings
+18:08:31.154 [main] DEBUG org.apache.poi.ooxml.POIXMLFactory - using default POIXMLDocumentPart for http://schemas.openxmlformats.org/officeDocument/2006/relationships/printerSettings
+18:08:31.483 [main] INFO  factory.ReadDataFromExcel - Exception Ouccred while Reading data from Excel Sheet:C:\Users\shaik.hussain\git\HDAP2_PEGAUI_Automation\Input_TestData\ExcelSheet_TestData_UI.xlsx
+18:08:31.504 [main] INFO  utils.KeyWords - Switching to Default Contend From Frame On Page: Retrieval portal
+18:08:31.521 [main] INFO  utils.KeyWords - Switched to Default Contend From Frame On Page: Retrieval portal
+18:08:31.601 [main] INFO  utils.KeyWords - Clicking on Element :[[ChromeDriver: chrome on windows (f3cede4b6eabd92af6c80eead2ec3dfb)] -> xpath: //button[text()='Create RG']] On Page: Retrieval portal
+18:08:31.779 [main] INFO  utils.KeyWords - Clicked on Element :[[ChromeDriver: chrome on windows (f3cede4b6eabd92af6c80eead2ec3dfb)] -> xpath: //button[text()='Create RG']] On Page: Retrieval portal
+18:08:35.103 [main] INFO  utils.KeyWords - Clicking on Element :[[ChromeDriver: chrome on windows (f3cede4b6eabd92af6c80eead2ec3dfb)] -> xpath: //button[@title='Complete this assignment']] On Page: Retrieval portal
+18:08:35.388 [main] INFO  utils.KeyWords - Clicked on Element :[[ChromeDriver: chrome on windows (f3cede4b6eabd92af6c80eead2ec3dfb)] -> xpath: //button[@title='Complete this assignment']] On Page: Retrieval portal
+18:08:37.434 [main] INFO  utils.KeyWords - Clicking on Element :[[ChromeDriver: chrome on windows (f3cede4b6eabd92af6c80eead2ec3dfb)] -> xpath: //button[text()='Add Contact']] On Page: Retrieval portal
+18:08:37.703 [main] INFO  utils.KeyWords - Clicked on Element :[[ChromeDriver: chrome on windows (f3cede4b6eabd92af6c80eead2ec3dfb)] -> xpath: //button[text()='Add Contact']] On Page: Retrieval portal
+18:08:39.313 [main] INFO  utils.KeyWords - Drop Down List Element is Visible :[[ChromeDriver: chrome on windows (f3cede4b6eabd92af6c80eead2ec3dfb)] -> xpath: //select[@id='80e67c33']] On Page: Retrieval portal
+18:08:39.328 [main] INFO  utils.KeyWords - Selecting drop down list value : Primary in DropDownList :[[ChromeDriver: chrome on windows (f3cede4b6eabd92af6c80eead2ec3dfb)] -> xpath: //select[@id='80e67c33']] On Page: Retrieval portal
+18:08:39.691 [main] INFO  utils.KeyWords - Drop down list selected with Value of :Primary On Page: Retrieval portal
+18:08:39.745 [main] INFO  utils.KeyWords - Drop Down List Element is Visible :[[ChromeDriver: chrome on windows (f3cede4b6eabd92af6c80eead2ec3dfb)] -> xpath: //select[@id='c1a346d0']] On Page: Retrieval portal
+18:08:39.759 [main] INFO  utils.KeyWords - Selecting drop down list value : Billing in DropDownList :[[ChromeDriver: chrome on windows (f3cede4b6eabd92af6c80eead2ec3dfb)] -> xpath: //select[@id='c1a346d0']] On Page: Retrieval portal
+18:08:40.162 [main] INFO  utils.KeyWords - Drop down list selected with Value of :Billing On Page: Retrieval portal
+18:08:40.202 [main] INFO  utils.KeyWords - Entering text:Phi Automation Team. In textbox WebElement: [[ChromeDriver: chrome on windows (f3cede4b6eabd92af6c80eead2ec3dfb)] -> xpath: //input[@id='45da4e1f']] On Page: Retrieval portal
+18:08:40.635 [main] INFO  utils.KeyWords - Entered text:Phi Automation Team. In textbox WebElement: [[ChromeDriver: chrome on windows (f3cede4b6eabd92af6c80eead2ec3dfb)] -> xpath: //input[@id='45da4e1f']] On Page: Retrieval portal
+18:08:40.682 [main] INFO  utils.KeyWords - Entering text:Testing Team. In textbox WebElement: [[ChromeDriver: chrome on windows (f3cede4b6eabd92af6c80eead2ec3dfb)] -> xpath: //input[@id='6da723dd']] On Page: Retrieval portal
+18:08:41.218 [main] INFO  utils.KeyWords - Entered text:Testing Team. In textbox WebElement: [[ChromeDriver: chrome on windows (f3cede4b6eabd92af6c80eead2ec3dfb)] -> xpath: //input[@id='6da723dd']] On Page: Retrieval portal
+18:08:41.261 [main] INFO  utils.KeyWords - Entering text:phiteam@test.com. In textbox WebElement: [[ChromeDriver: chrome on windows (f3cede4b6eabd92af6c80eead2ec3dfb)] -> xpath: //input[@id='5aea26b5']] On Page: Retrieval portal
+18:08:41.741 [main] INFO  utils.KeyWords - Entered text:phiteam@test.com. In textbox WebElement: [[ChromeDriver: chrome on windows (f3cede4b6eabd92af6c80eead2ec3dfb)] -> xpath: //input[@id='5aea26b5']] On Page: Retrieval portal
+18:08:41.788 [main] INFO  utils.KeyWords - Entering text:9642869555. In textbox WebElement: [[ChromeDriver: chrome on windows (f3cede4b6eabd92af6c80eead2ec3dfb)] -> xpath: //input[@id='d0a169f1']] On Page: Retrieval portal
+18:08:42.334 [main] INFO  utils.KeyWords - Entered text:9642869555. In textbox WebElement: [[ChromeDriver: chrome on windows (f3cede4b6eabd92af6c80eead2ec3dfb)] -> xpath: //input[@id='d0a169f1']] On Page: Retrieval portal
+18:08:44.405 [main] INFO  utils.KeyWords - Entering text:8. In textbox WebElement: [[ChromeDriver: chrome on windows (f3cede4b6eabd92af6c80eead2ec3dfb)] -> xpath: //input[@id='edf46543']] On Page: Retrieval portal
+18:08:44.994 [main] INFO  utils.KeyWords - Exception occured while Entered text: 8 in textbox WebElement: [[ChromeDriver: chrome on windows (f3cede4b6eabd92af6c80eead2ec3dfb)] -> xpath: //input[@id='edf46543']] On Page: Retrieval portal
+19:15:43.999 [main] INFO  utils.BaseClass - Intializing the Browser type: chrome
+19:15:52.338 [main] INFO  utils.KeyWords - Entering text:QA_Retrieval. In textbox WebElement: [[ChromeDriver: chrome on windows (4b5bd502b28e76c2c5ac03c538eace01)] -> xpath: //input[@id='txtUserID']] On Page: Login Page
+19:15:52.567 [main] INFO  utils.KeyWords - Entered text:QA_Retrieval. In textbox WebElement: [[ChromeDriver: chrome on windows (4b5bd502b28e76c2c5ac03c538eace01)] -> xpath: //input[@id='txtUserID']] On Page: Login Page
+19:15:52.594 [main] INFO  utils.KeyWords - Entering text:rules@123. In textbox WebElement: [[ChromeDriver: chrome on windows (4b5bd502b28e76c2c5ac03c538eace01)] -> xpath: //input[@id='txtPassword']] On Page: Login Page
+19:15:52.813 [main] INFO  utils.KeyWords - Entered text:rules@123. In textbox WebElement: [[ChromeDriver: chrome on windows (4b5bd502b28e76c2c5ac03c538eace01)] -> xpath: //input[@id='txtPassword']] On Page: Login Page
+19:15:52.875 [main] INFO  utils.KeyWords - Clicking on Element :[[ChromeDriver: chrome on windows (4b5bd502b28e76c2c5ac03c538eace01)] -> xpath: //button[@id='sub']] On Page: Login Page
+19:16:29.688 [main] INFO  utils.KeyWords - Clicked on Element :Proxy element for: DefaultElementLocator 'By.xpath: //button[@id='sub']' On Page: Login Page
+19:16:34.382 [main] INFO  factory.ReadDataFromExcel - RECOMMENDED: PLEASE MAKE THE TEST DATA SHEET TO READ ONLY MODE.
+19:16:34.383 [main] INFO  factory.ReadDataFromExcel - Reading Data from the Excel Sheet for TestCaseID: happyPath
+19:16:34.625 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+19:16:34.630 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
+19:16:34.631 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet3.xml.rels
+19:16:34.633 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet4.xml.rels
+19:16:34.634 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+19:16:35.500 [main] DEBUG org.apache.poi.ooxml.POIXMLFactory - using default POIXMLDocumentPart for http://schemas.openxmlformats.org/officeDocument/2006/relationships/printerSettings
+19:16:35.500 [main] DEBUG org.apache.poi.ooxml.POIXMLFactory - using default POIXMLDocumentPart for http://schemas.openxmlformats.org/officeDocument/2006/relationships/printerSettings
+19:16:35.791 [main] INFO  factory.ReadDataFromExcel - Exception Ouccred while Reading data from Excel Sheet:C:\Users\shaik.hussain\git\HDAP2_PEGAUI_Automation\Input_TestData\ExcelSheet_TestData_UI.xlsx
+19:16:35.810 [main] INFO  utils.KeyWords - Switching to Default Contend From Frame On Page: Retrieval portal
+19:16:35.824 [main] INFO  utils.KeyWords - Switched to Default Contend From Frame On Page: Retrieval portal
+19:16:35.913 [main] INFO  utils.KeyWords - Clicking on Element :[[ChromeDriver: chrome on windows (4b5bd502b28e76c2c5ac03c538eace01)] -> xpath: //button[text()='Create RG']] On Page: Retrieval portal
+19:16:36.166 [main] INFO  utils.KeyWords - Clicked on Element :[[ChromeDriver: chrome on windows (4b5bd502b28e76c2c5ac03c538eace01)] -> xpath: //button[text()='Create RG']] On Page: Retrieval portal
+19:16:38.671 [main] INFO  utils.KeyWords - Clicking on Element :[[ChromeDriver: chrome on windows (4b5bd502b28e76c2c5ac03c538eace01)] -> xpath: //button[@title='Complete this assignment']] On Page: Retrieval portal
+19:16:38.884 [main] INFO  utils.KeyWords - Clicked on Element :[[ChromeDriver: chrome on windows (4b5bd502b28e76c2c5ac03c538eace01)] -> xpath: //button[@title='Complete this assignment']] On Page: Retrieval portal
+19:16:41.063 [main] INFO  utils.KeyWords - Clicking on Element :[[ChromeDriver: chrome on windows (4b5bd502b28e76c2c5ac03c538eace01)] -> xpath: //button[text()='Add Contact']] On Page: Retrieval portal
+19:16:41.245 [main] INFO  utils.KeyWords - Clicked on Element :[[ChromeDriver: chrome on windows (4b5bd502b28e76c2c5ac03c538eace01)] -> xpath: //button[text()='Add Contact']] On Page: Retrieval portal
+19:16:43.689 [main] INFO  utils.KeyWords - Drop Down List Element is Visible :[[ChromeDriver: chrome on windows (4b5bd502b28e76c2c5ac03c538eace01)] -> xpath: //select[@id='80e67c33']] On Page: Retrieval portal
+19:16:43.708 [main] INFO  utils.KeyWords - Selecting drop down list value : Primary in DropDownList :[[ChromeDriver: chrome on windows (4b5bd502b28e76c2c5ac03c538eace01)] -> xpath: //select[@id='80e67c33']] On Page: Retrieval portal
+19:16:43.962 [main] INFO  utils.KeyWords - Drop down list selected with Value of :Primary On Page: Retrieval portal
+19:16:44.017 [main] INFO  utils.KeyWords - Drop Down List Element is Visible :[[ChromeDriver: chrome on windows (4b5bd502b28e76c2c5ac03c538eace01)] -> xpath: //select[@id='c1a346d0']] On Page: Retrieval portal
+19:16:44.048 [main] INFO  utils.KeyWords - Selecting drop down list value : Billing in DropDownList :[[ChromeDriver: chrome on windows (4b5bd502b28e76c2c5ac03c538eace01)] -> xpath: //select[@id='c1a346d0']] On Page: Retrieval portal
+19:16:44.378 [main] INFO  utils.KeyWords - Drop down list selected with Value of :Billing On Page: Retrieval portal
+19:16:44.422 [main] INFO  utils.KeyWords - Entering text:Phi Automation Team. In textbox WebElement: [[ChromeDriver: chrome on windows (4b5bd502b28e76c2c5ac03c538eace01)] -> xpath: //input[@id='45da4e1f']] On Page: Retrieval portal
+19:16:44.816 [main] INFO  utils.KeyWords - Entered text:Phi Automation Team. In textbox WebElement: [[ChromeDriver: chrome on windows (4b5bd502b28e76c2c5ac03c538eace01)] -> xpath: //input[@id='45da4e1f']] On Page: Retrieval portal
+19:16:44.854 [main] INFO  utils.KeyWords - Entering text:Testing Team. In textbox WebElement: [[ChromeDriver: chrome on windows (4b5bd502b28e76c2c5ac03c538eace01)] -> xpath: //input[@id='6da723dd']] On Page: Retrieval portal
+19:16:45.205 [main] INFO  utils.KeyWords - Entered text:Testing Team. In textbox WebElement: [[ChromeDriver: chrome on windows (4b5bd502b28e76c2c5ac03c538eace01)] -> xpath: //input[@id='6da723dd']] On Page: Retrieval portal
+19:16:45.250 [main] INFO  utils.KeyWords - Entering text:phiteam@test.com. In textbox WebElement: [[ChromeDriver: chrome on windows (4b5bd502b28e76c2c5ac03c538eace01)] -> xpath: //input[@id='5aea26b5']] On Page: Retrieval portal
+19:16:45.603 [main] INFO  utils.KeyWords - Entered text:phiteam@test.com. In textbox WebElement: [[ChromeDriver: chrome on windows (4b5bd502b28e76c2c5ac03c538eace01)] -> xpath: //input[@id='5aea26b5']] On Page: Retrieval portal
+19:16:45.707 [main] INFO  utils.KeyWords - Entering text:9642869555. In textbox WebElement: [[ChromeDriver: chrome on windows (4b5bd502b28e76c2c5ac03c538eace01)] -> xpath: //input[@id='d0a169f1']] On Page: Retrieval portal
+19:16:46.043 [main] INFO  utils.KeyWords - Entered text:9642869555. In textbox WebElement: [[ChromeDriver: chrome on windows (4b5bd502b28e76c2c5ac03c538eace01)] -> xpath: //input[@id='d0a169f1']] On Page: Retrieval portal
+19:16:48.185 [main] INFO  utils.KeyWords - Entering text:8. In textbox WebElement: [[ChromeDriver: chrome on windows (4b5bd502b28e76c2c5ac03c538eace01)] -> xpath: //input[@id='edf46543']] On Page: Retrieval portal
+19:16:48.329 [main] INFO  utils.KeyWords - Entered text:8. In textbox WebElement: [[ChromeDriver: chrome on windows (4b5bd502b28e76c2c5ac03c538eace01)] -> xpath: //input[@id='edf46543']] On Page: Retrieval portal
+19:16:50.474 [main] INFO  utils.KeyWords - Entering text:8529637415. In textbox WebElement: [[ChromeDriver: chrome on windows (4b5bd502b28e76c2c5ac03c538eace01)] -> xpath: //input[@id='95a33135']] On Page: Retrieval portal
+19:16:50.678 [main] INFO  utils.KeyWords - Entered text:8529637415. In textbox WebElement: [[ChromeDriver: chrome on windows (4b5bd502b28e76c2c5ac03c538eace01)] -> xpath: //input[@id='95a33135']] On Page: Retrieval portal
+19:16:52.750 [main] INFO  utils.KeyWords - Drop Down List Element is Visible :[[ChromeDriver: chrome on windows (4b5bd502b28e76c2c5ac03c538eace01)] -> xpath: //select[@id='89268613']] On Page: Retrieval portal
+19:16:52.761 [main] INFO  utils.KeyWords - Selecting drop down list value : Fax in DropDownList :[[ChromeDriver: chrome on windows (4b5bd502b28e76c2c5ac03c538eace01)] -> xpath: //select[@id='89268613']] On Page: Retrieval portal
+19:16:52.897 [main] INFO  utils.KeyWords - Drop down list selected with Value of :Fax On Page: Retrieval portal
+19:16:54.936 [main] INFO  utils.KeyWords - Drop Down List Element is Visible :[[ChromeDriver: chrome on windows (4b5bd502b28e76c2c5ac03c538eace01)] -> xpath: //select[@id='364c75d1']] On Page: Retrieval portal
+19:16:54.944 [main] INFO  utils.KeyWords - Selecting drop down list value : US/Alaska in DropDownList :[[ChromeDriver: chrome on windows (4b5bd502b28e76c2c5ac03c538eace01)] -> xpath: //select[@id='364c75d1']] On Page: Retrieval portal
+19:16:55.095 [main] INFO  utils.KeyWords - Drop down list selected with Value of :US/Alaska On Page: Retrieval portal
+19:17:01.138 [main] INFO  utils.KeyWords - Clicking on Element :[[ChromeDriver: chrome on windows (4b5bd502b28e76c2c5ac03c538eace01)] -> xpath: //h2[text()='Customer account summary']] On Page: Retrieval portal
+19:17:01.250 [main] INFO  utils.KeyWords - Clicked on Element :[[ChromeDriver: chrome on windows (4b5bd502b28e76c2c5ac03c538eace01)] -> xpath: //h2[text()='Customer account summary']] On Page: Retrieval portal
+19:17:01.291 [main] INFO  utils.KeyWords - Clicking on Element :[[ChromeDriver: chrome on windows (4b5bd502b28e76c2c5ac03c538eace01)] -> xpath: //button[@title='Complete this assignment']] On Page: Retrieval portal
+19:17:01.430 [main] INFO  utils.KeyWords - Clicked on Element :[[ChromeDriver: chrome on windows (4b5bd502b28e76c2c5ac03c538eace01)] -> xpath: //button[@title='Complete this assignment']] On Page: Retrieval portal
+19:17:04.711 [main] INFO  utils.KeyWords - Entering text:Vinay Automation . In textbox WebElement: [[ChromeDriver: chrome on windows (4b5bd502b28e76c2c5ac03c538eace01)] -> xpath: //input[@id='e12165d4']] On Page: Retrieval portal
+19:17:05.005 [main] INFO  utils.KeyWords - Entered text:Vinay Automation . In textbox WebElement: [[ChromeDriver: chrome on windows (4b5bd502b28e76c2c5ac03c538eace01)] -> xpath: //input[@id='e12165d4']] On Page: Retrieval portal
+19:17:05.038 [main] INFO  utils.KeyWords - Drop Down List Element is Visible :[[ChromeDriver: chrome on windows (4b5bd502b28e76c2c5ac03c538eace01)] -> xpath: //select[@id='af741cb3']] On Page: Retrieval portal
+19:17:05.056 [main] INFO  utils.KeyWords - Selecting drop down list value : US/Alaska in DropDownList :[[ChromeDriver: chrome on windows (4b5bd502b28e76c2c5ac03c538eace01)] -> xpath: //select[@id='af741cb3']] On Page: Retrieval portal
+19:17:05.196 [main] INFO  utils.KeyWords - Drop down list selected with Value of :US/Alaska On Page: Retrieval portal
+19:17:05.215 [main] INFO  utils.KeyWords - Entering text:Automated Instructions . In textbox WebElement: [[ChromeDriver: chrome on windows (4b5bd502b28e76c2c5ac03c538eace01)] -> xpath: //textarea[@id='91c190b1']] On Page: Retrieval portal
+19:17:05.586 [main] INFO  utils.KeyWords - Entered text:Automated Instructions . In textbox WebElement: [[ChromeDriver: chrome on windows (4b5bd502b28e76c2c5ac03c538eace01)] -> xpath: //textarea[@id='91c190b1']] On Page: Retrieval portal
+19:17:05.614 [main] INFO  utils.KeyWords - Entering text:19/10/2024. In textbox WebElement: [[ChromeDriver: chrome on windows (4b5bd502b28e76c2c5ac03c538eace01)] -> xpath: //input[@id='a1ed4d32']] On Page: Retrieval portal
+19:17:05.879 [main] INFO  utils.KeyWords - Entered text:19/10/2024. In textbox WebElement: [[ChromeDriver: chrome on windows (4b5bd502b28e76c2c5ac03c538eace01)] -> xpath: //input[@id='a1ed4d32']] On Page: Retrieval portal
+19:17:07.910 [main] INFO  utils.KeyWords - Selecting Drop down list with VisbleText : None in DropDownList :[[ChromeDriver: chrome on windows (4b5bd502b28e76c2c5ac03c538eace01)] -> xpath: //select[@id='a4b25490']] On Page: Retrieval portal
+19:17:08.190 [main] INFO  utils.KeyWords - Selected Drop down list selected with Visible Text of :None On Page: Retrieval portal
+19:17:08.214 [main] INFO  utils.KeyWords - Entering text:Zakirshaik. In textbox WebElement: [[ChromeDriver: chrome on windows (4b5bd502b28e76c2c5ac03c538eace01)] -> xpath: //input[@id='63add1cc']] On Page: Retrieval portal
+19:17:08.526 [main] INFO  utils.KeyWords - Entered text:Zakirshaik. In textbox WebElement: [[ChromeDriver: chrome on windows (4b5bd502b28e76c2c5ac03c538eace01)] -> xpath: //input[@id='63add1cc']] On Page: Retrieval portal
+19:17:21.964 [main] INFO  utils.BaseClass - Intializing the Browser type: chrome
+19:17:29.182 [main] INFO  utils.KeyWords - Entering text:QA_Retrieval. In textbox WebElement: [[ChromeDriver: chrome on windows (1b75e8447b56fa67fbfcd2a681769dcf)] -> xpath: //input[@id='txtUserID']] On Page: Login Page
+19:17:29.426 [main] INFO  utils.KeyWords - Entered text:QA_Retrieval. In textbox WebElement: [[ChromeDriver: chrome on windows (1b75e8447b56fa67fbfcd2a681769dcf)] -> xpath: //input[@id='txtUserID']] On Page: Login Page
+19:17:29.459 [main] INFO  utils.KeyWords - Entering text:rules@123. In textbox WebElement: [[ChromeDriver: chrome on windows (1b75e8447b56fa67fbfcd2a681769dcf)] -> xpath: //input[@id='txtPassword']] On Page: Login Page
+19:17:29.696 [main] INFO  utils.KeyWords - Entered text:rules@123. In textbox WebElement: [[ChromeDriver: chrome on windows (1b75e8447b56fa67fbfcd2a681769dcf)] -> xpath: //input[@id='txtPassword']] On Page: Login Page
+19:17:29.774 [main] INFO  utils.KeyWords - Clicking on Element :[[ChromeDriver: chrome on windows (1b75e8447b56fa67fbfcd2a681769dcf)] -> xpath: //button[@id='sub']] On Page: Login Page
+19:18:07.852 [main] INFO  utils.KeyWords - Clicked on Element :Proxy element for: DefaultElementLocator 'By.xpath: //button[@id='sub']' On Page: Login Page
+19:18:12.575 [main] INFO  factory.ReadDataFromExcel - RECOMMENDED: PLEASE MAKE THE TEST DATA SHEET TO READ ONLY MODE.
+19:18:12.575 [main] INFO  factory.ReadDataFromExcel - Reading Data from the Excel Sheet for TestCaseID: happyPath
+19:18:12.819 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+19:18:12.823 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
+19:18:12.825 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet3.xml.rels
+19:18:12.827 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet4.xml.rels
+19:18:12.828 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+19:18:13.619 [main] DEBUG org.apache.poi.ooxml.POIXMLFactory - using default POIXMLDocumentPart for http://schemas.openxmlformats.org/officeDocument/2006/relationships/printerSettings
+19:18:13.620 [main] DEBUG org.apache.poi.ooxml.POIXMLFactory - using default POIXMLDocumentPart for http://schemas.openxmlformats.org/officeDocument/2006/relationships/printerSettings
+19:18:13.896 [main] INFO  factory.ReadDataFromExcel - Exception Ouccred while Reading data from Excel Sheet:C:\Users\shaik.hussain\git\HDAP2_PEGAUI_Automation\Input_TestData\ExcelSheet_TestData_UI.xlsx
+19:18:13.916 [main] INFO  utils.KeyWords - Switching to Default Contend From Frame On Page: Retrieval portal
+19:18:13.929 [main] INFO  utils.KeyWords - Switched to Default Contend From Frame On Page: Retrieval portal
+19:18:14.035 [main] INFO  utils.KeyWords - Clicking on Element :[[ChromeDriver: chrome on windows (1b75e8447b56fa67fbfcd2a681769dcf)] -> xpath: //button[text()='Create RG']] On Page: Retrieval portal
+19:18:14.274 [main] INFO  utils.KeyWords - Clicked on Element :[[ChromeDriver: chrome on windows (1b75e8447b56fa67fbfcd2a681769dcf)] -> xpath: //button[text()='Create RG']] On Page: Retrieval portal
+19:18:16.138 [main] INFO  utils.KeyWords - Clicking on Element :[[ChromeDriver: chrome on windows (1b75e8447b56fa67fbfcd2a681769dcf)] -> xpath: //button[@title='Complete this assignment']] On Page: Retrieval portal
+19:18:16.345 [main] INFO  utils.KeyWords - Clicked on Element :[[ChromeDriver: chrome on windows (1b75e8447b56fa67fbfcd2a681769dcf)] -> xpath: //button[@title='Complete this assignment']] On Page: Retrieval portal
+19:18:19.396 [main] INFO  utils.KeyWords - Clicking on Element :[[ChromeDriver: chrome on windows (1b75e8447b56fa67fbfcd2a681769dcf)] -> xpath: //button[text()='Add Contact']] On Page: Retrieval portal
+19:18:19.582 [main] INFO  utils.KeyWords - Clicked on Element :[[ChromeDriver: chrome on windows (1b75e8447b56fa67fbfcd2a681769dcf)] -> xpath: //button[text()='Add Contact']] On Page: Retrieval portal
+19:18:21.909 [main] INFO  utils.KeyWords - Drop Down List Element is Visible :[[ChromeDriver: chrome on windows (1b75e8447b56fa67fbfcd2a681769dcf)] -> xpath: //select[@id='80e67c33']] On Page: Retrieval portal
+19:18:21.926 [main] INFO  utils.KeyWords - Selecting drop down list value : Primary in DropDownList :[[ChromeDriver: chrome on windows (1b75e8447b56fa67fbfcd2a681769dcf)] -> xpath: //select[@id='80e67c33']] On Page: Retrieval portal
+19:18:22.144 [main] INFO  utils.KeyWords - Drop down list selected with Value of :Primary On Page: Retrieval portal
+19:18:22.171 [main] INFO  utils.KeyWords - Drop Down List Element is Visible :[[ChromeDriver: chrome on windows (1b75e8447b56fa67fbfcd2a681769dcf)] -> xpath: //select[@id='c1a346d0']] On Page: Retrieval portal
+19:18:22.185 [main] INFO  utils.KeyWords - Selecting drop down list value : Billing in DropDownList :[[ChromeDriver: chrome on windows (1b75e8447b56fa67fbfcd2a681769dcf)] -> xpath: //select[@id='c1a346d0']] On Page: Retrieval portal
+19:18:22.421 [main] INFO  utils.KeyWords - Drop down list selected with Value of :Billing On Page: Retrieval portal
+19:18:22.461 [main] INFO  utils.KeyWords - Entering text:Phi Automation Team. In textbox WebElement: [[ChromeDriver: chrome on windows (1b75e8447b56fa67fbfcd2a681769dcf)] -> xpath: //input[@id='45da4e1f']] On Page: Retrieval portal
+19:18:22.757 [main] INFO  utils.KeyWords - Entered text:Phi Automation Team. In textbox WebElement: [[ChromeDriver: chrome on windows (1b75e8447b56fa67fbfcd2a681769dcf)] -> xpath: //input[@id='45da4e1f']] On Page: Retrieval portal
+19:18:22.787 [main] INFO  utils.KeyWords - Entering text:Testing Team. In textbox WebElement: [[ChromeDriver: chrome on windows (1b75e8447b56fa67fbfcd2a681769dcf)] -> xpath: //input[@id='6da723dd']] On Page: Retrieval portal
+19:18:23.043 [main] INFO  utils.KeyWords - Entered text:Testing Team. In textbox WebElement: [[ChromeDriver: chrome on windows (1b75e8447b56fa67fbfcd2a681769dcf)] -> xpath: //input[@id='6da723dd']] On Page: Retrieval portal
+19:18:23.075 [main] INFO  utils.KeyWords - Entering text:phiteam@test.com. In textbox WebElement: [[ChromeDriver: chrome on windows (1b75e8447b56fa67fbfcd2a681769dcf)] -> xpath: //input[@id='5aea26b5']] On Page: Retrieval portal
+19:18:23.398 [main] INFO  utils.KeyWords - Entered text:phiteam@test.com. In textbox WebElement: [[ChromeDriver: chrome on windows (1b75e8447b56fa67fbfcd2a681769dcf)] -> xpath: //input[@id='5aea26b5']] On Page: Retrieval portal
+19:18:23.426 [main] INFO  utils.KeyWords - Entering text:9642869555. In textbox WebElement: [[ChromeDriver: chrome on windows (1b75e8447b56fa67fbfcd2a681769dcf)] -> xpath: //input[@id='d0a169f1']] On Page: Retrieval portal
+19:18:23.715 [main] INFO  utils.KeyWords - Entered text:9642869555. In textbox WebElement: [[ChromeDriver: chrome on windows (1b75e8447b56fa67fbfcd2a681769dcf)] -> xpath: //input[@id='d0a169f1']] On Page: Retrieval portal
+19:18:25.874 [main] INFO  utils.KeyWords - Entering text:8. In textbox WebElement: [[ChromeDriver: chrome on windows (1b75e8447b56fa67fbfcd2a681769dcf)] -> xpath: //input[@id='edf46543']] On Page: Retrieval portal
+19:18:26.161 [main] INFO  utils.KeyWords - Entered text:8. In textbox WebElement: [[ChromeDriver: chrome on windows (1b75e8447b56fa67fbfcd2a681769dcf)] -> xpath: //input[@id='edf46543']] On Page: Retrieval portal
+19:18:28.322 [main] INFO  utils.KeyWords - Entering text:8529637415. In textbox WebElement: [[ChromeDriver: chrome on windows (1b75e8447b56fa67fbfcd2a681769dcf)] -> xpath: //input[@id='95a33135']] On Page: Retrieval portal
+19:18:28.518 [main] INFO  utils.KeyWords - Entered text:8529637415. In textbox WebElement: [[ChromeDriver: chrome on windows (1b75e8447b56fa67fbfcd2a681769dcf)] -> xpath: //input[@id='95a33135']] On Page: Retrieval portal
+19:18:30.617 [main] INFO  utils.KeyWords - Drop Down List Element is Visible :[[ChromeDriver: chrome on windows (1b75e8447b56fa67fbfcd2a681769dcf)] -> xpath: //select[@id='89268613']] On Page: Retrieval portal
+19:18:30.629 [main] INFO  utils.KeyWords - Selecting drop down list value : Fax in DropDownList :[[ChromeDriver: chrome on windows (1b75e8447b56fa67fbfcd2a681769dcf)] -> xpath: //select[@id='89268613']] On Page: Retrieval portal
+19:18:30.859 [main] INFO  utils.KeyWords - Drop down list selected with Value of :Fax On Page: Retrieval portal
+19:18:32.895 [main] INFO  utils.KeyWords - Drop Down List Element is Visible :[[ChromeDriver: chrome on windows (1b75e8447b56fa67fbfcd2a681769dcf)] -> xpath: //select[@id='364c75d1']] On Page: Retrieval portal
+19:18:32.907 [main] INFO  utils.KeyWords - Selecting drop down list value : US/Alaska in DropDownList :[[ChromeDriver: chrome on windows (1b75e8447b56fa67fbfcd2a681769dcf)] -> xpath: //select[@id='364c75d1']] On Page: Retrieval portal
+19:18:33.098 [main] INFO  utils.KeyWords - Drop down list selected with Value of :US/Alaska On Page: Retrieval portal
+19:18:39.163 [main] INFO  utils.KeyWords - Clicking on Element :[[ChromeDriver: chrome on windows (1b75e8447b56fa67fbfcd2a681769dcf)] -> xpath: //h2[text()='Customer account summary']] On Page: Retrieval portal
+19:18:39.306 [main] INFO  utils.KeyWords - Clicked on Element :[[ChromeDriver: chrome on windows (1b75e8447b56fa67fbfcd2a681769dcf)] -> xpath: //h2[text()='Customer account summary']] On Page: Retrieval portal
+19:18:39.360 [main] INFO  utils.KeyWords - Clicking on Element :[[ChromeDriver: chrome on windows (1b75e8447b56fa67fbfcd2a681769dcf)] -> xpath: //button[@title='Complete this assignment']] On Page: Retrieval portal
+19:18:39.531 [main] INFO  utils.KeyWords - Clicked on Element :[[ChromeDriver: chrome on windows (1b75e8447b56fa67fbfcd2a681769dcf)] -> xpath: //button[@title='Complete this assignment']] On Page: Retrieval portal
+19:18:42.925 [main] INFO  utils.KeyWords - Entering text:Vinay Automation . In textbox WebElement: [[ChromeDriver: chrome on windows (1b75e8447b56fa67fbfcd2a681769dcf)] -> xpath: //input[@id='e12165d4']] On Page: Retrieval portal
+19:18:43.309 [main] INFO  utils.KeyWords - Entered text:Vinay Automation . In textbox WebElement: [[ChromeDriver: chrome on windows (1b75e8447b56fa67fbfcd2a681769dcf)] -> xpath: //input[@id='e12165d4']] On Page: Retrieval portal
+19:18:43.342 [main] INFO  utils.KeyWords - Drop Down List Element is Visible :[[ChromeDriver: chrome on windows (1b75e8447b56fa67fbfcd2a681769dcf)] -> xpath: //select[@id='af741cb3']] On Page: Retrieval portal
+19:18:43.358 [main] INFO  utils.KeyWords - Selecting drop down list value : US/Alaska in DropDownList :[[ChromeDriver: chrome on windows (1b75e8447b56fa67fbfcd2a681769dcf)] -> xpath: //select[@id='af741cb3']] On Page: Retrieval portal
+19:18:43.581 [main] INFO  utils.KeyWords - Drop down list selected with Value of :US/Alaska On Page: Retrieval portal
+19:18:43.614 [main] INFO  utils.KeyWords - Entering text:Automated Instructions . In textbox WebElement: [[ChromeDriver: chrome on windows (1b75e8447b56fa67fbfcd2a681769dcf)] -> xpath: //textarea[@id='91c190b1']] On Page: Retrieval portal
+19:18:44.208 [main] INFO  utils.KeyWords - Entered text:Automated Instructions . In textbox WebElement: [[ChromeDriver: chrome on windows (1b75e8447b56fa67fbfcd2a681769dcf)] -> xpath: //textarea[@id='91c190b1']] On Page: Retrieval portal
+19:18:44.252 [main] INFO  utils.KeyWords - Entering text:19/10/2024. In textbox WebElement: [[ChromeDriver: chrome on windows (1b75e8447b56fa67fbfcd2a681769dcf)] -> xpath: //input[@id='a1ed4d32']] On Page: Retrieval portal
+19:18:44.586 [main] INFO  utils.KeyWords - Entered text:19/10/2024. In textbox WebElement: [[ChromeDriver: chrome on windows (1b75e8447b56fa67fbfcd2a681769dcf)] -> xpath: //input[@id='a1ed4d32']] On Page: Retrieval portal
+19:18:46.621 [main] INFO  utils.KeyWords - Selecting Drop down list with VisbleText : None in DropDownList :[[ChromeDriver: chrome on windows (1b75e8447b56fa67fbfcd2a681769dcf)] -> xpath: //select[@id='a4b25490']] On Page: Retrieval portal
+19:18:46.806 [main] INFO  utils.KeyWords - Selected Drop down list selected with Visible Text of :None On Page: Retrieval portal
+19:18:46.844 [main] INFO  utils.KeyWords - Entering text:Zakirshaik. In textbox WebElement: [[ChromeDriver: chrome on windows (1b75e8447b56fa67fbfcd2a681769dcf)] -> xpath: //input[@id='63add1cc']] On Page: Retrieval portal
+19:18:47.085 [main] INFO  utils.KeyWords - Entered text:Zakirshaik. In textbox WebElement: [[ChromeDriver: chrome on windows (1b75e8447b56fa67fbfcd2a681769dcf)] -> xpath: //input[@id='63add1cc']] On Page: Retrieval portal
+19:19:09.044 [main] INFO  utils.BaseClass - Intializing the Browser type: chrome
+19:19:16.620 [main] INFO  utils.KeyWords - Entering text:QA_Retrieval. In textbox WebElement: [[ChromeDriver: chrome on windows (aab8c801e18ee24ccb543d800b83e730)] -> xpath: //input[@id='txtUserID']] On Page: Login Page
+19:19:16.877 [main] INFO  utils.KeyWords - Entered text:QA_Retrieval. In textbox WebElement: [[ChromeDriver: chrome on windows (aab8c801e18ee24ccb543d800b83e730)] -> xpath: //input[@id='txtUserID']] On Page: Login Page
+19:19:16.912 [main] INFO  utils.KeyWords - Entering text:rules@123. In textbox WebElement: [[ChromeDriver: chrome on windows (aab8c801e18ee24ccb543d800b83e730)] -> xpath: //input[@id='txtPassword']] On Page: Login Page
+19:19:17.143 [main] INFO  utils.KeyWords - Entered text:rules@123. In textbox WebElement: [[ChromeDriver: chrome on windows (aab8c801e18ee24ccb543d800b83e730)] -> xpath: //input[@id='txtPassword']] On Page: Login Page
+19:19:17.217 [main] INFO  utils.KeyWords - Clicking on Element :[[ChromeDriver: chrome on windows (aab8c801e18ee24ccb543d800b83e730)] -> xpath: //button[@id='sub']] On Page: Login Page
+19:19:54.591 [main] INFO  utils.KeyWords - Clicked on Element :Proxy element for: DefaultElementLocator 'By.xpath: //button[@id='sub']' On Page: Login Page
+19:19:59.319 [main] INFO  factory.ReadDataFromExcel - RECOMMENDED: PLEASE MAKE THE TEST DATA SHEET TO READ ONLY MODE.
+19:19:59.320 [main] INFO  factory.ReadDataFromExcel - Reading Data from the Excel Sheet for TestCaseID: happyPath
+19:19:59.597 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+19:19:59.602 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
+19:19:59.603 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet3.xml.rels
+19:19:59.605 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet4.xml.rels
+19:19:59.606 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+19:20:00.439 [main] DEBUG org.apache.poi.ooxml.POIXMLFactory - using default POIXMLDocumentPart for http://schemas.openxmlformats.org/officeDocument/2006/relationships/printerSettings
+19:20:00.440 [main] DEBUG org.apache.poi.ooxml.POIXMLFactory - using default POIXMLDocumentPart for http://schemas.openxmlformats.org/officeDocument/2006/relationships/printerSettings
+19:20:00.733 [main] INFO  factory.ReadDataFromExcel - Exception Ouccred while Reading data from Excel Sheet:C:\Users\shaik.hussain\git\HDAP2_PEGAUI_Automation\Input_TestData\ExcelSheet_TestData_UI.xlsx
+19:20:00.752 [main] INFO  utils.KeyWords - Switching to Default Contend From Frame On Page: Retrieval portal
+19:20:00.763 [main] INFO  utils.KeyWords - Switched to Default Contend From Frame On Page: Retrieval portal
+19:20:00.844 [main] INFO  utils.KeyWords - Clicking on Element :[[ChromeDriver: chrome on windows (aab8c801e18ee24ccb543d800b83e730)] -> xpath: //button[text()='Create RG']] On Page: Retrieval portal
+19:20:01.072 [main] INFO  utils.KeyWords - Clicked on Element :[[ChromeDriver: chrome on windows (aab8c801e18ee24ccb543d800b83e730)] -> xpath: //button[text()='Create RG']] On Page: Retrieval portal
+19:20:03.603 [main] INFO  utils.KeyWords - Clicking on Element :[[ChromeDriver: chrome on windows (aab8c801e18ee24ccb543d800b83e730)] -> xpath: //button[@title='Complete this assignment']] On Page: Retrieval portal
+19:20:03.894 [main] INFO  utils.KeyWords - Clicked on Element :[[ChromeDriver: chrome on windows (aab8c801e18ee24ccb543d800b83e730)] -> xpath: //button[@title='Complete this assignment']] On Page: Retrieval portal
+19:20:05.848 [main] INFO  utils.KeyWords - Clicking on Element :[[ChromeDriver: chrome on windows (aab8c801e18ee24ccb543d800b83e730)] -> xpath: //button[text()='Add Contact']] On Page: Retrieval portal
+19:20:06.037 [main] INFO  utils.KeyWords - Clicked on Element :[[ChromeDriver: chrome on windows (aab8c801e18ee24ccb543d800b83e730)] -> xpath: //button[text()='Add Contact']] On Page: Retrieval portal
+19:20:07.954 [main] INFO  utils.KeyWords - Drop Down List Element is Visible :[[ChromeDriver: chrome on windows (aab8c801e18ee24ccb543d800b83e730)] -> xpath: //select[@id='80e67c33']] On Page: Retrieval portal
+19:20:07.970 [main] INFO  utils.KeyWords - Selecting drop down list value : Primary in DropDownList :[[ChromeDriver: chrome on windows (aab8c801e18ee24ccb543d800b83e730)] -> xpath: //select[@id='80e67c33']] On Page: Retrieval portal
+19:20:08.246 [main] INFO  utils.KeyWords - Drop down list selected with Value of :Primary On Page: Retrieval portal
+19:20:08.286 [main] INFO  utils.KeyWords - Drop Down List Element is Visible :[[ChromeDriver: chrome on windows (aab8c801e18ee24ccb543d800b83e730)] -> xpath: //select[@id='c1a346d0']] On Page: Retrieval portal
+19:20:08.306 [main] INFO  utils.KeyWords - Selecting drop down list value : Billing in DropDownList :[[ChromeDriver: chrome on windows (aab8c801e18ee24ccb543d800b83e730)] -> xpath: //select[@id='c1a346d0']] On Page: Retrieval portal
+19:20:08.605 [main] INFO  utils.KeyWords - Drop down list selected with Value of :Billing On Page: Retrieval portal
+19:20:08.650 [main] INFO  utils.KeyWords - Entering text:Phi Automation Team. In textbox WebElement: [[ChromeDriver: chrome on windows (aab8c801e18ee24ccb543d800b83e730)] -> xpath: //input[@id='45da4e1f']] On Page: Retrieval portal
+19:20:09.025 [main] INFO  utils.KeyWords - Entered text:Phi Automation Team. In textbox WebElement: [[ChromeDriver: chrome on windows (aab8c801e18ee24ccb543d800b83e730)] -> xpath: //input[@id='45da4e1f']] On Page: Retrieval portal
+19:20:09.067 [main] INFO  utils.KeyWords - Entering text:Testing Team. In textbox WebElement: [[ChromeDriver: chrome on windows (aab8c801e18ee24ccb543d800b83e730)] -> xpath: //input[@id='6da723dd']] On Page: Retrieval portal
+19:20:09.392 [main] INFO  utils.KeyWords - Entered text:Testing Team. In textbox WebElement: [[ChromeDriver: chrome on windows (aab8c801e18ee24ccb543d800b83e730)] -> xpath: //input[@id='6da723dd']] On Page: Retrieval portal
+19:20:09.430 [main] INFO  utils.KeyWords - Entering text:phiteam@test.com. In textbox WebElement: [[ChromeDriver: chrome on windows (aab8c801e18ee24ccb543d800b83e730)] -> xpath: //input[@id='5aea26b5']] On Page: Retrieval portal
+19:20:09.856 [main] INFO  utils.KeyWords - Entered text:phiteam@test.com. In textbox WebElement: [[ChromeDriver: chrome on windows (aab8c801e18ee24ccb543d800b83e730)] -> xpath: //input[@id='5aea26b5']] On Page: Retrieval portal
+19:20:09.898 [main] INFO  utils.KeyWords - Entering text:9642869555. In textbox WebElement: [[ChromeDriver: chrome on windows (aab8c801e18ee24ccb543d800b83e730)] -> xpath: //input[@id='d0a169f1']] On Page: Retrieval portal
+19:20:10.249 [main] INFO  utils.KeyWords - Entered text:9642869555. In textbox WebElement: [[ChromeDriver: chrome on windows (aab8c801e18ee24ccb543d800b83e730)] -> xpath: //input[@id='d0a169f1']] On Page: Retrieval portal
+19:20:12.378 [main] INFO  utils.KeyWords - Entering text:8. In textbox WebElement: [[ChromeDriver: chrome on windows (aab8c801e18ee24ccb543d800b83e730)] -> xpath: //input[@id='edf46543']] On Page: Retrieval portal
+19:20:12.529 [main] INFO  utils.KeyWords - Entered text:8. In textbox WebElement: [[ChromeDriver: chrome on windows (aab8c801e18ee24ccb543d800b83e730)] -> xpath: //input[@id='edf46543']] On Page: Retrieval portal
+19:20:14.657 [main] INFO  utils.KeyWords - Entering text:8529637415. In textbox WebElement: [[ChromeDriver: chrome on windows (aab8c801e18ee24ccb543d800b83e730)] -> xpath: //input[@id='95a33135']] On Page: Retrieval portal
+19:20:14.834 [main] INFO  utils.KeyWords - Entered text:8529637415. In textbox WebElement: [[ChromeDriver: chrome on windows (aab8c801e18ee24ccb543d800b83e730)] -> xpath: //input[@id='95a33135']] On Page: Retrieval portal
+19:20:16.926 [main] INFO  utils.KeyWords - Drop Down List Element is Visible :[[ChromeDriver: chrome on windows (aab8c801e18ee24ccb543d800b83e730)] -> xpath: //select[@id='89268613']] On Page: Retrieval portal
+19:20:16.941 [main] INFO  utils.KeyWords - Selecting drop down list value : Fax in DropDownList :[[ChromeDriver: chrome on windows (aab8c801e18ee24ccb543d800b83e730)] -> xpath: //select[@id='89268613']] On Page: Retrieval portal
+19:20:17.106 [main] INFO  utils.KeyWords - Drop down list selected with Value of :Fax On Page: Retrieval portal
+19:20:19.145 [main] INFO  utils.KeyWords - Drop Down List Element is Visible :[[ChromeDriver: chrome on windows (aab8c801e18ee24ccb543d800b83e730)] -> xpath: //select[@id='364c75d1']] On Page: Retrieval portal
+19:20:19.155 [main] INFO  utils.KeyWords - Selecting drop down list value : US/Alaska in DropDownList :[[ChromeDriver: chrome on windows (aab8c801e18ee24ccb543d800b83e730)] -> xpath: //select[@id='364c75d1']] On Page: Retrieval portal
+19:20:19.371 [main] INFO  utils.KeyWords - Drop down list selected with Value of :US/Alaska On Page: Retrieval portal
+19:20:25.423 [main] INFO  utils.KeyWords - Clicking on Element :[[ChromeDriver: chrome on windows (aab8c801e18ee24ccb543d800b83e730)] -> xpath: //h2[text()='Customer account summary']] On Page: Retrieval portal
+19:20:25.543 [main] INFO  utils.KeyWords - Clicked on Element :[[ChromeDriver: chrome on windows (aab8c801e18ee24ccb543d800b83e730)] -> xpath: //h2[text()='Customer account summary']] On Page: Retrieval portal
+19:20:25.581 [main] INFO  utils.KeyWords - Clicking on Element :[[ChromeDriver: chrome on windows (aab8c801e18ee24ccb543d800b83e730)] -> xpath: //button[@title='Complete this assignment']] On Page: Retrieval portal
+19:20:25.718 [main] INFO  utils.KeyWords - Clicked on Element :[[ChromeDriver: chrome on windows (aab8c801e18ee24ccb543d800b83e730)] -> xpath: //button[@title='Complete this assignment']] On Page: Retrieval portal
+19:20:29.634 [main] INFO  utils.KeyWords - Entering text:Vinay Automation . In textbox WebElement: [[ChromeDriver: chrome on windows (aab8c801e18ee24ccb543d800b83e730)] -> xpath: //input[@id='e12165d4']] On Page: Retrieval portal
+19:20:29.936 [main] INFO  utils.KeyWords - Entered text:Vinay Automation . In textbox WebElement: [[ChromeDriver: chrome on windows (aab8c801e18ee24ccb543d800b83e730)] -> xpath: //input[@id='e12165d4']] On Page: Retrieval portal
+19:20:29.966 [main] INFO  utils.KeyWords - Drop Down List Element is Visible :[[ChromeDriver: chrome on windows (aab8c801e18ee24ccb543d800b83e730)] -> xpath: //select[@id='af741cb3']] On Page: Retrieval portal
+19:20:29.985 [main] INFO  utils.KeyWords - Selecting drop down list value : US/Alaska in DropDownList :[[ChromeDriver: chrome on windows (aab8c801e18ee24ccb543d800b83e730)] -> xpath: //select[@id='af741cb3']] On Page: Retrieval portal
+19:20:30.157 [main] INFO  utils.KeyWords - Drop down list selected with Value of :US/Alaska On Page: Retrieval portal
+19:20:30.184 [main] INFO  utils.KeyWords - Entering text:Automated Instructions . In textbox WebElement: [[ChromeDriver: chrome on windows (aab8c801e18ee24ccb543d800b83e730)] -> xpath: //textarea[@id='91c190b1']] On Page: Retrieval portal
+19:20:30.492 [main] INFO  utils.KeyWords - Entered text:Automated Instructions . In textbox WebElement: [[ChromeDriver: chrome on windows (aab8c801e18ee24ccb543d800b83e730)] -> xpath: //textarea[@id='91c190b1']] On Page: Retrieval portal
+19:20:30.521 [main] INFO  utils.KeyWords - Entering text:19/10/2024. In textbox WebElement: [[ChromeDriver: chrome on windows (aab8c801e18ee24ccb543d800b83e730)] -> xpath: //input[@id='a1ed4d32']] On Page: Retrieval portal
+19:20:30.701 [main] INFO  utils.KeyWords - Entered text:19/10/2024. In textbox WebElement: [[ChromeDriver: chrome on windows (aab8c801e18ee24ccb543d800b83e730)] -> xpath: //input[@id='a1ed4d32']] On Page: Retrieval portal
+19:20:32.742 [main] INFO  utils.KeyWords - Selecting Drop down list with VisbleText : None in DropDownList :[[ChromeDriver: chrome on windows (aab8c801e18ee24ccb543d800b83e730)] -> xpath: //select[@id='a4b25490']] On Page: Retrieval portal
+19:20:32.934 [main] INFO  utils.KeyWords - Selected Drop down list selected with Visible Text of :None On Page: Retrieval portal
+19:20:32.955 [main] INFO  utils.KeyWords - Entering text:Zakirshaik. In textbox WebElement: [[ChromeDriver: chrome on windows (aab8c801e18ee24ccb543d800b83e730)] -> xpath: //input[@id='63add1cc']] On Page: Retrieval portal
+19:20:33.135 [main] INFO  utils.KeyWords - Entered text:Zakirshaik. In textbox WebElement: [[ChromeDriver: chrome on windows (aab8c801e18ee24ccb543d800b83e730)] -> xpath: //input[@id='63add1cc']] On Page: Retrieval portal
+19:20:55.766 [main] INFO  utils.BaseClass - Intializing the Browser type: chrome
+19:21:03.566 [main] INFO  utils.KeyWords - Entering text:QA_Retrieval. In textbox WebElement: [[ChromeDriver: chrome on windows (c85fe858ca29fc93a2f2490a9ff5bfe3)] -> xpath: //input[@id='txtUserID']] On Page: Login Page
+19:21:03.802 [main] INFO  utils.KeyWords - Entered text:QA_Retrieval. In textbox WebElement: [[ChromeDriver: chrome on windows (c85fe858ca29fc93a2f2490a9ff5bfe3)] -> xpath: //input[@id='txtUserID']] On Page: Login Page
+19:21:03.836 [main] INFO  utils.KeyWords - Entering text:rules@123. In textbox WebElement: [[ChromeDriver: chrome on windows (c85fe858ca29fc93a2f2490a9ff5bfe3)] -> xpath: //input[@id='txtPassword']] On Page: Login Page
+19:21:04.083 [main] INFO  utils.KeyWords - Entered text:rules@123. In textbox WebElement: [[ChromeDriver: chrome on windows (c85fe858ca29fc93a2f2490a9ff5bfe3)] -> xpath: //input[@id='txtPassword']] On Page: Login Page
+19:21:04.236 [main] INFO  utils.KeyWords - Clicking on Element :[[ChromeDriver: chrome on windows (c85fe858ca29fc93a2f2490a9ff5bfe3)] -> xpath: //button[@id='sub']] On Page: Login Page
+19:21:42.792 [main] INFO  utils.KeyWords - Clicked on Element :Proxy element for: DefaultElementLocator 'By.xpath: //button[@id='sub']' On Page: Login Page
+19:21:47.510 [main] INFO  factory.ReadDataFromExcel - RECOMMENDED: PLEASE MAKE THE TEST DATA SHEET TO READ ONLY MODE.
+19:21:47.510 [main] INFO  factory.ReadDataFromExcel - Reading Data from the Excel Sheet for TestCaseID: happyPath
+19:21:47.796 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+19:21:47.803 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
+19:21:47.805 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet3.xml.rels
+19:21:47.806 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet4.xml.rels
+19:21:47.807 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+19:21:48.617 [main] DEBUG org.apache.poi.ooxml.POIXMLFactory - using default POIXMLDocumentPart for http://schemas.openxmlformats.org/officeDocument/2006/relationships/printerSettings
+19:21:48.619 [main] DEBUG org.apache.poi.ooxml.POIXMLFactory - using default POIXMLDocumentPart for http://schemas.openxmlformats.org/officeDocument/2006/relationships/printerSettings
+19:21:48.932 [main] INFO  factory.ReadDataFromExcel - Exception Ouccred while Reading data from Excel Sheet:C:\Users\shaik.hussain\git\HDAP2_PEGAUI_Automation\Input_TestData\ExcelSheet_TestData_UI.xlsx
+19:21:48.962 [main] INFO  utils.KeyWords - Switching to Default Contend From Frame On Page: Retrieval portal
+19:21:48.975 [main] INFO  utils.KeyWords - Switched to Default Contend From Frame On Page: Retrieval portal
+19:21:49.058 [main] INFO  utils.KeyWords - Clicking on Element :[[ChromeDriver: chrome on windows (c85fe858ca29fc93a2f2490a9ff5bfe3)] -> xpath: //button[text()='Create RG']] On Page: Retrieval portal
+19:21:49.258 [main] INFO  utils.KeyWords - Clicked on Element :[[ChromeDriver: chrome on windows (c85fe858ca29fc93a2f2490a9ff5bfe3)] -> xpath: //button[text()='Create RG']] On Page: Retrieval portal
+19:21:51.602 [main] INFO  utils.KeyWords - Clicking on Element :[[ChromeDriver: chrome on windows (c85fe858ca29fc93a2f2490a9ff5bfe3)] -> xpath: //button[@title='Complete this assignment']] On Page: Retrieval portal
+19:21:51.846 [main] INFO  utils.KeyWords - Clicked on Element :[[ChromeDriver: chrome on windows (c85fe858ca29fc93a2f2490a9ff5bfe3)] -> xpath: //button[@title='Complete this assignment']] On Page: Retrieval portal
+19:21:53.734 [main] INFO  utils.KeyWords - Clicking on Element :[[ChromeDriver: chrome on windows (c85fe858ca29fc93a2f2490a9ff5bfe3)] -> xpath: //button[text()='Add Contact']] On Page: Retrieval portal
+19:21:53.938 [main] INFO  utils.KeyWords - Clicked on Element :[[ChromeDriver: chrome on windows (c85fe858ca29fc93a2f2490a9ff5bfe3)] -> xpath: //button[text()='Add Contact']] On Page: Retrieval portal
+19:21:55.891 [main] INFO  utils.KeyWords - Drop Down List Element is Visible :[[ChromeDriver: chrome on windows (c85fe858ca29fc93a2f2490a9ff5bfe3)] -> xpath: //select[@id='80e67c33']] On Page: Retrieval portal
+19:21:55.907 [main] INFO  utils.KeyWords - Selecting drop down list value : Primary in DropDownList :[[ChromeDriver: chrome on windows (c85fe858ca29fc93a2f2490a9ff5bfe3)] -> xpath: //select[@id='80e67c33']] On Page: Retrieval portal
+19:21:56.143 [main] INFO  utils.KeyWords - Drop down list selected with Value of :Primary On Page: Retrieval portal
+19:21:56.177 [main] INFO  utils.KeyWords - Drop Down List Element is Visible :[[ChromeDriver: chrome on windows (c85fe858ca29fc93a2f2490a9ff5bfe3)] -> xpath: //select[@id='c1a346d0']] On Page: Retrieval portal
+19:21:56.193 [main] INFO  utils.KeyWords - Selecting drop down list value : Billing in DropDownList :[[ChromeDriver: chrome on windows (c85fe858ca29fc93a2f2490a9ff5bfe3)] -> xpath: //select[@id='c1a346d0']] On Page: Retrieval portal
+19:21:56.415 [main] INFO  utils.KeyWords - Drop down list selected with Value of :Billing On Page: Retrieval portal
+19:21:56.442 [main] INFO  utils.KeyWords - Entering text:Phi Automation Team. In textbox WebElement: [[ChromeDriver: chrome on windows (c85fe858ca29fc93a2f2490a9ff5bfe3)] -> xpath: //input[@id='45da4e1f']] On Page: Retrieval portal
+19:21:56.764 [main] INFO  utils.KeyWords - Entered text:Phi Automation Team. In textbox WebElement: [[ChromeDriver: chrome on windows (c85fe858ca29fc93a2f2490a9ff5bfe3)] -> xpath: //input[@id='45da4e1f']] On Page: Retrieval portal
+19:21:56.795 [main] INFO  utils.KeyWords - Entering text:Testing Team. In textbox WebElement: [[ChromeDriver: chrome on windows (c85fe858ca29fc93a2f2490a9ff5bfe3)] -> xpath: //input[@id='6da723dd']] On Page: Retrieval portal
+19:21:57.095 [main] INFO  utils.KeyWords - Entered text:Testing Team. In textbox WebElement: [[ChromeDriver: chrome on windows (c85fe858ca29fc93a2f2490a9ff5bfe3)] -> xpath: //input[@id='6da723dd']] On Page: Retrieval portal
+19:21:57.127 [main] INFO  utils.KeyWords - Entering text:phiteam@test.com. In textbox WebElement: [[ChromeDriver: chrome on windows (c85fe858ca29fc93a2f2490a9ff5bfe3)] -> xpath: //input[@id='5aea26b5']] On Page: Retrieval portal
+19:21:57.495 [main] INFO  utils.KeyWords - Entered text:phiteam@test.com. In textbox WebElement: [[ChromeDriver: chrome on windows (c85fe858ca29fc93a2f2490a9ff5bfe3)] -> xpath: //input[@id='5aea26b5']] On Page: Retrieval portal
+19:21:57.528 [main] INFO  utils.KeyWords - Entering text:9642869555. In textbox WebElement: [[ChromeDriver: chrome on windows (c85fe858ca29fc93a2f2490a9ff5bfe3)] -> xpath: //input[@id='d0a169f1']] On Page: Retrieval portal
+19:21:57.812 [main] INFO  utils.KeyWords - Entered text:9642869555. In textbox WebElement: [[ChromeDriver: chrome on windows (c85fe858ca29fc93a2f2490a9ff5bfe3)] -> xpath: //input[@id='d0a169f1']] On Page: Retrieval portal
+19:21:59.951 [main] INFO  utils.KeyWords - Entering text:8. In textbox WebElement: [[ChromeDriver: chrome on windows (c85fe858ca29fc93a2f2490a9ff5bfe3)] -> xpath: //input[@id='edf46543']] On Page: Retrieval portal
+19:22:00.145 [main] INFO  utils.KeyWords - Entered text:8. In textbox WebElement: [[ChromeDriver: chrome on windows (c85fe858ca29fc93a2f2490a9ff5bfe3)] -> xpath: //input[@id='edf46543']] On Page: Retrieval portal
+19:22:02.246 [main] INFO  utils.KeyWords - Entering text:8529637415. In textbox WebElement: [[ChromeDriver: chrome on windows (c85fe858ca29fc93a2f2490a9ff5bfe3)] -> xpath: //input[@id='95a33135']] On Page: Retrieval portal
+19:22:02.458 [main] INFO  utils.KeyWords - Entered text:8529637415. In textbox WebElement: [[ChromeDriver: chrome on windows (c85fe858ca29fc93a2f2490a9ff5bfe3)] -> xpath: //input[@id='95a33135']] On Page: Retrieval portal
+19:22:04.548 [main] INFO  utils.KeyWords - Drop Down List Element is Visible :[[ChromeDriver: chrome on windows (c85fe858ca29fc93a2f2490a9ff5bfe3)] -> xpath: //select[@id='89268613']] On Page: Retrieval portal
+19:22:04.563 [main] INFO  utils.KeyWords - Selecting drop down list value : Fax in DropDownList :[[ChromeDriver: chrome on windows (c85fe858ca29fc93a2f2490a9ff5bfe3)] -> xpath: //select[@id='89268613']] On Page: Retrieval portal
+19:22:04.731 [main] INFO  utils.KeyWords - Drop down list selected with Value of :Fax On Page: Retrieval portal
+19:22:06.777 [main] INFO  utils.KeyWords - Drop Down List Element is Visible :[[ChromeDriver: chrome on windows (c85fe858ca29fc93a2f2490a9ff5bfe3)] -> xpath: //select[@id='364c75d1']] On Page: Retrieval portal
+19:22:06.790 [main] INFO  utils.KeyWords - Selecting drop down list value : US/Alaska in DropDownList :[[ChromeDriver: chrome on windows (c85fe858ca29fc93a2f2490a9ff5bfe3)] -> xpath: //select[@id='364c75d1']] On Page: Retrieval portal
+19:22:06.960 [main] INFO  utils.KeyWords - Drop down list selected with Value of :US/Alaska On Page: Retrieval portal
+19:22:13.008 [main] INFO  utils.KeyWords - Clicking on Element :[[ChromeDriver: chrome on windows (c85fe858ca29fc93a2f2490a9ff5bfe3)] -> xpath: //h2[text()='Customer account summary']] On Page: Retrieval portal
+19:22:13.115 [main] INFO  utils.KeyWords - Clicked on Element :[[ChromeDriver: chrome on windows (c85fe858ca29fc93a2f2490a9ff5bfe3)] -> xpath: //h2[text()='Customer account summary']] On Page: Retrieval portal
+19:22:13.158 [main] INFO  utils.KeyWords - Clicking on Element :[[ChromeDriver: chrome on windows (c85fe858ca29fc93a2f2490a9ff5bfe3)] -> xpath: //button[@title='Complete this assignment']] On Page: Retrieval portal
+19:22:13.306 [main] INFO  utils.KeyWords - Clicked on Element :[[ChromeDriver: chrome on windows (c85fe858ca29fc93a2f2490a9ff5bfe3)] -> xpath: //button[@title='Complete this assignment']] On Page: Retrieval portal
+19:22:17.164 [main] INFO  utils.KeyWords - Entering text:Vinay Automation . In textbox WebElement: [[ChromeDriver: chrome on windows (c85fe858ca29fc93a2f2490a9ff5bfe3)] -> xpath: //input[@id='e12165d4']] On Page: Retrieval portal
+19:22:17.446 [main] INFO  utils.KeyWords - Entered text:Vinay Automation . In textbox WebElement: [[ChromeDriver: chrome on windows (c85fe858ca29fc93a2f2490a9ff5bfe3)] -> xpath: //input[@id='e12165d4']] On Page: Retrieval portal
+19:22:17.478 [main] INFO  utils.KeyWords - Drop Down List Element is Visible :[[ChromeDriver: chrome on windows (c85fe858ca29fc93a2f2490a9ff5bfe3)] -> xpath: //select[@id='af741cb3']] On Page: Retrieval portal
+19:22:17.499 [main] INFO  utils.KeyWords - Selecting drop down list value : US/Alaska in DropDownList :[[ChromeDriver: chrome on windows (c85fe858ca29fc93a2f2490a9ff5bfe3)] -> xpath: //select[@id='af741cb3']] On Page: Retrieval portal
+19:22:17.690 [main] INFO  utils.KeyWords - Drop down list selected with Value of :US/Alaska On Page: Retrieval portal
+19:22:17.720 [main] INFO  utils.KeyWords - Entering text:Automated Instructions . In textbox WebElement: [[ChromeDriver: chrome on windows (c85fe858ca29fc93a2f2490a9ff5bfe3)] -> xpath: //textarea[@id='91c190b1']] On Page: Retrieval portal
+19:22:18.209 [main] INFO  utils.KeyWords - Entered text:Automated Instructions . In textbox WebElement: [[ChromeDriver: chrome on windows (c85fe858ca29fc93a2f2490a9ff5bfe3)] -> xpath: //textarea[@id='91c190b1']] On Page: Retrieval portal
+19:22:18.255 [main] INFO  utils.KeyWords - Entering text:19/10/2024. In textbox WebElement: [[ChromeDriver: chrome on windows (c85fe858ca29fc93a2f2490a9ff5bfe3)] -> xpath: //input[@id='a1ed4d32']] On Page: Retrieval portal
+19:22:18.577 [main] INFO  utils.KeyWords - Entered text:19/10/2024. In textbox WebElement: [[ChromeDriver: chrome on windows (c85fe858ca29fc93a2f2490a9ff5bfe3)] -> xpath: //input[@id='a1ed4d32']] On Page: Retrieval portal
+19:22:20.618 [main] INFO  utils.KeyWords - Selecting Drop down list with VisbleText : None in DropDownList :[[ChromeDriver: chrome on windows (c85fe858ca29fc93a2f2490a9ff5bfe3)] -> xpath: //select[@id='a4b25490']] On Page: Retrieval portal
+19:22:20.888 [main] INFO  utils.KeyWords - Selected Drop down list selected with Visible Text of :None On Page: Retrieval portal
+19:22:20.917 [main] INFO  utils.KeyWords - Entering text:Zakirshaik. In textbox WebElement: [[ChromeDriver: chrome on windows (c85fe858ca29fc93a2f2490a9ff5bfe3)] -> xpath: //input[@id='63add1cc']] On Page: Retrieval portal
+19:22:21.212 [main] INFO  utils.KeyWords - Entered text:Zakirshaik. In textbox WebElement: [[ChromeDriver: chrome on windows (c85fe858ca29fc93a2f2490a9ff5bfe3)] -> xpath: //input[@id='63add1cc']] On Page: Retrieval portal
+19:27:20.473 [main] INFO  utils.BaseClass - Intializing the Browser type: chrome
+19:27:26.446 [main] INFO  utils.KeyWords - Entering text:QA_Retrieval. In textbox WebElement: [[ChromeDriver: chrome on windows (b02185040da475bcd0ff5b0a8fcc26cd)] -> xpath: //input[@id='txtUserID']] On Page: Login Page
+19:27:26.703 [main] INFO  utils.KeyWords - Entered text:QA_Retrieval. In textbox WebElement: [[ChromeDriver: chrome on windows (b02185040da475bcd0ff5b0a8fcc26cd)] -> xpath: //input[@id='txtUserID']] On Page: Login Page
+19:27:26.727 [main] INFO  utils.KeyWords - Entering text:rules@123. In textbox WebElement: [[ChromeDriver: chrome on windows (b02185040da475bcd0ff5b0a8fcc26cd)] -> xpath: //input[@id='txtPassword']] On Page: Login Page
+19:27:27.025 [main] INFO  utils.KeyWords - Entered text:rules@123. In textbox WebElement: [[ChromeDriver: chrome on windows (b02185040da475bcd0ff5b0a8fcc26cd)] -> xpath: //input[@id='txtPassword']] On Page: Login Page
+19:27:27.097 [main] INFO  utils.KeyWords - Clicking on Element :[[ChromeDriver: chrome on windows (b02185040da475bcd0ff5b0a8fcc26cd)] -> xpath: //button[@id='sub']] On Page: Login Page
+19:28:05.071 [main] INFO  utils.KeyWords - Clicked on Element :Proxy element for: DefaultElementLocator 'By.xpath: //button[@id='sub']' On Page: Login Page
+19:28:09.757 [main] INFO  factory.ReadDataFromExcel - RECOMMENDED: PLEASE MAKE THE TEST DATA SHEET TO READ ONLY MODE.
+19:28:09.757 [main] INFO  factory.ReadDataFromExcel - Reading Data from the Excel Sheet for TestCaseID: happyPath
+19:28:10.070 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+19:28:10.078 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
+19:28:10.082 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet3.xml.rels
+19:28:10.084 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet4.xml.rels
+19:28:10.087 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+19:28:11.037 [main] DEBUG org.apache.poi.ooxml.POIXMLFactory - using default POIXMLDocumentPart for http://schemas.openxmlformats.org/officeDocument/2006/relationships/printerSettings
+19:28:11.039 [main] DEBUG org.apache.poi.ooxml.POIXMLFactory - using default POIXMLDocumentPart for http://schemas.openxmlformats.org/officeDocument/2006/relationships/printerSettings
+19:28:11.364 [main] INFO  factory.ReadDataFromExcel - Exception Ouccred while Reading data from Excel Sheet:C:\Users\shaik.hussain\git\HDAP2_PEGAUI_Automation\Input_TestData\ExcelSheet_TestData_UI.xlsx
+19:28:11.391 [main] INFO  utils.KeyWords - Switching to Default Contend From Frame On Page: Retrieval portal
+19:28:11.403 [main] INFO  utils.KeyWords - Switched to Default Contend From Frame On Page: Retrieval portal
+19:28:11.509 [main] INFO  utils.KeyWords - Clicking on Element :[[ChromeDriver: chrome on windows (b02185040da475bcd0ff5b0a8fcc26cd)] -> xpath: //button[text()='Create RG']] On Page: Retrieval portal
+19:28:11.758 [main] INFO  utils.KeyWords - Clicked on Element :[[ChromeDriver: chrome on windows (b02185040da475bcd0ff5b0a8fcc26cd)] -> xpath: //button[text()='Create RG']] On Page: Retrieval portal
+19:28:14.117 [main] INFO  utils.KeyWords - Clicking on Element :[[ChromeDriver: chrome on windows (b02185040da475bcd0ff5b0a8fcc26cd)] -> xpath: //button[@title='Complete this assignment']] On Page: Retrieval portal
+19:28:14.357 [main] INFO  utils.KeyWords - Clicked on Element :[[ChromeDriver: chrome on windows (b02185040da475bcd0ff5b0a8fcc26cd)] -> xpath: //button[@title='Complete this assignment']] On Page: Retrieval portal
+19:28:16.595 [main] INFO  utils.KeyWords - Clicking on Element :[[ChromeDriver: chrome on windows (b02185040da475bcd0ff5b0a8fcc26cd)] -> xpath: //button[text()='Add Contact']] On Page: Retrieval portal
+19:28:16.821 [main] INFO  utils.KeyWords - Clicked on Element :[[ChromeDriver: chrome on windows (b02185040da475bcd0ff5b0a8fcc26cd)] -> xpath: //button[text()='Add Contact']] On Page: Retrieval portal
+19:28:18.615 [main] INFO  utils.KeyWords - Drop Down List Element is Visible :[[ChromeDriver: chrome on windows (b02185040da475bcd0ff5b0a8fcc26cd)] -> xpath: //select[@id='80e67c33']] On Page: Retrieval portal
+19:28:18.632 [main] INFO  utils.KeyWords - Selecting drop down list value : Primary in DropDownList :[[ChromeDriver: chrome on windows (b02185040da475bcd0ff5b0a8fcc26cd)] -> xpath: //select[@id='80e67c33']] On Page: Retrieval portal
+19:28:18.950 [main] INFO  utils.KeyWords - Drop down list selected with Value of :Primary On Page: Retrieval portal
+19:28:18.981 [main] INFO  utils.KeyWords - Drop Down List Element is Visible :[[ChromeDriver: chrome on windows (b02185040da475bcd0ff5b0a8fcc26cd)] -> xpath: //select[@id='c1a346d0']] On Page: Retrieval portal
+19:28:18.997 [main] INFO  utils.KeyWords - Selecting drop down list value : Billing in DropDownList :[[ChromeDriver: chrome on windows (b02185040da475bcd0ff5b0a8fcc26cd)] -> xpath: //select[@id='c1a346d0']] On Page: Retrieval portal
+19:28:19.248 [main] INFO  utils.KeyWords - Drop down list selected with Value of :Billing On Page: Retrieval portal
+19:28:19.277 [main] INFO  utils.KeyWords - Entering text:Phi Automation Team. In textbox WebElement: [[ChromeDriver: chrome on windows (b02185040da475bcd0ff5b0a8fcc26cd)] -> xpath: //input[@id='45da4e1f']] On Page: Retrieval portal
+19:28:19.656 [main] INFO  utils.KeyWords - Entered text:Phi Automation Team. In textbox WebElement: [[ChromeDriver: chrome on windows (b02185040da475bcd0ff5b0a8fcc26cd)] -> xpath: //input[@id='45da4e1f']] On Page: Retrieval portal
+19:28:19.708 [main] INFO  utils.KeyWords - Entering text:Testing Team. In textbox WebElement: [[ChromeDriver: chrome on windows (b02185040da475bcd0ff5b0a8fcc26cd)] -> xpath: //input[@id='6da723dd']] On Page: Retrieval portal
+19:28:20.088 [main] INFO  utils.KeyWords - Entered text:Testing Team. In textbox WebElement: [[ChromeDriver: chrome on windows (b02185040da475bcd0ff5b0a8fcc26cd)] -> xpath: //input[@id='6da723dd']] On Page: Retrieval portal
+19:28:20.124 [main] INFO  utils.KeyWords - Entering text:phiteam@test.com. In textbox WebElement: [[ChromeDriver: chrome on windows (b02185040da475bcd0ff5b0a8fcc26cd)] -> xpath: //input[@id='5aea26b5']] On Page: Retrieval portal
+19:28:20.554 [main] INFO  utils.KeyWords - Entered text:phiteam@test.com. In textbox WebElement: [[ChromeDriver: chrome on windows (b02185040da475bcd0ff5b0a8fcc26cd)] -> xpath: //input[@id='5aea26b5']] On Page: Retrieval portal
+19:28:20.596 [main] INFO  utils.KeyWords - Entering text:9642869555. In textbox WebElement: [[ChromeDriver: chrome on windows (b02185040da475bcd0ff5b0a8fcc26cd)] -> xpath: //input[@id='d0a169f1']] On Page: Retrieval portal
+19:28:20.985 [main] INFO  utils.KeyWords - Entered text:9642869555. In textbox WebElement: [[ChromeDriver: chrome on windows (b02185040da475bcd0ff5b0a8fcc26cd)] -> xpath: //input[@id='d0a169f1']] On Page: Retrieval portal
+19:28:23.149 [main] INFO  utils.KeyWords - Entering text:8. In textbox WebElement: [[ChromeDriver: chrome on windows (b02185040da475bcd0ff5b0a8fcc26cd)] -> xpath: //input[@id='edf46543']] On Page: Retrieval portal
+19:28:23.318 [main] INFO  utils.KeyWords - Entered text:8. In textbox WebElement: [[ChromeDriver: chrome on windows (b02185040da475bcd0ff5b0a8fcc26cd)] -> xpath: //input[@id='edf46543']] On Page: Retrieval portal
+19:28:25.434 [main] INFO  utils.KeyWords - Entering text:8529637415. In textbox WebElement: [[ChromeDriver: chrome on windows (b02185040da475bcd0ff5b0a8fcc26cd)] -> xpath: //input[@id='95a33135']] On Page: Retrieval portal
+19:28:25.640 [main] INFO  utils.KeyWords - Entered text:8529637415. In textbox WebElement: [[ChromeDriver: chrome on windows (b02185040da475bcd0ff5b0a8fcc26cd)] -> xpath: //input[@id='95a33135']] On Page: Retrieval portal
+19:28:27.740 [main] INFO  utils.KeyWords - Drop Down List Element is Visible :[[ChromeDriver: chrome on windows (b02185040da475bcd0ff5b0a8fcc26cd)] -> xpath: //select[@id='89268613']] On Page: Retrieval portal
+19:28:27.749 [main] INFO  utils.KeyWords - Selecting drop down list value : Fax in DropDownList :[[ChromeDriver: chrome on windows (b02185040da475bcd0ff5b0a8fcc26cd)] -> xpath: //select[@id='89268613']] On Page: Retrieval portal
+19:28:27.885 [main] INFO  utils.KeyWords - Drop down list selected with Value of :Fax On Page: Retrieval portal
+19:28:29.930 [main] INFO  utils.KeyWords - Drop Down List Element is Visible :[[ChromeDriver: chrome on windows (b02185040da475bcd0ff5b0a8fcc26cd)] -> xpath: //select[@id='364c75d1']] On Page: Retrieval portal
+19:28:29.944 [main] INFO  utils.KeyWords - Selecting drop down list value : US/Alaska in DropDownList :[[ChromeDriver: chrome on windows (b02185040da475bcd0ff5b0a8fcc26cd)] -> xpath: //select[@id='364c75d1']] On Page: Retrieval portal
+19:28:30.142 [main] INFO  utils.KeyWords - Drop down list selected with Value of :US/Alaska On Page: Retrieval portal
+19:28:36.199 [main] INFO  utils.KeyWords - Clicking on Element :[[ChromeDriver: chrome on windows (b02185040da475bcd0ff5b0a8fcc26cd)] -> xpath: //h2[text()='Customer account summary']] On Page: Retrieval portal
+19:28:36.316 [main] INFO  utils.KeyWords - Clicked on Element :[[ChromeDriver: chrome on windows (b02185040da475bcd0ff5b0a8fcc26cd)] -> xpath: //h2[text()='Customer account summary']] On Page: Retrieval portal
+19:28:36.352 [main] INFO  utils.KeyWords - Clicking on Element :[[ChromeDriver: chrome on windows (b02185040da475bcd0ff5b0a8fcc26cd)] -> xpath: //button[@title='Complete this assignment']] On Page: Retrieval portal
+19:28:36.486 [main] INFO  utils.KeyWords - Clicked on Element :[[ChromeDriver: chrome on windows (b02185040da475bcd0ff5b0a8fcc26cd)] -> xpath: //button[@title='Complete this assignment']] On Page: Retrieval portal
+19:28:40.055 [main] INFO  utils.KeyWords - Entering text:Vinay Automation . In textbox WebElement: [[ChromeDriver: chrome on windows (b02185040da475bcd0ff5b0a8fcc26cd)] -> xpath: //input[@id='e12165d4']] On Page: Retrieval portal
+19:28:40.482 [main] INFO  utils.KeyWords - Entered text:Vinay Automation . In textbox WebElement: [[ChromeDriver: chrome on windows (b02185040da475bcd0ff5b0a8fcc26cd)] -> xpath: //input[@id='e12165d4']] On Page: Retrieval portal
+19:28:40.515 [main] INFO  utils.KeyWords - Drop Down List Element is Visible :[[ChromeDriver: chrome on windows (b02185040da475bcd0ff5b0a8fcc26cd)] -> xpath: //select[@id='af741cb3']] On Page: Retrieval portal
+19:28:40.530 [main] INFO  utils.KeyWords - Selecting drop down list value : US/Alaska in DropDownList :[[ChromeDriver: chrome on windows (b02185040da475bcd0ff5b0a8fcc26cd)] -> xpath: //select[@id='af741cb3']] On Page: Retrieval portal
+19:28:40.856 [main] INFO  utils.KeyWords - Drop down list selected with Value of :US/Alaska On Page: Retrieval portal
+19:28:40.893 [main] INFO  utils.KeyWords - Entering text:Automated Instructions . In textbox WebElement: [[ChromeDriver: chrome on windows (b02185040da475bcd0ff5b0a8fcc26cd)] -> xpath: //textarea[@id='91c190b1']] On Page: Retrieval portal
+19:28:41.508 [main] INFO  utils.KeyWords - Entered text:Automated Instructions . In textbox WebElement: [[ChromeDriver: chrome on windows (b02185040da475bcd0ff5b0a8fcc26cd)] -> xpath: //textarea[@id='91c190b1']] On Page: Retrieval portal
+19:28:41.555 [main] INFO  utils.KeyWords - Entering text:19/10/2024. In textbox WebElement: [[ChromeDriver: chrome on windows (b02185040da475bcd0ff5b0a8fcc26cd)] -> xpath: //input[@id='a1ed4d32']] On Page: Retrieval portal
+19:28:41.895 [main] INFO  utils.KeyWords - Entered text:19/10/2024. In textbox WebElement: [[ChromeDriver: chrome on windows (b02185040da475bcd0ff5b0a8fcc26cd)] -> xpath: //input[@id='a1ed4d32']] On Page: Retrieval portal
+19:28:43.931 [main] INFO  utils.KeyWords - Selecting Drop down list with VisbleText : None in DropDownList :[[ChromeDriver: chrome on windows (b02185040da475bcd0ff5b0a8fcc26cd)] -> xpath: //select[@id='a4b25490']] On Page: Retrieval portal
+19:28:44.165 [main] INFO  utils.KeyWords - Selected Drop down list selected with Visible Text of :None On Page: Retrieval portal
+19:28:44.195 [main] INFO  utils.KeyWords - Entering text:Zakirshaik. In textbox WebElement: [[ChromeDriver: chrome on windows (b02185040da475bcd0ff5b0a8fcc26cd)] -> xpath: //input[@id='63add1cc']] On Page: Retrieval portal
+19:28:44.452 [main] INFO  utils.KeyWords - Entered text:Zakirshaik. In textbox WebElement: [[ChromeDriver: chrome on windows (b02185040da475bcd0ff5b0a8fcc26cd)] -> xpath: //input[@id='63add1cc']] On Page: Retrieval portal
+19:28:59.922 [main] INFO  utils.BaseClass - Intializing the Browser type: chrome
+19:29:07.056 [main] INFO  utils.KeyWords - Entering text:QA_Retrieval. In textbox WebElement: [[ChromeDriver: chrome on windows (969174e3b9316344c6668872ed7d023d)] -> xpath: //input[@id='txtUserID']] On Page: Login Page
+19:29:07.308 [main] INFO  utils.KeyWords - Entered text:QA_Retrieval. In textbox WebElement: [[ChromeDriver: chrome on windows (969174e3b9316344c6668872ed7d023d)] -> xpath: //input[@id='txtUserID']] On Page: Login Page
+19:29:07.343 [main] INFO  utils.KeyWords - Entering text:rules@123. In textbox WebElement: [[ChromeDriver: chrome on windows (969174e3b9316344c6668872ed7d023d)] -> xpath: //input[@id='txtPassword']] On Page: Login Page
+19:29:07.573 [main] INFO  utils.KeyWords - Entered text:rules@123. In textbox WebElement: [[ChromeDriver: chrome on windows (969174e3b9316344c6668872ed7d023d)] -> xpath: //input[@id='txtPassword']] On Page: Login Page
+19:29:07.642 [main] INFO  utils.KeyWords - Clicking on Element :[[ChromeDriver: chrome on windows (969174e3b9316344c6668872ed7d023d)] -> xpath: //button[@id='sub']] On Page: Login Page
+19:29:45.187 [main] INFO  utils.KeyWords - Clicked on Element :Proxy element for: DefaultElementLocator 'By.xpath: //button[@id='sub']' On Page: Login Page
+19:29:49.900 [main] INFO  factory.ReadDataFromExcel - RECOMMENDED: PLEASE MAKE THE TEST DATA SHEET TO READ ONLY MODE.
+19:29:49.900 [main] INFO  factory.ReadDataFromExcel - Reading Data from the Excel Sheet for TestCaseID: happyPath
+19:29:50.187 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+19:29:50.193 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
+19:29:50.195 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet3.xml.rels
+19:29:50.198 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet4.xml.rels
+19:29:50.200 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+19:29:51.249 [main] DEBUG org.apache.poi.ooxml.POIXMLFactory - using default POIXMLDocumentPart for http://schemas.openxmlformats.org/officeDocument/2006/relationships/printerSettings
+19:29:51.250 [main] DEBUG org.apache.poi.ooxml.POIXMLFactory - using default POIXMLDocumentPart for http://schemas.openxmlformats.org/officeDocument/2006/relationships/printerSettings
+19:29:51.580 [main] INFO  factory.ReadDataFromExcel - Exception Ouccred while Reading data from Excel Sheet:C:\Users\shaik.hussain\git\HDAP2_PEGAUI_Automation\Input_TestData\ExcelSheet_TestData_UI.xlsx
+19:29:51.604 [main] INFO  utils.KeyWords - Switching to Default Contend From Frame On Page: Retrieval portal
+19:29:51.616 [main] INFO  utils.KeyWords - Switched to Default Contend From Frame On Page: Retrieval portal
+19:29:51.726 [main] INFO  utils.KeyWords - Clicking on Element :[[ChromeDriver: chrome on windows (969174e3b9316344c6668872ed7d023d)] -> xpath: //button[text()='Create RG']] On Page: Retrieval portal
+19:29:52.024 [main] INFO  utils.KeyWords - Clicked on Element :[[ChromeDriver: chrome on windows (969174e3b9316344c6668872ed7d023d)] -> xpath: //button[text()='Create RG']] On Page: Retrieval portal
+19:29:54.265 [main] INFO  utils.KeyWords - Clicking on Element :[[ChromeDriver: chrome on windows (969174e3b9316344c6668872ed7d023d)] -> xpath: //button[@title='Complete this assignment']] On Page: Retrieval portal
+19:29:54.489 [main] INFO  utils.KeyWords - Clicked on Element :[[ChromeDriver: chrome on windows (969174e3b9316344c6668872ed7d023d)] -> xpath: //button[@title='Complete this assignment']] On Page: Retrieval portal
+19:29:56.444 [main] INFO  utils.KeyWords - Clicking on Element :[[ChromeDriver: chrome on windows (969174e3b9316344c6668872ed7d023d)] -> xpath: //button[text()='Add Contact']] On Page: Retrieval portal
+19:29:56.645 [main] INFO  utils.KeyWords - Clicked on Element :[[ChromeDriver: chrome on windows (969174e3b9316344c6668872ed7d023d)] -> xpath: //button[text()='Add Contact']] On Page: Retrieval portal
+19:29:59.909 [main] INFO  utils.KeyWords - Drop Down List Element is Visible :[[ChromeDriver: chrome on windows (969174e3b9316344c6668872ed7d023d)] -> xpath: //select[@id='80e67c33']] On Page: Retrieval portal
+19:29:59.924 [main] INFO  utils.KeyWords - Selecting drop down list value : Primary in DropDownList :[[ChromeDriver: chrome on windows (969174e3b9316344c6668872ed7d023d)] -> xpath: //select[@id='80e67c33']] On Page: Retrieval portal
+19:30:00.204 [main] INFO  utils.KeyWords - Drop down list selected with Value of :Primary On Page: Retrieval portal
+19:30:00.238 [main] INFO  utils.KeyWords - Drop Down List Element is Visible :[[ChromeDriver: chrome on windows (969174e3b9316344c6668872ed7d023d)] -> xpath: //select[@id='c1a346d0']] On Page: Retrieval portal
+19:30:00.258 [main] INFO  utils.KeyWords - Selecting drop down list value : Billing in DropDownList :[[ChromeDriver: chrome on windows (969174e3b9316344c6668872ed7d023d)] -> xpath: //select[@id='c1a346d0']] On Page: Retrieval portal
+19:30:00.581 [main] INFO  utils.KeyWords - Drop down list selected with Value of :Billing On Page: Retrieval portal
+19:30:00.620 [main] INFO  utils.KeyWords - Entering text:Phi Automation Team. In textbox WebElement: [[ChromeDriver: chrome on windows (969174e3b9316344c6668872ed7d023d)] -> xpath: //input[@id='45da4e1f']] On Page: Retrieval portal
+19:30:00.995 [main] INFO  utils.KeyWords - Entered text:Phi Automation Team. In textbox WebElement: [[ChromeDriver: chrome on windows (969174e3b9316344c6668872ed7d023d)] -> xpath: //input[@id='45da4e1f']] On Page: Retrieval portal
+19:30:01.029 [main] INFO  utils.KeyWords - Entering text:Testing Team. In textbox WebElement: [[ChromeDriver: chrome on windows (969174e3b9316344c6668872ed7d023d)] -> xpath: //input[@id='6da723dd']] On Page: Retrieval portal
+19:30:01.384 [main] INFO  utils.KeyWords - Entered text:Testing Team. In textbox WebElement: [[ChromeDriver: chrome on windows (969174e3b9316344c6668872ed7d023d)] -> xpath: //input[@id='6da723dd']] On Page: Retrieval portal
+19:30:01.417 [main] INFO  utils.KeyWords - Entering text:phiteam@test.com. In textbox WebElement: [[ChromeDriver: chrome on windows (969174e3b9316344c6668872ed7d023d)] -> xpath: //input[@id='5aea26b5']] On Page: Retrieval portal
+19:30:01.779 [main] INFO  utils.KeyWords - Entered text:phiteam@test.com. In textbox WebElement: [[ChromeDriver: chrome on windows (969174e3b9316344c6668872ed7d023d)] -> xpath: //input[@id='5aea26b5']] On Page: Retrieval portal
+19:30:01.838 [main] INFO  utils.KeyWords - Entering text:9642869555. In textbox WebElement: [[ChromeDriver: chrome on windows (969174e3b9316344c6668872ed7d023d)] -> xpath: //input[@id='d0a169f1']] On Page: Retrieval portal
+19:30:02.267 [main] INFO  utils.KeyWords - Entered text:9642869555. In textbox WebElement: [[ChromeDriver: chrome on windows (969174e3b9316344c6668872ed7d023d)] -> xpath: //input[@id='d0a169f1']] On Page: Retrieval portal
+19:30:04.424 [main] INFO  utils.KeyWords - Entering text:8. In textbox WebElement: [[ChromeDriver: chrome on windows (969174e3b9316344c6668872ed7d023d)] -> xpath: //input[@id='edf46543']] On Page: Retrieval portal
+19:30:04.696 [main] INFO  utils.KeyWords - Entered text:8. In textbox WebElement: [[ChromeDriver: chrome on windows (969174e3b9316344c6668872ed7d023d)] -> xpath: //input[@id='edf46543']] On Page: Retrieval portal
+19:30:06.932 [main] INFO  utils.KeyWords - Entering text:8529637415. In textbox WebElement: [[ChromeDriver: chrome on windows (969174e3b9316344c6668872ed7d023d)] -> xpath: //input[@id='95a33135']] On Page: Retrieval portal
+19:30:07.150 [main] INFO  utils.KeyWords - Entered text:8529637415. In textbox WebElement: [[ChromeDriver: chrome on windows (969174e3b9316344c6668872ed7d023d)] -> xpath: //input[@id='95a33135']] On Page: Retrieval portal
+19:30:09.248 [main] INFO  utils.KeyWords - Drop Down List Element is Visible :[[ChromeDriver: chrome on windows (969174e3b9316344c6668872ed7d023d)] -> xpath: //select[@id='89268613']] On Page: Retrieval portal
+19:30:09.263 [main] INFO  utils.KeyWords - Selecting drop down list value : Fax in DropDownList :[[ChromeDriver: chrome on windows (969174e3b9316344c6668872ed7d023d)] -> xpath: //select[@id='89268613']] On Page: Retrieval portal
+19:30:09.451 [main] INFO  utils.KeyWords - Drop down list selected with Value of :Fax On Page: Retrieval portal
+19:30:11.482 [main] INFO  utils.KeyWords - Drop Down List Element is Visible :[[ChromeDriver: chrome on windows (969174e3b9316344c6668872ed7d023d)] -> xpath: //select[@id='364c75d1']] On Page: Retrieval portal
+19:30:11.495 [main] INFO  utils.KeyWords - Selecting drop down list value : US/Alaska in DropDownList :[[ChromeDriver: chrome on windows (969174e3b9316344c6668872ed7d023d)] -> xpath: //select[@id='364c75d1']] On Page: Retrieval portal
+19:30:11.676 [main] INFO  utils.KeyWords - Drop down list selected with Value of :US/Alaska On Page: Retrieval portal
+19:30:17.740 [main] INFO  utils.KeyWords - Clicking on Element :[[ChromeDriver: chrome on windows (969174e3b9316344c6668872ed7d023d)] -> xpath: //h2[text()='Customer account summary']] On Page: Retrieval portal
+19:30:17.847 [main] INFO  utils.KeyWords - Clicked on Element :[[ChromeDriver: chrome on windows (969174e3b9316344c6668872ed7d023d)] -> xpath: //h2[text()='Customer account summary']] On Page: Retrieval portal
+19:30:17.890 [main] INFO  utils.KeyWords - Clicking on Element :[[ChromeDriver: chrome on windows (969174e3b9316344c6668872ed7d023d)] -> xpath: //button[@title='Complete this assignment']] On Page: Retrieval portal
+19:30:18.046 [main] INFO  utils.KeyWords - Clicked on Element :[[ChromeDriver: chrome on windows (969174e3b9316344c6668872ed7d023d)] -> xpath: //button[@title='Complete this assignment']] On Page: Retrieval portal
+19:30:21.680 [main] INFO  utils.KeyWords - Entering text:Vinay Automation . In textbox WebElement: [[ChromeDriver: chrome on windows (969174e3b9316344c6668872ed7d023d)] -> xpath: //input[@id='e12165d4']] On Page: Retrieval portal
+19:30:22.040 [main] INFO  utils.KeyWords - Entered text:Vinay Automation . In textbox WebElement: [[ChromeDriver: chrome on windows (969174e3b9316344c6668872ed7d023d)] -> xpath: //input[@id='e12165d4']] On Page: Retrieval portal
+19:30:22.073 [main] INFO  utils.KeyWords - Drop Down List Element is Visible :[[ChromeDriver: chrome on windows (969174e3b9316344c6668872ed7d023d)] -> xpath: //select[@id='af741cb3']] On Page: Retrieval portal
+19:30:22.088 [main] INFO  utils.KeyWords - Selecting drop down list value : US/Alaska in DropDownList :[[ChromeDriver: chrome on windows (969174e3b9316344c6668872ed7d023d)] -> xpath: //select[@id='af741cb3']] On Page: Retrieval portal
+19:30:22.358 [main] INFO  utils.KeyWords - Drop down list selected with Value of :US/Alaska On Page: Retrieval portal
+19:30:22.389 [main] INFO  utils.KeyWords - Entering text:Automated Instructions . In textbox WebElement: [[ChromeDriver: chrome on windows (969174e3b9316344c6668872ed7d023d)] -> xpath: //textarea[@id='91c190b1']] On Page: Retrieval portal
+19:30:23.091 [main] INFO  utils.KeyWords - Entered text:Automated Instructions . In textbox WebElement: [[ChromeDriver: chrome on windows (969174e3b9316344c6668872ed7d023d)] -> xpath: //textarea[@id='91c190b1']] On Page: Retrieval portal
+19:30:23.132 [main] INFO  utils.KeyWords - Entering text:19/10/2024. In textbox WebElement: [[ChromeDriver: chrome on windows (969174e3b9316344c6668872ed7d023d)] -> xpath: //input[@id='a1ed4d32']] On Page: Retrieval portal
+19:30:23.473 [main] INFO  utils.KeyWords - Entered text:19/10/2024. In textbox WebElement: [[ChromeDriver: chrome on windows (969174e3b9316344c6668872ed7d023d)] -> xpath: //input[@id='a1ed4d32']] On Page: Retrieval portal
+19:30:25.506 [main] INFO  utils.KeyWords - Selecting Drop down list with VisbleText : None in DropDownList :[[ChromeDriver: chrome on windows (969174e3b9316344c6668872ed7d023d)] -> xpath: //select[@id='a4b25490']] On Page: Retrieval portal
+19:30:25.693 [main] INFO  utils.KeyWords - Selected Drop down list selected with Visible Text of :None On Page: Retrieval portal
+19:30:25.718 [main] INFO  utils.KeyWords - Entering text:Zakirshaik. In textbox WebElement: [[ChromeDriver: chrome on windows (969174e3b9316344c6668872ed7d023d)] -> xpath: //input[@id='63add1cc']] On Page: Retrieval portal
+19:30:26.021 [main] INFO  utils.KeyWords - Entered text:Zakirshaik. In textbox WebElement: [[ChromeDriver: chrome on windows (969174e3b9316344c6668872ed7d023d)] -> xpath: //input[@id='63add1cc']] On Page: Retrieval portal

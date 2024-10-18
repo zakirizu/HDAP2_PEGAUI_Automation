@@ -4,6 +4,7 @@ import java.util.HashMap;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 
 import factory.ReadDataFromExcel;
@@ -62,10 +63,14 @@ public class Create_RG_Sd {
 		obj.keyWords().sendKeys(obj.getPageCreateRG().getRole_txtbox(),testData.get("role"));
 		obj.keyWords().sendKeys(obj.getPageCreateRG().getEmail_txtbox(),testData.get("email"));
 		obj.keyWords().sendKeys(obj.getPageCreateRG().getPhone_txtbox(),testData.get("phone"));
+		obj.getPageCreateRG().getPhone_txtbox().sendKeys(Keys.TAB);
 		Thread.sleep(2000);
+		
 		obj.keyWords().sendKeys(obj.getPageCreateRG().getExt_txtbox(),testData.get("ext"));
+		obj.getPageCreateRG().getExt_txtbox().sendKeys(Keys.TAB);
 		Thread.sleep(2000);
 		obj.keyWords().sendKeys(obj.getPageCreateRG().getFax_txtbox(),testData.get("fax"));		
+		obj.getPageCreateRG().getFax_txtbox().sendKeys(Keys.TAB);
 		Thread.sleep(2000);
 		obj.keyWords().selectByValue(obj.getPageCreateRG().getPreferred_method_txtbox(), testData.get("preferredMethod"));	
 		Thread.sleep(2000);
