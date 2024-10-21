@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Oct 21 15:09:36 IST 2024</td>
+<td>Started on:</td><td>Mon Oct 21 18:10:24 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>80 seconds (80174 ms)</td>
+<tr><td>Total time:</td><td>194 seconds (194964 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,8 +67,8 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td><b>Attribute(s)</b></td>
 <td width="30%"><b>Exception</b></td>
@@ -77,9 +77,24 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='testRunner.RunnerTestNG.runScenario()'><b>runScenario</b><br>Test class: testRunner.RunnerTestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Valdiate Whether User is able to create an RG with Single Contact", "Request Group Scenarios"</td>
-<td></td>
-<td>79</td>
-<td>testRunner.RunnerTestNG@7a6d7e92</td></tr>
+<td><div><pre>java.lang.AssertionError: Not Able to SelectByValue for WebElement:[[ChromeDriver: chrome on windows (ecd852cf72a8cb375c93a75f098908b8)] -&gt; xpath: //select[@id=&apos;364c75d1&apos;]]. On Page title: Retrieval portal expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at utils.KeyWords.selectByValue(KeyWords.java:408)
+	at stepDefinitionFile.Create_RG_Sd.AddaSingleContact(Create_RG_Sd.java:77)
+	at ?.Under Contact section Add a Single Contact(file:///C:/Users/shaik.hussain/git/HDAP2_PEGAUI_Automation/src/main/java/featureFile/Create_RG.feature:12)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1571125860", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1571125860'><pre>java.lang.AssertionError: Not Able to SelectByValue for WebElement:[[ChromeDriver: chrome on windows (ecd852cf72a8cb375c93a75f098908b8)] -&gt; xpath: //select[@id=&apos;364c75d1&apos;]]. On Page title: Retrieval portal expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at utils.KeyWords.selectByValue(KeyWords.java:408)
+	at stepDefinitionFile.Create_RG_Sd.AddaSingleContact(Create_RG_Sd.java:77)
+	at ?.Under Contact section Add a Single Contact(file:///C:/Users/shaik.hussain/git/HDAP2_PEGAUI_Automation/src/main/java/featureFile/Create_RG.feature:12)
+</pre></div></td>
+<td>194</td>
+<td>testRunner.RunnerTestNG@43f02ef2</td></tr>
 </table><p>
 </body>
 </html>
