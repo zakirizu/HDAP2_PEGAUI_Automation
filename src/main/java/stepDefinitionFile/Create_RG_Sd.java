@@ -65,7 +65,6 @@ public class Create_RG_Sd {
 		obj.keyWords().sendKeys(obj.getPageCreateRG().getPhone_txtbox(),testData.get("phone"));
 		obj.getPageCreateRG().getPhone_txtbox().sendKeys(Keys.TAB);
 		Thread.sleep(2000);
-		
 		obj.keyWords().sendKeys(obj.getPageCreateRG().getExt_txtbox(),testData.get("ext"));
 		obj.getPageCreateRG().getExt_txtbox().sendKeys(Keys.TAB);
 		Thread.sleep(2000);
@@ -111,26 +110,27 @@ public class Create_RG_Sd {
        obj.keyWords().clickElement(obj.getPageCreateRG().getUse_facility_checkbox());
 	   obj.keyWords().clickElement(obj.getPageCreateRG().getGroup_letter_checkbox());
 	   obj.keyWords().sendKeys(obj.getPageCreateRG().getLettersperbatch_sendkeys(),testData.get("Lettersforbatch_Checkbox"));		
-	   obj.keyWords().clickElement(obj.getPageCreateRG().getClaim_Entity_checkbox());
-	   obj.keyWords().clickElement(obj.getPageCreateRG().getProvider_name_checkbox());
+	   //obj.keyWords().clickElement(obj.getPageCreateRG().getClaim_Entity_checkbox());
+	   //obj.keyWords().clickElement(obj.getPageCreateRG().getProvider_name_checkbox());
 	   
-	   obj.keyWords().SelectByVisibleText(obj.getPageCreateRG().getPayment_preference_ddl(),testData.get("PaymentPreference_DDL"));
+	  obj.keyWords().SelectByVisibleText(obj.getPageCreateRG().getPayment_preference_ddl(),testData.get("PaymentPreference_DDL"));	
+	  obj.keyWords().shortWait();
 	   obj.keyWords().SendKeys_Into_AutoSuggestiveTextBox(obj.getPageCreateRG().getCardtype_txtbox(),testData.get("Cardtype_ddl"));
 	   obj.keyWords().SelectByVisibleText(obj.getPageCreateRG().getPayVia_ddl(),testData.get("PayVia_ddl"));
 	   
 	   
 	   
 		obj.keyWords().SelectByVisibleText(obj.getPageCreateRG().getReturn_prefernce_ddl(),testData.get("ReturnPreference_DDL"));
-		
+	
 		obj.keyWords().SelectByVisibleText(obj.getPageCreateRG().getSend_preference_ddl(),testData.get("SP_DDL"));
 		
 		obj.keyWords().clickElement(obj.getPageCreateRG().getUsemainaddress_checkbox());
-		obj.keyWords().sendKeys(obj.getPageCreateRG().getSendPreferenceAttnTo_Textbox(),testData.get("SP_AttnTo_textbox"));
-		obj.keyWords().sendKeys(obj.getPageCreateRG().getSendPreferenceAddress_Textbox(),testData.get("SP_Address_textbox"));
-		obj.keyWords().selectByValue(obj.getPageCreateRG().getSendPreferenceAddressLines2_Textbox(),testData.get("SP_Addressline2_Textbox"));
-		obj.keyWords().sendKeys(obj.getPageCreateRG().getSendPreferenceCity_Textbox(),testData.get("SPCity_Textbox"));
-		obj.keyWords().SelectByVisibleText(obj.getPageCreateRG().getSendPreferenceState_ddl(),testData.get("SPState_DDL"));
-		obj.keyWords().sendKeys(obj.getPageCreateRG().getSendPreferenceZipCode_textbox(),testData.get("SP_ZipCode_Textbox"));
+		obj.keyWords().sendKeys(obj.getPageCreateRG().getSPOverride_AttnTo_textbox(),testData.get("SP_AttnTo_textbox"));
+		obj.keyWords().sendKeys(obj.getPageCreateRG().getSPAddress_Textbox(),testData.get("SP_Address_textbox"));
+		obj.keyWords().selectByValue(obj.getPageCreateRG().getSPAddressLines2_Textbox(),testData.get("SP_Addressline2_Textbox"));
+		obj.keyWords().sendKeys(obj.getPageCreateRG().getSPCity_Textbox(),testData.get("SPCity_Textbox"));
+		obj.keyWords().SelectByVisibleText(obj.getPageCreateRG().getSPState_ddl(),testData.get("SPState_DDL"));
+		obj.keyWords().sendKeys(obj.getPageCreateRG().getSPZipCode_textbox(),testData.get("SP_ZipCode_Textbox"));
 		
 		obj.keyWords().SelectByVisibleText(obj.getPageCreateRG().getSPOverride_ddl(),testData.get("SPOverride1_ddl"));
 		obj.keyWords().clickElement(obj.getPageCreateRG().getSPOverride_UseRequestGroup__Checkbox());

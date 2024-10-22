@@ -248,11 +248,6 @@ public class Create_RG_Pg {
 		@FindBy(xpath = "//input[@id='4fba27ee']")
 		private WebElement SPOverride_City_textbox;
 		
-		public WebElement getPayment_Preference_ddl() {
-			return Payment_Preference_ddl;
-		}
-
-
 		public WebElement getSPUsemainaddress_checkbox() {
 			return SPUsemainaddress_checkbox;
 		}
@@ -804,66 +799,6 @@ public class Create_RG_Pg {
 			return Usemainaddress_checkbox;
 		}
 
-		
-		@FindBy(xpath = "test")
-		private WebElement  SendPreferenceAttnTo_Textbox;
-		public WebElement getSendPreferenceAttnTo_Textbox() {
-			return SendPreferenceAttnTo_Textbox;
-		}
-
-		
-		@FindBy(xpath = "test")
-		private WebElement  SendPreferenceAddress_Textbox;
-		
-		public WebElement getSendPreferenceAddress_Textbox() {
-			return SendPreferenceAddress_Textbox;
-		}
-
-		
-		@FindBy(xpath = "test")
-		private WebElement  SendPreferenceAddressLines2_Textbox;
-		public WebElement getSendPreferenceAddressLines2_Textbox() {
-			return SendPreferenceAddressLines2_Textbox;
-		}
-
-		
-		@FindBy(xpath = "test")
-		private WebElement  SendPreferenceCity_Textbox;
-		public WebElement getSendPreferenceCity_Textbox() {
-			return SendPreferenceCity_Textbox;
-		}
-
-		
-		@FindBy(xpath = "test")
-		private WebElement  SendPreferenceState_ddl;
-		public WebElement getSendPreferenceState_ddl() {
-			return SendPreferenceState_ddl;
-		}
-
-		
-		@FindBy(xpath = "test")
-		private WebElement  SendPreferenceZipCode_textbox;
-		public WebElement getSendPreferenceZipCode_textbox() {
-			return SendPreferenceZipCode_textbox;
-		}
-
-		@FindBy(xpath = "test")
-		private WebElement  SendPreferenceOverride_ddl;
-		public WebElement getSendPreferenceOverride_ddl() {
-			return SendPreferenceOverride_ddl;
-		}
-
-		@FindBy(xpath = "test")
-		private WebElement  Override_UsePrimaryContactsEmailaddress__textbox;
-		public WebElement getOverride_UsePrimaryContactsEmailaddress__textbox() {
-			return Override_UsePrimaryContactsEmailaddress__textbox;
-		}
-
-		@FindBy(xpath = "test")
-		private WebElement  Override_AttnTo_textbox;
-		public WebElement getOverride_AttnTo_textbox() {
-			return Override_AttnTo_textbox;
-		}
 		
 		@FindBy(xpath = "//select[@id='42316691']")
 		private WebElement  payment_preference_ddl;	
