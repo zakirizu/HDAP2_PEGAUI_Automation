@@ -2,26 +2,26 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-10-21T18:10:24 IST" name="Default suite" finished-at="2024-10-21T18:13:39 IST" duration-ms="194964">
+  <suite started-at="2024-10-21T20:05:35 IST" name="Default suite" finished-at="2024-10-21T20:07:38 IST" duration-ms="122838">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.RunnerTestNG@43f02ef2]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2024-10-21T18:10:24 IST" name="Default test" finished-at="2024-10-21T18:13:39 IST" duration-ms="194964">
+    <test started-at="2024-10-21T20:05:35 IST" name="Default test" finished-at="2024-10-21T20:07:38 IST" duration-ms="122838">
       <class name="testRunner.RunnerTestNG">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:testRunner.RunnerTestNG@43f02ef2]" started-at="2024-10-21T18:10:24 IST" name="setUpClass" finished-at="2024-10-21T18:10:25 IST" duration-ms="671" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:testRunner.RunnerTestNG@43f02ef2]" started-at="2024-10-21T20:05:35 IST" name="setUpClass" finished-at="2024-10-21T20:05:36 IST" duration-ms="1323" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@5ab7ac02]]>
+                <![CDATA[org.testng.TestRunner@1de30c31]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.RunnerTestNG@43f02ef2]" started-at="2024-10-21T18:10:25 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-10-21T18:13:39 IST" duration-ms="194118" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.RunnerTestNG@43f02ef2]" started-at="2024-10-21T20:05:36 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-10-21T20:07:37 IST" duration-ms="121324" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -34,25 +34,59 @@
               </value>
             </param>
           </params>
-          <exception class="java.lang.AssertionError">
+          <exception class="org.openqa.selenium.NoSuchWindowException">
             <message>
-              <![CDATA[Not Able to SelectByValue for WebElement:[[ChromeDriver: chrome on windows (ecd852cf72a8cb375c93a75f098908b8)] -> xpath: //select[@id='364c75d1']]. On Page title: Retrieval portal expected [true] but found [false]]]>
+              <![CDATA[no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=130.0.6723.58)
+Build info: version: '4.25.0', revision: '8a8aea2337'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ee04b3acc9c28732044a2882b4cf5e9f, findElement {using=xpath, value=//input[@id='9da9e070']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 130.0.6723.58, chrome: {chromedriverVersion: 130.0.6723.58 (3a50e012e4c9..., userDataDir: C:\Users\SHAIK~1.HUS\AppDat...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56575}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56575/devtoo..., se:cdpVersion: 130.0.6723.58, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ee04b3acc9c28732044a2882b4cf5e9f]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Not Able to SelectByValue for WebElement:[[ChromeDriver: chrome on windows (ecd852cf72a8cb375c93a75f098908b8)] -> xpath: //select[@id='364c75d1']]. On Page title: Retrieval portal expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1578)
-at org.testng.Assert.assertTrue(Assert.java:57)
-at utils.KeyWords.selectByValue(KeyWords.java:408)
-at stepDefinitionFile.Create_RG_Sd.AddaSingleContact(Create_RG_Sd.java:77)
-at ✽.Under Contact section Add a Single Contact(file:///C:/Users/shaik.hussain/git/HDAP2_PEGAUI_Automation/src/main/java/featureFile/Create_RG.feature:12)
+              <![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=130.0.6723.58)
+Build info: version: '4.25.0', revision: '8a8aea2337'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ee04b3acc9c28732044a2882b4cf5e9f, findElement {using=xpath, value=//input[@id='9da9e070']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 130.0.6723.58, chrome: {chromedriverVersion: 130.0.6723.58 (3a50e012e4c9..., userDataDir: C:\Users\SHAIK~1.HUS\AppDat...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56575}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56575/devtoo..., se:cdpVersion: 130.0.6723.58, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ee04b3acc9c28732044a2882b4cf5e9f
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy40.toString(Unknown Source)
+at java.base/java.lang.String.valueOf(String.java:3365)
+at java.base/java.lang.StringBuilder.append(StringBuilder.java:169)
+at utils.KeyWords.clickElement(KeyWords.java:314)
+at stepDefinitionFile.Create_RG_Sd.EnterDataintheRequestGroupSettingssection(Create_RG_Sd.java:110)
+at ✽.Enter Data in the  Request Group Settings section(file:///C:/Users/shaik.hussain/git/HDAP2_PEGAUI_Automation/src/main/java/featureFile/Create_RG.feature:13)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:testRunner.RunnerTestNG@43f02ef2]" started-at="2024-10-21T18:13:39 IST" name="tearDownClass" finished-at="2024-10-21T18:13:39 IST" duration-ms="113" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:testRunner.RunnerTestNG@43f02ef2]" started-at="2024-10-21T20:07:37 IST" name="tearDownClass" finished-at="2024-10-21T20:07:38 IST" duration-ms="97" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

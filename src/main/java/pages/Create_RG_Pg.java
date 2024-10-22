@@ -138,7 +138,7 @@ public class Create_RG_Pg {
 		
 		
 		
-		@FindBy(xpath = "//select[@id='c7dd8e21']")
+		@FindBy(xpath = "//div[@data-expr-id='932934f8ede9b951cd7bdf227f159b38954f5729_116']//select[@id='c7dd8e21']")
 		private WebElement LetterPreference_ddl ;
 		
 		@FindBy(xpath = "//input[@id='9da9e070']")
