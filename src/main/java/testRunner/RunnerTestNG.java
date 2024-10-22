@@ -14,6 +14,6 @@ import io.cucumber.testng.CucumberOptions;
 		plugin					= 	{"pretty","html:TestResults_CucumberReports/cucumber.html","json:TestResults_cucumberReports/cucumber.json"}
 	)
 public class RunnerTestNG extends AbstractTestNGCucumberTests {
-	
 }
+
 
