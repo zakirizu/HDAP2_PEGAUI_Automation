@@ -628,13 +628,6 @@ public class Create_RG_Pg {
 			return Additional_checkbox;
 		}
 
-		public WebElement getPayment_preference_ddl() {
-			return payment_preference_ddl;
-		}
-
-		public WebElement getReturn_prefernce_ddl() {
-			return return_prefernce_ddl;
-		}
 
 		public WebElement getSend_preference_ddl() {
 			return send_preference_ddl;
@@ -804,66 +797,123 @@ public class Create_RG_Pg {
 			return ReturnPreference_ddl;
 		}
 
+		
+		@FindBy(xpath = "test")
+		private WebElement  Usemainaddress_checkbox;
 		public WebElement getUsemainaddress_checkbox() {
 			return Usemainaddress_checkbox;
 		}
 
+		
+		@FindBy(xpath = "test")
+		private WebElement  SendPreferenceAttnTo_Textbox;
 		public WebElement getSendPreferenceAttnTo_Textbox() {
 			return SendPreferenceAttnTo_Textbox;
 		}
 
+		
+		@FindBy(xpath = "test")
+		private WebElement  SendPreferenceAddress_Textbox;
+		
 		public WebElement getSendPreferenceAddress_Textbox() {
 			return SendPreferenceAddress_Textbox;
 		}
 
+		
+		@FindBy(xpath = "test")
+		private WebElement  SendPreferenceAddressLines2_Textbox;
 		public WebElement getSendPreferenceAddressLines2_Textbox() {
 			return SendPreferenceAddressLines2_Textbox;
 		}
 
+		
+		@FindBy(xpath = "test")
+		private WebElement  SendPreferenceCity_Textbox;
 		public WebElement getSendPreferenceCity_Textbox() {
 			return SendPreferenceCity_Textbox;
 		}
 
+		
+		@FindBy(xpath = "test")
+		private WebElement  SendPreferenceState_ddl;
 		public WebElement getSendPreferenceState_ddl() {
 			return SendPreferenceState_ddl;
 		}
 
+		
+		@FindBy(xpath = "test")
+		private WebElement  SendPreferenceZipCode_textbox;
 		public WebElement getSendPreferenceZipCode_textbox() {
 			return SendPreferenceZipCode_textbox;
 		}
 
+		@FindBy(xpath = "test")
+		private WebElement  SendPreferenceOverride_ddl;
 		public WebElement getSendPreferenceOverride_ddl() {
 			return SendPreferenceOverride_ddl;
 		}
 
+		@FindBy(xpath = "test")
+		private WebElement  Override_UsePrimaryContactsEmailaddress__textbox;
 		public WebElement getOverride_UsePrimaryContactsEmailaddress__textbox() {
 			return Override_UsePrimaryContactsEmailaddress__textbox;
 		}
 
+		@FindBy(xpath = "test")
+		private WebElement  Override_AttnTo_textbox;
 		public WebElement getOverride_AttnTo_textbox() {
 			return Override_AttnTo_textbox;
 		}
+		
+		@FindBy(xpath = "//select[@id='42316691']")
+		private WebElement  payment_preference_ddl;	
+		public WebElement getPayment_preference_ddl() {
+			return payment_preference_ddl;
+		}
 
+		@FindBy(xpath = "//select[@id='8ef5e811']")
+		private WebElement  return_prefernce_ddl;
+		public WebElement getReturn_prefernce_ddl() {
+			return return_prefernce_ddl;
+		}
+		
+		
+/*
+		@FindBy(xpath = "test")
+		private WebElement  test;
 		public WebElement getOverride_Address_textbox() {
 			return Override_Address_textbox;
 		}
 
+		@FindBy(xpath = "test")
+		private WebElement  test;
 		public WebElement getOverride_AddressLines2_textbox() {
 			return Override_AddressLines2_textbox;
 		}
 
+		@FindBy(xpath = "test")
+		private WebElement  test;
 		public WebElement getOverride_City_textbox() {
 			return Override_City_textbox;
 		}
 
+		@FindBy(xpath = "test")
+		private WebElement  test;
 		public WebElement getOverride_State_ddl() {
 			return Override_State_ddl;
 		}
 
+		@FindBy(xpath = "test")
+		private WebElement  test;
 		public WebElement getOverride_ZipCode_textbox() {
 			return Override_ZipCode_textbox;
 		}
+		
+		
 
+		
+		
+*/
 		
 
 }

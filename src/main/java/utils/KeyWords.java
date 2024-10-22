@@ -192,7 +192,7 @@ public class KeyWords {
 	 @ Developer ID		: 163054
 	 @ Can Be Used For	: To Enter Text In AutoSuggestive TextBox
 	*/	
-	public static  void SendKeys_Into_AutoSuggestiveTextBox(WebElement ele, String value) {
+	public   void SendKeys_Into_AutoSuggestiveTextBox(WebElement ele, String value) {
 
 		String title=null;
 		try 
