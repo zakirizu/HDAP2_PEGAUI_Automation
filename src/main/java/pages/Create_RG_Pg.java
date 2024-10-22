@@ -141,10 +141,10 @@ public class Create_RG_Pg {
 		@FindBy(xpath = "//div[@data-expr-id='932934f8ede9b951cd7bdf227f159b38954f5729_116']//select[@id='c7dd8e21']")
 		private WebElement LetterPreference_ddl ;
 		
-		@FindBy(xpath = "//input[@id='9da9e070']")
+		@FindBy(xpath = "//div[@data-expr-id='932934f8ede9b951cd7bdf227f159b38954f5729_116']//input[@id='9da9e070']")
 		private WebElement Use_facility_checkbox;
 		
-		@FindBy(xpath = "//input[@id='7736f9b2']")
+		@FindBy(xpath = "//div[@data-expr-id='932934f8ede9b951cd7bdf227f159b38954f5729_116']//input[@id='7736f9b2']")
 		private WebElement Group_letter_checkbox;
 		
 		@FindBy(xpath = "//input[@id='70c38c10']")
@@ -194,10 +194,7 @@ public class Create_RG_Pg {
 		
 		
 		@FindBy(xpath = "//select[@id='42316691']")
-		private WebElement payment_preference_ddl;
-		
-		@FindBy(xpath = "//select[@id='8ef5e811']")
-		private WebElement return_prefernce_ddl;
+		private WebElement Payment_Preference_ddl;
 		
 		@FindBy(xpath = "//input[@id='ms1e9c8969']")
 		private WebElement Cardtype_txtbox;
@@ -212,50 +209,134 @@ public class Create_RG_Pg {
 		private WebElement send_preference_ddl;
 		
 		@FindBy(xpath = "//input[@id='f295d67c']")
-		private WebElement  Usemainaddress_checkbox;
+		private WebElement  SPUsemainaddress_checkbox;
 		
 		@FindBy(xpath = "//input[@id='3ad2e389']")
-		private WebElement  SendPreferenceAttnTo_Textbox;
+		private WebElement  SPAttnTo_Textbox;
 		
 		@FindBy(xpath = "//input[@id='359b12ab']")
-		private WebElement  SendPreferenceAddress_Textbox;
+		private WebElement  SPAddress_Textbox;
 		
 		@FindBy(xpath = "//input[@id='ac924311']")
-		private WebElement  SendPreferenceAddressLines2_Textbox;
+		private WebElement  SPAddressLines2_Textbox;
 		
 		@FindBy(xpath = "//input[@id='37caddcf']")
-		private WebElement  SendPreferenceCity_Textbox;
+		private WebElement  SPCity_Textbox;
 		
 		@FindBy(xpath = "//Select[@id='89e668b0']")
-		private WebElement  SendPreferenceState_ddl;
+		private WebElement  SPState_ddl;
 		
 		@FindBy(xpath = "//input[@id='2d54ce90']")
-		private WebElement  SendPreferenceZipCode_textbox;
+		private WebElement  SPZipCode_textbox;
 		
 		//override
 		@FindBy(xpath = "//select[@id='804c8b80']")
-		private WebElement  SendPreferenceOverride_ddl;
+		private WebElement  SPOverride_ddl;
 		
-		@FindBy(xpath = "//input[@id='15fc3d2f']")
-		private WebElement  Override_UsePrimaryContactsEmailaddress__textbox;
+		@FindBy(xpath = "//input[@id='754c82d8']")
+		private WebElement  SPOverride_UseRequestGroup__Checkbox;
 		
 		@FindBy(xpath = "//input[@id='eb259518']")
-		private WebElement  Override_AttnTo_textbox;
+		private WebElement  SPOverride_AttnTo_textbox;
 		
 		@FindBy(xpath = "//input[@id='02c9b33b']")
-		private WebElement  Override_Address_textbox;
+		private WebElement  SPOverride_Address_textbox;
 		
 		@FindBy(xpath = "//input[@id='9bc0e281']")
-		private WebElement  Override_AddressLines2_textbox;
+		private WebElement  SPOverride_AddressLines2_textbox;
 		
 		@FindBy(xpath = "//input[@id='4fba27ee']")
-		private WebElement  Override_City_textbox;
+		private WebElement SPOverride_City_textbox;
 		
+		public WebElement getPayment_Preference_ddl() {
+			return Payment_Preference_ddl;
+		}
+
+
+		public WebElement getSPUsemainaddress_checkbox() {
+			return SPUsemainaddress_checkbox;
+		}
+
+
+		public WebElement getSPAttnTo_Textbox() {
+			return SPAttnTo_Textbox;
+		}
+
+
+		public WebElement getSPAddress_Textbox() {
+			return SPAddress_Textbox;
+		}
+
+
+		public WebElement getSPAddressLines2_Textbox() {
+			return SPAddressLines2_Textbox;
+		}
+
+
+		public WebElement getSPCity_Textbox() {
+			return SPCity_Textbox;
+		}
+
+
+		public WebElement getSPState_ddl() {
+			return SPState_ddl;
+		}
+
+
+		public WebElement getSPZipCode_textbox() {
+			return SPZipCode_textbox;
+		}
+
+
+		public WebElement getSPOverride_ddl() {
+			return SPOverride_ddl;
+		}
+
+
+		public WebElement getSPOverride_UseRequestGroup__Checkbox() {
+			return SPOverride_UseRequestGroup__Checkbox;
+		}
+
+
+		public WebElement getSPOverride_AttnTo_textbox() {
+			return SPOverride_AttnTo_textbox;
+		}
+
+
+		public WebElement getSPOverride_Address_textbox() {
+			return SPOverride_Address_textbox;
+		}
+
+
+		public WebElement getSPOverride_AddressLines2_textbox() {
+			return SPOverride_AddressLines2_textbox;
+		}
+
+
+		public WebElement getSPOverride_City_textbox() {
+			return SPOverride_City_textbox;
+		}
+
+
+		public WebElement getSPOverride_State_ddl() {
+			return SPOverride_State_ddl;
+		}
+
+
+		public WebElement getSPOverride_ZipCode_textbox() {
+			return SPOverride_ZipCode_textbox;
+		}
+
+
+		public WebElement getCustomerAccSummary() {
+			return customerAccSummary;
+		}
+
 		@FindBy(xpath = "//select[@id='c5f70814']")
-		private WebElement  Override_State_ddl;
+		private WebElement  SPOverride_State_ddl;
 		
 		@FindBy(xpath = "//input[@id='8b39a549']")
-		private WebElement  Override_ZipCode_textbox;
+		private WebElement  SPOverride_ZipCode_textbox;
 		
 		@FindBy(xpath = "//div[text()='Next >>']")
 		private WebElement Next_button;

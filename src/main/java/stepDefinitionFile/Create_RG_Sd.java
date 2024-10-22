@@ -114,11 +114,15 @@ public class Create_RG_Sd {
 	   obj.keyWords().clickElement(obj.getPageCreateRG().getClaim_Entity_checkbox());
 	   obj.keyWords().clickElement(obj.getPageCreateRG().getProvider_name_checkbox());
 	   
-	   obj.keyWords().clickElement(obj.getPageCreateRG().getPayment_preference_ddl());
-	   obj.keyWords().clickElement(obj.getPageCreateRG().getCardtype_txtbox());
-	   obj.keyWords().clickElement(obj.getPageCreateRG().getPayVia_ddl());
+	   obj.keyWords().SelectByVisibleText(obj.getPageCreateRG().getPayment_preference_ddl(),testData.get("PaymentPreference_DDL"));
+	   obj.keyWords().SendKeys_Into_AutoSuggestiveTextBox(obj.getPageCreateRG().getCardtype_txtbox(),testData.get("Cardtype_ddl"));
+	   obj.keyWords().SelectByVisibleText(obj.getPageCreateRG().getPayVia_ddl(),testData.get("PayVia_ddl"));
 	   
-		obj.keyWords().clickElement(obj.getPageCreateRG().getReturn_prefernce_ddl());
+	   
+	   
+		obj.keyWords().SelectByVisibleText(obj.getPageCreateRG().getReturn_prefernce_ddl(),testData.get("ReturnPreference_DDL"));
+		
+		obj.keyWords().SelectByVisibleText(obj.getPageCreateRG().getSend_preference_ddl(),testData.get("SP_DDL"));
 		
 		obj.keyWords().clickElement(obj.getPageCreateRG().getUsemainaddress_checkbox());
 		obj.keyWords().sendKeys(obj.getPageCreateRG().getSendPreferenceAttnTo_Textbox(),testData.get("SP_AttnTo_textbox"));
@@ -128,6 +132,8 @@ public class Create_RG_Sd {
 		obj.keyWords().SelectByVisibleText(obj.getPageCreateRG().getSendPreferenceState_ddl(),testData.get("SPState_DDL"));
 		obj.keyWords().sendKeys(obj.getPageCreateRG().getSendPreferenceZipCode_textbox(),testData.get("SP_ZipCode_Textbox"));
 		
+		obj.keyWords().SelectByVisibleText(obj.getPageCreateRG().getSPOverride_ddl(),testData.get("SPOverride1_ddl"));
+		obj.keyWords().clickElement(obj.getPageCreateRG().getSPOverride_UseRequestGroup__Checkbox());
 		
 		
 		obj.keyWords().clickElement(obj.getPageCreateRG().getNext_button());

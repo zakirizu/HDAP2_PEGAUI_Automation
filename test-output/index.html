@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\shaik.hussain\AppData\Local\Temp\1\testng-eclipse--2147064095\testng-customsuite.xml</span>
+                    <span>C:\Users\hi\AppData\Local\Temp\testng-eclipse--1746853020\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -130,39 +130,13 @@
                   </a> <!-- runScenario("Valdiate Whether User is able to create an RG with Single Contact", "Request Group Scenarios") -->
                   <span class="method-name">runScenario</span>
                   <span class="parameters">("Valdiate Whether User is able to create an RG with Single Contact","Request Group Scenarios")</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=130.0.6723.58)
-Build info: version: &apos;4.25.0&apos;, revision: &apos;8a8aea2337&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.1&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [ee04b3acc9c28732044a2882b4cf5e9f, findElement {using=xpath, value=//input[@id=&apos;9da9e070&apos;]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 130.0.6723.58, chrome: {chromedriverVersion: 130.0.6723.58 (3a50e012e4c9..., userDataDir: C:\Users\SHAIK~1.HUS\AppDat...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56575}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56575/devtoo..., se:cdpVersion: 130.0.6723.58, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: ee04b3acc9c28732044a2882b4cf5e9f
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy40.toString(Unknown Source)
-	at java.base/java.lang.String.valueOf(String.java:3365)
-	at java.base/java.lang.StringBuilder.append(StringBuilder.java:169)
-	at utils.KeyWords.clickElement(KeyWords.java:314)
-	at stepDefinitionFile.Create_RG_Sd.EnterDataintheRequestGroupSettingssection(Create_RG_Sd.java:110)
-	at ✽.Enter Data in the  Request Group Settings section(file:///C:/Users/shaik.hussain/git/HDAP2_PEGAUI_Automation/src/main/java/featureFile/Create_RG.feature:13)
+                  <div class="stack-trace">java.lang.AssertionError: Not Able to Enter Text in WebElement:[[ChromeDriver: chrome on windows (896b0fda200a8d867eb3166ca970a270)] -&gt; xpath: //input[@id=&apos;edf46543&apos;]]On Page: Retrieval portal expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at utils.KeyWords.sendKeys(KeyWords.java:181)
+	at stepDefinitionFile.Create_RG_Sd.AddaSingleContact(Create_RG_Sd.java:69)
+	at ✽.Under Contact section Add a Single Contact(file:///C:/Users/hi/git/HDAP2_PEGAUI_Automation/src/main/java/featureFile/Create_RG.feature:12)
 
 </div> <!-- stack-trace -->
                   <em>
@@ -174,7 +148,7 @@ Session ID: ee04b3acc9c28732044a2882b4cf5e9f
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\shaik.hussain\AppData\Local\Temp\1\testng-eclipse--2147064095\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\hi\AppData\Local\Temp\testng-eclipse--1746853020\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -235,12 +209,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'testRunner.RunnerTestNG')
-data.setCell(0, 3, 121324);
+data.setCell(0, 3, 54119);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 minutes</span>
+              <span class="suite-total-time">Total running time: 54 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -268,18 +242,18 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">testRunner.RunnerTestNG</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <span class="method-name">setUpClass(org.testng.TestRunner@1de30c31)</span>
+                <span class="method-name">setUpClass(org.testng.TestRunner@4aa22cc2)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">runScenario("Valdiate Whether User is able to create an RG with Single Contact", "Request Group Scenarios")</span>
-                <span class="method-start">1348 ms</span>
+                <span class="method-start">506 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">122686 ms</span>
+                <span class="method-start">54625 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
