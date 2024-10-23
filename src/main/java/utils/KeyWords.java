@@ -468,7 +468,7 @@ public class KeyWords {
 	 @ Can Be Used For	: To Wait until the target Element is displayed. This is Defined in Seconds
 	 @ Can Be Configured: ROW_MDM_Automation\Resources\propertyFile.properties (Property:explicitWait)
 	*/
-	public static void explicitWait_Until_ElementDisplayed(WebElement ele) {
+	public  void explicitWait_Until_ElementDisplayed(WebElement ele) {
 			String 	title		=driver.getTitle();		
 		try 
 		{
@@ -477,7 +477,7 @@ public class KeyWords {
 			WebDriverWait wait 	= new WebDriverWait(driver, Duration.ofSeconds(sec));
 			wait.until(ExpectedConditions.visibilityOf(ele));
 		
-		if(ele.isDisplayed() && highLigtElement.equalsIgnoreCase("yes"))
+		if(ele.isDisplayed())
 		{					
 			myLogger.info("Element is Visible :"+ele +" On Page: "+title);		
 			js.executeScript("arguments[0].setAttribute('style','background:yellow;border:2px solid red;')", ele);		

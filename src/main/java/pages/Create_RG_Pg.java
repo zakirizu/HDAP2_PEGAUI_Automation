@@ -248,6 +248,66 @@ public class Create_RG_Pg {
 		@FindBy(xpath = "//input[@id='4fba27ee']")
 		private WebElement SPOverride_City_textbox;
 		
+		
+		@FindBy(xpath = "//input[@id='22ae9cbf']")
+		private WebElement SPUsedPrimaryContact_textbox;
+		
+		@FindBy(xpath = "//input[@id='679227ed']")
+		private WebElement SPEmail_textbox;
+		
+		@FindBy(xpath = "//input[@id='9984a1b8']")
+		private WebElement SPFax_Checkbox;
+		
+		@FindBy(xpath = "//input[@id='1da89e30']")
+		private WebElement SPFax_textbox;
+		
+		@FindBy(xpath = "//input[@id='22ae9cbf']")
+		private WebElement SPUsedPrimarycontactEmail_Checkbox;
+		
+		@FindBy(xpath = "//input[@id='f295d67c']")
+		private WebElement SPUsedPrimarycontactMail_Checkbox;
+		
+		@FindBy(xpath = "//input[@id='9984a1b8']")
+		private WebElement SPUsedPrimarycontactFax_Checkbox;
+		
+		
+		public WebElement getSPFax_Checkbox() {
+			return SPFax_Checkbox;
+		}
+
+
+		public WebElement getSPFax_textbox() {
+			return SPFax_textbox;
+		}
+
+
+		public WebElement getSPUpload_textbox() {
+			return SPUpload_textbox;
+		}
+
+		@FindBy(xpath = "//input[@id='78fd16f6']")
+		private WebElement SPUpload_textbox;
+		
+		public WebElement getPayment_Preference_ddl() {
+			return Payment_Preference_ddl;
+		}
+
+
+		public WebElement getSPUsedPrimaryContact_textbox() {
+			return SPUsedPrimaryContact_textbox;
+		}
+
+
+		public WebElement getSPEmail_textbox() {
+			return SPEmail_textbox;
+		}
+
+
+		public void setSPEmail_textbox(WebElement sPEmail_textbox) {
+			SPEmail_textbox = sPEmail_textbox;
+		}
+
+
 		public WebElement getSPUsemainaddress_checkbox() {
 			return SPUsemainaddress_checkbox;
 		}
