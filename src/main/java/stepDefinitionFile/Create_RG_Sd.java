@@ -54,6 +54,12 @@ public class Create_RG_Sd {
 		obj.keyWords().clickElement(obj.getPageCreateRG().getBtn_Next());
 	}
 	
+	@Then("Under Contact section Add a Multiple Contact")
+	public void AddMultipleContact() throws InterruptedException {
+	}
+	
+	
+	
 	@Then("Under Contact section Add a Single Contact")
 	public void AddaSingleContact() throws InterruptedException {
 		obj.keyWords().clickElement(obj.getPageCreateRG().getAddContact_btn());
@@ -113,18 +119,21 @@ public class Create_RG_Sd {
 	   //obj.keyWords().clickElement(obj.getPageCreateRG().getClaim_Entity_checkbox());
 	   //obj.keyWords().clickElement(obj.getPageCreateRG().getProvider_name_checkbox());
 	   
-	  obj.keyWords().SelectByVisibleText(obj.getPageCreateRG().getPayment_preference_ddl(),testData.get("PaymentPreference_DDL"));	
-	  obj.keyWords().shortWait();
-	   obj.keyWords().SendKeys_Into_AutoSuggestiveTextBox(obj.getPageCreateRG().getCardtype_txtbox(),testData.get("Cardtype_ddl"));
-	   obj.keyWords().SelectByVisibleText(obj.getPageCreateRG().getPayVia_ddl(),testData.get("PayVia_ddl"));
+	//  obj.keyWords().SelectByVisibleText(obj.getPageCreateRG().getPayment_preference_ddl(),testData.get("PaymentPreference_DDL"));	
+	 // obj.keyWords().shortWait();
+	//   obj.keyWords().SendKeys_Into_AutoSuggestiveTextBox(obj.getPageCreateRG().getCardtype_txtbox(),testData.get("Cardtype_ddl"));
+//	   obj.keyWords().SelectByVisibleText(obj.getPageCreateRG().getPayVia_ddl(),testData.get("PayVia_ddl"));
 	   
 	   
 	   
 		obj.keyWords().SelectByVisibleText(obj.getPageCreateRG().getReturn_prefernce_ddl(),testData.get("ReturnPreference_DDL"));
 	
+		
+		obj.keyWords().SelectByVisibleText(obj.getPageCreateRG().getSend_preference_ddl(),"None");
 		obj.keyWords().SelectByVisibleText(obj.getPageCreateRG().getSend_preference_ddl(),testData.get("SP_DDL"));
 		
-		obj.keyWords().clickElement(obj.getPageCreateRG().getUsemainaddress_checkbox());
+	//	obj.keyWords().clickElement(obj.getPageCreateRG().getSPUsemainaddress_checkbox());
+		
 		obj.keyWords().sendKeys(obj.getPageCreateRG().getSPOverride_AttnTo_textbox(),testData.get("SP_AttnTo_textbox"));
 		obj.keyWords().sendKeys(obj.getPageCreateRG().getSPAddress_Textbox(),testData.get("SP_Address_textbox"));
 		obj.keyWords().selectByValue(obj.getPageCreateRG().getSPAddressLines2_Textbox(),testData.get("SP_Addressline2_Textbox"));
@@ -138,15 +147,47 @@ public class Create_RG_Sd {
 		
 		obj.keyWords().clickElement(obj.getPageCreateRG().getNext_button());
 
-		
-		
-		
-		
+	}
+
+	@Then("Enter Data in the  Request Group Settings section with SendPreference of Mail")
+	public void EnterDataintheRequestGroupSettingssectionwithSendPreferenceofMail() {
 		
 	}
 
 	
+	@Then("Enter Data in the  Request Group Settings section with SendPreference of Fax")
+	public void EnterDataintheRequestGroupSettingssectionwithSendPreferenceofFax() {
+		
+	}
 	
 	
+	@Then("Enter Data in the  Request Group Settings section with SendPreference of Email")
+	public void EnterDataintheRequestGroupSettingssectionwithSendPreferenceofEmail() {
+		
+	}
+	
+	
+	@Then("Enter Data in the  Request Group Settings section with SendPreference as Use primary contacts Mail address")
+	public void RequestGroupUseprimarycontactsMailaddress() {
+		
+	}
+
+	
+	@Then("Enter Data in the  Request Group Settings section with SendPreference as Use primary contacts Email address")
+	public void RequestGroupUseprimarycontactsEmailaddress() {
+		
+	}
+	
+	
+	@Then("Enter Data in the  Request Group Settings section with SendPreference as Use primary contacts Fax address")
+	public void RequestGroupUseprimarycontactsFaxaddress() {
+		
+	}
+	
+	
+	@Then("Enter Data in the  Request Group Settings section with SendPreference of Upload")
+	public void EnterDataintheRequestGroupSettingssectionwithSendPreferenceofPhone() {
+		
+	}
 
 }

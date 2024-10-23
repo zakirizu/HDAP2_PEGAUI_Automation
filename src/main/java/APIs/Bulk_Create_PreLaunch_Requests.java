@@ -11,7 +11,7 @@ public class Bulk_Create_PreLaunch_Requests {
 	static String accountID			= PropertiesFileReader.getAPIProperty("AccountID");
 	static String subAccountID		= PropertiesFileReader.getAPIProperty("SubAccountID");
 	
-	@Test(invocationCount = 1000)
+	@Test(invocationCount = 15)
 	public  static void ChaseRequest_With_Single_Matching_RG_01() throws InterruptedException
 	{
 		    String cotivitClaimNumber = stepDefinitionFile.Common_Functions_Sd.getUniqueRandomInteger();

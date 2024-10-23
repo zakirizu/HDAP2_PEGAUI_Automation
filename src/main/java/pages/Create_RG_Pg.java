@@ -628,9 +628,7 @@ public class Create_RG_Pg {
 			return send_preference_ddl;
 		}
 
-		public WebElement getMain_address_checkbox() {
-			return Usemainaddress_checkbox;
-		}
+
 
 		public WebElement getNext_button() {
 			return Next_button;
@@ -793,12 +791,7 @@ public class Create_RG_Pg {
 		}
 
 		
-		@FindBy(xpath = "test")
-		private WebElement  Usemainaddress_checkbox;
-		public WebElement getUsemainaddress_checkbox() {
-			return Usemainaddress_checkbox;
-		}
-
+	
 		
 		@FindBy(xpath = "//select[@id='42316691']")
 		private WebElement  payment_preference_ddl;	
