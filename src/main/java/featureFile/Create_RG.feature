@@ -3,7 +3,6 @@ Feature: Request Group Scenarios
 Background:
 Given Launch the Application
 
-
 @CreateRGZR
  Scenario Outline:  Valdiate Whether User is able to create an RG with Single Contact
  Given Read ExcelData from CreateRGSheet  for  <TestCaseID>
@@ -53,7 +52,6 @@ Then 		Enter Data in the  Request Group Settings section with SendPreference of 
 Examples:
 |		TestCaseID		|
 |		happyPath		|
-
 
 
 @CreateRG 					@CreateRG_With_SingleContact_SP_PrimayMail_CheckBox
@@ -117,14 +115,3 @@ Then 		Enter Data in the  Request Group Settings section
 Examples:
 |		TestCaseID		|
 |		happyPath		|
-
-
-
-
-
-    
-    
-    
-    
-    
-    
