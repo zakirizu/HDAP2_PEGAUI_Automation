@@ -34,7 +34,7 @@ Examples:
 Given 	Click on CreateRGButton
 And     	Click on NextButton
 Then 		Under Contact section Add a Single Contact
-Then 		Enter Data in the  Request Group Settings section with SendPreference of Email
+Then 		Enter Data in the  Request Group Settings section with SendPreference of Mail
 
 Examples:
 |		TestCaseID		|
