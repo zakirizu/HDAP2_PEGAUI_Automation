@@ -60,8 +60,9 @@ public class ProjectLaunches_Sd {
 	
 	@Given("User Clicks on the Project Launches Tab")
 	public void UserClicksontheProjectLaunchesTab() {		
-		obj.keyWords().clickElement(obj.getProjectLaunches_Pg().getTab_ProjectLaunches());
-		obj.keyWords().sendKeys(null, null);
+		obj.keyWords().clickElement(obj.getProjectLaunches_Pg().getQA_Retrieval_btn());
+		obj.keyWords().clickElement(obj.getProjectLaunches_Pg().getSwitchRole_btn());
+		obj.keyWords().clickElement(obj.getProjectLaunches_Pg().getHDAP_Admin_btn());
 	}
 	
 	
