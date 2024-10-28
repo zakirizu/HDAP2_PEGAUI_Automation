@@ -230,6 +230,30 @@ public class Create_RG_Pg {
 		private WebElement  SPZipCode_textbox;
 		
 		//override
+		
+		@FindBy(xpath = "//button[text()='Add Override']")
+		private WebElement  ADDOverride_BTN;
+		
+		
+		public WebElement getADDOverride_BTN() {
+			return ADDOverride_BTN;
+		}
+
+
+		public WebElement getSPUsedPrimarycontactEmail_Checkbox() {
+			return SPUsedPrimarycontactEmail_Checkbox;
+		}
+
+
+		public WebElement getSPUsedPrimarycontactMail_Checkbox() {
+			return SPUsedPrimarycontactMail_Checkbox;
+		}
+
+
+		public WebElement getSPUsedPrimarycontactFax_Checkbox() {
+			return SPUsedPrimarycontactFax_Checkbox;
+		}
+
 		@FindBy(xpath = "//select[@id='804c8b80']")
 		private WebElement  SPOverride_ddl;
 		
