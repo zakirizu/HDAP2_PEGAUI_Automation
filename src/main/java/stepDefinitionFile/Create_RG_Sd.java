@@ -570,8 +570,7 @@ public class Create_RG_Sd {
 	
 	@Then("Enter Data in the  Request Group Settings section with SendPreference as Use primary contacts Fax address")
 	public void EnterDataintheRequestGroupSettingssectionwithSendPreferenceasUseprimarycontactsFaxaddress() throws InterruptedException {
-		
-		 //Configuration Request Group Name TxtBox
+				 //Configuration Request Group Name TxtBox
 		obj.keyWords().sendKeys(obj.getPageCreateRG().getRequest_Group_Name_Txtbox(), testData.get("requestGroupName"));
 				
 		//ContactDay/Time Preference	
