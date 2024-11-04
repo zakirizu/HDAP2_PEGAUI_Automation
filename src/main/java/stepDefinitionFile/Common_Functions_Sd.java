@@ -9,6 +9,7 @@ import java.time.Duration;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 import org.apache.commons.io.FileUtils;
 import org.apache.logging.log4j.LogManager;
@@ -137,9 +138,12 @@ public class Common_Functions_Sd {
 	}
 	
 	public static String  getUniqueRandomInteger() {
-		int  rand = ThreadLocalRandom.current().nextInt();
-		String temp = Integer.toString(rand);
-		return temp;
+        Random random = new Random();
+        long randomNumber = 1_000_000_000L + random.nextLong();	         
+        String  x = Long.toString(randomNumber);
+        String  temp = x.replaceAll("-", "");
+        return temp;
+
 	
 	}	
 
