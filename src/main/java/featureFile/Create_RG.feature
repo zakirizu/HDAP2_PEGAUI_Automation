@@ -3,7 +3,7 @@ Feature: Request Group Scenarios
 Background:
 Given Launch the Application
 
-@CreateRGZR
+@CreateRGZR                    @RunNow
  Scenario Outline:  Valdiate Whether User is able to create an RG with Single Contact
  Given Read ExcelData from CreateRGSheet  for  <TestCaseID>
 Given 	Click on CreateRGButton
@@ -12,49 +12,64 @@ Then 		Under Contact section Add a Single Contact
 Then 		Enter Data in the  Request Group Settings section
 Examples:
 |		TestCaseID		|
-|		happyPath		|
+|		CreateRG_AllSections		|
 
 
-@CreateRG 					@CreateRG_With_SingleContact_SP_Email  @RunNow
+@CreateRG 	@CreateRG_With_SingleContact_SP_Mail         @RunNow
  Scenario Outline:  Valdiate Whether User is able to create an RG with Single Contact
  Given Read ExcelData from CreateRGSheet  for  <TestCaseID>
 Given 	Click on CreateRGButton
-And     	Click on NextButton
-Then 		Under Contact section Add a Single Contact
-Then 		Enter Data in the  Request Group Settings section with SendPreference of Email
-
-Examples:
-|		TestCaseID	                  |
-|		sendPrefereneceEmail  |
-
-
-@CreateRG 					@CreateRG_With_SingleContact_SP_Upload 
- Scenario Outline:  Valdiate Whether User is able to create an RG with Single Contact
- Given Read ExcelData from CreateRGSheet  for  <TestCaseID>
-Given 	Click on CreateRGButton
-And     	Click on NextButton
+And     Click on NextButton
 Then 		Under Contact section Add a Single Contact
 Then 		Enter Data in the  Request Group Settings section with SendPreference of Mail
 
 Examples:
-|		TestCaseID		|
-|		happyPath		|
+|		TestCaseID	                  |
+|		SP_Mail  |
 
 
-@CreateRG 					@CreateRG_With_SingleContact_SP_Fax
+@CreateRG 	@CreateRG_With_SingleContact_SP_Upload        @RunNow
  Scenario Outline:  Valdiate Whether User is able to create an RG with Single Contact
  Given Read ExcelData from CreateRGSheet  for  <TestCaseID>
 Given 	Click on CreateRGButton
-And     	Click on NextButton
+And     Click on NextButton
 Then 		Under Contact section Add a Single Contact
 Then 		Enter Data in the  Request Group Settings section with SendPreference of Fax
 
 Examples:
 |		TestCaseID		|
-|		happyPath		|
+|		SP_Fax		|
 
 
-@CreateRG 					@CreateRG_With_SingleContact_SP_PrimayMail_CheckBox
+@CreateRG 	@CreateRG_With_SingleContact_SP_Fax       @RunNow
+ Scenario Outline:  Valdiate Whether User is able to create an RG with Single Contact
+ Given Read ExcelData from CreateRGSheet  for  <TestCaseID>
+Given 	Click on CreateRGButton
+And     Click on NextButton
+Then 		Under Contact section Add a Single Contact
+Then 		Enter Data in the  Request Group Settings section with SendPreference of Email
+
+Examples:
+|		TestCaseID		|
+|		SP_Email		|
+
+@CreateRG 	@CreateRG_With_SingleContact_SP_Fax          @RunNow
+ Scenario Outline:  Valdiate Whether User is able to create an RG with Single Contact
+ Given Read ExcelData from CreateRGSheet  for  <TestCaseID>
+Given 	Click on CreateRGButton
+And     Click on NextButton
+Then 		Under Contact section Add a Single Contact
+Then 		Enter Data in the  Request Group Settings section with SendPreference of Upload
+
+Examples:
+|		TestCaseID		|
+|		SP_Upload		|
+
+
+
+
+
+@CreateRG 	@CreateRG_With_SingleContact_SP_PrimayMail_CheckBox       @RunNow
  Scenario Outline:  Valdiate Whether User is able to create an RG with Single Contact
  Given Read ExcelData from CreateRGSheet  for  <TestCaseID>
 Given 	Click on CreateRGButton
@@ -64,10 +79,10 @@ Then 		Enter Data in the  Request Group Settings section with SendPreference as 
 
 Examples:
 |		TestCaseID		|
-|		happyPath		|
+|		SP_Mail_CheckBox		|
 
 
-@CreateRG 					@CreateRG_With_SingleContact_SP_PrimayEmail_CheckBox
+@CreateRG 					@CreateRG_With_SingleContact_SP_PrimayEmail_CheckBox      @RunNow
  Scenario Outline:  Valdiate Whether User is able to create an RG with Single Contact
  Given Read ExcelData from CreateRGSheet  for  <TestCaseID>
 Given 	Click on CreateRGButton
@@ -77,41 +92,44 @@ Then 		Enter Data in the  Request Group Settings section with SendPreference as 
 
 Examples:
 |		TestCaseID		|
-|		happyPath		|
+|		SP_Email_CheckBox		|
 
 
-@CreateRG 					@CreateRG_With_SingleContact_SP_PrimayFax_CheckBox
+@CreateRG 					@CreateRG_With_SingleContact_SP_PrimayFax_CheckBox     @RunNow
  Scenario Outline:  Valdiate Whether User is able to create an RG with Single Contact
  Given Read ExcelData from CreateRGSheet  for  <TestCaseID>
 Given 	Click on CreateRGButton
-And     	Click on NextButton
+And     Click on NextButton
 Then 		Under Contact section Add a Single Contact
 Then 		Enter Data in the  Request Group Settings section with SendPreference as Use primary contacts Fax address
 
 Examples:
 |		TestCaseID		|
-|		happyPath		|
+|		SP_Fax_CheckBox		|
 
 
-@CreateRG 					@CreateRG_With_SingleContact_SP_Upload
+@CreateRG 					@CreateRG_With_SingleContact_SP_PrimayFax_CheckBox      @RunNow
  Scenario Outline:  Valdiate Whether User is able to create an RG with Single Contact
  Given Read ExcelData from CreateRGSheet  for  <TestCaseID>
 Given 	Click on CreateRGButton
-And     	Click on NextButton
+And     Click on NextButton
 Then 		Under Contact section Add a Single Contact
-Then 		Enter Data in the  Request Group Settings section with SendPreference of Upload
+Then 		Enter Data in the  Request Group Settings section with All Mandatory Fields
 
 Examples:
 |		TestCaseID		|
-|		happyPath		|
+|		CreateRG_MandatoryFields  |
 
-@CreateRG       @CreateRG_with_MultipleContacts
+
+@CreateRG 					@CreateRG_With_SingleContact_SP_PrimayFax_CheckBox        @RunNow
  Scenario Outline:  Valdiate Whether User is able to create an RG with Single Contact
  Given Read ExcelData from CreateRGSheet  for  <TestCaseID>
 Given 	Click on CreateRGButton
-And     	Click on NextButton
-Then 		Under Contact section Add a Multiple Contact
-Then 		Enter Data in the  Request Group Settings section
+And     Click on NextButton
+Then 		Under Contact section Add a Multiple Contacts
+
 Examples:
 |		TestCaseID		|
-|		happyPath		|
+|		Multiple_Contacts  |
+
+

@@ -229,8 +229,22 @@ public class Create_RG_Pg {
 		@FindBy(xpath = "//input[@id='2d54ce90']")
 		private WebElement  SPZipCode_textbox;
 		
+		@FindBy(xpath = "//div[text()='<< Back']")
+		private WebElement  RG_Back_Btn;
+		
+		
+		
 		//override
 		
+		public WebElement getRG_Back_Btn() {
+			return RG_Back_Btn;
+		}
+
+
+		public void setRG_Back_Btn(WebElement rG_Back_Btn) {
+			RG_Back_Btn = rG_Back_Btn;
+		}
+
 		@FindBy(xpath = "//button[text()='Add Override']")
 		private WebElement  ADDOverride_BTN;
 		
