@@ -3,7 +3,7 @@ Feature: Request Group Scenarios
 Background:
 Given Launch the Application
 
-@CreateRGZR               @RunNow
+@CreateRGZR                    @RunNow
  Scenario Outline:  Valdiate Whether User is able to create an RG with Single Contact
  Given Read ExcelData from CreateRGSheet  for  <TestCaseID>
 Given 	Click on CreateRGButton
@@ -15,7 +15,7 @@ Examples:
 |		CreateRG_AllSections		|
 
 
-@CreateRG 	@CreateRG_With_SingleContact_SP_Mail  
+@CreateRG 	@CreateRG_With_SingleContact_SP_Mail         @RunNow
  Scenario Outline:  Valdiate Whether User is able to create an RG with Single Contact
  Given Read ExcelData from CreateRGSheet  for  <TestCaseID>
 Given 	Click on CreateRGButton
@@ -28,7 +28,7 @@ Examples:
 |		SP_Mail  |
 
 
-@CreateRG 	@CreateRG_With_SingleContact_SP_Upload     
+@CreateRG 	@CreateRG_With_SingleContact_SP_Upload        @RunNow
  Scenario Outline:  Valdiate Whether User is able to create an RG with Single Contact
  Given Read ExcelData from CreateRGSheet  for  <TestCaseID>
 Given 	Click on CreateRGButton
@@ -41,7 +41,7 @@ Examples:
 |		SP_Fax		|
 
 
-@CreateRG 	@CreateRG_With_SingleContact_SP_Fax
+@CreateRG 	@CreateRG_With_SingleContact_SP_Fax       @RunNow
  Scenario Outline:  Valdiate Whether User is able to create an RG with Single Contact
  Given Read ExcelData from CreateRGSheet  for  <TestCaseID>
 Given 	Click on CreateRGButton
@@ -53,7 +53,7 @@ Examples:
 |		TestCaseID		|
 |		SP_Email		|
 
-@CreateRG 	@CreateRG_With_SingleContact_SP_Fax         @RunNow
+@CreateRG 	@CreateRG_With_SingleContact_SP_Fax          @RunNow
  Scenario Outline:  Valdiate Whether User is able to create an RG with Single Contact
  Given Read ExcelData from CreateRGSheet  for  <TestCaseID>
 Given 	Click on CreateRGButton
@@ -69,7 +69,7 @@ Examples:
 
 
 
-@CreateRG 	@CreateRG_With_SingleContact_SP_PrimayMail_CheckBox
+@CreateRG 	@CreateRG_With_SingleContact_SP_PrimayMail_CheckBox       @RunNow
  Scenario Outline:  Valdiate Whether User is able to create an RG with Single Contact
  Given Read ExcelData from CreateRGSheet  for  <TestCaseID>
 Given 	Click on CreateRGButton
@@ -82,7 +82,7 @@ Examples:
 |		SP_Mail_CheckBox		|
 
 
-@CreateRG 					@CreateRG_With_SingleContact_SP_PrimayEmail_CheckBox
+@CreateRG 					@CreateRG_With_SingleContact_SP_PrimayEmail_CheckBox      @RunNow
  Scenario Outline:  Valdiate Whether User is able to create an RG with Single Contact
  Given Read ExcelData from CreateRGSheet  for  <TestCaseID>
 Given 	Click on CreateRGButton
@@ -95,7 +95,7 @@ Examples:
 |		SP_Email_CheckBox		|
 
 
-@CreateRG 					@CreateRG_With_SingleContact_SP_PrimayFax_CheckBox
+@CreateRG 					@CreateRG_With_SingleContact_SP_PrimayFax_CheckBox     @RunNow
  Scenario Outline:  Valdiate Whether User is able to create an RG with Single Contact
  Given Read ExcelData from CreateRGSheet  for  <TestCaseID>
 Given 	Click on CreateRGButton
@@ -108,7 +108,7 @@ Examples:
 |		SP_Fax_CheckBox		|
 
 
-@CreateRG 					@CreateRG_With_SingleContact_SP_PrimayFax_CheckBox
+@CreateRG 					@CreateRG_With_SingleContact_SP_PrimayFax_CheckBox      @RunNow
  Scenario Outline:  Valdiate Whether User is able to create an RG with Single Contact
  Given Read ExcelData from CreateRGSheet  for  <TestCaseID>
 Given 	Click on CreateRGButton
@@ -121,7 +121,7 @@ Examples:
 |		CreateRG_MandatoryFields  |
 
 
-@CreateRG 					@CreateRG_With_SingleContact_SP_PrimayFax_CheckBox
+@CreateRG 					@CreateRG_With_SingleContact_SP_PrimayFax_CheckBox        @RunNow
  Scenario Outline:  Valdiate Whether User is able to create an RG with Single Contact
  Given Read ExcelData from CreateRGSheet  for  <TestCaseID>
 Given 	Click on CreateRGButton
