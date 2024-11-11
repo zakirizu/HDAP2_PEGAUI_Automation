@@ -3,7 +3,7 @@ Feature: Request Group Scenarios
 Background:
 Given Launch the Application
 
-<<<<<<< Updated upstream
+
 
 @CreateRGZR                    @RunNow
  Scenario Outline:  Valdiate Whether User is able to create an RG with Single Contact
@@ -50,11 +50,7 @@ Examples:
 
 
 
-
-@CreateRGZR                    @RunNow
-=======
 @CreateRGZR                    @RunNow   @Masum
->>>>>>> Stashed changes
  Scenario Outline:  Valdiate Whether User is able to create an RG with Single Contact
  Given Read ExcelData from CreateRGSheet  for  <TestCaseID>
 Given 	Click on CreateRGButton

@@ -8,19 +8,18 @@ import io.restassured.response.Response;
 import utils.DependencyInjection;
 import utils.PropertiesFileReader;
 
-public class CreateRG_OAuth2 {
+public class Create_PendingRGAssignment_ChaseRequest {
 	static String endPoint = PropertiesFileReader.getAPIProperty("chaseRequest_url");
 	static String resource = PropertiesFileReader.getAPIProperty("chaseRequest_resource");
 	static String intendedUse = PropertiesFileReader.getAPIProperty("intendedUse");
 	static String accountID = PropertiesFileReader.getAPIProperty("AccountID");
 	static String subAccountID = PropertiesFileReader.getAPIProperty("SubAccountID");
-	static String  authtoken = CreateRG_OAuth2.Create_Auth();
+	static String authtoken = Create_PendingRGAssignment_ChaseRequest.Create_Auth();
 
-	@Test(invocationCount = 1)
+	@Test(invocationCount =1)
 	public static void ChaseRequest_With_No_Matching_RG() throws InterruptedException
 
 	{
-
 		String cotivitClaimNumber = stepDefinitionFile.Common_Functions_Sd.getUniqueRandomInteger();
 		System.out.println("*******************************Creating Chase Request with NO Matching Single RG with Below Combination*****************************");
 		System.out.println("Intended Use------------------------->" + intendedUse);
@@ -49,7 +48,7 @@ public class CreateRG_OAuth2 {
 
 		DependencyInjection dp = new DependencyInjection();
 
-		System.out.println("Generating OAuth2.0 Token");
+		System.out.println("Generating OAuth2.0 Token ");
 		// Set the base URI for the authorization server
 		RestAssured.baseURI = "https://cotiviti-ext-devtest.oktapreview.com"; // Your auth endpoint
 
@@ -70,9 +69,9 @@ public class CreateRG_OAuth2 {
 				.extract().response(); // Extract the response
 
 		String responseBody = response.getBody().asString(); // Get the response body as a string
-		System.out.println("Response Body: " + responseBody);
+		//System.out.println("Response Body: " + responseBody);
 
-		System.out.println("authToken" + response);
+		//System.out.println("authToken" + response);
 		// Extract the access_token from the response JSON
 		String authToken = response.jsonPath().getString("access_token");
 		System.out.println("authToken" + authToken);
@@ -83,13 +82,7 @@ public class CreateRG_OAuth2 {
 		if (authToken == null || authToken.isEmpty()) {
 			org.testng.Assert.fail("Authorization token not generated.");
 		}
-
-		System.out.println("Generated Auth Token: " + authToken); // Optional: Print the token for debugging
-		// return authToken;
-
-
-
-		return authToken;
+	return authToken;
 	}
 
 }

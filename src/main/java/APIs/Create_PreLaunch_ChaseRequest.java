@@ -8,15 +8,15 @@ import io.restassured.response.Response;
 import utils.DependencyInjection;
 import utils.PropertiesFileReader;
 
-public class CreateRG_With_OAuth {
+public class Create_PreLaunch_ChaseRequest {
 	static String endPoint = PropertiesFileReader.getAPIProperty("chaseRequest_url");
 	static String resource = PropertiesFileReader.getAPIProperty("chaseRequest_resource");
 	static String intendedUse = PropertiesFileReader.getAPIProperty("intendedUse");
 	static String accountID = PropertiesFileReader.getAPIProperty("AccountID");
 	static String subAccountID = PropertiesFileReader.getAPIProperty("SubAccountID");
-	static String authtoken = CreateRG_With_OAuth.Create_Auth();
+	static String authtoken = Create_PreLaunch_ChaseRequest.Create_Auth();
 
-	@Test(invocationCount = 5)
+	@Test(invocationCount =1)
 	public static void ChaseRequest_With_No_Matching_RG() throws InterruptedException
 
 	{
@@ -35,7 +35,7 @@ public class CreateRG_With_OAuth {
 		// JsonPath js =
 		given()// .log().all()
 				.header("Content-Type", "application/json").header("Authorization", authtoken)
-				.body(APIs_PayLoads.ChaseRequest_PayLoads.payLoad_With_No_Matching_RG(intendedUse, accountID,
+				.body(APIs_PayLoads.ChaseRequest_PayLoads.payLoad_With_Single_Matching_RG(intendedUse, accountID,
 						subAccountID, cotivitClaimNumber))
 
 				.when().post(resource)
