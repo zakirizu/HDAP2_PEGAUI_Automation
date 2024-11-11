@@ -463,13 +463,17 @@ public class Create_RG_Pg {
 		private WebElement Dates_of_service_availability;
 		
 		@FindBy(xpath = "//input[@id='992a9b8b']")
-		private WebElement From_textbox;
+		private WebElement DOSAFrom_textbox;
 		
 		@FindBy(xpath = "//input[@id='6d47affd']")
-		private WebElement To_textbox;
+		private WebElement DOSATo_textbox;
 		
 		@FindBy(xpath = "//input[@id='5ec16eb5']")
 		private WebElement Present_checkbox;
+		
+		@FindBy(xpath = "//button[@name='DateRangesForServiceAvailability_pyWorkPage.ProcessForRules.DatesOfServiceRanges(1)_8']//i")
+		private WebElement DOSA_DelectBtn;
+		
 		
        @FindBy(xpath = "//button[text()='Add DOS Range']")
 		private WebElement  Add_DOS_Range_btn;
@@ -487,17 +491,58 @@ public class Create_RG_Pg {
 		private WebElement Patient_name_ddl;
 		
 		@FindBy(xpath = "//select[@id='3b2b098']")
-		private WebElement From_txtbox;
+		private WebElement PatientName_From_txtbox;
 		
 		@FindBy(xpath = "//select[@id='29481f2a']")
-		private WebElement To_txtbox;
+		private WebElement PatientName_To_txtbox;
 		
 		@FindBy(xpath = "//button[text()='Add Letter Range']")
 		private WebElement Add_letter_Range_btn;
 		
+		@FindBy(xpath = "//button[@name='DisplayLetterRanges_pyWorkPage.ProcessForRules.PatientNameLetterRange(1)_3']//i")
+		private WebElement PatientName_Delete;
 		
 		@FindBy(xpath = "//div[text()='Finish']")
 		private WebElement Finish_button;
+		
+		public WebElement getDOSAFrom_textbox() {
+			return DOSAFrom_textbox;
+		}
+
+
+		public WebElement getDOSATo_textbox() {
+			return DOSATo_textbox;
+		}
+
+
+		public WebElement getDOSA_DelectBtn() {
+			return DOSA_DelectBtn;
+		}
+
+
+		public WebElement getPatientName_From_txtbox() {
+			return PatientName_From_txtbox;
+		}
+
+
+		public WebElement getPatientName_To_txtbox() {
+			return PatientName_To_txtbox;
+		}
+
+
+		public WebElement getPatientName_Delete() {
+			return PatientName_Delete;
+		}
+
+
+		public WebElement getDelect_button() {
+			return Delect_button;
+		}
+
+		@FindBy(xpath = "//button[@name='ProjectTypes_pyWorkPage.ProcessForRules_17']//i")
+		private WebElement Delect_button;
+		
+		
 		//
 		
 
@@ -760,13 +805,6 @@ public class Create_RG_Pg {
 			return Dates_of_service_availability;
 		}
 
-		public WebElement getFrom_textbox() {
-			return From_textbox;
-		}
-
-		public WebElement getTo_textbox() {
-			return To_textbox;
-		}
 
 		public WebElement getPresent_checkbox() {
 			return Present_checkbox;
@@ -790,14 +828,6 @@ public class Create_RG_Pg {
 
 		public WebElement getPatient_name_ddl() {
 			return Patient_name_ddl;
-		}
-
-		public WebElement getFrom_txtbox() {
-			return From_txtbox;
-		}
-
-		public WebElement getTo_txtbox() {
-			return To_txtbox;
 		}
 
 		public WebElement getAdd_letter_Range_btn() {

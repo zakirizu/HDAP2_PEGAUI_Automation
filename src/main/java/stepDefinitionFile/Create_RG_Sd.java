@@ -115,11 +115,10 @@ public class Create_RG_Sd {
        obj.keyWords().clickElement(obj.getPageCreateRG().getContact_Will_Confirm_Checkbox());	
 	   obj.keyWords().clickElement(obj.getPageCreateRG().getExcluded_Checkbox());
 	   obj.keyWords().explicitWait_Until_ElementDisplayed(obj.getPageCreateRG().getReasonforExclusion_Txtbox());
-	
+	// obj.keyWords().shortWait();
 	   obj.keyWords().SelectByVisibleText(obj.getPageCreateRG().getReasonforExclusion_Txtbox(),testData.get("ReasonExclusion"));
-       obj.keyWords().shortWait();
+	   obj.keyWords().shortWait();
 	   obj.keyWords().sendKeys(obj.getPageCreateRG().getWebsite_Txtbox(),testData.get("WebSite"));
-      
        obj.keyWords().sendKeys(obj.getPageCreateRG().getMainAddressAttn_Txtbox(),testData.get("MA_AttnTo"));
 	   obj.keyWords().sendKeys(obj.getPageCreateRG().getMainAddressAddress_Txtbox(),testData.get("MA_Address"));
 	   obj.keyWords().sendKeys(obj.getPageCreateRG().getMainAddressAddress2_Txtbox(),testData.get("MA_Address_Line2"));
@@ -146,9 +145,13 @@ public class Create_RG_Sd {
 	   obj.keyWords().clickElement(obj.getPageCreateRG().getAdditional_checkbox());
 	  
 	   obj.keyWords().SelectByVisibleText(obj.getPageCreateRG().getPayment_preference_ddl(),testData.get("PaymentPreference_DDL"));	
-	   obj.keyWords().shortWait();
+	   obj.keyWords().explicitWait_Until_ElementDisplayed(obj.getPageCreateRG().getCardtype_txtbox());
+	   //obj.keyWords().shortWait();
 	   obj.keyWords().SendKeys_Into_AutoSuggestiveTextBox(obj.getPageCreateRG().getCardtype_txtbox(),testData.get("Cardtype_ddl"));
 	   obj.keyWords().SelectByVisibleText(obj.getPageCreateRG().getPayVia_ddl(),testData.get("PayVia_ddl"));
+	   obj.keyWords().explicitWait_Until_ElementDisplayed(obj.getPageCreateRG().getPayVia_ddl());
+	   
+	   
    	   obj.keyWords().SelectByVisibleText(obj.getPageCreateRG().getReturn_prefernce_ddl(),testData.get("ReturnPreference_DDL"));
 	   obj.keyWords().SelectByVisibleText(obj.getPageCreateRG().getSend_preference_ddl(),testData.get("SP_DDL"));
 	   obj.keyWords().explicitWait_Until_ElementDisplayed(obj.getPageCreateRG().getSPUsemainaddress_checkbox());
@@ -156,7 +159,7 @@ public class Create_RG_Sd {
 	
 		//obj.getPageCreateRG().getSPUsemainaddress_checkbox().click();
 	    //obj.keyWords().clickElement(obj.getPageCreateRG().getSPUsemainaddress_checkbox());
-		
+	   
 		obj.keyWords().explicitWait_Until_ElementDisplayed(obj.getPageCreateRG().getSPAttnTo_Textbox());
 		obj.keyWords().sendKeys(obj.getPageCreateRG().getSPAttnTo_Textbox(),testData.get("SP_AttnTo_textbox"));
 	    obj.keyWords().explicitWait_Until_ElementDisplayed(obj.getPageCreateRG().getSPAddress_Textbox());
@@ -187,9 +190,27 @@ public class Create_RG_Sd {
 		obj.keyWords().sendKeys(obj.getPageCreateRG().getSPOverride_ZipCode_textbox(),testData.get("SP_Override__Zipcode_Textbox"));
 		obj.keyWords().clickElement(obj.getPageCreateRG().getNext_button());   
 		
-
 	}
 
+	@Then("Enter Data in the Process For Rules")
+	public void EnterDataintheProcessForRules() throws InterruptedException {
+	
+	     obj.keyWords().SendKeys_Into_AutoSuggestiveTextBox(obj.getPageCreateRG().getProject_type_Txtbox(),testData.get("ProjextTypes"));
+	     obj.keyWords().SendKeys_Into_AutoSuggestiveTextBox(obj.getPageCreateRG().getChart_types_textbox(),testData.get("ChartTypes"));
+	     obj.keyWords().SendKeys_Into_AutoSuggestiveTextBox(obj.getPageCreateRG().getAudit_types_textbox(),testData.get("AuditsTypes"));
+	     obj.keyWords().SendKeys_Into_AutoSuggestiveTextBox(obj.getPageCreateRG().getDates_of_service_availability(),testData.get("DateofServiceAvailabilityFrom"));
+	     obj.keyWords().SendKeys_Into_AutoSuggestiveTextBox(obj.getPageCreateRG().getDates_of_service_availability(),testData.get("DateofServiceAvailabilityTo"));
+	     obj.keyWords().SendKeys_Into_AutoSuggestiveTextBox(obj.getPageCreateRG().getClients_textbox(),testData.get("Clients"));
+	     obj.keyWords().SelectByVisibleText(obj.getPageCreateRG().getPatient_Name_checkbox(),testData.get("PatientNames"));
+	     obj.keyWords().SelectByVisibleText(obj.getPageCreateRG().getPatientName_From_txtbox(),testData.get("PatientNamesFrom"));
+	     obj.keyWords().SelectByVisibleText(obj.getPageCreateRG().getPatientName_To_txtbox(),testData.get("PatientNamesTo"));
+	     obj.keyWords().clickElement(obj.getPageCreateRG().getFinish_button());
+	    		 
+	}
+	
+	
+	
+		
 	@Then("Enter Data in the  Request Group Settings section with SendPreference of Mail")
 	 public void EnterDataintheRequestGroupSettingssectionwithSendPreferenceofMail() throws InterruptedException {
 

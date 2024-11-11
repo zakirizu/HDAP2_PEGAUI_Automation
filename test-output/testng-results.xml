@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< Updated upstream
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
@@ -12,6 +13,66 @@
           </reporter-output>
         </test-method> <!-- ChaseRequest_With_No_Matching_RG -->
       </class> <!-- APIs.CreateRG_OAuth2 -->
+=======
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-11-11T17:11:20 IST" name="Default suite" finished-at="2024-11-11T17:15:17 IST" duration-ms="237477">
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.RunnerTestNG@7a6d7e92]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test started-at="2024-11-11T17:11:20 IST" name="Default test" finished-at="2024-11-11T17:15:17 IST" duration-ms="237477">
+      <class name="testRunner.RunnerTestNG">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:testRunner.RunnerTestNG@7a6d7e92]" started-at="2024-11-11T17:11:20 IST" name="setUpClass" finished-at="2024-11-11T17:11:20 IST" duration-ms="550" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@22657db1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.RunnerTestNG@7a6d7e92]" started-at="2024-11-11T17:11:20 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-11T17:15:17 IST" duration-ms="236835" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Valdiate Whether User is able to create an RG with Single Contact"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Request Group Scenarios"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[WebElement is Not Visible with Xpath:[[ChromeDriver: chrome on windows (88c83ab9c06fb7283d23fc1e6261ebf8)] -> xpath: //input[@id='ms1e9c8969']]. On Page title: Retrieval portal . expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: WebElement is Not Visible with Xpath:[[ChromeDriver: chrome on windows (88c83ab9c06fb7283d23fc1e6261ebf8)] -> xpath: //input[@id='ms1e9c8969']]. On Page title: Retrieval portal . expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at utils.KeyWords.explicitWait_Until_ElementDisplayed(KeyWords.java:498)
+at stepDefinitionFile.Create_RG_Sd.EnterDataintheRequestGroupSettingssection(Create_RG_Sd.java:148)
+at ✽.Enter Data in the  Request Group Settings section(file:///C:/Users/hi/git/HDAP2_PEGAUI_Automation/src/main/java/featureFile/Create_RG.feature:12)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:testRunner.RunnerTestNG@7a6d7e92]" started-at="2024-11-11T17:15:17 IST" name="tearDownClass" finished-at="2024-11-11T17:15:17 IST" duration-ms="45" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- testRunner.RunnerTestNG -->
+>>>>>>> Stashed changes
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
