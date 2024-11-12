@@ -17,7 +17,7 @@ public class Create_PreLaunch_ChaseRequest {
 	static String authtoken = Create_PreLaunch_ChaseRequest.Create_Auth();
 
 	@Test(invocationCount =1)
-	public static void ChaseRequest_With_No_Matching_RG() throws InterruptedException
+	public static void ChaseRequest_With_Matching_RG() throws InterruptedException
 
 	{
 		String cotivitClaimNumber = stepDefinitionFile.Common_Functions_Sd.getUniqueRandomInteger();

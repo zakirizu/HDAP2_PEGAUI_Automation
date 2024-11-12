@@ -16,7 +16,7 @@ public class CreateRG_OAuth2 {
 	static String subAccountID = PropertiesFileReader.getAPIProperty("SubAccountID");
 	static String  authtoken = CreateRG_OAuth2.Create_Auth();
 
-	@Test(invocationCount = 1)
+	@Test(invocationCount = 5)
 	public static void ChaseRequest_With_No_Matching_RG() throws InterruptedException
 
 	{

@@ -30,25 +30,6 @@ Examples:
 
 
 
-@CreateRGZR                    @RunNow
- Scenario Outline:  Valdiate Whether User is able to create an RG with Single Contact
- Given Read ExcelData from CreateRGSheet  for  <TestCaseID>
-Given 	Click on CreateRGButton
-And     	Click on NextButton
-Then 		Under Contact section Add a Single Contact
-And     Under RG Setting Tab Enter date under Contact Day Time Preference Section
-And     Under RG Setting Tab Enter date under Retrieval Method  Section
-And     Under RG Setting Tab Enter date under Send Preference  Section
-And     Under Process For Rules Section Enter Valid PFRs
-And     Click on the Submit Button
-Then   Validate the Success Message on the Create RG Screen
-
-Examples:
-|		TestCaseID		|
-|		CreateRG_AllSections		|
-
-
-
 
 @CreateRGZR                    @RunNow
  Scenario Outline:  Valdiate Whether User is able to create an RG with Single Contact
