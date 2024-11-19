@@ -3,11 +3,10 @@ Feature: Test feature
    
    #50 runs pre launch
    
-   @api
+   @SingleMatchingRG
     Scenario Outline: Create Chase Request with Single Matching RG
     Given Read ExcelData from CreateRGSheet   for  <TestCaseID>
     Given Create Chase Request with Single Matching RG
-  
   
    Examples:
 |		TestCaseID		|
@@ -19,3 +18,22 @@ Feature: Test feature
 |		API6	|
 |		API7	|
 |		API8	|
+
+
+   @NoMatchingRG
+    Scenario Outline: Create Chase Request with No Matching RG
+    Given Read ExcelData from CreateRGSheet   for  <TestCaseID>
+    Given Create Chase Request with No Matching RG
+  
+   Examples:
+|		TestCaseID		|
+|		API1	|
+
+
+   @MultipleMatchingRGs
+    Scenario Outline: Create Chase Request with No Matching RG
+    Given Read ExcelData from CreateRGSheet   for  <TestCaseID>
+    Given Create Chase Request with Multiple Matching RG
+     Examples:
+|		TestCaseID		|
+|		API1	|
