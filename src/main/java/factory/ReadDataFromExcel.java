@@ -1,5 +1,6 @@
 package factory;
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.util.HashMap;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -63,4 +64,35 @@ public class ReadDataFromExcel {
 		
 	return hmap;
 		}
+	
+	
+	
+	 // Method to store data in Excel
+	   public static void storeDataInExcel(String sheetName, String data) {
+	        try {
+	            mylogger.info("Storing Data in the Excel Sheet at B2 (Second row, second column)");
+	            fis = new FileInputStream(path);
+	            XSSFWorkbook workbook = new XSSFWorkbook(fis);
+	            XSSFSheet sheet = workbook.getSheet(sheetName);
+
+	            // Create the second row (index 1) if it doesn't exist, and write to the second column (index 1)
+	            if (sheet.getRow(1) == null) {
+	                sheet.createRow(1); // Create the second row if it doesn't exist
+	            }
+	            sheet.getRow(1).createCell(1).setCellValue(data); // B2 is at row index 1, column index 1
+
+	            // Save the updated data back to the file
+	            try (FileOutputStream fileOut = new FileOutputStream(path)) {
+	                workbook.write(fileOut);
+	            }
+
+	            workbook.close();
+	            mylogger.info("Successfully stored data at B2 in Excel Sheet");
+     } catch (Exception e) {
+         mylogger.error("Error while writing data to the Excel Sheet: " + path, e);
+         e.printStackTrace();
+     }
+ }
+	
+	
 }

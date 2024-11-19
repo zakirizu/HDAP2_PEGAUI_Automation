@@ -1,48 +1,70 @@
 package APIs;
 
 import static io.restassured.RestAssured.given;
+
+import java.util.HashMap;
+
 import org.testng.annotations.Test;
+
+import factory.ReadDataFromExcel;
+import io.cucumber.java.en.Then;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import utils.DependencyInjection;
 import utils.PropertiesFileReader;
 
-public class Create_PendingRGAssignment_ChaseRequest {
+public class Create_PendingRGAssignment_Requests {
 	static String endPoint = PropertiesFileReader.getAPIProperty("chaseRequest_url");
 	static String resource = PropertiesFileReader.getAPIProperty("chaseRequest_resource");
 	static String intendedUse = PropertiesFileReader.getAPIProperty("intendedUse");
 	static String accountID = PropertiesFileReader.getAPIProperty("AccountID");
 	static String subAccountID = PropertiesFileReader.getAPIProperty("SubAccountID");
-	static String authtoken = Create_PendingRGAssignment_ChaseRequest.Create_Auth();
-	static String cotivitClaimNumber = stepDefinitionFile.Common_Functions_Sd.getUniqueRandomInteger();
-
-	@Test(invocationCount =5)
+	static String authtoken = Create_PendingRGAssignment_Requests.Create_Auth();
+	
+	
+	HashMap<String,String> testData;	
+	@Then("^Read ExcelData from CreateRGSheet  for  (.+)$")
+	public HashMap<String, String> ReadExcelSheetDataFromSheet( String TestCaseID) {		
+		testData = ReadDataFromExcel.getExcelData("createRG", TestCaseID);
+		return testData;		
+	}
+	
+	@Test(invocationCount = 1)
 	public static void ChaseRequest_With_No_Matching_RG() throws InterruptedException
 
-	{	
-		
-		System.out.println("*******************************Creating Chase Request with NO Matching Single RG with Below Combination*****************************");
+	{
+
+		String cotivitClaimNumber = stepDefinitionFile.Common_Functions_Sd.getUniqueRandomInteger();
+		System.out.println(
+				"*******************************Creating Chase Request with NO Matching Single RG with Below Combination*****************************");
 		System.out.println("Intended Use------------------------->" + intendedUse);
 		System.out.println("Account ID---------------------------->" + accountID);
 		System.out.println("Sub Account ID----------------------->" + subAccountID);
 		System.out.println("Cotiviti Claim Number-------------->" + cotivitClaimNumber);
 		System.out.println("<----------RESPONSE BODY--------->");
 
+		// Create_Auth_Token auth = new Create_Auth_Token();
+
+		String authtoken = Create_PendingRGAssignment_Requests.Create_Auth();
 		RestAssured.baseURI = endPoint;
 		// JsonPath js =
 		given()// .log().all()
 				.header("Content-Type", "application/json").header("Authorization", authtoken)
-				.body(APIs_PayLoads.ChaseRequest_PayLoads.payLoad_With_No_Matching_RG(intendedUse, accountID,subAccountID, cotivitClaimNumber))
+				.body(APIs_PayLoads.ChaseRequest_PayLoads.payLoad_With_No_Matching_RG(intendedUse, accountID,
+						subAccountID, cotivitClaimNumber))
+
 				.when().post(resource)
+
 				.then().log().body(true).assertThat().statusCode(202).extract().response().jsonPath();
-}
+
+	}
 
 	public static String Create_Auth() {
 
 		DependencyInjection dp = new DependencyInjection();
 
-		System.out.println("Generating OAuth2.0 Token ");
+		System.out.println("Create Auth Running ");
 		// Set the base URI for the authorization server
 		RestAssured.baseURI = "https://cotiviti-ext-devtest.oktapreview.com"; // Your auth endpoint
 
@@ -63,6 +85,10 @@ public class Create_PendingRGAssignment_ChaseRequest {
 				.extract().response(); // Extract the response
 
 		String responseBody = response.getBody().asString(); // Get the response body as a string
+		System.out.println("Response Body: " + responseBody);
+
+		System.out.println("authToken" + response);
+		// Extract the access_token from the response JSON
 		String authToken = response.jsonPath().getString("access_token");
 		System.out.println("authToken" + authToken);
 
@@ -72,7 +98,13 @@ public class Create_PendingRGAssignment_ChaseRequest {
 		if (authToken == null || authToken.isEmpty()) {
 			org.testng.Assert.fail("Authorization token not generated.");
 		}
-	return authToken;
+
+		System.out.println("Generated Auth Token: " + authToken); // Optional: Print the token for debugging
+		// return authToken;
+
+		//dp.setAuth(authToken);
+
+		return authToken;
 	}
 
 }

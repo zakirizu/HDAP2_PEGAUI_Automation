@@ -143,8 +143,6 @@ public class Common_Functions_Sd {
         String  x = Long.toString(randomNumber);
         String  temp = x.replaceAll("-", "");
         return temp;
-
-	
 	}	
 
 	/*
