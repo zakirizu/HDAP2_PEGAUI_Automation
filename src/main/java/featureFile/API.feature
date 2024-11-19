@@ -8,7 +8,7 @@ Feature: Test feature
     Given Read ExcelData from CreateRGSheet   for  <TestCaseID>
     Given Create Chase Request with Single Matching RG
   
-   Examples:
+     Examples:
 |		TestCaseID		|
 |		API1	|
 |		API2	|
