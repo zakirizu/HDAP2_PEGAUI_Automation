@@ -106,7 +106,7 @@ public class API_Sd {
 	        String subAccountID = testData.get("SubAccountID");
 	        String cotivitClaimNumber = stepDefinitionFile.Common_Functions_Sd.getUniqueRandomInteger();
 	    	
-	    	
+	    	Thread.sleep(3000);
 	        System.out.println("Creating Chase Request with the following details:");
 	        System.out.println("Intended Use: " + intendedUse);
 	        System.out.println("Account ID: " + accountID);

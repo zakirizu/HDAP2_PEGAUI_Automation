@@ -10,7 +10,7 @@ import io.cucumber.testng.CucumberOptions;
 		glue						=	"stepDefinitionFile" ,
 		monochrome		=	true,
 		dryRun					= 	false, //If true only checks if all the Features has corresponding StepDefinitions or Not. If False then runs the actual code in the step Definition
-		tags						=	"@dryTest",
+		tags						=	"@SingleMatchingRG",
 		plugin					= 	{"pretty","html:TestResults_CucumberReports/cucumber.html","json:TestResults_cucumberReports/cucumber.json"}
 	)
 public class RunnerTestNG extends AbstractTestNGCucumberTests {
