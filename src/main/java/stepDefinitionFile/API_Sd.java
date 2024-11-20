@@ -14,11 +14,7 @@ public class API_Sd {
 	HashMap<String, String> testData;
 	static String authtoken;
     // Extract other values from testData
-    String endPoint = testData.get("chaseRequest_url");
-    String resource = testData.get("chaseRequest_resource");
-    String accountID = testData.get("AccountID");
-    String subAccountID = testData.get("SubAccountID");
-    String cotivitClaimNumber = stepDefinitionFile.Common_Functions_Sd.getUniqueRandomInteger();
+
 
 
 	
@@ -37,6 +33,7 @@ public class API_Sd {
 	    // Modify the original createChaseRequestWithSingleMatchingRG() to handle dynamic invocation count
 	    @Given("^Create Chase Request with Single Matching RG$")
 	    public void createChaseRequestWithSingleMatchingRG() throws InterruptedException {
+	    	
 	        // Get the "InvocationCount" field from the Excel sheet (this determines how many times to run the API)
 	        int dynamicInvocationCount = Integer.parseInt(testData.get("InvocationCount"));
 	        System.out.println("Dynamic Invocation Count: " + dynamicInvocationCount);
@@ -103,6 +100,13 @@ public class API_Sd {
 	
 	    private void Run_API_With_Single_Matching_RG(String intendedUse) throws InterruptedException {
 	        // Print request details for debugging purposes
+	        String endPoint = testData.get("chaseRequest_url");
+	        String resource = testData.get("chaseRequest_resource");
+	        String accountID = testData.get("AccountID");
+	        String subAccountID = testData.get("SubAccountID");
+	        String cotivitClaimNumber = stepDefinitionFile.Common_Functions_Sd.getUniqueRandomInteger();
+	    	
+	    	
 	        System.out.println("Creating Chase Request with the following details:");
 	        System.out.println("Intended Use: " + intendedUse);
 	        System.out.println("Account ID: " + accountID);
@@ -141,6 +145,12 @@ public class API_Sd {
 	    
 	    private void Run_API_With_No_Matching_RG(String intendedUse) throws InterruptedException {
 	        // Print request details for debugging purposes
+	        String endPoint = testData.get("chaseRequest_url");
+	        String resource = testData.get("chaseRequest_resource");
+	        String accountID = testData.get("AccountID");
+	        String subAccountID = testData.get("SubAccountID");
+	        String cotivitClaimNumber = stepDefinitionFile.Common_Functions_Sd.getUniqueRandomInteger();
+	    	
 	        System.out.println("Creating Chase Request with the following details:");
 	        System.out.println("Intended Use: " + intendedUse);
 	        System.out.println("Account ID: " + accountID);
@@ -177,6 +187,11 @@ public class API_Sd {
 	    
 	    private void Run_API_With_Multiple_Matching_RG(String intendedUse) throws InterruptedException {
 	        // Print request details for debugging purposes
+	        String endPoint = testData.get("chaseRequest_url");
+	        String resource = testData.get("chaseRequest_resource");
+	        String accountID = testData.get("AccountID");
+	        String subAccountID = testData.get("SubAccountID");
+	        String cotivitClaimNumber = stepDefinitionFile.Common_Functions_Sd.getUniqueRandomInteger();
 	        System.out.println("Creating Chase Request with the following details:");
 	        System.out.println("Intended Use: " + intendedUse);
 	        System.out.println("Account ID: " + accountID);

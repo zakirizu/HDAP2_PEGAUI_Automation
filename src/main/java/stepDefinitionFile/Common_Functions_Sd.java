@@ -185,9 +185,8 @@ public class Common_Functions_Sd {
 	}
 	
 	@After
-	public void afterScenarios(Scenario scenario) throws InterruptedException {
-		
-		
+	public void afterScenarios(Scenario scenario) throws  NullPointerException {
+
 		if (scenario.isFailed()) {
            try {
                 final byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
@@ -197,15 +196,18 @@ public class Common_Functions_Sd {
             catch (Exception e) {
                 e.printStackTrace();
             }
-    
         }
 	       else
-           { 
+	    	   try {    { 
 	                final byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
 	                scenario.attach(screenshot, "image/png", "PASSED  Scenario Screenshot");
 	                driver.close();
            }
         driver.quit();  // Closing the browser after scenario
+           }catch(Exception e) {
+        	   System.out.println("Driver not initiated");
+           }
+}
+}
+	
 
-}
-}
