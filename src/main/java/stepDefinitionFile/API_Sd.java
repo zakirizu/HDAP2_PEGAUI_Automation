@@ -5,6 +5,7 @@ import java.util.HashMap;
 import APIs.Create_PendingRGAssignment_Requests;
 import factory.ReadDataFromExcel;
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 import io.restassured.RestAssured;
 
 
@@ -22,10 +23,13 @@ public class API_Sd {
 
 	
 	
-	@Given("^Read ExcelData from CreateRGSheet   for  (.+)$")
+	@Given("^Read ExcelData from API_Sheet for  (.+)$")
 	public HashMap<String, String> ReadExcelSheetDataFromSheet(String TestCaseID) {
 		testData = ReadDataFromExcel.getExcelData("API", TestCaseID);
+		System.out.println("ZR");
+		System.out.println(testData);
 		return testData;
+		
 	}
 
 

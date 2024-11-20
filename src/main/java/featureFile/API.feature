@@ -6,7 +6,7 @@ Feature: Test feature
    
       @dryTest
     Scenario Outline: Create Chase Request with Single Matching RG
-    Given Read ExcelData from CreateRGSheet   for  <TestCaseID>
+    Given Read ExcelData from API_Sheet for  <TestCaseID>
     Given Create Chase Request with Single Matching RG
   
      Examples:
@@ -16,7 +16,7 @@ Feature: Test feature
    
    @SingleMatchingRG
     Scenario Outline: Create Chase Request with Single Matching RG
-    Given Read ExcelData from CreateRGSheet   for  <TestCaseID>
+    Given Read ExcelData from API_Sheet for  <TestCaseID>
     Given Create Chase Request with Single Matching RG
   
      Examples:
@@ -33,7 +33,7 @@ Feature: Test feature
 
    @NoMatchingRG
     Scenario Outline: Create Chase Request with No Matching RG
-    Given Read ExcelData from CreateRGSheet   for  <TestCaseID>
+    Given Read ExcelData from API_Sheet for  <TestCaseID>
     Given Create Chase Request with No Matching RG
   
    Examples:
@@ -43,7 +43,7 @@ Feature: Test feature
 
    @MultipleMatchingRGs
     Scenario Outline: Create Chase Request with Multiple Matching RG
-    Given Read ExcelData from CreateRGSheet   for  <TestCaseID>
+    Given Read ExcelData from API_Sheet for  <TestCaseID>
     Given Create Chase Request with Multiple Matching RG
      Examples:
 |		TestCaseID		|
