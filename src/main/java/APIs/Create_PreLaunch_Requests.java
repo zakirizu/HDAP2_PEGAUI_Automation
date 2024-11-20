@@ -21,7 +21,7 @@ public class Create_PreLaunch_Requests {
 	static String subAccountID = PropertiesFileReader.getAPIProperty("SubAccountID");
 	static String authtoken = Create_PendingRGAssignment_Requests.Create_Auth();
 
-	@Test(invocationCount = 100)
+	@Test(invocationCount = 2)
 	public static void ChaseRequest_With_Single_Matching_RG_01() throws InterruptedException {
 		String cotivitClaimNumber = stepDefinitionFile.Common_Functions_Sd.getUniqueRandomInteger();
 		System.out.println(
@@ -37,9 +37,7 @@ public class Create_PreLaunch_Requests {
 		given()// .log().all()
 		.header("Content-Type", "application/json").header("Authorization", authtoken)
 				.body(APIs_PayLoads.ChaseRequest_PayLoads.payLoad_With_Single_Matching_RG(intendedUse, accountID,	subAccountID, cotivitClaimNumber))
-
 				.when().post(resource)
-
 				.then().log().body(true).assertThat().statusCode(202).extract().response().jsonPath();
 
 	}

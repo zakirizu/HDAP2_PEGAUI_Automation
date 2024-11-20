@@ -72,8 +72,7 @@ public class Create_PendingRGAssignment_Requests {
 		String sessionCookie = "E3FDDF4D92FD562312A9540EDFCA370A";
 
 		// Send a POST request with the necessary headers
-		Response response = RestAssured.given().header("Authorization", authorizationHeader) // Add the Authorization
-																								// header
+		Response response = RestAssured.given().header("Authorization", authorizationHeader) // Add the Authorization	// header
 				.header("Cookie", "JSESSIONID=" + sessionCookie) // Add the session cookie
 				.contentType(ContentType.URLENC) // Content type is URL encoded
 				.accept(ContentType.JSON) // Accepting JSON responses
@@ -100,10 +99,6 @@ public class Create_PendingRGAssignment_Requests {
 		}
 
 		System.out.println("Generated Auth Token: " + authToken); // Optional: Print the token for debugging
-		// return authToken;
-
-		//dp.setAuth(authToken);
-
 		return authToken;
 	}
 
