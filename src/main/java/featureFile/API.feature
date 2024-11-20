@@ -17,6 +17,16 @@ Feature: Test feature
   
      Examples:
 |		TestCaseID		|
+|		API2	|
+
+
+   @Allin
+    Scenario Outline: Create Chase Request with Single Matching RG
+    Given Read ExcelData from API_Sheet for  <TestCaseID>
+    Given Create Chase Request with Single Matching RG
+  
+     Examples:
+|		TestCaseID		|
 |		API1	|
 |		API2	|
 |		API3	|

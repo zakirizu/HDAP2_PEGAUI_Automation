@@ -14,13 +14,6 @@ import utils.PropertiesFileReader;
 public class Create_PreLaunch_Requests {
 
 	static HashMap<String, String> testData;
-
-	/*@Then("^Read ExcelData from CreateRGSheet  for  (.+)$")
-	public HashMap<String, String> ReadExcelSheetDataFromSheet(String TestCaseID) {
-		testData = ReadDataFromExcel.getExcelData("API", TestCaseID);
-		return testData;
-	}*/
-
 	static String endPoint = PropertiesFileReader.getAPIProperty("chaseRequest_url");
 	static String resource = PropertiesFileReader.getAPIProperty("chaseRequest_resource");
 	static String intendedUse = PropertiesFileReader.getAPIProperty("intendedUse");
@@ -28,7 +21,7 @@ public class Create_PreLaunch_Requests {
 	static String subAccountID = PropertiesFileReader.getAPIProperty("SubAccountID");
 	static String authtoken = Create_PendingRGAssignment_Requests.Create_Auth();
 
-	@Test(invocationCount = 5)
+	@Test(invocationCount = 100)
 	public static void ChaseRequest_With_Single_Matching_RG_01() throws InterruptedException {
 		String cotivitClaimNumber = stepDefinitionFile.Common_Functions_Sd.getUniqueRandomInteger();
 		System.out.println(
@@ -43,13 +36,18 @@ public class Create_PreLaunch_Requests {
 		// JsonPath js =
 		given()// .log().all()
 		.header("Content-Type", "application/json").header("Authorization", authtoken)
-				.body(APIs_PayLoads.ChaseRequest_PayLoads.payLoad_With_Single_Matching_RG(intendedUse, accountID,
-						subAccountID, cotivitClaimNumber))
+				.body(APIs_PayLoads.ChaseRequest_PayLoads.payLoad_With_Single_Matching_RG(intendedUse, accountID,	subAccountID, cotivitClaimNumber))
 
 				.when().post(resource)
 
 				.then().log().body(true).assertThat().statusCode(202).extract().response().jsonPath();
 
 	}
+	
+	
+	
+	
+	
+	
 
 }

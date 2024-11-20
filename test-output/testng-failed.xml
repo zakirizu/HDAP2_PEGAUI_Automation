@@ -3,13 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testRunner.RunnerTestNG">
+      <class name="APIs.Create_PreLaunch_Requests">
         <methods>
-          <include name="setUpClass"/>
-          <include name="runScenario" invocation-numbers="0 1 2 3 4 5 6 7"/>
-          <include name="tearDownClass"/>
+          <include name="ChaseRequest_With_Single_Matching_RG_01"/>
         </methods>
-      </class> <!-- testRunner.RunnerTestNG -->
+      </class> <!-- APIs.Create_PreLaunch_Requests -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
