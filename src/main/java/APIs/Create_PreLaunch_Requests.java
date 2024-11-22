@@ -21,7 +21,7 @@ public class Create_PreLaunch_Requests {
 	static String subAccountID = PropertiesFileReader.getAPIProperty("SubAccountID");
 	static String authtoken = Create_PendingRGAssignment_Requests.Create_Auth();
 
-	@Test(invocationCount = 2)
+	@Test(invocationCount = 5)
 	public static void ChaseRequest_With_Single_Matching_RG_01() throws InterruptedException {
 		String cotivitClaimNumber = stepDefinitionFile.Common_Functions_Sd.getUniqueRandomInteger();
 		System.out.println(
@@ -42,6 +42,7 @@ public class Create_PreLaunch_Requests {
 
 	}
 	
+
 	
 	
 	
