@@ -7,15 +7,7 @@
       <class name="APIs.Bulk_Create_PreLaunch_Requests">
       		<methods>
 				<include name="ChaseRequest_With_Single_Matching_RG_01"></include>
-				<include name="ChaseRequest_With_Single_Matching_RG_02"></include>
-				<include name="ChaseRequest_With_Single_Matching_RG_03"></include>
-				<include name="ChaseRequest_With_Single_Matching_RG_04"></include>
-				<include name="ChaseRequest_With_Single_Matching_RG_05"></include>
-				<include name="ChaseRequest_With_Single_Matching_RG_06"></include>
-				<include name="ChaseRequest_With_Single_Matching_RG_07"></include>
-				<include name="ChaseRequest_With_Single_Matching_RG_08"></include>
-				<include name="ChaseRequest_With_Single_Matching_RG_09"></include>
-				<include name="ChaseRequest_With_Single_Matching_RG_10"></include>
+				<include name="ChaseRequest_With_Single_Matching_RG_01"></include>
 			</methods>
       </class>
 
