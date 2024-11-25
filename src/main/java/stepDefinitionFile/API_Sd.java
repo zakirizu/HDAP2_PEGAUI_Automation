@@ -2,7 +2,7 @@ package stepDefinitionFile;
 import static io.restassured.RestAssured.given;
 import org.apache.commons.lang3.StringUtils;
 import java.util.HashMap;
-import APIs.Create_PendingRGAssignment_Requests;
+import APIs.CreateOAuth2_Token;
 import factory.ReadDataFromExcel;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -120,7 +120,7 @@ public class API_Sd {
 
 	            System.out.println("Taking Auth_Token from Excel Sheet");
 	        } else {
-	            authtoken = Create_PendingRGAssignment_Requests.Create_Auth();
+	            authtoken = CreateOAuth2_Token.Create_Auth();
 	            System.out.println("Taking Auth_Token from API");
 	            ReadDataFromExcel.storeDataInExcel("API", authtoken);
 	            System.out.println("Storing Auth_Token in Excel Sheet");
@@ -131,7 +131,7 @@ public class API_Sd {
 	        given()
 	            .header("Content-Type", "application/json")
 	            .header("Authorization", authtoken)
-	            .body(APIs_PayLoads.ChaseRequest_PayLoads.payLoad_With_Single_Matching_RG(intendedUse, accountID, subAccountID, cotivitClaimNumber))
+	            .body(APIs_PayLoads.ChaseRequest_PayLoads_RG_20013.MATCH_WITH_RG_20013(intendedUse, accountID, subAccountID, cotivitClaimNumber))
 	        .when()
 	            .post(resource)
 	        .then()
@@ -164,7 +164,7 @@ public class API_Sd {
 
 	            System.out.println("Taking Auth_Token from Excel Sheet");
 	        } else {
-	            authtoken = Create_PendingRGAssignment_Requests.Create_Auth();
+	            authtoken = CreateOAuth2_Token.Create_Auth();
 	            System.out.println("Taking Auth_Token from API");
 	            ReadDataFromExcel.storeDataInExcel("API", authtoken);
 	            System.out.println("Storing Auth_Token in Excel Sheet");
@@ -175,7 +175,7 @@ public class API_Sd {
 	        given()
 	            .header("Content-Type", "application/json")
 	            .header("Authorization", authtoken)
-	            .body(APIs_PayLoads.ChaseRequest_PayLoads.payLoad_With_No_Matching_RG(intendedUse, accountID, subAccountID, cotivitClaimNumber))
+	            .body(APIs_PayLoads.ChaseRequest_PayLoads_RG_20013.MATCH_WITH_RG_20013(intendedUse, accountID, subAccountID, cotivitClaimNumber))
 	        .when()
 	            .post(resource)
 	        .then()
@@ -205,7 +205,7 @@ public class API_Sd {
 
 	            System.out.println("Taking Auth_Token from Excel Sheet");
 	        } else {
-	            authtoken = Create_PendingRGAssignment_Requests.Create_Auth();
+	            authtoken = CreateOAuth2_Token.Create_Auth();
 	            System.out.println("Taking Auth_Token from API");
 	            ReadDataFromExcel.storeDataInExcel("API", authtoken);
 	            System.out.println("Storing Auth_Token in Excel Sheet");
@@ -216,7 +216,7 @@ public class API_Sd {
 	        given()
 	            .header("Content-Type", "application/json")
 	            .header("Authorization", authtoken)
-	            .body(APIs_PayLoads.ChaseRequest_PayLoads.payLoad_With_Multile_Matching_RG(intendedUse, accountID, subAccountID, cotivitClaimNumber))
+	            .body(APIs_PayLoads.ChaseRequest_PayLoads_RG_20013.MATCH_WITH_RG_20013(intendedUse, accountID, subAccountID, cotivitClaimNumber))
 	        .when()
 	            .post(resource)
 	        .then()
