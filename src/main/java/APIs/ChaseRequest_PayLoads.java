@@ -1,4 +1,4 @@
-package APIs_PayLoads;
+package APIs;
 
 public class ChaseRequest_PayLoads {
 	public static  String demoTest(String intendedUse, String accountID, String subAccountID, String cotivitClaimNumber) {		
@@ -6,8 +6,8 @@ public class ChaseRequest_PayLoads {
 				+ "  \"ChaseRequest\": {\r\n"
 				+ "    \"ChaseRequestHeader\": {\r\n"
 				+ "      \"IntendedUse\": \""+intendedUse+"\",\r\n"
-				+ "      \"AuditType\": \"HH\",\r\n"
-				+ "      \"ChartType\": \"Billing\",\r\n"
+				+ "      \"AuditType\": \"SS\",\r\n"
+				+ "      \"ChartType\": \"Medical\",\r\n"
 				+ "      \"RelatedChaseID\": \"911\",\r\n"
 				+ "      \"ExternalChaseNumber\": \"894986377\",\r\n"
 				+ "      \"GlobalWorkforceApproved\": false,\r\n"
@@ -28,8 +28,8 @@ public class ChaseRequest_PayLoads {
 				+ "      \"ClaimType\": \"S\",\r\n"
 				+ "      \"InNetwork\": true,\r\n"
 				+ "      \"ClientClaimNumber\": \"5106326342\",\r\n"
-				+ "      \"DateOfServiceStart\": \"2024-09-26\",\r\n"
-				+ "      \"DateOfServiceEnd\": \"2024-10-26\",\r\n"
+				+ "      \"DateOfServiceStart\": \"2022-09-26\",\r\n"
+				+ "      \"DateOfServiceEnd\": \"2023-09-26\",\r\n"
 				+ "      \"TotalClaimAmt\": 1666.09,\r\n"
 				+ "      \"ProviderSpecialty\": \"test\",\r\n"
 				+ "      \"PatientMemberIdx\": 2,\r\n"
@@ -59,8 +59,8 @@ public class ChaseRequest_PayLoads {
 				+ "    \"Members\": [\r\n"
 				+ "      {\r\n"
 				+ "        \"Member\": {\r\n"
-				+ "          \"LastName\": \"ZakirS\",\r\n"
-				+ "          \"FirstName\": \"ZRAZ\",\r\n"
+				+ "          \"LastName\": \"Richards\",\r\n"
+				+ "          \"FirstName\": \"Elizabeth\",\r\n"
 				+ "          \"Address1\": \"048 Hinton Loop Apt. 872\",\r\n"
 				+ "          \"Address2\": \"Apt. 736\",\r\n"
 				+ "          \"City\": \"Kathleenside\",\r\n"
@@ -79,8 +79,8 @@ public class ChaseRequest_PayLoads {
 				+ "      },\r\n"
 				+ "      {\r\n"
 				+ "        \"Member\": {\r\n"
-				+ "          \"LastName\": \"Zakir\",\r\n"
-				+ "          \"FirstName\": \"ZR\",\r\n"
+				+ "          \"LastName\": \"Evans\",\r\n"
+				+ "          \"FirstName\": \"Theresa\",\r\n"
 				+ "          \"Address1\": \"644 Rachel Ridge Apt. 945\",\r\n"
 				+ "          \"Address2\": \"Suite 660\",\r\n"
 				+ "          \"City\": \"East Victoriaborough\",\r\n"

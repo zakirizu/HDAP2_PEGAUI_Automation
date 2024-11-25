@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="APIs.Create_PreLaunch_Requests">
+      <class name="APIs.DemoTestKavyaStory">
         <methods>
-          <include name="bulkCreate" invocation-numbers="0 1 2 4"/>
+          <include name="ChaseRequest_With_Single_Matching_RG_01"/>
         </methods>
-      </class> <!-- APIs.Create_PreLaunch_Requests -->
+      </class> <!-- APIs.DemoTestKavyaStory -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
