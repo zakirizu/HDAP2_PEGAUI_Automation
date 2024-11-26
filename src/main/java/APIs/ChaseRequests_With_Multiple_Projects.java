@@ -1,5 +1,4 @@
 package APIs;
-
 import static io.restassured.RestAssured.given;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -7,7 +6,7 @@ import APIs_PayLoads.CreateOAuth2_Token;
 import io.restassured.RestAssured;
 import utils.PropertiesFileReader;
 
-public class ChaseRequests_With_Different_AccountID_IntendedUse {
+public class ChaseRequests_With_Multiple_Projects {
 	static String endPoint = PropertiesFileReader.getAPIProperty("chaseRequest_url");
 	static String resource = PropertiesFileReader.getAPIProperty("chaseRequest_resource");
 	static String intendedUse = PropertiesFileReader.getAPIProperty("intendedUse");
@@ -16,7 +15,7 @@ public class ChaseRequests_With_Different_AccountID_IntendedUse {
 	static String authtoken = CreateOAuth2_Token.Create_Auth();
 
 	//We need to run this 100 times. But we are doing it in two rounds 50 each due to the limitation in the time out.
-	@Test(invocationCount = 2, dataProvider = "200_Set_testdata" ) 
+	@Test(invocationCount = 10, dataProvider = "Set4" ) 
 	public static void ChaseRequest_With_Single_Matching_RG_01(String accountID , String intendedUse) throws InterruptedException {
 		String cotivitClaimNumber = stepDefinitionFile.Common_Functions_Sd.getUniqueRandomInteger();
 		Thread.sleep(500);
@@ -37,7 +36,7 @@ public class ChaseRequests_With_Different_AccountID_IntendedUse {
 	}
 	
 	
-	 @DataProvider (name = "50_Set_testdata")
+	 @DataProvider (name = "Set1")
      public Object[][] FiftySetData(){
 	 return new Object[][] {
 		 {"P610", "HEDIS"},
@@ -46,7 +45,7 @@ public class ChaseRequests_With_Different_AccountID_IntendedUse {
      }
 
 
-	 @DataProvider (name = "100_Set_testdata")
+	 @DataProvider (name = "Set2")
      public Object[][] HundredSetData(){
 	 return new Object[][] {
 		 {"J667", "CV"},
@@ -64,7 +63,7 @@ public class ChaseRequests_With_Different_AccountID_IntendedUse {
 	 
 	 
 
-	 @DataProvider (name = "150_Set_testdata")
+	 @DataProvider (name = "Set3")
      public Object[][] OneFiftySetData(){
 	 return new Object[][] {
 		 {"M710", "CRA"},
@@ -82,7 +81,7 @@ public class ChaseRequests_With_Different_AccountID_IntendedUse {
 	 }
 	 
 	 
-	 @DataProvider (name = "200_Set_testdata")
+	 @DataProvider (name = "Set4")
      public Object[][] TwoHundredSetData(){
 	 return new Object[][] {
 		 {"Q001", "RADV"},

@@ -6,7 +6,7 @@ import APIs_PayLoads.CreateOAuth2_Token;
 import io.restassured.RestAssured;
 import utils.PropertiesFileReader;
 
-public class ChaseRequests_With_Same_AccountID_IntendeUse {
+public class ChaseRequests_With_SingleProject {
 
 	//static HashMap<String, String> testData = ReadDataFromExcel.getExcelData("createRG", TestCaseID);
 	static String endPoint = PropertiesFileReader.getAPIProperty("chaseRequest_url");
@@ -18,7 +18,7 @@ public class ChaseRequests_With_Same_AccountID_IntendeUse {
 	
 	
 
-	@Test(invocationCount = 3)
+	@Test(invocationCount = 2)
 	public static void ChaseRequest_With_Single_Matching_RG_01() throws InterruptedException {
 		String cotivitClaimNumber = stepDefinitionFile.Common_Functions_Sd.getUniqueRandomInteger();
 		System.out.println(
