@@ -1,14 +1,8 @@
 package APIs;
 
 import static io.restassured.RestAssured.given;
-
-import java.util.HashMap;
-
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-
-import factory.ReadDataFromExcel;
-import io.cucumber.java.en.Then;
+import APIs_PayLoads.CreateOAuth2_Token;
 import io.restassured.RestAssured;
 import utils.PropertiesFileReader;
 

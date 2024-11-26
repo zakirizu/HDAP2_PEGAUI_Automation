@@ -2,10 +2,9 @@ package stepDefinitionFile;
 import static io.restassured.RestAssured.given;
 import org.apache.commons.lang3.StringUtils;
 import java.util.HashMap;
-import APIs.CreateOAuth2_Token;
+import APIs_PayLoads.CreateOAuth2_Token;
 import factory.ReadDataFromExcel;
 import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
 import io.restassured.RestAssured;
 
 
@@ -15,9 +14,6 @@ public class API_Sd {
 	static String authtoken;
     // Extract other values from testData
 
-
-
-	
 	
 	@Given("^Read ExcelData from API_Sheet for  (.+)$")
 	public HashMap<String, String> ReadExcelSheetDataFromSheet(String TestCaseID) {

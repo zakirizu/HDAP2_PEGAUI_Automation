@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="APIs.DemoTestKavyaStory">
+      <class name="APIs.ChaseRequests_With_Different_AccountID_IntendedUse">
         <methods>
-          <include name="ChaseRequest_With_Single_Matching_RG_01" invocation-numbers="1 2 3 4 5 6 7 8 9"/>
+          <include name="ChaseRequest_With_Single_Matching_RG_01" invocation-numbers="2 4 5 7 8 9"/>
         </methods>
-      </class> <!-- APIs.DemoTestKavyaStory -->
+      </class> <!-- APIs.ChaseRequests_With_Different_AccountID_IntendedUse -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

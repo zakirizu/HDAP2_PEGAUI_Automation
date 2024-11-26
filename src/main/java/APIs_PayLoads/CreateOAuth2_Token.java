@@ -1,4 +1,4 @@
-package APIs;
+package APIs_PayLoads;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
