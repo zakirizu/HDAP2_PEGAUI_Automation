@@ -40,6 +40,15 @@ public class ChaseRequests_With_Multiple_Projects {
      public Object[][] FiftySetData(){
 	 return new Object[][] {
 		 {"P610", "HEDIS"},
+		 {"P610", "CCV"},
+		 {"P610", "CV"},
+		 {"P610", "MRA"},
+		 {"P610", "CRA"},
+		 {"P610", "CPR"},
+		{"P610", "RADV"},
+		{"J667", "RCA"},
+		{"J667", "HEDIS"},
+		{"J667", "CCV"},
 
 			};
      }
