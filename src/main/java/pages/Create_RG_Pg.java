@@ -74,6 +74,10 @@ public class Create_RG_Pg {
 		private WebElement Contacts_Nextbtn;
 		
 		
+		@FindBy(xpath = "//div[text()='<< Back']")
+		private WebElement Contacts_Backbtn;
+		
+		
 //Request Group Settings-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		@FindBy(xpath = "//input[@id='e12165d4']")
 		private WebElement Request_Group_Name_Txtbox;
@@ -138,13 +142,13 @@ public class Create_RG_Pg {
 		
 		
 		
-		@FindBy(xpath = "//div[@data-expr-id='932934f8ede9b951cd7bdf227f159b38954f5729_116']//select[@id='c7dd8e21']")
+		@FindBy(xpath = "(//select[@ID='c7dd8e21'])[1]")
 		private WebElement LetterPreference_ddl ;
 		
-		@FindBy(xpath = "//div[@data-expr-id='932934f8ede9b951cd7bdf227f159b38954f5729_116']//input[@id='9da9e070']")
+		@FindBy(xpath = "(//input[@id='9da9e070'])[2]")
 		private WebElement Use_facility_checkbox;
 		
-		@FindBy(xpath = "//div[@data-expr-id='932934f8ede9b951cd7bdf227f159b38954f5729_116']//input[@id='7736f9b2']")
+		@FindBy(xpath = "(//input[@id='7736f9b2'])[2]")
 		private WebElement Group_letter_checkbox;
 		
 		@FindBy(xpath = "//input[@id='70c38c10']")
@@ -241,9 +245,7 @@ public class Create_RG_Pg {
 		}
 
 
-		public void setRG_Back_Btn(WebElement rG_Back_Btn) {
-			RG_Back_Btn = rG_Back_Btn;
-		}
+		
 
 		@FindBy(xpath = "//button[text()='Add Override']")
 		private WebElement  ADDOverride_BTN;
@@ -462,6 +464,9 @@ public class Create_RG_Pg {
 		@FindBy(xpath = "//div[text()='Dates of Service Availability']")
 		private WebElement Dates_of_service_availability;
 		
+		@FindBy(xpath = "//button[text()='Add DOS Range']")
+		private WebElement DOS_Click;
+		
 		@FindBy(xpath = "//input[@id='992a9b8b']")
 		private WebElement DOSAFrom_textbox;
 		
@@ -555,6 +560,10 @@ public class Create_RG_Pg {
 		
 		@FindBy(xpath = "(//iframe[contains(@title,'RG-')])[1]")
 		private WebElement frame_CreateRG;
+		
+		
+		@FindBy(xpath = "//iframe[@name='PegaGadget1Ifr']")
+		private WebElement frame_Req_Grp;
 		
 		@FindBy(xpath = "//button[@title='Complete this assignment']")
 		private WebElement btn_Next;
@@ -931,6 +940,26 @@ public class Create_RG_Pg {
 		private WebElement  return_prefernce_ddl;
 		public WebElement getReturn_prefernce_ddl() {
 			return return_prefernce_ddl;
+		}
+
+
+		public WebElement getFrame_Req_Grp() {
+			return frame_Req_Grp;
+		}
+
+
+		public void setFrame_Req_Grp(WebElement frame_Req_Grp) {
+			this.frame_Req_Grp = frame_Req_Grp;
+		}
+
+
+		public WebElement getContacts_Backbtn() {
+			return Contacts_Backbtn;
+		}
+
+
+		public WebElement getDOS_Click() {
+			return DOS_Click;
 		}
 		
 		
