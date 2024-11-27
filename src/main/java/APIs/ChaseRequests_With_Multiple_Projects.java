@@ -15,7 +15,7 @@ public class ChaseRequests_With_Multiple_Projects {
 	static String authtoken = CreateOAuth2_Token.Create_Auth();
 
 	//We need to run this 100 times. But we are doing it in two rounds 50 each due to the limitation in the time out.
-	@Test(invocationCount = 10, dataProvider = "Set4" ) 
+	@Test(invocationCount = 10, dataProvider = "demo" ) 
 	public static void ChaseRequest_With_Single_Matching_RG_01(String accountID , String intendedUse) throws InterruptedException {
 		String cotivitClaimNumber = stepDefinitionFile.Common_Functions_Sd.getUniqueRandomInteger();
 		Thread.sleep(500);
@@ -34,7 +34,9 @@ public class ChaseRequests_With_Multiple_Projects {
 				.when().post(resource)
 				.then().log().body(true).assertThat().statusCode(202).extract().response().jsonPath();
 	}
+
 	
+
 	
 	 @DataProvider (name = "Set1")
      public Object[][] FiftySetData(){
