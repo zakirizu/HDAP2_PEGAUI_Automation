@@ -9,13 +9,15 @@ import utils.PropertiesFileReader;
 public class ChaseRequests_With_Multiple_Projects {
 	static String endPoint = PropertiesFileReader.getAPIProperty("chaseRequest_url");
 	static String resource = PropertiesFileReader.getAPIProperty("chaseRequest_resource");
-	static String intendedUse = PropertiesFileReader.getAPIProperty("intendedUse");
-	static String accountID = PropertiesFileReader.getAPIProperty("AccountID");
 	static String subAccountID = PropertiesFileReader.getAPIProperty("SubAccountID");
 	static String authtoken = CreateOAuth2_Token.Create_Auth();
+	static String auditType = PropertiesFileReader.getAPIProperty("AuditType");
+	static String chartType = PropertiesFileReader.getAPIProperty("ChartType");
+	static String DOS = PropertiesFileReader.getAPIProperty("DateOfStart");
+	static String DOE = PropertiesFileReader.getAPIProperty("DateOfEnd");
 
 	//We need to run this 100 times. But we are doing it in two rounds 50 each due to the limitation in the time out.
-	@Test(invocationCount = 10, dataProvider = "demo" ) 
+	@Test(invocationCount = 100, dataProvider = "demo" ) 
 	public static void ChaseRequest_With_Single_Matching_RG_01(String accountID , String intendedUse) throws InterruptedException {
 		String cotivitClaimNumber = stepDefinitionFile.Common_Functions_Sd.getUniqueRandomInteger();
 		Thread.sleep(500);
@@ -30,7 +32,7 @@ public class ChaseRequests_With_Multiple_Projects {
 		// JsonPath js =
 		given()// .log().all()
 		.header("Content-Type", "application/json").header("Authorization", authtoken)
-				.body(APIs_PayLoads.ChaseRequest_PayLoads_RG_20013.MATCH_WITH_RG_20013(intendedUse, accountID,	subAccountID, cotivitClaimNumber))
+		.body(APIs_PayLoads.ChaseRequest_PayLoads_RG_20013.MATCH_WITH_RG_20013(auditType,chartType, DOS, DOE, intendedUse, accountID,	subAccountID, cotivitClaimNumber))
 				.when().post(resource)
 				.then().log().body(true).assertThat().statusCode(202).extract().response().jsonPath();
 	}
@@ -38,7 +40,7 @@ public class ChaseRequests_With_Multiple_Projects {
 	
 
 	
-	 @DataProvider (name = "Set1")
+	 @DataProvider (name = "demo")
      public Object[][] FiftySetData(){
 	 return new Object[][] {
 		 {"P610", "HEDIS"},

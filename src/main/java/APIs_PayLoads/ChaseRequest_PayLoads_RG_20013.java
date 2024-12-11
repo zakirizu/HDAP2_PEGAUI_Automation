@@ -1,13 +1,13 @@
 package APIs_PayLoads;
 
 public class ChaseRequest_PayLoads_RG_20013 {
-	public static  String MATCH_WITH_RG_20013(String intendedUse, String accountID, String subAccountID, String cotivitClaimNumber) {		
+	public static  String MATCH_WITH_RG_20013(String auditType, String  chartType, String DOS, String DOE, String intendedUse, String accountID, String subAccountID, String cotivitClaimNumber) {		
 		String payLoad = "{\r\n"
 				+ "  \"ChaseRequest\": {\r\n"
 				+ "    \"ChaseRequestHeader\": {\r\n"
 				+ "      \"IntendedUse\": \""+intendedUse+"\",\r\n"
-				+ "      \"AuditType\": \"HH\",\r\n"
-				+ "      \"ChartType\": \"Billing\",\r\n"
+				+ "      \"AuditType\": \""+auditType+"\",\r\n"
+				+ "      \"ChartType\": \""+chartType+"\",\r\n"
 				+ "      \"RelatedChaseID\": \"911\",\r\n"
 				+ "      \"ExternalChaseNumber\": \"894986377\",\r\n"
 				+ "      \"GlobalWorkforceApproved\": false,\r\n"
@@ -28,8 +28,8 @@ public class ChaseRequest_PayLoads_RG_20013 {
 				+ "      \"ClaimType\": \"S\",\r\n"
 				+ "      \"InNetwork\": true,\r\n"
 				+ "      \"ClientClaimNumber\": \"5106326342\",\r\n"
-				+ "      \"DateOfServiceStart\": \"2023-10-26\",\r\n"
-				+ "      \"DateOfServiceEnd\": \"2023-11-26\",\r\n"
+				+ "      \"DateOfServiceStart\": \""+DOS+"\",\r\n"
+				+ "      \"DateOfServiceEnd\": \""+DOE+"\",\r\n"
 				+ "      \"TotalClaimAmt\": 1666.09,\r\n"
 				+ "      \"ProviderSpecialty\": \"test\",\r\n"
 				+ "      \"PatientMemberIdx\": 2,\r\n"
@@ -120,7 +120,7 @@ public class ChaseRequest_PayLoads_RG_20013 {
 				+ "      },\r\n"
 				+ "      {\r\n"
 				+ "        \"Provider\": {\r\n"
-				+ "          \"Name\": \"\",\r\n"
+				+ "          \"Name\": \"Automation Testing QA\",\r\n"
 				+ "          \"LastName\": \"Messer\",\r\n"
 				+ "          \"FirstName\": \"Michelle\",\r\n"
 				+ "          \"Address1\": \"94966 Glass Roads Suite 263\",\r\n"
@@ -263,7 +263,7 @@ public class ChaseRequest_PayLoads_RG_20013 {
 				+ "      },\r\n"
 				+ "      {\r\n"
 				+ "        \"Provider\": {\r\n"
-				+ "          \"Name\": \"\",\r\n"
+				+ "          \"Name\": \"Automation Testing phi QA\",\r\n"
 				+ "          \"LastName\": \"Messer\",\r\n"
 				+ "          \"FirstName\": \"Michelle\",\r\n"
 				+ "          \"Address1\": \"94966 Glass Roads Suite 263\",\r\n"

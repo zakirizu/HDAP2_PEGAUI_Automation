@@ -6,6 +6,7 @@ import APIs_PayLoads.CreateOAuth2_Token;
 import factory.ReadDataFromExcel;
 import io.cucumber.java.en.Given;
 import io.restassured.RestAssured;
+import utils.PropertiesFileReader;
 
 
 public class API_Sd {
@@ -13,7 +14,10 @@ public class API_Sd {
 	HashMap<String, String> testData;
 	static String authtoken;
     // Extract other values from testData
-
+	static String auditType = PropertiesFileReader.getAPIProperty("AuditType");
+	static String chartType = PropertiesFileReader.getAPIProperty("ChartType");
+	static String DOS = PropertiesFileReader.getAPIProperty("DateOfStart");
+	static String DOE = PropertiesFileReader.getAPIProperty("DateOfEnd");
 	
 	@Given("^Read ExcelData from API_Sheet for  (.+)$")
 	public HashMap<String, String> ReadExcelSheetDataFromSheet(String TestCaseID) {
@@ -127,7 +131,7 @@ public class API_Sd {
 	        given()
 	            .header("Content-Type", "application/json")
 	            .header("Authorization", authtoken)
-	            .body(APIs_PayLoads.ChaseRequest_PayLoads_RG_20013.MATCH_WITH_RG_20013(intendedUse, accountID, subAccountID, cotivitClaimNumber))
+	        	.body(APIs_PayLoads.ChaseRequest_PayLoads_RG_20013.MATCH_WITH_RG_20013(auditType,chartType, DOS, DOE, intendedUse, accountID,	subAccountID, cotivitClaimNumber))
 	        .when()
 	            .post(resource)
 	        .then()
@@ -171,7 +175,7 @@ public class API_Sd {
 	        given()
 	            .header("Content-Type", "application/json")
 	            .header("Authorization", authtoken)
-	            .body(APIs_PayLoads.ChaseRequest_PayLoads_RG_20013.MATCH_WITH_RG_20013(intendedUse, accountID, subAccountID, cotivitClaimNumber))
+	        	.body(APIs_PayLoads.ChaseRequest_PayLoads_RG_20013.MATCH_WITH_RG_20013(auditType,chartType, DOS, DOE, intendedUse, accountID,	subAccountID, cotivitClaimNumber))
 	        .when()
 	            .post(resource)
 	        .then()
@@ -212,7 +216,7 @@ public class API_Sd {
 	        given()
 	            .header("Content-Type", "application/json")
 	            .header("Authorization", authtoken)
-	            .body(APIs_PayLoads.ChaseRequest_PayLoads_RG_20013.MATCH_WITH_RG_20013(intendedUse, accountID, subAccountID, cotivitClaimNumber))
+	        	.body(APIs_PayLoads.ChaseRequest_PayLoads_RG_20013.MATCH_WITH_RG_20013(auditType,chartType, DOS, DOE, intendedUse, accountID,	subAccountID, cotivitClaimNumber))
 	        .when()
 	            .post(resource)
 	        .then()
