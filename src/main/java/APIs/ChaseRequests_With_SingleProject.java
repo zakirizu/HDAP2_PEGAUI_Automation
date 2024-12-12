@@ -13,8 +13,7 @@ public class ChaseRequests_With_SingleProject {
 	static String resource = PropertiesFileReader.getAPIProperty("chaseRequest_resource");
 	static String intendedUse = PropertiesFileReader.getAPIProperty("IntendedUse");
 	static String accountID = PropertiesFileReader.getAPIProperty("Client_AccountID");
-	static String subAccountID = PropertiesFileReader.getAPIProperty("SubAccountID");
-	
+	static String subAccountID = PropertiesFileReader.getAPIProperty("SubAccountID");	
 	static String auditType = PropertiesFileReader.getAPIProperty("AuditType");
 	static String chartType = PropertiesFileReader.getAPIProperty("ChartType");
 	static String DOS = PropertiesFileReader.getAPIProperty("DateOfStart");
