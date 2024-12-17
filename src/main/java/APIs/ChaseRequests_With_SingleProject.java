@@ -18,24 +18,23 @@ public class ChaseRequests_With_SingleProject {
 	static String chartType = PropertiesFileReader.getAPIProperty("ChartType");
 	static String DOS = PropertiesFileReader.getAPIProperty("DateOfStart");
 	static String DOE = PropertiesFileReader.getAPIProperty("DateOfEnd");
-	static String cotivitClaimNumber = stepDefinitionFile.Common_Functions_Sd.getUniqueRandomInteger();
+	
 	
 	
 	
 	static String authtoken = CreateOAuth2_Token.Create_Auth();
 	
 	
-	@Test(invocationCount =4)
+	@Test(invocationCount =120)
 	public static void ChaseRequest_With_Single_Matching_RG_01() throws InterruptedException {
-		
 		System.out.println(	"*******************************Creating Chase Request Matching With Single RG with Below Combination*****************************");
 		System.out.println("Intended Use-------------------------->" + intendedUse);
 		System.out.println("Account ID---------------------------->" + accountID);
 		System.out.println("Sub Account ID----------------------->" + subAccountID);
+		String cotivitClaimNumber = stepDefinitionFile.Common_Functions_Sd.currentDateTimeMilliSeconds();
 		System.out.println("Cotiviti Claim Number--------------->" + cotivitClaimNumber);
-		
 		System.out.println("<----------RESPONSE BODY--------->");
-		Thread.sleep(2000);
+		Thread.sleep(800);
 
 		RestAssured.baseURI = endPoint; 
 		// JsonPath js =

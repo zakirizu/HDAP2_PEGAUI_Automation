@@ -133,6 +133,7 @@ public class Common_Functions_Sd {
 		String stringDate = DateFor.format(date);
 		String RandomText = ((stringDate.replace(" ", "")).replace(",", "")).replace(":", "");
 		System.out.println(RandomText);	
+		
 		return RandomText;
 	
 	}
@@ -145,6 +146,21 @@ public class Common_Functions_Sd {
         return temp;
 	}	
 
+	public static String currentDateTimeMilliSeconds() {
+		String stringDate ="";
+		try {	
+			Thread.sleep(50);
+		Date date = new Date();
+		SimpleDateFormat DateFor = new SimpleDateFormat("yyyyMMddHHmmssSSS");
+		stringDate = DateFor.format(date);
+		} catch (Exception e) {
+			e.getLocalizedMessage();
+		}
+		return stringDate;
+	}
+	
+	
+	
 	/*
 	 *Desgined By: Shaik Zakir Hussain
 	 * This function can be used to enter data into the Next Review Date.
