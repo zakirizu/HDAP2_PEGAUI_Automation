@@ -17,7 +17,7 @@ public class ChaseRequests_With_Multiple_Projects {
 	static String DOE = PropertiesFileReader.getAPIProperty("DateOfEnd");
 
 	//We need to run this 100 times. But we are doing it in two rounds 50 each due to the limitation in the time out.
-	@Test(invocationCount = 20, dataProvider = "Set4" ) 
+	@Test(invocationCount = 1, dataProvider = "Set4" ) 
 	public static void ChaseRequest_With_Single_Matching_RG_01(String accountID , String intendedUse) throws InterruptedException {
 		String cotivitClaimNumber = stepDefinitionFile.Common_Functions_Sd.getUniqueRandomInteger();
 		Thread.sleep(500);
