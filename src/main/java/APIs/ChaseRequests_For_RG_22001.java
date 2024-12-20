@@ -6,7 +6,7 @@ import APIs_PayLoads.CreateOAuth2_Token;
 import io.restassured.RestAssured;
 import utils.PropertiesFileReader;
 
-public class ChaseRequests_With_Multiple_Projects {
+public class ChaseRequests_For_RG_22001 {
 	static String endPoint = PropertiesFileReader.getAPIProperty("chaseRequest_url");
 	static String resource = PropertiesFileReader.getAPIProperty("chaseRequest_resource");
 	static String subAccountID = PropertiesFileReader.getAPIProperty("SubAccountID");
@@ -17,24 +17,23 @@ public class ChaseRequests_With_Multiple_Projects {
 	static String DOE = PropertiesFileReader.getAPIProperty("DateOfEnd");
 
 	//We need to run this 100 times. But we are doing it in two rounds 50 each due to the limitation in the time out.
-	@Test(invocationCount = 1, dataProvider = "Set4" ) 
+	@Test(invocationCount = 3, dataProvider = "Set4" ) 
 	public static void ChaseRequest_With_Single_Matching_RG_01(String accountID , String intendedUse) throws InterruptedException {
 		String cotivitClaimNumber = stepDefinitionFile.Common_Functions_Sd.getUniqueRandomInteger();
 		Thread.sleep(500);
 		System.out.println("*******************************Creating Chase Request Matching With Single RG with Below Combination*****************************");
 		System.out.println("Intended Use-------------------------->" + intendedUse);
-		System.out.println("Account ID---------------------------->" + accountID);
-		System.out.println("Sub Account ID----------------------->" + subAccountID);
+		System.out.println("Account ID----------------------------->" + accountID);
+		System.out.println("Sub Account ID------------------------>" + subAccountID);
 		System.out.println("Cotiviti Claim Number--------------->" + cotivitClaimNumber);
 		System.out.println("<----------RESPONSE BODY--------->");
-
 		RestAssured.baseURI = endPoint;
 		// JsonPath js =
 		given()// .log().all()
 		.header("Content-Type", "application/json").header("Authorization", authtoken)
 		.body(APIs_PayLoads.ChaseRequest_PayLoads_RG_20013.MATCH_WITH_RG_20013(auditType,chartType, DOS, DOE, intendedUse, accountID,	subAccountID, cotivitClaimNumber))
-				.when().post(resource)
-				.then().log().body(true).assertThat().statusCode(202).extract().response().jsonPath();
+		.when().post(resource)
+		.then().log().body(true).assertThat().statusCode(202).extract().response().jsonPath();
 	}
 
 	

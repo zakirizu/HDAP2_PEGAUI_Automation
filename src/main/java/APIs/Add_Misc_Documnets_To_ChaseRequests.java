@@ -15,11 +15,8 @@ public class Add_Misc_Documnets_To_ChaseRequests {
 		System.out.println(	"*******************************Creating Chase Request Matching With Single RG with Below Combination*****************************");
 		String endPoint = PropertiesFileReader.getAPIProperty("misc_url");
 		String resource = "/qa/HDAP/Workflow/v1/ChaseRequests/"+id+"/WFUpdates";
-		//String resource = PropertiesFileReader.getAPIProperty("misc_resource");	
-
 		System.out.println("<----------RESPONSE BODY--------->");
 		Thread.sleep(800);
-
 		RestAssured.baseURI = endPoint; 
 		// JsonPath js =
 		given() .log().all()
@@ -33,27 +30,23 @@ public class Add_Misc_Documnets_To_ChaseRequests {
 	 @DataProvider (name = "demo")
      public Object[][] FiftySetData(){
 	 return new Object[][] {
-		// {"A888-0000009333"},
-		// {"A888-0000009334"},
-		// {"A888-0000009335"},
-		 {"A888-0000009336"},
-		 {"A888-0000009337"},
-		 {"A888-0000009338"},
-		 {"A888-0000009339"},
-		 {"A888-0000009340"},
-		 {"A888-0000009341"},
-		 {"A888-0000009342"},
-		 {"A888-0000009343"},
-		 {"A888-0000009344"},
-		 {"A888-0000009345"},
-		 {"A888-0000009346"},
-		 {"A888-0000009347"},
-		 {"A888-0000009348"},
-		 {"A888-0000009349"},
-		 {"A888-0000009350"},
-		 {"A888-0000009351"},
-		 {"A888-0000009352"},
-		 {"A888-0000009353"} 
+		 {"A888-0000009401"},
+	  /*  {"B115-0000000328"},
+	    {"B115-0000000326"},
+		{"B115-0000000335"},
+		{"B115-0000000338"},
+		{"B115-0000000318"},
+		{"B115-0000000315"},
+		{"B115-0000000317"},
+		{"B115-0000000330"},
+		{"B115-0000000334"},
+	     {"B115-0000000320"},
+	     {"B115-0000000323"},
+	     {"B115-0000000331"},
+	    {"B115-0000000324"},	
+	    {"B115-0000000332"},
+		{"B115-0000000325"},
+		{"B115-0000000316"} */
 
 			};
      }

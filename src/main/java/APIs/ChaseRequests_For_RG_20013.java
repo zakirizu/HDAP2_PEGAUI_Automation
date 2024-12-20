@@ -6,7 +6,7 @@ import APIs_PayLoads.CreateOAuth2_Token;
 import io.restassured.RestAssured;
 import utils.PropertiesFileReader;
 
-public class ChaseRequests_With_SingleProject {
+public class ChaseRequests_For_RG_20013 {
 
 	//static HashMap<String, String> testData = ReadDataFromExcel.getExcelData("createRG", TestCaseID);
 	static String endPoint = PropertiesFileReader.getAPIProperty("chaseRequest_url");
@@ -25,7 +25,7 @@ public class ChaseRequests_With_SingleProject {
 	static String authtoken = CreateOAuth2_Token.Create_Auth();
 	
 	
-	@Test(invocationCount =30)
+	@Test(invocationCount =3)
 	public static void ChaseRequest_With_Single_Matching_RG_01() throws InterruptedException {
 		System.out.println(	"*******************************Creating Chase Request Matching With Single RG with Below Combination*****************************");
 		System.out.println("Intended Use-------------------------->" + intendedUse);
@@ -38,7 +38,7 @@ public class ChaseRequests_With_SingleProject {
 
 		RestAssured.baseURI = endPoint; 
 		// JsonPath js =
-		given().log().all()
+		given()//.log().all()
 		.header("Content-Type", "application/json").header("Authorization", authtoken)
 				.body(APIs_PayLoads.ChaseRequest_PayLoads_RG_20013.MATCH_WITH_RG_20013(auditType,chartType, DOS, DOE, intendedUse, accountID,	subAccountID, cotivitClaimNumber))
 				.when().post(resource)
