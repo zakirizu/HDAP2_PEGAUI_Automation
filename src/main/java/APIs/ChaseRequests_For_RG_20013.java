@@ -18,14 +18,10 @@ public class ChaseRequests_For_RG_20013 {
 	static String chartType = PropertiesFileReader.getAPIProperty("ChartType");
 	static String DOS = PropertiesFileReader.getAPIProperty("DateOfStart");
 	static String DOE = PropertiesFileReader.getAPIProperty("DateOfEnd");
-	
-	
-	
-	
 	static String authtoken = CreateOAuth2_Token.Create_Auth();
 	
 	
-	@Test(invocationCount =3)
+	@Test(invocationCount =4)
 	public static void ChaseRequest_With_Single_Matching_RG_01() throws InterruptedException {
 		System.out.println(	"*******************************Creating Chase Request Matching With Single RG with Below Combination*****************************");
 		System.out.println("Intended Use-------------------------->" + intendedUse);

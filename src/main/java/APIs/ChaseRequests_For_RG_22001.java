@@ -15,7 +15,7 @@ public class ChaseRequests_For_RG_22001 {
 	static String chartType = PropertiesFileReader.getAPIProperty("ChartType");
 	static String DOS = PropertiesFileReader.getAPIProperty("DateOfStart");
 	static String DOE = PropertiesFileReader.getAPIProperty("DateOfEnd");
-
+	
 	//We need to run this 100 times. But we are doing it in two rounds 50 each due to the limitation in the time out.
 	@Test(invocationCount = 3, dataProvider = "Set4" ) 
 	public static void ChaseRequest_With_Single_Matching_RG_01(String accountID , String intendedUse) throws InterruptedException {
