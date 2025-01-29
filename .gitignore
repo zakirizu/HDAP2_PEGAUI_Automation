@@ -1,3 +1,11 @@
 /target/
 .settings/org.eclipse.jdt.core.prefs
 .settings/org.eclipse.jdt.core.prefs
+test-output/Default suite/Default test.html
+test-output/Default suite/Default test.xml
+test-output/emailable-report.html
+test-output/index.html
+test-output/testng-results.xml
+test-output/junitreports/TEST-APIs.ChaseRequests_For_RG_22001.xml
+test-output/index.html
+test-output/emailable-report.html
