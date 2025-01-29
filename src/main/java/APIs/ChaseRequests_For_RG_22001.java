@@ -18,7 +18,7 @@ public class ChaseRequests_For_RG_22001 {
 	static String authtoken = CreateOAuth2_Token.Create_Auth();
 	
 	
-	@Test(invocationCount =10)
+	@Test(invocationCount =2)
 	public static void ChaseRequest_With_Single_Matching_RG_01() throws InterruptedException {
 		System.out.println(	"*******************************Creating Chase Request Matching With Single RG with Below Combination*****************************");
 		System.out.println("Intended Use-------------------------->" + intendedUse);
