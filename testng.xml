@@ -1,17 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
-    <test thread-count="10" name="Test" parallel="methods">
+  <test thread-count="5" name="Test">
     <classes>
-    
-      <class name="APIs.Bulk_Create_PreLaunch_Requests">
-      		<methods>
-				<include name="ChaseRequest_With_Single_Matching_RG_01"></include>
-				<include name="ChaseRequest_With_Single_Matching_RG_01"></include>
-			</methods>
-      </class>
-
+      <class name="APIs.MultipleProjects_ChaseRequests_For_RG_22001"/>
+      <class name="APIs.ChaseRequests_For_RG_20013"/>
+      <class name="stepDefinitionFile.Common_Functions_Sd"/>
+      <class name="APIs.ChaseRequests_For_RG_22001"/>
+      <class name="APIs.Add_Misc_Documnets_To_ChaseRequests"/>
     </classes>
-    
   </test> <!-- Test -->
 </suite> <!-- Suite -->
