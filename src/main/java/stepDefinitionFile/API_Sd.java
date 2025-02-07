@@ -2,11 +2,11 @@ package stepDefinitionFile;
 import static io.restassured.RestAssured.given;
 import org.apache.commons.lang3.StringUtils;
 import java.util.HashMap;
-import APIs_PayLoads.CreateOAuth2_Token;
 import factory.ReadDataFromExcel;
 import io.cucumber.java.en.Given;
 import io.restassured.RestAssured;
 import utils.PropertiesFileReader;
+import utils_API.OAuth2_Token_QA;
 
 
 public class API_Sd {
@@ -120,7 +120,7 @@ public class API_Sd {
 
 	            System.out.println("Taking Auth_Token from Excel Sheet");
 	        } else {
-	            authtoken = CreateOAuth2_Token.Create_Auth();
+	            authtoken = OAuth2_Token_QA.Generate_QA_OAuth();
 	            System.out.println("Taking Auth_Token from API");
 	            ReadDataFromExcel.storeDataInExcel("API", authtoken);
 	            System.out.println("Storing Auth_Token in Excel Sheet");
@@ -164,7 +164,7 @@ public class API_Sd {
 
 	            System.out.println("Taking Auth_Token from Excel Sheet");
 	        } else {
-	            authtoken = CreateOAuth2_Token.Create_Auth();
+	            authtoken = OAuth2_Token_QA.Generate_QA_OAuth();
 	            System.out.println("Taking Auth_Token from API");
 	            ReadDataFromExcel.storeDataInExcel("API", authtoken);
 	            System.out.println("Storing Auth_Token in Excel Sheet");
@@ -205,7 +205,7 @@ public class API_Sd {
 
 	            System.out.println("Taking Auth_Token from Excel Sheet");
 	        } else {
-	            authtoken = CreateOAuth2_Token.Create_Auth();
+	            authtoken = OAuth2_Token_QA.Generate_QA_OAuth();
 	            System.out.println("Taking Auth_Token from API");
 	            ReadDataFromExcel.storeDataInExcel("API", authtoken);
 	            System.out.println("Storing Auth_Token in Excel Sheet");

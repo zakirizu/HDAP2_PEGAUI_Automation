@@ -1,9 +1,9 @@
 package APIs;
 import static io.restassured.RestAssured.given;
 import org.testng.annotations.Test;
-import APIs_PayLoads.CreateOAuth2_Token;
 import io.restassured.RestAssured;
 import utils.PropertiesFileReader;
+import utils_API.OAuth2_Token_QA;
 
 public class ChaseRequests_For_RG_22001 {
 	static String endPoint = PropertiesFileReader.getAPIProperty("chaseRequest_url");
@@ -15,10 +15,10 @@ public class ChaseRequests_For_RG_22001 {
 	static String chartType = PropertiesFileReader.getAPIProperty("ChartType");
 	static String DOS = PropertiesFileReader.getAPIProperty("DateOfStart");
 	static String DOE = PropertiesFileReader.getAPIProperty("DateOfEnd");
-	static String authtoken = CreateOAuth2_Token.Create_Auth();
+	static String authtoken = OAuth2_Token_QA.Generate_QA_OAuth();
 	
 	
-	@Test(invocationCount =1)
+	@Test(invocationCount =25)
 	public static void ChaseRequest_With_Single_Matching_RG_01() throws InterruptedException {
 		System.out.println(	"*******************************Creating Chase Request Matching With Single RG with Below Combination*****************************");
 		System.out.println("Intended Use-------------------------->" + intendedUse);

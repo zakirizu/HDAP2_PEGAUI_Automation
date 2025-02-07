@@ -4,12 +4,12 @@ import static io.restassured.RestAssured.given;
 
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import APIs_PayLoads.CreateOAuth2_Token;
 import io.restassured.RestAssured;
 import utils.PropertiesFileReader;
+import utils_API.OAuth2_Token_QA;
 
 public class Add_Misc_Documnets_To_ChaseRequests {
-	static String authtoken = CreateOAuth2_Token.Create_Auth();
+	static String authtoken = OAuth2_Token_QA.Generate_QA_OAuth();
 	@Test( dataProvider = "demo")
 	public static void ChaseRequest_With_Single_Matching_RG_01(String id) throws InterruptedException {
 		System.out.println(	"*******************************Creating Chase Request Matching With Single RG with Below Combination*****************************");

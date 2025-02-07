@@ -3,9 +3,9 @@ import static io.restassured.RestAssured.given;
 
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import APIs_PayLoads.CreateOAuth2_Token;
 import io.restassured.RestAssured;
 import utils.PropertiesFileReader;
+import utils_API.OAuth2_Token_QA;
 
 public class MultipleProjects_ChaseRequests_For_RG_22001 {
 	static String endPoint = PropertiesFileReader.getAPIProperty("chaseRequest_url");
@@ -15,7 +15,7 @@ public class MultipleProjects_ChaseRequests_For_RG_22001 {
 	static String chartType = PropertiesFileReader.getAPIProperty("ChartType");
 	static String DOS = PropertiesFileReader.getAPIProperty("DateOfStart");
 	static String DOE = PropertiesFileReader.getAPIProperty("DateOfEnd");
-	static String authtoken = CreateOAuth2_Token.Create_Auth();
+	static String authtoken = OAuth2_Token_QA.Generate_QA_OAuth();
 	
 	//We need to run this 100 times. But we are doing it in two rounds 50 each due to the limitation in the time out.
 	@Test(invocationCount = 1, dataProvider = "demo"  ) 
