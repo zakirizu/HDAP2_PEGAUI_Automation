@@ -13,13 +13,12 @@ import static io.restassured.RestAssured.given;
 
 public class PractDataProcessor {
 
-	 static String authtoken = OAuth2_Token_UAT.Generate_UAT_OAuth();  // Fetches the authorization token
+	   static String authtoken = Generate_OAuth2.Token();  // Fetches the authorization token
 
     public ConcurrentHashMap<String, String> processPractData(ConcurrentHashMap<String, String> dataMap, String practitionerId) {
         try {
             // Construct the API URL dynamically with the Practitioner ID
-            String apiUrl = "https://is8i4ayzcg.execute-api.us-east-1.amazonaws.com/uat/HDAP/Workflow/v1/Practitioners/"
-                    + practitionerId;
+            String apiUrl = "https://is8i4ayzcg.execute-api.us-east-1.amazonaws.com/qa/HDAP/Workflow/v1/Practitioners/"+ practitionerId;
 
             // Fetch response from the API
             String jsonResponse = sendGetRequest(apiUrl);

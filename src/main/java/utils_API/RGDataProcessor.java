@@ -14,7 +14,7 @@ import static io.restassured.RestAssured.given;
 
 public class RGDataProcessor {
 
-	 static String authtoken = OAuth2_Token_UAT.Generate_UAT_OAuth();  // Fetches the authorization token
+	   static String authtoken = Generate_OAuth2.Token();   // Fetches the authorization token
 
     // Method to generate random UK-style FirstName and LastName
     private static String[] generateUKName() {
@@ -30,7 +30,7 @@ public class RGDataProcessor {
     public ConcurrentHashMap<String, String> processRGData(ConcurrentHashMap<String, String> dataMap, String rgId) {
         try {
             // Construct the API URL dynamically with the RG ID
-            String apiUrl = "https://is8i4ayzcg.execute-api.us-east-1.amazonaws.com/uat/HDAP/Workflow/v1/RequestGroups/"+ rgId + "/ProcessesForRules";
+            String apiUrl = "https://is8i4ayzcg.execute-api.us-east-1.amazonaws.com/qa/HDAP/Workflow/v1/RequestGroups/"+ rgId + "/ProcessesForRules";
 
             // Fetch response from the API
             String jsonResponse = sendGetRequest(apiUrl);

@@ -13,7 +13,7 @@ import static io.restassured.RestAssured.given;
 
 public class FactDataProcessor {
 
-    static String authtoken = OAuth2_Token_UAT.Generate_UAT_OAuth();  // Fetches the authorization token
+	   static String authtoken = Generate_OAuth2.Token();   // Fetches the authorization token
 
     public ConcurrentHashMap<String, String> processFactData(ConcurrentHashMap<String, String> dataMap, String facilityId) {
         try {

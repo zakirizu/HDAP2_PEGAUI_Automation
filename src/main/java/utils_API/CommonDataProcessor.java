@@ -18,24 +18,21 @@ import utils.PropertiesFileReader;
 
 public class CommonDataProcessor {
 	
-    static String authtoken = OAuth2_Token_QA.Generate_QA_OAuth(); // Fetches the authorization token
+    static String authtoken = Generate_OAuth2.Token(); 
     static String inputFilePath = factory.Constants.API_INPUT;
-    static String outputFilePath = factory.Constants.API_OUTPUT;
-   
+    static String outputFilePath = factory.Constants.API_OUTPUT;   
      String resource = PropertiesFileReader.getAPIProperty("chaseRequest_resource");
 	XSSFSheet sheet;
 	XSSFWorkbook writeWB;
 	ConcurrentHashMap<String, String> dataMap;
-	// Main method for testing
+	
+	
 	public static void main(String[] args) {
 		CommonDataProcessor processor = new CommonDataProcessor();
-		//processor.processDataAndGenerateOutput("input.xlsx", "output.csv");
 		processor.processDataAndGenerateOutput(inputFilePath,outputFilePath );
 	}
 
 
-
-    // Process each row in the input Excel file and store results in output CSV
 	public void processDataAndGenerateOutput(String inputFilePath, String outputFilePath) {
 		try {
 			// Load the input Excel file
@@ -51,15 +48,8 @@ public class CommonDataProcessor {
 
 				String rgId = inputRow.getCell(0).getStringCellValue();
 				String providerID = inputRow.getCell(1).getStringCellValue();
-				
-				
-				
-				
-				//String practId = inputRow.getCell(2).getStringCellValue();
-
-				// Initialize the data map for this row
-				//ConcurrentHashMap<String, String> dataMap = new ConcurrentHashMap<>();
 				dataMap = new ConcurrentHashMap<>();
+				
 				RGDataProcessor rgProcessor = new RGDataProcessor();
 				rgProcessor.processRGData(dataMap, rgId);
 
@@ -68,7 +58,7 @@ public class CommonDataProcessor {
 					FactDataProcessor factProcessor = new FactDataProcessor();
 					factProcessor.processFactData(dataMap, providerID);
 					RestAssured.baseURI = PropertiesFileReader.getAPIProperty("chaseRequest_url");
-					given()//.log().all()
+					given().log().all()
 					.header("Content-Type", "application/json").header("Authorization", authtoken)
 							.body(APIs_PayLoads.ChaseRequest_Practitioner.Practitioner_Provider(dataMap))
 							.when().post(resource)
@@ -80,7 +70,7 @@ public class CommonDataProcessor {
 					PractDataProcessor practProcessor = new PractDataProcessor();
 					practProcessor.processPractData(dataMap, providerID);
 					RestAssured.baseURI = PropertiesFileReader.getAPIProperty("chaseRequest_url");
-					given()//.log().all()
+					given().log().all()
 					.header("Content-Type", "application/json").header("Authorization", authtoken)
 							.body(APIs_PayLoads.ChaseRequest_Practitioner.Practitioner_Provider(dataMap))
 							.when().post(resource)

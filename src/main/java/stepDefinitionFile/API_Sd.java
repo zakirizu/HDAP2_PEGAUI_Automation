@@ -6,7 +6,8 @@ import factory.ReadDataFromExcel;
 import io.cucumber.java.en.Given;
 import io.restassured.RestAssured;
 import utils.PropertiesFileReader;
-import utils_API.OAuth2_Token_QA;
+import utils_API.Generate_OAuth2;
+
 
 
 public class API_Sd {
@@ -120,7 +121,7 @@ public class API_Sd {
 
 	            System.out.println("Taking Auth_Token from Excel Sheet");
 	        } else {
-	            authtoken = OAuth2_Token_QA.Generate_QA_OAuth();
+	        	    authtoken = Generate_OAuth2.Token(); 
 	            System.out.println("Taking Auth_Token from API");
 	            ReadDataFromExcel.storeDataInExcel("API", authtoken);
 	            System.out.println("Storing Auth_Token in Excel Sheet");
@@ -164,7 +165,7 @@ public class API_Sd {
 
 	            System.out.println("Taking Auth_Token from Excel Sheet");
 	        } else {
-	            authtoken = OAuth2_Token_QA.Generate_QA_OAuth();
+	       	    authtoken = Generate_OAuth2.Token(); 
 	            System.out.println("Taking Auth_Token from API");
 	            ReadDataFromExcel.storeDataInExcel("API", authtoken);
 	            System.out.println("Storing Auth_Token in Excel Sheet");
@@ -205,7 +206,7 @@ public class API_Sd {
 
 	            System.out.println("Taking Auth_Token from Excel Sheet");
 	        } else {
-	            authtoken = OAuth2_Token_QA.Generate_QA_OAuth();
+	       	    authtoken = Generate_OAuth2.Token(); 
 	            System.out.println("Taking Auth_Token from API");
 	            ReadDataFromExcel.storeDataInExcel("API", authtoken);
 	            System.out.println("Storing Auth_Token in Excel Sheet");
