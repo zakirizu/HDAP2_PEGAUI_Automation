@@ -24,7 +24,7 @@ public class Automated_TestData_Creator {
 	
 	
 	public static void main(String[] args) {
-		System.out.println("Creating the Test Data in "+COLORS.RED+PropertiesFileReader.getAPIProperty("env")+COLORS.RESET+" Environment. If you want to change the Environment, Kindly stop and update the 'Env' Variable Under the API Properiets File");
+		System.out.println(COLORS.CYAN+"Creating the Test Data in "+PropertiesFileReader.getAPIProperty("env")+" Environment. If you want to change the Environment, Kindly stop and update the 'Env' Variable Under the API Properiets File"+COLORS.RESET);
 		 authtoken = Generate_OAuth2.Token(); 		
 		Automated_TestData_Creator processor = new Automated_TestData_Creator();
 		processor.processDataAndGenerateOutput(inputFilePath,outputFilePath );
@@ -57,8 +57,10 @@ public class Automated_TestData_Creator {
 				if(providerID.startsWith("F-"))
 				{
 					System.out.println("Reading the Facility Data");
+					
 					Get_Facility_API factProcessor = new Get_Facility_API();
 					factProcessor.get_Facility_Data(dataMap, providerID);
+					
 					String env = PropertiesFileReader.getAPIProperty("env");
 					if(env.equalsIgnoreCase("QA"))
 					{

@@ -6,7 +6,11 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import factory.COLORS;
 import io.restassured.RestAssured;
 import org.apache.poi.ss.usermodel.*;
+import org.json.JSONArray;
+import org.json.JSONObject;
+
 import io.restassured.response.Response;
+import utils.PropertiesFileReader;
 
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
@@ -18,84 +22,79 @@ public class Get_Facility_API {
 	   static String authtoken = Generate_OAuth2.Token();   // Fetches the authorization token
 
     public ConcurrentHashMap<String, String> get_Facility_Data(ConcurrentHashMap<String, String> dataMap, String facilityId) {
+    	String apiUrl= "";
         try {
-        	System.out.println("Getting the data for the Facility with Friendly ID: "+COLORS.RED+facilityId);
-            // Construct the API URL dynamically with the Facility ID
-            String apiUrl = "https://is8i4ayzcg.execute-api.us-east-1.amazonaws.com/uat/HDAP/Workflow/v1/Facilities/"+ facilityId;
+        	System.out.println(COLORS.RED+"Getting the data for the Facility with Friendly ID: "+facilityId+COLORS.RESET);
+        	
+        	String env = PropertiesFileReader.getAPIProperty("env");
+        	if(env.equalsIgnoreCase("UAT"))
+        	{
+        		String url = PropertiesFileReader.getAPIProperty("UAT_getFacility");
+        			apiUrl = url+facilityId;
+        	}
+        	else
+        	{
+        		String url = PropertiesFileReader.getAPIProperty("QA_getFacility");
+    			apiUrl = url+facilityId;
+        	}
+        	
 
             // Fetch response from the API
-            String jsonResponse = sendGetRequest(apiUrl);
+            String jsonString = 
+            		given()//.log().all()
+            		.baseUri(apiUrl).header("Content-Type", "application/json")
+                    .header("Authorization", authtoken)  
+                    .when().get().then().statusCode(200)  
+                    .extract().asString(); 
+            
+            // Create a JSONObject from the string
+            JSONObject jsonObject = new JSONObject(jsonString);
 
-            // Parse the JSON response
-            ObjectMapper objectMapper = new ObjectMapper();
-            JsonNode rootNode = objectMapper.readTree(jsonResponse);
+            String name = jsonObject.getString("Name");
+            dataMap.put("Faci_Name", name);            
+            String tin = jsonObject.getString("TIN");
+            dataMap.put("Faci_TIN", tin);            
+            String npi = jsonObject.getString("NPI"); 
+            dataMap.put("Faci_NPI", npi);      
+            String phone = jsonObject.getString("Phone");
+            dataMap.put("Faci_Phone", phone);
 
-            // Extract the required values from the response (update field names)
-            String name = rootNode.path("Name").asText();
-            String tin = rootNode.path("TIN").asText();
-            String npi = rootNode.path("NPI").asText();
-            String phone = rootNode.path("Phone").asText();
 
-            // Extract address info (addresses is an array)
-            String street = "", city = "", state = "", postalCode = "";
-            JsonNode addressesNode = rootNode.path("Addresses");
-            if (addressesNode.isArray() && addressesNode.size() > 0) {
-                JsonNode addressNode = addressesNode.get(0); // Get the first address
-                String address = addressNode.path("Address").asText();
-
-                // Use regular expressions to split the address into street, city, state, and postal code
-                String[] addressParts = parseAddress(address);
-                street = addressParts[0];
-                city = addressParts[1];
-                state = addressParts[2];
-                postalCode = addressParts[3];
+            // Read Addresses array
+            JSONArray addresses = jsonObject.getJSONArray("Addresses");
+      //      System.out.println("\nAddresses:");
+            for (int i = 0; i < addresses.length(); i++) {
+            	
+                JSONObject address = addresses.getJSONObject(i);
+                if(address.getBoolean("IsPrimary"))
+                {
+                   String addressDetail = address.getString("Address");
+                   String[] splitAddress = addressDetail.split(", ");
+                   dataMap.put("Faci_Street", splitAddress[0]);
+                   dataMap.put("Faci_City", splitAddress[1]);
+                   dataMap.put("Faci_State", splitAddress[2]);
+                   dataMap.put("Faci_PostalCode", splitAddress[3]);
+                   break;
+                }
             }
-
-            // Extract Facility from the response (assuming it's in the API response)
-            String facility = rootNode.path("Facility").asText(); // Facility value
-
-            // Add extracted values to the data map
-            dataMap.put("Fname", name);
-            dataMap.put("Ftin", tin);
-            dataMap.put("Fnpi", npi);
-            dataMap.put("Fphone", phone);
-            dataMap.put("Fstreet", street);
-            dataMap.put("Fcity", city);
-            dataMap.put("Fstate", state);
-            dataMap.put("FpostalCode", postalCode);
-            dataMap.put("Facility", facility);
-
-        } catch (Exception e) {
+    
+        }
+        catch (Exception e) {
             e.printStackTrace();
         }
+        
+        
+        System.out.println(COLORS.RED+"Below Request Group and Facility Data which will be now injected into Chase Request to match with this RG and Provider"+COLORS.RESET);
+      		//Printing  using ForEachLoop		
+      		for(String k : dataMap.keySet())		{
+      			System.out.println(COLORS.BLUE+k    + "----------->"    +dataMap.get(k));			
+      		}
+      		
+      		System.out.println(COLORS.RED+"NOTE:  if RG/Provider has multiple values to any Attribute Then we are taking the first one into account."+COLORS.RESET);
+      		
         return dataMap;
     }
 
-    // Method to send GET request and return the response
-    private static String sendGetRequest(String apiUrl) throws Exception {
-        return given().baseUri(apiUrl).header("Content-Type", "application/json")
-                .header("Authorization", authtoken)  // Add the Authorization header
-                .when().get().then().statusCode(200)  // Check if the status is OK
-                .extract().asString();  // Extract the response body as a string
-    }
-
-    // Helper method to parse the address string into street, city, state, and postal code
-    private String[] parseAddress(String address) {
-        String[] addressParts = new String[4];
-        // Regular expression to split the address
-        // This assumes address format: street, city, state, postal code
-        // Example: "03354 Brown Landing Apt. 514, West Dustinfort, FM, 54477"
-        String[] splitAddress = address.split(", ");
-        if (splitAddress.length == 4) {
-            addressParts[0] = splitAddress[0];  // Street
-            addressParts[1] = splitAddress[1];  // City
-            addressParts[2] = splitAddress[2];  // State
-            addressParts[3] = splitAddress[3];  // Postal Code
-        }
-        return addressParts;
-    }
-    
-    
     
     
 

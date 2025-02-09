@@ -1,14 +1,62 @@
 package APIs_PayLoads;
 
+import java.util.concurrent.ConcurrentHashMap;
+
+import utils.PropertiesFileReader;
+
 public class ChaseRequest_Facility {
 	
-	 public static  String Practitioner_Provider(String auditType, String  chartType, String DOS, String DOE, String intendedUse, String accountID, String subAccountID, String cotivitClaimNumber) {		
+	 public static  String Practitioner_Provider(ConcurrentHashMap<String, String> dataMap) {
+		 //General Data
+		 String cotivitClaimNumber = stepDefinitionFile.Common_Functions_Sd.currentDateTimeMilliSeconds();
+     	 String accountID = PropertiesFileReader.getAPIProperty("Client_AccountID");
+    	 String subAccountID = PropertiesFileReader.getAPIProperty("SubAccountID");	 
+		 
+		 
+		 //RG Details from Map
+		 String RG_intendedUse	 = dataMap.get("RGProjectTypes");//
+		 String RG_AuditType			 = dataMap.get("RGAuditTypes");//
+		 String RG_CharTypes 		= dataMap.get("RGChartTypes");//
+		 String RG_DOS 						= dataMap.get("RGstartDate");//
+		 String RG_DOE 						= dataMap.get("RGendDate");//
+		 String RG_FName 				= dataMap.get("RGfirstName");//
+		 String RG_LName 				= dataMap.get("RGlastName");//
+		 
+		 
+		 //Facility Data
+		 
+		 
+		 
+		 
+		 
+		 //Practitioner Data
+         String P_FName						= dataMap.get("PfirstName");
+         String P_LName    					=dataMap.get("PlastName");
+         String P_TIN    							=dataMap.get("Ptin");
+         String P_NPI   							 =dataMap.get("Pnpi");
+         String P_Phone 						=dataMap.get("Pphone" );
+         String P_Email    						=dataMap.get("Pemail" );
+         String P_Fax    =dataMap.get("Pfax");
+         String P_pager    =dataMap.get("Ppager");
+         String P_Languages    =dataMap.get("Planguages");
+         String P_Specaility   =dataMap.get("Pspecialty");
+         String P_Street    =dataMap.get("Pstreet");
+         String P_City    =dataMap.get("Pcity");
+         String P_State    =dataMap.get("Pstate");
+         String P_PostalCode    =dataMap.get("PpostalCode");
+         String P_PractitionerID    =dataMap.get("PpractitionerId");
+         
+
+
+
+
+		 
 		String payLoad = "{\r\n"
 				+ "    \"ChaseRequest\": {\r\n"
 				+ "        \"ChaseRequestHeader\": {\r\n"
-				+ "            \"IntendedUse\": \""+intendedUse+"\",\r\n"
-				+ "            \"AuditType\": \""+auditType+"\",\r\n"
-				+ "            \"ChartType\": \""+chartType+"\",\r\n"
+				+ "            \"IntendedUse\": \""+RG_intendedUse+"\",\r\n"
+				+ "            \"AuditType\": \""+RG_AuditType+"\",\r\n"
+				+ "            \"ChartType\": \""+RG_CharTypes+"\",\r\n"
 				+ "            \"RelatedChaseID\": \"911\",\r\n"
 				+ "            \"ExternalChaseNumber\": \"894986377\",\r\n"
 				+ "            \"GlobalWorkforceApproved\": false,\r\n"
@@ -29,8 +77,8 @@ public class ChaseRequest_Facility {
 				+ "            \"ClaimType\": \"S\",\r\n"
 				+ "            \"InNetwork\": true,\r\n"
 				+ "      \"ClientClaimNumber\": \"5106326342\",\r\n"
-				+ "            \"DateOfServiceStart\": \"2022-09-26\",\r\n"
-				+ "            \"DateOfServiceEnd\": \"2023-09-26\",\r\n"
+				+ "            \"DateOfServiceStart\": \""+RG_DOS+10+"\",\r\n"
+				+ "            \"DateOfServiceEnd\": \""+RG_DOE+"\",\r\n"
 				+ "            \"TotalClaimAmt\": 1666.09,\r\n"
 				+ "            \"ProviderSpecialty\": \"test\",\r\n"
 				+ "            \"PatientMemberIdx\": 1,\r\n"
@@ -102,20 +150,20 @@ public class ChaseRequest_Facility {
 				+ "        \"Providers\": [\r\n"
 				+ "            {\r\n"
 				+ "                \"Provider\": {\r\n"
-				+ "                    \"Name\": \"Leblanc Chiropractic, Pc\",\r\n"
-				+ "                    \"LastName\": \"\",\r\n"
-				+ "                    \"FirstName\": \"\",\r\n"
-				+ "                    \"Address1\": \"33259 Anthony Streets Suite 145\",\r\n"
+				+ "                    \"Name\": \""+P_FName+P_LName+"\",\r\n"
+				+ "                    \"LastName\": \""+P_FName+"\",\r\n"
+				+ "                    \"FirstName\": \""+P_LName+"\",\r\n"
+				+ "                    \"Address1\": \""+P_Street+"\",\r\n"
 				+ "                    \"Address2\": \"Suite 358\",\r\n"
-				+ "                    \"City\": \"West Jenna\",\r\n"
-				+ "                    \"State\": \"LA\",\r\n"
+				+ "                    \"City\": \""+P_City+"\",\r\n"
+				+ "                    \"State\": \""+P_State+"\",\r\n"
 				+ "                    \"Zip\": \"60923\",\r\n"
-				+ "                    \"NPI\": \"1528144581\",\r\n"
-				+ "                    \"TIN\": \"628766168\",\r\n"
-				+ "                    \"Phone1\": \"147-764-4955\",\r\n"
+				+ "                    \"NPI\": \""+P_NPI+"\",\r\n"
+				+ "                    \"TIN\": \""+P_TIN+"\",\r\n"
+				+ "                    \"Phone1\": \""+P_Phone+"\",\r\n"
 				+ "                    \"Phone2\": \"746-655-2864\",\r\n"
 				+ "                    \"Phone3\": \"586-128-4316\",\r\n"
-				+ "                    \"Fax\": \"498-946-3184\",\r\n"
+				+ "                    \"Fax\": \""+P_Fax+"\",\r\n"
 				+ "                    \"ClientProviderId\": \"3435\"\r\n"
 				+ "                }\r\n"
 				+ "            },\r\n"
