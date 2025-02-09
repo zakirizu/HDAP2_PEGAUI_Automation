@@ -47,7 +47,7 @@ public static String Token() {
 		org.testng.Assert.fail("Authorization token not generated.");
 	}
 
-	System.out.println("Generated Auth Token: " + authToken); // Optional: Print the token for debugging
+	System.out.println("Generated QA_Auth Token: " + authToken); // Optional: Print the token for debugging
 	return authToken;
 }
 
@@ -92,7 +92,7 @@ else
 		org.testng.Assert.fail("Authorization token not generated.");
 	}
 
-	System.out.println("Generated Auth Token: " + authToken); // Optional: Print the token for debugging
+	System.out.println("Generated UA_Auth Token: " + authToken); // Optional: Print the token for debugging
 	// return authToken;
 
 	//dp.setAuth(authToken);

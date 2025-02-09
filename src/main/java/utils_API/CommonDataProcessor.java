@@ -50,8 +50,8 @@ public class CommonDataProcessor {
 				String providerID = inputRow.getCell(1).getStringCellValue();
 				dataMap = new ConcurrentHashMap<>();
 				
-				RGDataProcessor rgProcessor = new RGDataProcessor();
-				rgProcessor.processRGData(dataMap, rgId);
+				//RGDataProcessor rgProcessor = new RGDataProcessor();
+			//	rgProcessor.processRGData(dataMap, rgId);
 
 				if(providerID.startsWith("F-"))
 				{

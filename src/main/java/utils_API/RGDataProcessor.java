@@ -6,6 +6,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import io.restassured.RestAssured;
 import org.apache.poi.ss.usermodel.*;
 import io.restassured.response.Response;
+import utils.PropertiesFileReader;
 
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
@@ -28,9 +29,18 @@ public class RGDataProcessor {
     }
 
     public ConcurrentHashMap<String, String> processRGData(ConcurrentHashMap<String, String> dataMap, String rgId) {
+    	String apiUrl ="";
         try {
             // Construct the API URL dynamically with the RG ID
-            String apiUrl = "https://is8i4ayzcg.execute-api.us-east-1.amazonaws.com/qa/HDAP/Workflow/v1/RequestGroups/"+ rgId + "/ProcessesForRules";
+        	String env = PropertiesFileReader.getAPIProperty("env");
+        	if(env.equalsIgnoreCase("QA"))
+        	{
+             apiUrl = PropertiesFileReader.getAPIProperty("QA_requestGroup")+rgId+PropertiesFileReader.getAPIProperty("QA_requestGroup_Resource");
+        	}
+        	else
+        	{
+        		 apiUrl = PropertiesFileReader.getAPIProperty("UAT_requestGroup")+ rgId+PropertiesFileReader.getAPIProperty("UAT_requestGroup_Resource");
+        	}
 
             // Fetch response from the API
             String jsonResponse = sendGetRequest(apiUrl);
@@ -77,7 +87,8 @@ public class RGDataProcessor {
 
     // Method to send GET request and return the response
     private static String sendGetRequest(String apiUrl) throws Exception {
-        return given().baseUri(apiUrl).header("Content-Type", "application/json")
+        return given().log().all().
+        		baseUri(apiUrl).header("Content-Type", "application/json")
                 .header("Authorization", authtoken)  // Add the Authorization header
                 .when().get().then().statusCode(200)  // Check if the status is OK
                 .extract().asString();  // Extract the response body as a string

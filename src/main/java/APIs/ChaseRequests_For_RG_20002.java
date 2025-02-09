@@ -3,6 +3,7 @@ import static io.restassured.RestAssured.given;
 import org.testng.annotations.Test;
 import io.restassured.RestAssured;
 import utils.PropertiesFileReader;
+import utils_API.Generate_OAuth2;
 
 public class ChaseRequests_For_RG_20002 {
 	static String endPoint = PropertiesFileReader.getAPIProperty("chaseRequest_url");
@@ -14,7 +15,7 @@ public class ChaseRequests_For_RG_20002 {
 	static String chartType = PropertiesFileReader.getAPIProperty("ChartType");
 	static String DOS = PropertiesFileReader.getAPIProperty("DateOfStart");
 	static String DOE = PropertiesFileReader.getAPIProperty("DateOfEnd");
-	static String authtoken = utils_API.OAuth2_Token_QA.Generate_QA_OAuth();
+	static String authtoken =  Generate_OAuth2.Token();
 	
 	
 	@Test(invocationCount =2)

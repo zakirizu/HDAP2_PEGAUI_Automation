@@ -6,10 +6,11 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import io.restassured.RestAssured;
 import utils.PropertiesFileReader;
-import utils_API.OAuth2_Token_QA;
+import utils_API.Generate_OAuth2;
+
 
 public class Add_Misc_Documnets_To_ChaseRequests {
-	static String authtoken = OAuth2_Token_QA.Generate_QA_OAuth();
+	static String authtoken = Generate_OAuth2.Token();
 	@Test( dataProvider = "demo")
 	public static void ChaseRequest_With_Single_Matching_RG_01(String id) throws InterruptedException {
 		System.out.println(	"*******************************Creating Chase Request Matching With Single RG with Below Combination*****************************");
