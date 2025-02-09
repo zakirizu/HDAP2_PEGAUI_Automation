@@ -50,14 +50,25 @@ public class CommonDataProcessor {
 				String providerID = inputRow.getCell(1).getStringCellValue();
 				dataMap = new ConcurrentHashMap<>();
 				
-				//RGDataProcessor rgProcessor = new RGDataProcessor();
-			//	rgProcessor.processRGData(dataMap, rgId);
+				RGDataProcessor rgProcessor = new RGDataProcessor();
+				rgProcessor.get_RequestGroup_Data(dataMap, rgId);
+				
+				
 
 				if(providerID.startsWith("F-"))
 				{
 					FactDataProcessor factProcessor = new FactDataProcessor();
-					factProcessor.processFactData(dataMap, providerID);
-					RestAssured.baseURI = PropertiesFileReader.getAPIProperty("chaseRequest_url");
+					factProcessor.get_Facility_Data(dataMap, providerID);
+					String env = PropertiesFileReader.getAPIProperty("env");
+					if(env.equalsIgnoreCase("QA"))
+					{
+						RestAssured.baseURI = PropertiesFileReader.getAPIProperty("QA_chaseRequest_url");
+					}
+					else
+					{
+						RestAssured.baseURI = PropertiesFileReader.getAPIProperty("UAT_chaseRequest_url");
+					}
+					
 					given().log().all()
 					.header("Content-Type", "application/json").header("Authorization", authtoken)
 							.body(APIs_PayLoads.ChaseRequest_Practitioner.Practitioner_Provider(dataMap))
@@ -68,7 +79,17 @@ public class CommonDataProcessor {
 				else if(providerID.startsWith("P-"))
 				{
 					PractDataProcessor practProcessor = new PractDataProcessor();
-					practProcessor.processPractData(dataMap, providerID);
+					practProcessor.get_Practitioner_Data(dataMap, providerID);
+					String env = PropertiesFileReader.getAPIProperty("env");
+					if(env.equalsIgnoreCase("UAT"))
+					{
+						RestAssured.baseURI = PropertiesFileReader.getAPIProperty("UAT_chaseRequest_url");
+					}
+					else
+					{
+						RestAssured.baseURI = PropertiesFileReader.getAPIProperty("QA_chaseRequest_url");
+					}
+										
 					RestAssured.baseURI = PropertiesFileReader.getAPIProperty("chaseRequest_url");
 					given().log().all()
 					.header("Content-Type", "application/json").header("Authorization", authtoken)

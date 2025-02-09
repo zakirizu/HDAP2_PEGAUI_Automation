@@ -9,11 +9,13 @@ import utils.PropertiesFileReader;
 public class Generate_OAuth2{
 static String env = PropertiesFileReader.getAPIProperty("env");
 
+
 public static String Token() {
 	
 	if(env.equalsIgnoreCase("QA"))
 	{
-	System.out.println("Create OAuth2.0--- Running ");
+		
+		System.out.println("Hi There, Generating QA Auth2.0 Code");
 	// Set the base URI for the authorization server
 	RestAssured.baseURI = "https://cotiviti-ext-devtest.oktapreview.com"; // Your auth endpoint
 
@@ -33,12 +35,12 @@ public static String Token() {
 			.extract().response(); // Extract the response
 
 	String responseBody = response.getBody().asString(); // Get the response body as a string
-	System.out.println("Response Body: " + responseBody);
+	//System.out.println("Response Body: " + responseBody);
 
-	System.out.println("authToken" + response);
+	//System.out.println("authToken" + response);
 	// Extract the access_token from the response JSON
 	String authToken = response.jsonPath().getString("access_token");
-	System.out.println("authToken" + authToken);
+	//System.out.println("authToken" + authToken);
 
 	// Extract the access_token from the response JSON
 	authToken = response.jsonPath().getString("access_token"); // Adjust the path if necessary
@@ -47,7 +49,8 @@ public static String Token() {
 		org.testng.Assert.fail("Authorization token not generated.");
 	}
 
-	System.out.println("Generated QA_Auth Token: " + authToken); // Optional: Print the token for debugging
+	System.out.println("Generated QA_Auth2.0 Token Successfully: "); // Optional: Print the token for debugging
+	//System.out.println(authToken); // Optional: Print the token for debugging
 	return authToken;
 }
 
@@ -57,7 +60,7 @@ else
 {
 	DependencyInjection dp = new DependencyInjection();
 
-	System.out.println("Create Auth Running ");
+	System.out.println("Hi There, Generating UAT Auth2.0 Code");
 	// Set the base URI for the authorization server
 	RestAssured.baseURI = "https://login-preview.cotiviti.com"; // Your auth endpoint
 
@@ -78,12 +81,12 @@ else
 			.extract().response(); // Extract the response
 
 	String responseBody = response.getBody().asString(); // Get the response body as a string
-	System.out.println("Response Body: " + responseBody);
+	//System.out.println("Response Body: " + responseBody);
 
-	System.out.println("authToken" + response);
+	//System.out.println("authToken" + response);
 	// Extract the access_token from the response JSON
 	String authToken = response.jsonPath().getString("access_token");
-	System.out.println("authToken" + authToken);
+	//System.out.println("authToken" + authToken);
 
 	// Extract the access_token from the response JSON
 	authToken = response.jsonPath().getString("access_token"); // Adjust the path if necessary
@@ -92,7 +95,8 @@ else
 		org.testng.Assert.fail("Authorization token not generated.");
 	}
 
-	System.out.println("Generated UA_Auth Token: " + authToken); // Optional: Print the token for debugging
+	System.out.println("Generated UAT_Auth Token Successfully: "); // Optional: Print the token for debugging
+	//System.out.println(authToken); // Optional: Print the token for debugging
 	// return authToken;
 
 	//dp.setAuth(authToken);

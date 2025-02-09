@@ -3,6 +3,8 @@ package utils_API;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+
+import factory.COLORS;
 import io.restassured.RestAssured;
 import org.apache.poi.ss.usermodel.*;
 import io.restassured.response.Response;
@@ -28,18 +30,29 @@ public class RGDataProcessor {
         return new String[] { firstName, lastName };
     }
 
-    public ConcurrentHashMap<String, String> processRGData(ConcurrentHashMap<String, String> dataMap, String rgId) {
+    public ConcurrentHashMap<String, String> get_RequestGroup_Data(ConcurrentHashMap<String, String> dataMap, String rgId) {
+    	System.out.println("Getting the data for the Request Group ID: "+COLORS.RED+rgId);
+    	System.out.println(COLORS.BLACK);
     	String apiUrl ="";
         try {
             // Construct the API URL dynamically with the RG ID
         	String env = PropertiesFileReader.getAPIProperty("env");
-        	if(env.equalsIgnoreCase("QA"))
+        	if(env.equalsIgnoreCase("UAT"))
         	{
-             apiUrl = PropertiesFileReader.getAPIProperty("QA_requestGroup")+rgId+PropertiesFileReader.getAPIProperty("QA_requestGroup_Resource");
+        		String url = PropertiesFileReader.getAPIProperty("UAT_requestGroup");
+        		String resource = PropertiesFileReader.getAPIProperty("UAT_requestGroup_Resource");
+        		apiUrl = url+rgId+resource;
+        		 
+        		//apiUrl = "https://is8i4ayzcg.execute-api.us-east-1.amazonaws.com/uat/HDAP/Workflow/v1/RequestGroups/"+rgId + "/ProcessesForRules";
+            // apiUrl = PropertiesFileReader.getAPIProperty("QA_requestGroup")+rgId+PropertiesFileReader.getAPIProperty("QA_requestGroup_Resource");
         	}
         	else
         	{
-        		 apiUrl = PropertiesFileReader.getAPIProperty("UAT_requestGroup")+ rgId+PropertiesFileReader.getAPIProperty("UAT_requestGroup_Resource");
+        		String url = PropertiesFileReader.getAPIProperty("QA_requestGroup");
+        		String resource = PropertiesFileReader.getAPIProperty("QA_requestGroup_Resource");
+        		apiUrl = url+rgId+resource;
+        		// apiUrl = "https://is8i4ayzcg.execute-api.us-east-1.amazonaws.com/uat/HDAP/Workflow/v1/RequestGroups/"+rgId + "/ProcessesForRules";
+        		 //apiUrl = PropertiesFileReader.getAPIProperty("UAT_requestGroup")+ rgId+PropertiesFileReader.getAPIProperty("UAT_requestGroup_Resource");
         	}
 
             // Fetch response from the API
@@ -82,13 +95,20 @@ public class RGDataProcessor {
         } catch (Exception e) {
             e.printStackTrace();
         }
+        System.out.println("Stored  the data for the Request Group ID: "+rgId +" into HashMap");
+		//Printing  using ForEachLoop		
+		for(String k : dataMap.keySet())		{
+			System.out.println(COLORS.RED+k    + "----------->"    +dataMap.get(k));			
+		}
+		System.out.println(COLORS.RESET);
+		
         return dataMap;
     }
 
     // Method to send GET request and return the response
     private static String sendGetRequest(String apiUrl) throws Exception {
-        return given().log().all().
-        		baseUri(apiUrl).header("Content-Type", "application/json")
+        return given()//.log().all()
+        		.baseUri(apiUrl).header("Content-Type", "application/json")
                 .header("Authorization", authtoken)  // Add the Authorization header
                 .when().get().then().statusCode(200)  // Check if the status is OK
                 .extract().asString();  // Extract the response body as a string

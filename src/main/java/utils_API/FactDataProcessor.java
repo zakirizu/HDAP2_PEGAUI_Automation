@@ -15,7 +15,7 @@ public class FactDataProcessor {
 
 	   static String authtoken = Generate_OAuth2.Token();   // Fetches the authorization token
 
-    public ConcurrentHashMap<String, String> processFactData(ConcurrentHashMap<String, String> dataMap, String facilityId) {
+    public ConcurrentHashMap<String, String> get_Facility_Data(ConcurrentHashMap<String, String> dataMap, String facilityId) {
         try {
             // Construct the API URL dynamically with the Facility ID
             String apiUrl = "https://is8i4ayzcg.execute-api.us-east-1.amazonaws.com/uat/HDAP/Workflow/v1/Facilities/" + facilityId;

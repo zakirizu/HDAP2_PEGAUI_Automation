@@ -5,6 +5,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import io.restassured.RestAssured;
 import org.apache.poi.ss.usermodel.*;
 import io.restassured.response.Response;
+import utils.PropertiesFileReader;
 
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
@@ -15,10 +16,21 @@ public class PractDataProcessor {
 
 	   static String authtoken = Generate_OAuth2.Token();  // Fetches the authorization token
 
-    public ConcurrentHashMap<String, String> processPractData(ConcurrentHashMap<String, String> dataMap, String practitionerId) {
+    public ConcurrentHashMap<String, String> get_Practitioner_Data (ConcurrentHashMap<String, String> dataMap, String practitionerId) {
         try {
             // Construct the API URL dynamically with the Practitioner ID
-            String apiUrl = "https://is8i4ayzcg.execute-api.us-east-1.amazonaws.com/qa/HDAP/Workflow/v1/Practitioners/"+ practitionerId;
+        	String apiUrl="";
+        	String env = PropertiesFileReader.getAPIProperty("env");
+        	if(env.equalsIgnoreCase("UAT"))
+        	{
+        	String url = PropertiesFileReader.getAPIProperty("UAT_getPractitioners");
+             apiUrl = url+ practitionerId;
+        	}
+        	else
+        	{
+        		String url = PropertiesFileReader.getAPIProperty("QA_getPractitioners");
+                apiUrl = url+ practitionerId;
+        	}
 
             // Fetch response from the API
             String jsonResponse = sendGetRequest(apiUrl);
