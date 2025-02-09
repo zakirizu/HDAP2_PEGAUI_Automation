@@ -14,13 +14,13 @@ public class ChaseRequest_Practitioner {
 		 
 		 
 		 //RG Details from Map
-		 String RG_intendedUse	 = dataMap.get("RGProjectTypes");
-		 String RG_AuditType			 = dataMap.get("RGAuditTypes");
-		 String RG_CharTypes 		= dataMap.get("RGChartTypes");
-		 String RG_DOS 						= dataMap.get("RGstartDate");
-		 String RG_DOE 						= dataMap.get("RGendDate");
-		 String RG_FName 				= dataMap.get("RGfirstName");
-		 String RG_LName 				= dataMap.get("RGlastName");
+		 String RG_intendedUse	 = dataMap.get("RGProjectTypes");//
+		 String RG_AuditType			 = dataMap.get("RGAuditTypes");//
+		 String RG_CharTypes 		= dataMap.get("RGChartTypes");//
+		 String RG_DOS 						= dataMap.get("RGstartDate");//
+		 String RG_DOE 						= dataMap.get("RGendDate");//
+		 String RG_FName 				= dataMap.get("RGfirstName");//
+		 String RG_LName 				= dataMap.get("RGlastName");//
 		 
 		 //Practitioner Data
          String P_FName						= dataMap.get("PfirstName");

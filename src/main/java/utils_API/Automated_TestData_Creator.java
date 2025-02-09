@@ -49,7 +49,7 @@ public class Automated_TestData_Creator {
 				String providerID = inputRow.getCell(1).getStringCellValue();
 				dataMap = new ConcurrentHashMap<>();
 				
-				RGDataProcessor rgProcessor = new RGDataProcessor();
+				GET_RequestGroup_API rgProcessor = new GET_RequestGroup_API();
 				rgProcessor.get_RequestGroup_Data(dataMap, rgId);
 				
 				
@@ -57,7 +57,7 @@ public class Automated_TestData_Creator {
 				if(providerID.startsWith("F-"))
 				{
 					System.out.println("Reading the Facility Data");
-					FactDataProcessor factProcessor = new FactDataProcessor();
+					Get_Facility_API factProcessor = new Get_Facility_API();
 					factProcessor.get_Facility_Data(dataMap, providerID);
 					String env = PropertiesFileReader.getAPIProperty("env");
 					if(env.equalsIgnoreCase("QA"))
