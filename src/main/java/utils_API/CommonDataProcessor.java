@@ -1,5 +1,7 @@
 package utils_API;
 
+import static io.restassured.RestAssured.given;
+
 import java.io.*;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
@@ -10,11 +12,17 @@ import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
+import APIs.ChaseRequests_For_RG_20002;
+import io.restassured.RestAssured;
+import utils.PropertiesFileReader;
+
 public class CommonDataProcessor {
 	
-    static String authtoken = OAuth2_Token_UAT.Generate_UAT_OAuth(); // Fetches the authorization token
+    static String authtoken = OAuth2_Token_QA.Generate_QA_OAuth(); // Fetches the authorization token
     static String inputFilePath = factory.Constants.API_INPUT;
     static String outputFilePath = factory.Constants.API_OUTPUT;
+   
+     String resource = PropertiesFileReader.getAPIProperty("chaseRequest_resource");
 	XSSFSheet sheet;
 	XSSFWorkbook writeWB;
 	ConcurrentHashMap<String, String> dataMap;
@@ -42,23 +50,47 @@ public class CommonDataProcessor {
 				}
 
 				String rgId = inputRow.getCell(0).getStringCellValue();
-				String factId = inputRow.getCell(1).getStringCellValue();
+				String providerID = inputRow.getCell(1).getStringCellValue();
+				
+				
+				
+				
 				//String practId = inputRow.getCell(2).getStringCellValue();
 
 				// Initialize the data map for this row
 				//ConcurrentHashMap<String, String> dataMap = new ConcurrentHashMap<>();
 				dataMap = new ConcurrentHashMap<>();
-
-				// Process the data for RG, Fact, and Pract
 				RGDataProcessor rgProcessor = new RGDataProcessor();
 				rgProcessor.processRGData(dataMap, rgId);
 
-				FactDataProcessor factProcessor = new FactDataProcessor();
-				factProcessor.processFactData(dataMap, factId);
-
-			//	PractDataProcessor practProcessor = new PractDataProcessor();
-			//	practProcessor.processPractData(dataMap, practId);
+				if(providerID.startsWith("F-"))
+				{
+					FactDataProcessor factProcessor = new FactDataProcessor();
+					factProcessor.processFactData(dataMap, providerID);
+					RestAssured.baseURI = PropertiesFileReader.getAPIProperty("chaseRequest_url");
+					given()//.log().all()
+					.header("Content-Type", "application/json").header("Authorization", authtoken)
+							.body(APIs_PayLoads.ChaseRequest_Practitioner.Practitioner_Provider(dataMap))
+							.when().post(resource)
+							.then().log().body(true).assertThat().statusCode(202).extract().response().jsonPath();
+					
+				}
+				else if(providerID.startsWith("P-"))
+				{
+					PractDataProcessor practProcessor = new PractDataProcessor();
+					practProcessor.processPractData(dataMap, providerID);
+					RestAssured.baseURI = PropertiesFileReader.getAPIProperty("chaseRequest_url");
+					given()//.log().all()
+					.header("Content-Type", "application/json").header("Authorization", authtoken)
+							.body(APIs_PayLoads.ChaseRequest_Practitioner.Practitioner_Provider(dataMap))
+							.when().post(resource)
+							.then().log().body(true).assertThat().statusCode(202).extract().response().jsonPath();
+				}
 				
+				// Process the data for RG, Fact, and Pract
+
+
+
 				//Wrting the data into Excel Sheet
 				writeWB = new XSSFWorkbook();
 				sheet = writeWB.createSheet("chaseData");

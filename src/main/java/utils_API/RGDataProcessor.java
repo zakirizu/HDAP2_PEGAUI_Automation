@@ -88,7 +88,8 @@ public class RGDataProcessor {
         if (jsonNode.isArray() && jsonNode.size() > 0) {
             for (JsonNode node : jsonNode) {
                 String type = node.path("Type").asText();
-                if (type.equals("Pharmacy") || type.equals("RADM") || type.equals("CCV")) {
+                if (type.equals("Pharmacy") || type.equals("RADM") || type.equals("CCV")) 
+                {
                     return type;  // Return first matching type
                 }
             }
