@@ -21,7 +21,7 @@ import static io.restassured.RestAssured.given;
 
 public class GET_RequestGroup_API {
 
-	   static String authtoken = Generate_OAuth2.Token();   // Fetches the authorization token
+	//   static String authtoken = Generate_OAuth2.Token();   // Fetches the authorization token
 
     // Method to generate random UK-style FirstName and LastName
     private static String[] generateUKName() {

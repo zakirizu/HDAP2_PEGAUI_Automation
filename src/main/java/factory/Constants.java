@@ -14,5 +14,6 @@ public interface Constants {
 	String API_OUTPUT		= PROJECT_PATH + File.separator + "TestData" + File.separator + "API_OUTPUT.xlsx";
 	String SCREENSHOT      	= PROJECT_PATH + File.separator + "ScreenShots"+ File.separator ;
 	String REPORTS       		= PROJECT_PATH + File.separator + "Reports"+ File.separator ;
+	String env       					= PropertiesFileReader.getAPIProperty("env");
 	String Environment			= PropertiesFileReader.getUIProperty("Env");
 }

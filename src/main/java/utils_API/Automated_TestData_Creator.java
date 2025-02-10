@@ -4,16 +4,18 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import factory.COLORS;
+import factory.Constants;
 import utils.PropertiesFileReader;
 
 public class Automated_TestData_Creator {
+	final String env = PropertiesFileReader.getAPIProperty("env");
 	
     @DataProvider(name = "QA")
     public Object[][] QA_DataProvider() {
         return new Object[][] 
         	{
             	{"RG-20002", "P-388412033222"},
-            	{"RG-20002", "P-388412033222"},            	  
+            	//{"RG-20002", "P-388412033222"},            	  
         	};
     }
     
@@ -21,15 +23,15 @@ public class Automated_TestData_Creator {
     public Object[][] UAT_DataProvider() {
         return new Object[][] 
         	{
-            	{"RG-20002", "P-388412033222"},
-            	{"RG-20002", "P-388412033222"},
-            	{"RG-20002", "P-388412033222"},       
+            	{"RG-10002", "P-354531020225"},
+
         	};
     }
 	
 		
-	@Test(dataProvider = "QA", invocationCount = 1)
-	public void processDataAndGenerateOutput(String requestGroup, String providerId) {		
+	@Test(dataProvider = "UAT", invocationCount = 1)
+	public void processDataAndGenerateOutput(String requestGroup, String providerId) {	
+			System.out.println();
 			System.out.println(COLORS.GREEN+"Creating the Test Data in "+PropertiesFileReader.getAPIProperty("env")+" Environment. If you want to change the Environment, Kindly stop and update the 'Env' Variable Under the API Properiets File"+COLORS.RESET);
 			String authtoken = Generate_OAuth2.Token(); 		
 			String rgId = requestGroup; 

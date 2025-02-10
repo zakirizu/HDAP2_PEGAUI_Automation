@@ -8,16 +8,29 @@ public class ChaseRequest_Practitioner_PayLoad {
 		 public static  String PractitionerPayLoad(ConcurrentHashMap<String, String> dataMap) {
 		 //General Data
 		 String cotivitClaimNumber = stepDefinitionFile.Common_Functions_Sd.currentDateTimeMilliSeconds();
-     	 String accountID = PropertiesFileReader.getAPIProperty("Client_AccountID");    	 String subAccountID = PropertiesFileReader.getAPIProperty("SubAccountID");	 
+		 String accountID= ""; String subAccountID="";
+     	 String env = PropertiesFileReader.getAPIProperty("env");
+     			if(env.equalsIgnoreCase("UAT"))
+     			{
+     				 accountID = PropertiesFileReader.getAPIProperty("UAT_AccountID");    
+     				 subAccountID = PropertiesFileReader.getAPIProperty("UAT_SubAccountID");	 
+     			}
+     			else
+     			{
+     				 accountID = PropertiesFileReader.getAPIProperty("QA_AccountID");    
+     				 subAccountID = PropertiesFileReader.getAPIProperty("QA_SubAccountID");	 
+     			}
+
     	 		 	 
 		 //RG Details from Map
-		 String RG_intendedUse	 = dataMap.get("RG_ProjectTypes");//
+		 String RG_intendedUse	 = dataMap.get("RG_ProjectTypes");// 
 		 String RG_AuditType			 = dataMap.get("RG_AuditTypes");//
 		 String RG_CharTypes 		= dataMap.get("RG_ChartTypes");//
 		 String RG_DOS 						= dataMap.get("RG_startDate");//
 		 String RG_DOE 						= dataMap.get("RG_endDate");//
 		 String RG_FName 				= dataMap.get("RG_firstName");//
 		 String RG_LName 				= dataMap.get("RG_lastName");//
+		 
 		 
 		 //Practitioner Data
 		 		String Prac_DOB 				= dataMap.get("Prac_DOB");
@@ -70,8 +83,8 @@ public class ChaseRequest_Practitioner_PayLoad {
 				+ "            \"ProviderSpecialty\": \"test\",\r\n"
 				+ "            \"PatientMemberIdx\": 1,\r\n"
 				+ "            \"SubscriberMemberIdx\": 2,\r\n"
-				+ "            \"BillingProviderIdx\": 1,\r\n"
-				+ "            \"RenderingProviderIdx\": 2\r\n"
+				+ "            \"BillingProviderIdx\": 2,\r\n"
+				+ "            \"RenderingProviderIdx\": 1\r\n"
 				+ "        },\r\n"
 				+ "        \"ChaseDetails\": {\r\n"
 				+ "            \"DOSChartRangeStart1\": \"2022-09-26\",\r\n"
@@ -137,7 +150,7 @@ public class ChaseRequest_Practitioner_PayLoad {
 				+ "        \"Providers\": [\r\n"
 				+ "            {\r\n"
 				+ "                \"Provider\": {\r\n"
-				+ "                    \"Name\": \""+Prac_FirstName+Prac_LastName+"\",\r\n"
+				+ "                    \"Name\": \""+Prac_FirstName+" "+Prac_LastName+"\",\r\n"
 				+ "                    \"LastName\": \""+Prac_LastName+"\",\r\n"
 				+ "                    \"FirstName\": \""+Prac_FirstName+"\",\r\n"
 				+ "                    \"Address1\": \""+Prac_Street+"\",\r\n"
