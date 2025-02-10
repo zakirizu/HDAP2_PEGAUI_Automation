@@ -19,12 +19,12 @@ public class Automated_TestData_Creator {
     static String authtoken = ""; 
     static String inputFilePath = factory.Constants.API_INPUT;
     static String outputFilePath = factory.Constants.API_OUTPUT;   
-     String resource = PropertiesFileReader.getAPIProperty("chaseRequest_resource");
+     String resource = "";
 	ConcurrentHashMap<String, String> dataMap;
 	
 	
 	public static void main(String[] args) {
-		System.out.println(COLORS.CYAN+"Creating the Test Data in "+PropertiesFileReader.getAPIProperty("env")+" Environment. If you want to change the Environment, Kindly stop and update the 'Env' Variable Under the API Properiets File"+COLORS.RESET);
+		System.out.println(COLORS.RED+"Creating the Test Data in "+PropertiesFileReader.getAPIProperty("env")+" Environment. If you want to change the Environment, Kindly stop and update the 'Env' Variable Under the API Properiets File"+COLORS.RESET);
 		 authtoken = Generate_OAuth2.Token(); 		
 		Automated_TestData_Creator processor = new Automated_TestData_Creator();
 		processor.processDataAndGenerateOutput(inputFilePath,outputFilePath );
@@ -58,17 +58,20 @@ public class Automated_TestData_Creator {
 				{
 					System.out.println("Reading the Facility Data");
 					
-					Get_Facility_API factProcessor = new Get_Facility_API();
+					GET_Facility_API factProcessor = new GET_Facility_API();
 					factProcessor.get_Facility_Data(dataMap, providerID);
 					
 					String env = PropertiesFileReader.getAPIProperty("env");
-					if(env.equalsIgnoreCase("QA"))
+					if(env.equalsIgnoreCase("UAT"))
 					{
-						RestAssured.baseURI = PropertiesFileReader.getAPIProperty("QA_chaseRequest_url");
+						RestAssured.baseURI = PropertiesFileReader.getAPIProperty("UAT_chaseRequest_url");
+						resource = PropertiesFileReader.getAPIProperty("UAT_chaseRequest_resource");
+						
 					}
 					else
 					{
-						RestAssured.baseURI = PropertiesFileReader.getAPIProperty("UAT_chaseRequest_url");
+						RestAssured.baseURI = PropertiesFileReader.getAPIProperty("QA_chaseRequest_url");
+						resource = PropertiesFileReader.getAPIProperty("QA_chaseRequest_resource");
 					}
 					
 					given()//.log().all()
@@ -81,7 +84,7 @@ public class Automated_TestData_Creator {
 				else if(providerID.startsWith("P-"))
 				{
 					System.out.println("Getting the Practitioner Data");
-					PractDataProcessor practProcessor = new PractDataProcessor();
+					GET_Practitioner_API practProcessor = new GET_Practitioner_API();
 					practProcessor.get_Practitioner_Data(dataMap, providerID);
 					String env = PropertiesFileReader.getAPIProperty("env");
 					if(env.equalsIgnoreCase("UAT"))

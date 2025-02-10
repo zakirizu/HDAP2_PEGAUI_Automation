@@ -69,7 +69,7 @@ public class GET_RequestGroup_API {
             for (int i = 0; i < projectTypes.length(); i++) {
                 JSONObject project = projectTypes.getJSONObject(i);
                // System.out.println("Type: " + project.getString("Type"));
-                dataMap.put("RGProjectTypes", project.getString("Type"));
+                dataMap.put("RG_ProjectTypes", project.getString("Type"));
                 break;
             }
 
@@ -79,7 +79,7 @@ public class GET_RequestGroup_API {
             for (int i = 0; i < clients.length(); i++) {
                 JSONObject client = clients.getJSONObject(i);
                 //System.out.println("Type: " + client.getString("Type"));
-                dataMap.put("RGAuditTypes", client.getString("Type"));
+                dataMap.put("RG_AuditTypes", client.getString("Type"));
                 break;
             }
 
@@ -92,8 +92,8 @@ public class GET_RequestGroup_API {
             for (int i = 0; i < ranges.length(); i++) {
                 JSONObject range = ranges.getJSONObject(i);
             //    System.out.println("Range: " + range.getString("startChar") + " to " + range.getString("endChar"));
-                dataMap.put("RGfirstName",  range.getString("startChar"));
-                dataMap.put("RGlastName",  range.getString("endChar"));
+                dataMap.put("RG_firstName",  range.getString("startChar"));
+                dataMap.put("RG_lastName",  range.getString("endChar"));
                 break;
                 
             }
@@ -104,7 +104,7 @@ public class GET_RequestGroup_API {
             for (int i = 0; i < chartTypes.length(); i++) {
                 JSONObject chart = chartTypes.getJSONObject(i);
               //  System.out.println("Type: " + chart.getString("Type"));
-                dataMap.put("RGChartTypes",  chart.getString("Type"));
+                dataMap.put("RG_ChartTypes",  chart.getString("Type"));
                 break;
                 
             }
@@ -115,8 +115,8 @@ public class GET_RequestGroup_API {
             for (int i = 0; i < datesOfService.length(); i++) {
                 JSONObject dateRange = datesOfService.getJSONObject(i);
                 //System.out.println("Start Date: " + dateRange.getString("StartDate") + ", End Date: " + dateRange.getString("EndDate"));
-                dataMap.put("RGstartDate",  dateRange.getString("StartDate"));
-                dataMap.put("RGendDate",  dateRange.getString("EndDate"));
+                dataMap.put("RG_startDate",  dateRange.getString("StartDate"));
+                dataMap.put("RG_endDate",  dateRange.getString("EndDate"));
                 break;
             }
 
@@ -126,7 +126,7 @@ public class GET_RequestGroup_API {
             for (int i = 0; i < auditTypes.length(); i++) {
                 JSONObject audit = auditTypes.getJSONObject(i);
                 //System.out.println("Type: " + audit.getString("Type"));
-                dataMap.put("RGAuditTypes",  audit.getString("Type"));
+                dataMap.put("RG_AuditTypes",  audit.getString("Type"));
                 break;
             }
         
@@ -139,7 +139,7 @@ public class GET_RequestGroup_API {
      
 		for(String k : dataMap.keySet())	
 		{
-			System.out.println(COLORS.YELLOW+k    + "----------->"    +dataMap.get(k)+COLORS.RESET);			
+			System.out.println(COLORS.BLUE+k    + "----------->"    +dataMap.get(k)+COLORS.RESET);			
 		}
 		
 		
