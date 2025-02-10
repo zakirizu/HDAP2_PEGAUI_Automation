@@ -5,8 +5,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import utils.PropertiesFileReader;
 
 public class ChaseRequest_Practitioner_PayLoad {
-	
-	 public static  String PractitionerPayLoad(ConcurrentHashMap<String, String> dataMap) {
+		 public static  String PractitionerPayLoad(ConcurrentHashMap<String, String> dataMap) {
 		 //General Data
 		 String cotivitClaimNumber = stepDefinitionFile.Common_Functions_Sd.currentDateTimeMilliSeconds();
      	 String accountID = PropertiesFileReader.getAPIProperty("Client_AccountID");    	 String subAccountID = PropertiesFileReader.getAPIProperty("SubAccountID");	 
@@ -37,7 +36,7 @@ public class ChaseRequest_Practitioner_PayLoad {
 				String Prac_TIN 			= dataMap.get("Prac_TIN");
 				
 				String given_Prac_FAX 			= dataMap.get("Prac_FAX").replaceAll("\\D", "");
-	            String Prac_FAX = given_Prac_FAX.substring(0, 3) + "-" +given_Prac_FAX.substring(3, 6) + "-" + given_Prac_FAX.substring(6); System.out.println(Prac_FAX);
+	            String Prac_FAX = given_Prac_FAX.substring(0, 3) + "-" +given_Prac_FAX.substring(3, 6) + "-" + given_Prac_FAX.substring(6); 
 
 		String payLoad = "{\r\n"
 				+ "    \"ChaseRequest\": {\r\n"

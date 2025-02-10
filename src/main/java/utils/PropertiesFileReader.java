@@ -17,7 +17,6 @@ public class PropertiesFileReader {
 	}
 	public static String getAPIProperty(String key) {
 		try {
-			
 			locationPath = System.getProperty("user.dir")+"\\Resources\\propertyFile_API.properties";
 			FileInputStream fis = new FileInputStream(locationPath);
 			Properties prop = new Properties();

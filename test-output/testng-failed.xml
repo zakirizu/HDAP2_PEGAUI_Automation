@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="APIs.ChaseRequests_For_RG_20002">
+      <class name="utils_API_TEST.Automated_TestData_Creator_TEST">
         <methods>
-          <include name="ChaseRequest_With_Single_Matching_RG_01"/>
+          <include name="processDataAndGenerateOutput" invocation-numbers="0 1"/>
         </methods>
-      </class> <!-- APIs.ChaseRequests_For_RG_20002 -->
+      </class> <!-- utils_API_TEST.Automated_TestData_Creator_TEST -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
