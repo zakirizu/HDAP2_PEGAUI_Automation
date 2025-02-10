@@ -1,121 +1,55 @@
 package utils_API;
-
-import static io.restassured.RestAssured.given;
-
-import java.io.*;
 import java.util.concurrent.ConcurrentHashMap;
-import org.apache.poi.ss.usermodel.Row;
-import org.apache.poi.ss.usermodel.Sheet;
-import org.apache.poi.ss.usermodel.Workbook;
-import org.apache.poi.xssf.usermodel.XSSFSheet;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
 
 import factory.COLORS;
-import io.restassured.RestAssured;
 import utils.PropertiesFileReader;
 
 public class Automated_TestData_Creator {
 	
-    static String authtoken = ""; 
-    static String inputFilePath = factory.Constants.API_INPUT;
-    static String outputFilePath = factory.Constants.API_OUTPUT;   
-     String resource = "";
-	ConcurrentHashMap<String, String> dataMap;
+    @DataProvider(name = "QA")
+    public Object[][] QA_DataProvider() {
+        return new Object[][] 
+        	{
+            	{"RG-20002", "P-388412033222"},
+            	{"RG-20002", "P-388412033222"},            	  
+        	};
+    }
+    
+    @DataProvider(name = "UAT")
+    public Object[][] UAT_DataProvider() {
+        return new Object[][] 
+        	{
+            	{"RG-20002", "P-388412033222"},
+            	{"RG-20002", "P-388412033222"},
+            	{"RG-20002", "P-388412033222"},       
+        	};
+    }
 	
-	
-	public static void main(String[] args) {
-		System.out.println(COLORS.RED+"Creating the Test Data in "+PropertiesFileReader.getAPIProperty("env")+" Environment. If you want to change the Environment, Kindly stop and update the 'Env' Variable Under the API Properiets File"+COLORS.RESET);
-		 authtoken = Generate_OAuth2.Token(); 		
-		Automated_TestData_Creator processor = new Automated_TestData_Creator();
-		processor.processDataAndGenerateOutput(inputFilePath,outputFilePath );
 		
-	}
+	@Test(dataProvider = "QA", invocationCount = 1)
+	public void processDataAndGenerateOutput(String requestGroup, String providerId) {		
+			System.out.println(COLORS.GREEN+"Creating the Test Data in "+PropertiesFileReader.getAPIProperty("env")+" Environment. If you want to change the Environment, Kindly stop and update the 'Env' Variable Under the API Properiets File"+COLORS.RESET);
+			String authtoken = Generate_OAuth2.Token(); 		
+			String rgId = requestGroup; 
+			String providerID = providerId ; 			
+			ConcurrentHashMap<String, String> dataMap = new ConcurrentHashMap<>();
 
-
-	public void processDataAndGenerateOutput(String inputFilePath, String outputFilePath) {
-		try {
-			// Load the input Excel file
-			FileInputStream fis = new FileInputStream(inputFilePath);
-			Workbook workbook = new XSSFWorkbook(fis);
-			Sheet inputSheet = workbook.getSheetAt(0); 
-		
-			// Iterate through the input data rows
-			for (Row inputRow : inputSheet) {
-				if (inputRow.getRowNum() == 0) {
-					continue; // Skip the header row
-				}
-
-				String rgId = inputRow.getCell(0).getStringCellValue();
-				String providerID = inputRow.getCell(1).getStringCellValue();
-				dataMap = new ConcurrentHashMap<>();
-				
-				GET_RequestGroup_API rgProcessor = new GET_RequestGroup_API();
-				rgProcessor.get_RequestGroup_Data(dataMap, rgId);
-				
-				
+			
+			GET_RequestGroup_API.get_RequestGroup_Data(dataMap, rgId,authtoken);
+  
 
 				if(providerID.startsWith("F-"))
 				{
-					
-					System.out.println("Reading the Facility Data");
-					String apiUrl ="";
-					GET_Facility_API factProcessor = new GET_Facility_API();
-					factProcessor.get_Facility_Data(dataMap, providerID);
-					
-					String env = PropertiesFileReader.getAPIProperty("env");
-					if(env.equalsIgnoreCase("UAT"))
-					{
-						RestAssured.baseURI = PropertiesFileReader.getAPIProperty("UAT_chaseRequest_url")+PropertiesFileReader.getAPIProperty("UAT_chaseRequest_resource");				
-					}
-					else
-					{
-						RestAssured.baseURI = PropertiesFileReader.getAPIProperty("QA_chaseRequest_url")+PropertiesFileReader.getAPIProperty("QA_chaseRequest_resource");
-					}
-					
-					given()//.log().all()
-					.header("Content-Type", "application/json").header("Authorization", authtoken)
-							.body(APIs_PayLoads.ChaseRequest_Facility_PayLoad.FacilityPayLoad(dataMap))
-							.when().post(resource)
-							.then().log().body(true).assertThat().statusCode(202).extract().response().jsonPath();
-					
+					GET_Facility_API.get_Facility_Data(dataMap, providerID,authtoken );
 				}
 				else if(providerID.startsWith("P-"))
 				{
-					System.out.println("Getting the Practitioner Data");
-					GET_Practitioner_API practProcessor = new GET_Practitioner_API();
-					practProcessor.get_Practitioner_Data(dataMap, providerID); // GET PRACTITIONER DATA
-					String env = PropertiesFileReader.getAPIProperty("env");
-					if(env.equalsIgnoreCase("UAT"))
-					{
-						RestAssured.baseURI = PropertiesFileReader.getAPIProperty("UAT_chaseRequest_url")+PropertiesFileReader.getAPIProperty("QA_chaseRequest_resource");	
-					}
-					else
-					{
-						RestAssured.baseURI = PropertiesFileReader.getAPIProperty("QA_chaseRequest_url")+PropertiesFileReader.getAPIProperty("QA_chaseRequest_resource");	
-					}
-										
+					GET_Practitioner_API.get_Practitioner_Data(dataMap, providerID,authtoken); 
 					
-					given().log().all()
-					.header("Content-Type", "application/json").header("Authorization", authtoken)
-							.body(APIs_PayLoads.ChaseRequest_Practitioner_PayLoad.PractitionerPayLoad(dataMap))
-							.when().post(resource)
-							.then().log().body(true).assertThat().statusCode(202).log().all()
-							.extract().response().jsonPath();
 				}
-			}
-			workbook.close();
-	}
-		catch (Exception e) {
-			e.printStackTrace();
+			
+
 		}
-	}
-
-
-
-
-
-
-
-
-
 }

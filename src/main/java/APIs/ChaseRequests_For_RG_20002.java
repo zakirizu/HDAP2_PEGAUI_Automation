@@ -4,6 +4,7 @@ import org.testng.annotations.Test;
 import io.restassured.RestAssured;
 import utils.PropertiesFileReader;
 import utils_API.Generate_OAuth2;
+import utils.*;
 
 public class ChaseRequests_For_RG_20002 {
 	static String endPoint = PropertiesFileReader.getAPIProperty("chaseRequest_url");
@@ -16,8 +17,7 @@ public class ChaseRequests_For_RG_20002 {
 	static String DOS = PropertiesFileReader.getAPIProperty("DateOfStart");
 	static String DOE = PropertiesFileReader.getAPIProperty("DateOfEnd");
 	static String authtoken =  Generate_OAuth2.Token();
-	
-	
+		
 	@Test(invocationCount =2)
 	public static void ChaseRequest_With_Single_Matching_RG_01() throws InterruptedException {
 		System.out.println(	"*******************************Creating Chase Request Matching With Single RG with Below Combination*****************************");

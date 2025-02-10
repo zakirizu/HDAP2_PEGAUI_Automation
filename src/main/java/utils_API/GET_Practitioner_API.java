@@ -17,15 +17,16 @@ import java.util.concurrent.ConcurrentHashMap;
 
 import static io.restassured.RestAssured.given;
 
-public class GET_Practitioner_API {
-	   static String authtoken = Generate_OAuth2.Token();  // Fetches the authorization token
+public  class GET_Practitioner_API {
+
 	   
 
-    public ConcurrentHashMap<String, String> get_Practitioner_Data (ConcurrentHashMap<String, String> dataMap, String practitionerId) {
+    public static ConcurrentHashMap<String, String> get_Practitioner_Data (ConcurrentHashMap<String, String> dataMap, String practitionerId, String authtoken) {
         try {
         	System.out.println(COLORS.RED+"Getting the data for the Practitioner with Friendly ID: "+practitionerId+COLORS.RESET);
-            // Construct the API URL dynamically with the Practitioner ID
-        	String apiUrl="";        	String env = PropertiesFileReader.getAPIProperty("env");
+            String apiUrl=""; 
+            String resource = "";
+        	String env = PropertiesFileReader.getAPIProperty("env");
         	if(env.equalsIgnoreCase("UAT"))
         	{
         	String url = PropertiesFileReader.getAPIProperty("UAT_getPractitioners");
@@ -42,7 +43,7 @@ public class GET_Practitioner_API {
             		given()//.log().all()
             		.baseUri(apiUrl).header("Content-Type", "application/json")
                     .header("Authorization", authtoken)  // Add the Authorization header
-                    .when().get().then().statusCode(200).log().all()  // Check if the status is OK
+                    .when().get().then().statusCode(200)//.log().all()  // Check if the status is OK
                     .extract().asString();  // Extract the response body as a string
             
             JSONObject jsonObject = new JSONObject(jsonResponse);
@@ -75,6 +76,10 @@ public class GET_Practitioner_API {
                    break;
                 }
             }
+         
+         
+         
+         
             System.out.println(COLORS.RED+"Below Request Group and Practitoner Data which will be now injected into Chase Request to match with this RG and Provider"+COLORS.RESET);
       		//Printing  using ForEachLoop		
       		for(String k : dataMap.keySet())		{
@@ -82,6 +87,24 @@ public class GET_Practitioner_API {
       		}
       		
       		System.out.println(COLORS.RED+"NOTE:  if RG/Provider has multiple values to any Attribute Then we are taking the first one into account."+COLORS.RESET);
+      		//String env = PropertiesFileReader.getAPIProperty("env");
+      		// env = PropertiesFileReader.getAPIProperty("env");
+			if(env.equalsIgnoreCase("UAT"))
+			{
+				RestAssured.baseURI = PropertiesFileReader.getAPIProperty("UAT_chaseRequest_url")+PropertiesFileReader.getAPIProperty("QA_chaseRequest_resource");	
+			}
+			else
+			{
+				RestAssured.baseURI = PropertiesFileReader.getAPIProperty("QA_chaseRequest_url")+PropertiesFileReader.getAPIProperty("QA_chaseRequest_resource");	
+			}
+								
+			
+			given()//.log().all()
+			.header("Content-Type", "application/json").header("Authorization", authtoken)
+					.body(APIs_PayLoads.ChaseRequest_Practitioner_PayLoad.PractitionerPayLoad(dataMap))
+					.when().post(resource)
+					.then().log().body(true).assertThat().statusCode(202).log().all()
+					.extract().response().jsonPath();
       		
         }
         catch (Exception e) {

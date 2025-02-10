@@ -34,7 +34,7 @@ public class GET_RequestGroup_API {
         return new String[] { firstName, lastName };
     }
 
-    public ConcurrentHashMap<String, String> get_RequestGroup_Data(ConcurrentHashMap<String, String> dataMap, String rgId) {
+    public static ConcurrentHashMap<String, String> get_RequestGroup_Data(ConcurrentHashMap<String, String> dataMap, String rgId, String authtoken) {
     	System.out.println();
     	System.out.println(COLORS.RED+"Getting the data for the Request Group ID: "+COLORS.RED+rgId+COLORS.RESET);
     	    	String apiUrl ="";

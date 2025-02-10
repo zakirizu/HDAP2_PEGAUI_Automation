@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-02-10T17:57:27 IST" name="Default suite" finished-at="2025-02-10T17:57:49 IST" duration-ms="22100">
+  <suite started-at="2025-02-10T18:02:19 IST" name="Default suite" finished-at="2025-02-10T18:02:40 IST" duration-ms="20925">
     <groups>
     </groups>
-    <test started-at="2025-02-10T17:57:27 IST" name="Default test" finished-at="2025-02-10T17:57:49 IST" duration-ms="22100">
-      <class name="utils_API_TEST.Automated_TestData_Creator_TEST">
-        <test-method signature="processDataAndGenerateOutput(java.lang.String,java.lang.String)[pri:0, instance:utils_API_TEST.Automated_TestData_Creator_TEST@75437611]" started-at="2025-02-10T17:57:27 IST" name="processDataAndGenerateOutput" data-provider="QA" finished-at="2025-02-10T17:57:42 IST" duration-ms="15441" status="PASS">
+    <test started-at="2025-02-10T18:02:19 IST" name="Default test" finished-at="2025-02-10T18:02:40 IST" duration-ms="20925">
+      <class name="utils_API.Automated_TestData_Creator">
+        <test-method signature="processDataAndGenerateOutput(java.lang.String,java.lang.String)[pri:0, instance:utils_API.Automated_TestData_Creator@75437611]" started-at="2025-02-10T18:02:19 IST" name="processDataAndGenerateOutput" data-provider="QA" finished-at="2025-02-10T18:02:34 IST" duration-ms="14208" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -23,7 +23,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- processDataAndGenerateOutput -->
-        <test-method signature="processDataAndGenerateOutput(java.lang.String,java.lang.String)[pri:0, instance:utils_API_TEST.Automated_TestData_Creator_TEST@75437611]" started-at="2025-02-10T17:57:42 IST" name="processDataAndGenerateOutput" data-provider="QA" finished-at="2025-02-10T17:57:49 IST" duration-ms="6588" status="PASS">
+        <test-method signature="processDataAndGenerateOutput(java.lang.String,java.lang.String)[pri:0, instance:utils_API.Automated_TestData_Creator@75437611]" started-at="2025-02-10T18:02:34 IST" name="processDataAndGenerateOutput" data-provider="QA" finished-at="2025-02-10T18:02:40 IST" duration-ms="6626" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -39,7 +39,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- processDataAndGenerateOutput -->
-      </class> <!-- utils_API_TEST.Automated_TestData_Creator_TEST -->
+      </class> <!-- utils_API.Automated_TestData_Creator -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

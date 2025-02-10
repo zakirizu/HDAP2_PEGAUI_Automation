@@ -2,6 +2,8 @@ package utils_API;
 
 
 import factory.COLORS;
+import io.restassured.RestAssured;
+
 import org.json.JSONArray;
 import org.json.JSONObject;
 import utils.PropertiesFileReader;
@@ -11,10 +13,11 @@ import static io.restassured.RestAssured.given;
 
 public class GET_Facility_API {
 
-	   static String authtoken = Generate_OAuth2.Token();   // Fetches the authorization token
 
-    public ConcurrentHashMap<String, String> get_Facility_Data(ConcurrentHashMap<String, String> dataMap, String facilityId) {
+
+    public static ConcurrentHashMap<String, String> get_Facility_Data(ConcurrentHashMap<String, String> dataMap, String facilityId, String authtoken) {    	
     	String apiUrl= "";
+    	String resource = "";
         try {
         	System.out.println(COLORS.RED+"Getting the data for the Facility with Friendly ID: "+facilityId+COLORS.RESET);
         	
@@ -74,10 +77,23 @@ public class GET_Facility_API {
             e.printStackTrace();
         }
         
+        String env = PropertiesFileReader.getAPIProperty("env");
+		if(env.equalsIgnoreCase("UAT"))
+		{
+			RestAssured.baseURI = PropertiesFileReader.getAPIProperty("UAT_chaseRequest_url")+PropertiesFileReader.getAPIProperty("UAT_chaseRequest_resource");				
+		}
+		else
+		{
+			RestAssured.baseURI = PropertiesFileReader.getAPIProperty("QA_chaseRequest_url")+PropertiesFileReader.getAPIProperty("QA_chaseRequest_resource");
+		}
+		given()//.log().all()
+		.header("Content-Type", "application/json").header("Authorization", authtoken)
+				.body(APIs_PayLoads.ChaseRequest_Facility_PayLoad.FacilityPayLoad(dataMap))
+				.when().post(resource)
+				.then().log().body(true).assertThat().statusCode(202).extract().response().jsonPath();
         
         System.out.println(COLORS.RED+"Below Request Group and Facility Data which will be now injected into Chase Request to match with this RG and Provider"+COLORS.RESET);
-      		//Printing  using ForEachLoop		
-      		for(String k : dataMap.keySet())		{
+      	for(String k : dataMap.keySet())		{
       			System.out.println(COLORS.BLUE+k    + "----------->"    +dataMap.get(k));			
       		}
       		

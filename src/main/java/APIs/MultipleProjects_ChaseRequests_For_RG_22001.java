@@ -7,7 +7,6 @@ import io.restassured.RestAssured;
 import utils.PropertiesFileReader;
 import utils_API.Generate_OAuth2;
 
-
 public class MultipleProjects_ChaseRequests_For_RG_22001 {
 	static String endPoint = PropertiesFileReader.getAPIProperty("chaseRequest_url");
 	static String resource = PropertiesFileReader.getAPIProperty("chaseRequest_resource");
