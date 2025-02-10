@@ -37,8 +37,7 @@ public class GET_RequestGroup_API {
     public ConcurrentHashMap<String, String> get_RequestGroup_Data(ConcurrentHashMap<String, String> dataMap, String rgId) {
     	System.out.println();
     	System.out.println(COLORS.RED+"Getting the data for the Request Group ID: "+COLORS.RED+rgId+COLORS.RESET);
-    	
-    	String apiUrl ="";
+    	    	String apiUrl ="";
         try {
         	String env = PropertiesFileReader.getAPIProperty("env");
         	if(env.equalsIgnoreCase("UAT"))
@@ -57,7 +56,7 @@ public class GET_RequestGroup_API {
            String jsonString = given()//.log().all()
             		.baseUri(apiUrl).header("Content-Type", "application/json")
                     .header("Authorization", authtoken)  
-                    .when().get().then().statusCode(200) 
+                    .when().get().then().statusCode(200)//.log().all()
                     .extract().asString(); 
             
             // Create a JSONObject from the string

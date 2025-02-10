@@ -56,27 +56,25 @@ public class Automated_TestData_Creator {
 
 				if(providerID.startsWith("F-"))
 				{
-					System.out.println("Reading the Facility Data");
 					
+					System.out.println("Reading the Facility Data");
+					String apiUrl ="";
 					GET_Facility_API factProcessor = new GET_Facility_API();
 					factProcessor.get_Facility_Data(dataMap, providerID);
 					
 					String env = PropertiesFileReader.getAPIProperty("env");
 					if(env.equalsIgnoreCase("UAT"))
 					{
-						RestAssured.baseURI = PropertiesFileReader.getAPIProperty("UAT_chaseRequest_url");
-						resource = PropertiesFileReader.getAPIProperty("UAT_chaseRequest_resource");
-						
+						RestAssured.baseURI = PropertiesFileReader.getAPIProperty("UAT_chaseRequest_url")+PropertiesFileReader.getAPIProperty("UAT_chaseRequest_resource");				
 					}
 					else
 					{
-						RestAssured.baseURI = PropertiesFileReader.getAPIProperty("QA_chaseRequest_url");
-						resource = PropertiesFileReader.getAPIProperty("QA_chaseRequest_resource");
+						RestAssured.baseURI = PropertiesFileReader.getAPIProperty("QA_chaseRequest_url")+PropertiesFileReader.getAPIProperty("QA_chaseRequest_resource");
 					}
 					
 					given()//.log().all()
 					.header("Content-Type", "application/json").header("Authorization", authtoken)
-							.body(APIs_PayLoads.ChaseRequest_Practitioner.Practitioner_Provider(dataMap))
+							.body(APIs_PayLoads.ChaseRequest_Facility_PayLoad.FacilityPayLoad(dataMap))
 							.when().post(resource)
 							.then().log().body(true).assertThat().statusCode(202).extract().response().jsonPath();
 					
@@ -85,23 +83,24 @@ public class Automated_TestData_Creator {
 				{
 					System.out.println("Getting the Practitioner Data");
 					GET_Practitioner_API practProcessor = new GET_Practitioner_API();
-					practProcessor.get_Practitioner_Data(dataMap, providerID);
+					practProcessor.get_Practitioner_Data(dataMap, providerID); // GET PRACTITIONER DATA
 					String env = PropertiesFileReader.getAPIProperty("env");
 					if(env.equalsIgnoreCase("UAT"))
 					{
-						RestAssured.baseURI = PropertiesFileReader.getAPIProperty("UAT_chaseRequest_url");
+						RestAssured.baseURI = PropertiesFileReader.getAPIProperty("UAT_chaseRequest_url")+PropertiesFileReader.getAPIProperty("QA_chaseRequest_resource");	
 					}
 					else
 					{
-						RestAssured.baseURI = PropertiesFileReader.getAPIProperty("QA_chaseRequest_url");
+						RestAssured.baseURI = PropertiesFileReader.getAPIProperty("QA_chaseRequest_url")+PropertiesFileReader.getAPIProperty("QA_chaseRequest_resource");	
 					}
 										
-					RestAssured.baseURI = PropertiesFileReader.getAPIProperty("chaseRequest_url");
-					given()//.log().all()
+					
+					given().log().all()
 					.header("Content-Type", "application/json").header("Authorization", authtoken)
-							.body(APIs_PayLoads.ChaseRequest_Practitioner.Practitioner_Provider(dataMap))
+							.body(APIs_PayLoads.ChaseRequest_Practitioner_PayLoad.PractitionerPayLoad(dataMap))
 							.when().post(resource)
-							.then().log().body(true).assertThat().statusCode(202).extract().response().jsonPath();
+							.then().log().body(true).assertThat().statusCode(202).log().all()
+							.extract().response().jsonPath();
 				}
 			}
 			workbook.close();

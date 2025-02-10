@@ -18,7 +18,6 @@ import java.util.concurrent.ConcurrentHashMap;
 import static io.restassured.RestAssured.given;
 
 public class GET_Practitioner_API {
-
 	   static String authtoken = Generate_OAuth2.Token();  // Fetches the authorization token
 	   
 
@@ -26,8 +25,7 @@ public class GET_Practitioner_API {
         try {
         	System.out.println(COLORS.RED+"Getting the data for the Practitioner with Friendly ID: "+practitionerId+COLORS.RESET);
             // Construct the API URL dynamically with the Practitioner ID
-        	String apiUrl="";
-        	String env = PropertiesFileReader.getAPIProperty("env");
+        	String apiUrl="";        	String env = PropertiesFileReader.getAPIProperty("env");
         	if(env.equalsIgnoreCase("UAT"))
         	{
         	String url = PropertiesFileReader.getAPIProperty("UAT_getPractitioners");
@@ -44,17 +42,24 @@ public class GET_Practitioner_API {
             		given()//.log().all()
             		.baseUri(apiUrl).header("Content-Type", "application/json")
                     .header("Authorization", authtoken)  // Add the Authorization header
-                    .when().get().then().statusCode(200)//.log().all()  // Check if the status is OK
+                    .when().get().then().statusCode(200).log().all()  // Check if the status is OK
                     .extract().asString();  // Extract the response body as a string
             
             JSONObject jsonObject = new JSONObject(jsonResponse);
-            dataMap.put("Prac_FirstName: " , jsonObject.getString("FirstName"));
-            dataMap.put("Prac_LastName: " , jsonObject.getString("LastName"));
-            dataMap.put("Prac_Gender: ", jsonObject.getString("Gender"));
-            dataMap.put("Prac_DOB: " , jsonObject.getString("DOB"));
-            dataMap.put("Prac_Email: " , jsonObject.getString("Email"));
-            dataMap.put("Prac_Phone: " , jsonObject.getString("Phone"));
-            dataMap.put("Prac_Languages: " , jsonObject.getString("Languages"));
+            
+            String npi = jsonObject.getString("NPI");
+            
+            
+            dataMap.put("Prac_FirstName" , jsonObject.getString("FirstName"));
+            dataMap.put("Prac_LastName" , jsonObject.getString("LastName"));
+            dataMap.put("Prac_Gender", jsonObject.getString("Gender"));
+            dataMap.put("Prac_DOB" , jsonObject.getString("DOB"));
+            dataMap.put("Prac_Email" , jsonObject.getString("Email"));
+            dataMap.put("Prac_Phone" , jsonObject.getString("Phone"));
+            dataMap.put("Prac_Languages" , jsonObject.getString("Languages"));
+            dataMap.put("Prac_NPI", jsonObject.getString("NPI"));
+            dataMap.put("Prac_TIN", jsonObject.getString("TIN"));
+            dataMap.put("Prac_FAX", jsonObject.getString("Fax"));
             
             
             JSONArray addresses = jsonObject.getJSONArray("Addresses");

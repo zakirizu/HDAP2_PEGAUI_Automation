@@ -41,7 +41,6 @@ public class GET_Facility_API {
             
             // Create a JSONObject from the string
             JSONObject jsonObject = new JSONObject(jsonString);
-
             String name = jsonObject.getString("Name");
             dataMap.put("Faci_Name", name);            
             String tin = jsonObject.getString("TIN");
