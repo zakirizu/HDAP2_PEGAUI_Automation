@@ -33,7 +33,7 @@ Examples:
 
 
 @CreateRGZR                    @RunNow   @Masum
- Scenario Outline:  Valdiate Whether User is able to create an RG with Single Contact
+ Scenario Outline:  Valdiate Whether User is able to create an RG with Multiple Contacts
  Given Read ExcelData from CreateRGSheet for  <TestCaseID>
 Given 	Click on CreateRGButton
 And     	Click on NextButton
