@@ -1,20 +1,10 @@
 package utils_API;
-
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
-
 import factory.COLORS;
 import io.restassured.RestAssured;
-import org.apache.poi.ss.usermodel.*;
 import org.json.JSONArray;
 import org.json.JSONObject;
-
-import io.restassured.response.Response;
 import utils.PropertiesFileReader;
-
-import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
-
 import static io.restassured.RestAssured.given;
 
 public  class GET_Practitioner_API {
@@ -24,7 +14,7 @@ public  class GET_Practitioner_API {
     public static ConcurrentHashMap<String, String> get_Practitioner_Data (ConcurrentHashMap<String, String> dataMap, String practitionerId, String authtoken, String env) {
         try {
         	System.out.println(COLORS.RED+"Getting the data for the Practitioner with Friendly ID: "+practitionerId+COLORS.RESET);
-            String apiUrl="";             String resource = "";        //	String env = PropertiesFileReader.getAPIProperty("env");
+            String apiUrl="";             String resource = "";      
             
         	if(env.equalsIgnoreCase("UAT"))
         	{
@@ -51,11 +41,11 @@ public  class GET_Practitioner_API {
             
             dataMap.put("Prac_FirstName" , jsonObject.getString("FirstName"));
             dataMap.put("Prac_LastName" , jsonObject.getString("LastName"));
-            dataMap.put("Prac_Gender", jsonObject.getString("Gender"));
-            dataMap.put("Prac_DOB" , jsonObject.getString("DOB"));
-            dataMap.put("Prac_Email" , jsonObject.getString("Email"));
+            //dataMap.put("Prac_Gender", jsonObject.getString("Gender"));
+            //dataMap.put("Prac_DOB" , jsonObject.getString("DOB"));
+           // dataMap.put("Prac_Email" , jsonObject.getString("Email"));
             dataMap.put("Prac_Phone" , jsonObject.getString("Phone"));
-            dataMap.put("Prac_Languages" , jsonObject.getString("Languages"));
+           // dataMap.put("Prac_Languages" , jsonObject.getString("Languages"));
             dataMap.put("Prac_NPI", jsonObject.getString("NPI"));
             dataMap.put("Prac_TIN", jsonObject.getString("TIN"));
             dataMap.put("Prac_FAX", jsonObject.getString("Fax"));
@@ -81,12 +71,13 @@ public  class GET_Practitioner_API {
            
       		//Printing  using ForEachLoop		
       		for(String k : dataMap.keySet())		{
-      			System.out.println(COLORS.BLUE+k    + "----------->"    +dataMap.get(k));			
+      			
+      			if(k.contains("Prac")) {
+      			System.out.println(COLORS.BLUE+k    + "----------->"    +dataMap.get(k));	
+      			}
       		}
       		 System.out.println(COLORS.RED+"Above Request Group and Practitoner Data will now be injected into Chase Request to match with this RG and Provider"+COLORS.RESET);
 
-      		//String env = PropertiesFileReader.getAPIProperty("env");
-      		// env = PropertiesFileReader.getAPIProperty("env");
 			if(env.equalsIgnoreCase("UAT"))
 			{
 				RestAssured.baseURI = PropertiesFileReader.getAPIProperty("UAT_chaseRequest_url")+PropertiesFileReader.getAPIProperty("UAT_chaseRequest_resource");	

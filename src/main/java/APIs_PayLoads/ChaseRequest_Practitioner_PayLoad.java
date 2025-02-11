@@ -34,17 +34,17 @@ public class ChaseRequest_Practitioner_PayLoad {
 		
 		 
 		 //Practitioner Data
-		 		String Prac_DOB 				= dataMap.get("Prac_DOB");
+		 		//String Prac_DOB 				= dataMap.get("Prac_DOB");
 				String Prac_Street 			= dataMap.get("Prac_Street");
 				String Prac_LastName 	= dataMap.get("Prac_LastName");
 				String Prac_City 				= dataMap.get("Prac_City");
-				String Prac_Email 			= dataMap.get("Prac_Email");
+				//String Prac_Email 			= dataMap.get("Prac_Email");
 				String Prac_FirstName 	= dataMap.get("Prac_FirstName");
 				String Prac_PostalCode	= dataMap.get("Prac_PostalCode");
-				String Prac_Gender 		= dataMap.get("Prac_Gender");
+				//String Prac_Gender 		= dataMap.get("Prac_Gender");
 				String Given_Prac_Phone 			= dataMap.get("Prac_Phone");
 				String  Prac_Phone = Given_Prac_Phone.replaceAll("\\(|\\)", "").replace(" ", "-");
-				String Prac_Languages 	= dataMap.get("Prac_Languages");
+				//String Prac_Languages 	= dataMap.get("Prac_Languages");
 				String Prac_State 			= dataMap.get("Prac_State");				
 				String Prac_NPI 			= dataMap.get("Prac_NPI");
 				String Prac_TIN 			= dataMap.get("Prac_TIN");
