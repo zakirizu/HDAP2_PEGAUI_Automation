@@ -21,10 +21,10 @@ public  class GET_Practitioner_API {
 
 	   
 
-    public static ConcurrentHashMap<String, String> get_Practitioner_Data (ConcurrentHashMap<String, String> dataMap, String practitionerId, String authtoken) {
+    public static ConcurrentHashMap<String, String> get_Practitioner_Data (ConcurrentHashMap<String, String> dataMap, String practitionerId, String authtoken, String env) {
         try {
         	System.out.println(COLORS.RED+"Getting the data for the Practitioner with Friendly ID: "+practitionerId+COLORS.RESET);
-            String apiUrl="";             String resource = "";        	String env = PropertiesFileReader.getAPIProperty("env");
+            String apiUrl="";             String resource = "";        //	String env = PropertiesFileReader.getAPIProperty("env");
             
         	if(env.equalsIgnoreCase("UAT"))
         	{
@@ -78,13 +78,13 @@ public  class GET_Practitioner_API {
          
          
          
-            System.out.println(COLORS.RED+"Below Request Group and Practitoner Data which will be now injected into Chase Request to match with this RG and Provider"+COLORS.RESET);
+           
       		//Printing  using ForEachLoop		
       		for(String k : dataMap.keySet())		{
       			System.out.println(COLORS.BLUE+k    + "----------->"    +dataMap.get(k));			
       		}
-      		
-      		System.out.println(COLORS.RED+"NOTE:  if RG/Provider has multiple values to any Attribute Then we are taking the first one into account."+COLORS.RESET);
+      		 System.out.println(COLORS.RED+"Above Request Group and Practitoner Data will now be injected into Chase Request to match with this RG and Provider"+COLORS.RESET);
+
       		//String env = PropertiesFileReader.getAPIProperty("env");
       		// env = PropertiesFileReader.getAPIProperty("env");
 			if(env.equalsIgnoreCase("UAT"))
@@ -97,13 +97,16 @@ public  class GET_Practitioner_API {
 			}
 								
 			
-			given().log().all()
+			given()//.log().all()
 			.header("Content-Type", "application/json").header("Authorization", authtoken)
-					.body(APIs_PayLoads.ChaseRequest_Practitioner_PayLoad.PractitionerPayLoad(dataMap))
+					.body(APIs_PayLoads.ChaseRequest_Practitioner_PayLoad.PractitionerPayLoad(dataMap, env))
 					.when().post(resource)
-					.then().log().body(true).assertThat().statusCode(202).log().all()
+					.then().log().body(true).assertThat().statusCode(202)//.log().all()
 					.extract().response().jsonPath();
       		
+			
+			System.out.println(COLORS.BLUE+"************************Create Chase Request Successfully*******************"+COLORS.RESET);
+			
         }
         catch (Exception e) {
             e.printStackTrace();

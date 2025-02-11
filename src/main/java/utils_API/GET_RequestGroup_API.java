@@ -1,29 +1,14 @@
 package utils_API;
-
-
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
-
 import factory.COLORS;
-import io.restassured.RestAssured;
-import org.apache.poi.ss.usermodel.*;
 import org.json.JSONArray;
 import org.json.JSONObject;
-
-import io.restassured.response.Response;
 import utils.PropertiesFileReader;
-
-import java.awt.image.ColorConvertOp;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
-
 import static io.restassured.RestAssured.given;
 
 public class GET_RequestGroup_API {
 
-	//   static String authtoken = Generate_OAuth2.Token();   // Fetches the authorization token
-
-    // Method to generate random UK-style FirstName and LastName
     private static String[] generateUKName() {
         List<String> firstNames = Arrays.asList("Oliver", "George", "Harry", "Jack", "Jacob", "Charlie", "Thomas", "James", "William", "Joshua");
         List<String> lastNames = Arrays.asList("Smith", "Jones", "Taylor", "Brown", "Williams", "Wilson", "Evans","Thomas", "Johnson", "Roberts");
@@ -34,22 +19,25 @@ public class GET_RequestGroup_API {
         return new String[] { firstName, lastName };
     }
 
-    public static ConcurrentHashMap<String, String> get_RequestGroup_Data(ConcurrentHashMap<String, String> dataMap, String rgId, String authtoken) {
-    	System.out.println();
+    public static ConcurrentHashMap<String, String> get_RequestGroup_Data(ConcurrentHashMap<String, String> dataMap, String rgId, String authtoken, String env) {
+    	System.out.println("Selected Environment is : "+env);
+  		System.out.println(COLORS.BLUE+"NOTE:  If RG/Provider has multiple values to any Attribute Then we are taking the first one into account. Also"+COLORS.RESET);
+  		System.out.println(COLORS.BLUE+"NOTE: Please ensure that the Above RG and Provider are binded with the Process For Rules in Health Lake "+COLORS.RESET);
     	System.out.println(COLORS.RED+"Getting the data for the Request Group ID: "+COLORS.RED+rgId+COLORS.RESET);
     	    	String apiUrl ="";
         try {
-        	String env = PropertiesFileReader.getAPIProperty("env");
+        	//String env = PropertiesFileReader.getAPIProperty("env");
+        	
         	if(env.equalsIgnoreCase("UAT"))
         	{
         		String url = PropertiesFileReader.getAPIProperty("UAT_requestGroup");
         		String resource = PropertiesFileReader.getAPIProperty("UAT_requestGroup_Resource");
         		apiUrl = url+rgId+resource;
         	}
-        	else
+        	else if(env.equalsIgnoreCase("QA"))
         	{
-        		String url = PropertiesFileReader.getAPIProperty("QA_requestGroup");
-        		String resource = PropertiesFileReader.getAPIProperty("QA_requestGroup_Resource");
+        		String url = PropertiesFileReader.getAPIProperty("QA_requestGroup");        	
+        		String resource = PropertiesFileReader.getAPIProperty("QA_requestGroup_Resource");        		
         		apiUrl = url+rgId+resource;
         	}
 

@@ -11,7 +11,7 @@ import utils_API.Generate_OAuth2;
 
 
 public class API_Sd {
-
+	static String env = PropertiesFileReader.getAPIProperty("env");
 	HashMap<String, String> testData;
 	static String authtoken;
     // Extract other values from testData
@@ -121,7 +121,7 @@ public class API_Sd {
 
 	            System.out.println("Taking Auth_Token from Excel Sheet");
 	        } else {
-	        	    authtoken = Generate_OAuth2.Token(); 
+	        	    authtoken = Generate_OAuth2.Token(env); 
 	            System.out.println("Taking Auth_Token from API");
 	            ReadDataFromExcel.storeDataInExcel("API", authtoken);
 	            System.out.println("Storing Auth_Token in Excel Sheet");
@@ -165,7 +165,7 @@ public class API_Sd {
 
 	            System.out.println("Taking Auth_Token from Excel Sheet");
 	        } else {
-	       	    authtoken = Generate_OAuth2.Token(); 
+	       	    authtoken = Generate_OAuth2.Token(env); 
 	            System.out.println("Taking Auth_Token from API");
 	            ReadDataFromExcel.storeDataInExcel("API", authtoken);
 	            System.out.println("Storing Auth_Token in Excel Sheet");
@@ -206,7 +206,7 @@ public class API_Sd {
 
 	            System.out.println("Taking Auth_Token from Excel Sheet");
 	        } else {
-	       	    authtoken = Generate_OAuth2.Token(); 
+	       	    authtoken = Generate_OAuth2.Token(env); 
 	            System.out.println("Taking Auth_Token from API");
 	            ReadDataFromExcel.storeDataInExcel("API", authtoken);
 	            System.out.println("Storing Auth_Token in Excel Sheet");

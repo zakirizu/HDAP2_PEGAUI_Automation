@@ -10,7 +10,8 @@ import utils_API.Generate_OAuth2;
 
 
 public class Add_Misc_Documnets_To_ChaseRequests {
-	static String authtoken = Generate_OAuth2.Token();
+	static String env = PropertiesFileReader.getAPIProperty("env");
+	static String authtoken = Generate_OAuth2.Token(env);
 	@Test( dataProvider = "demo")
 	public static void ChaseRequest_With_Single_Matching_RG_01(String id) throws InterruptedException {
 		System.out.println(	"*******************************Creating Chase Request Matching With Single RG with Below Combination*****************************");

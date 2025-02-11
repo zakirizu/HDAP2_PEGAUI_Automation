@@ -15,7 +15,8 @@ public class MultipleProjects_ChaseRequests_For_RG_22001 {
 	static String chartType = PropertiesFileReader.getAPIProperty("ChartType");
 	static String DOS = PropertiesFileReader.getAPIProperty("DateOfStart");
 	static String DOE = PropertiesFileReader.getAPIProperty("DateOfEnd");
-	static String authtoken =  Generate_OAuth2.Token();
+	static String env = PropertiesFileReader.getAPIProperty("env");
+	static String authtoken =  Generate_OAuth2.Token(env);
 	
 	//We need to run this 100 times. But we are doing it in two rounds 50 each due to the limitation in the time out.
 	@Test(invocationCount = 1, dataProvider = "demo"  ) 

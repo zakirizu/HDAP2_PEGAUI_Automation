@@ -5,11 +5,12 @@ import java.util.concurrent.ConcurrentHashMap;
 import utils.PropertiesFileReader;
 
 public class ChaseRequest_Practitioner_PayLoad {
-		 public static  String PractitionerPayLoad(ConcurrentHashMap<String, String> dataMap) {
+		 public static  String PractitionerPayLoad(ConcurrentHashMap<String, String> dataMap, String env) {
 		 //General Data
 		 String cotivitClaimNumber = stepDefinitionFile.Common_Functions_Sd.currentDateTimeMilliSeconds();
 		 String accountID= ""; String subAccountID="";
-     	 String env = PropertiesFileReader.getAPIProperty("env");
+     	 //String env = PropertiesFileReader.getAPIProperty("env");
+     	 
      			if(env.equalsIgnoreCase("UAT"))
      			{
      				 accountID = PropertiesFileReader.getAPIProperty("UAT_AccountID");    
@@ -30,7 +31,7 @@ public class ChaseRequest_Practitioner_PayLoad {
 		 String RG_DOE 						= dataMap.get("RG_endDate");//
 		 String RG_FName 				= dataMap.get("RG_firstName");//
 		 String RG_LName 				= dataMap.get("RG_lastName");//
-		 
+		
 		 
 		 //Practitioner Data
 		 		String Prac_DOB 				= dataMap.get("Prac_DOB");

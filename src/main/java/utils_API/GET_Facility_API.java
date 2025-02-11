@@ -15,13 +15,13 @@ public class GET_Facility_API {
 
 
 
-    public static ConcurrentHashMap<String, String> get_Facility_Data(ConcurrentHashMap<String, String> dataMap, String facilityId, String authtoken) {    	
+    public static ConcurrentHashMap<String, String> get_Facility_Data(ConcurrentHashMap<String, String> dataMap, String facilityId, String authtoken, String env) {    	
     	String apiUrl= "";
     	String resource = "";
         try {
         	System.out.println(COLORS.RED+"Getting the data for the Facility with Friendly ID: "+facilityId+COLORS.RESET);
         	
-        	String env = PropertiesFileReader.getAPIProperty("env");
+        	//String env = PropertiesFileReader.getAPIProperty("env");
         	if(env.equalsIgnoreCase("UAT"))
         	{
         		String url = PropertiesFileReader.getAPIProperty("UAT_getFacility");
@@ -77,7 +77,11 @@ public class GET_Facility_API {
             e.printStackTrace();
         }
         
-        String env = PropertiesFileReader.getAPIProperty("env");
+        System.out.println(COLORS.RED+"Below Request Group and Facility Data which will be now injected into Chase Request to match with this RG and Provider"+COLORS.RESET);
+      	for(String k : dataMap.keySet())		{
+      			System.out.println(COLORS.BLUE+k    + "----------->"    +dataMap.get(k));			
+      		}
+       // String env = PropertiesFileReader.getAPIProperty("env");
 		if(env.equalsIgnoreCase("UAT"))
 		{
 			RestAssured.baseURI = PropertiesFileReader.getAPIProperty("UAT_chaseRequest_url")+PropertiesFileReader.getAPIProperty("UAT_chaseRequest_resource");				
@@ -86,18 +90,19 @@ public class GET_Facility_API {
 		{
 			RestAssured.baseURI = PropertiesFileReader.getAPIProperty("QA_chaseRequest_url")+PropertiesFileReader.getAPIProperty("QA_chaseRequest_resource");
 		}
+		
+		System.out.println(COLORS.RED+"NOTE:  if RG/Provider has multiple values to any Attribute Then we are taking the first one into account."+COLORS.RESET);
+		
+		
 		given()//.log().all()
 		.header("Content-Type", "application/json").header("Authorization", authtoken)
-				.body(APIs_PayLoads.ChaseRequest_Facility_PayLoad.FacilityPayLoad(dataMap))
+				.body(APIs_PayLoads.ChaseRequest_Facility_PayLoad.FacilityPayLoad(dataMap, env))
 				.when().post(resource)
 				.then().log().body(true).assertThat().statusCode(202).extract().response().jsonPath();
         
-        System.out.println(COLORS.RED+"Below Request Group and Facility Data which will be now injected into Chase Request to match with this RG and Provider"+COLORS.RESET);
-      	for(String k : dataMap.keySet())		{
-      			System.out.println(COLORS.BLUE+k    + "----------->"    +dataMap.get(k));			
-      		}
+     
+		System.out.println(COLORS.PURPLE+"************************Create Chase Request Successfully*******************"+COLORS.RESET);
       		
-      		System.out.println(COLORS.RED+"NOTE:  if RG/Provider has multiple values to any Attribute Then we are taking the first one into account."+COLORS.RESET);
       		
         return dataMap;
     }

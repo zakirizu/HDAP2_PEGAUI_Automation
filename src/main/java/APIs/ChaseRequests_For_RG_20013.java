@@ -16,10 +16,11 @@ public class ChaseRequests_For_RG_20013 {
 	static String chartType = PropertiesFileReader.getAPIProperty("ChartType");
 	static String DOS = PropertiesFileReader.getAPIProperty("DateOfStart");
 	static String DOE = PropertiesFileReader.getAPIProperty("DateOfEnd");
-	static String authtoken =  Generate_OAuth2.Token();
+	static String env = PropertiesFileReader.getAPIProperty("env");
+	static String authtoken =  Generate_OAuth2.Token(env);
 	
 	
-	@Test(invocationCount =5)
+	@Test(invocationCount =2)
 	public static void ChaseRequest_With_Single_Matching_RG_01() throws InterruptedException {
 		System.out.println(	"*******************************Creating Chase Request Matching With Single RG with Below Combination*****************************");
 		System.out.println("Intended Use-------------------------->" + intendedUse);

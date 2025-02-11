@@ -7,6 +7,7 @@ import utils_API.Generate_OAuth2;
 import utils.*;
 
 public class ChaseRequests_For_RG_20002 {
+	static String env = PropertiesFileReader.getAPIProperty("env");
 	static String endPoint = PropertiesFileReader.getAPIProperty("chaseRequest_url");
 	static String resource = PropertiesFileReader.getAPIProperty("chaseRequest_resource");
 	static String intendedUse = PropertiesFileReader.getAPIProperty("IntendedUse");
@@ -16,7 +17,7 @@ public class ChaseRequests_For_RG_20002 {
 	static String chartType = PropertiesFileReader.getAPIProperty("ChartType");
 	static String DOS = PropertiesFileReader.getAPIProperty("DateOfStart");
 	static String DOE = PropertiesFileReader.getAPIProperty("DateOfEnd");
-	static String authtoken =  Generate_OAuth2.Token();
+	static String authtoken =  Generate_OAuth2.Token(env);
 		
 	@Test(invocationCount =2)
 	public static void ChaseRequest_With_Single_Matching_RG_01() throws InterruptedException {
