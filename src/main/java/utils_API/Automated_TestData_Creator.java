@@ -8,8 +8,8 @@ import factory.Constants;
 import utils.PropertiesFileReader;
 
 public class Automated_TestData_Creator {
-	 private static final String env = "UAT";
-;
+	 private static final String env = "QA";
+
 	
 	    
 	    @DataProvider(name = env)
@@ -19,13 +19,13 @@ public class Automated_TestData_Creator {
 	    	{
 	        return new Object[][] 
 	        	{
+	        	//Test
 	        	//Enter the Request Group and Provider Details Here for QA Environment
 	        	//Valid Set of Data Do Not Delete this
-	 
+        		    //{"RG-73512850102019", "P-628385031024"},	 
 	        		{"RG-20002", "P-388412033222"},
-	        		{"RG-20013","P-329988776655"},
+	        		//{"RG-20013","P-329988776655"},
 	        		//{"RG-22001","P-388412068877"},
-	        		
 	        	//Invalid Set of Data 	
 	        		//{"RG-22001","P-329988776655"},
 	        		//test
@@ -45,7 +45,7 @@ public class Automated_TestData_Creator {
 	    }
 
 		
-	@Test(dataProvider = env , invocationCount = 1)
+	@Test(dataProvider = env , invocationCount = 10)
 	public void processDataAndGenerateOutput(String requestGroup, String providerId) {	
 			System.out.println();
 			System.out.println(COLORS.GREEN+"Creating the Test Data in " +COLORS.RED+env+COLORS.GREEN+" Environment. If you want to change the Environment, Kindly stop and update the 'Env' Variable Under the API Properiets File"+COLORS.RESET);
