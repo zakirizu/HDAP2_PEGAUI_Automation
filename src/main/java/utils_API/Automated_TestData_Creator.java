@@ -20,7 +20,7 @@ public class Automated_TestData_Creator {
 	        return new Object[][] 
 	        	{
 	        	//Enter the Request Group and Provider Details Here for QA Environment
-	        	//Valid Set of Data Do Not Delete this. 
+	        	//Valid Set of Data Do Not Delete this
 	 
 	        		{"RG-20002", "P-388412033222"},
 	        		{"RG-20013","P-329988776655"},
