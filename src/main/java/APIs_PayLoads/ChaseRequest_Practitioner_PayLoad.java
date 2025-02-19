@@ -31,6 +31,8 @@ public class ChaseRequest_Practitioner_PayLoad {
 		 String RG_DOE 						= dataMap.get("RG_endDate");//
 		 String RG_FName 				= dataMap.get("RG_firstName");//
 		 String RG_LName 				= dataMap.get("RG_lastName");//
+		 
+		 
 		
 		 
 		 //Practitioner Data
@@ -47,7 +49,13 @@ public class ChaseRequest_Practitioner_PayLoad {
 				//String Prac_Languages 	= dataMap.get("Prac_Languages");
 				String Prac_State 			= dataMap.get("Prac_State");				
 				String Prac_NPI 			= dataMap.get("Prac_NPI");
-				String Prac_TIN 			= dataMap.get("Prac_TIN");
+				
+				String tempNPI 			= dataMap.get("Prac_TIN");
+				
+				String Prac_TIN = tempNPI.length() >= 9 ? tempNPI.substring(0, 9) : tempNPI;
+				
+			//	String Prac_TIN = 
+				
 				
 				String given_Prac_FAX 			= dataMap.get("Prac_FAX").replaceAll("\\D", "");
 	            String Prac_FAX = given_Prac_FAX.substring(0, 3) + "-" +given_Prac_FAX.substring(3, 6) + "-" + given_Prac_FAX.substring(6); 
