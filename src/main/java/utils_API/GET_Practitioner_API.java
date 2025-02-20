@@ -32,7 +32,7 @@ public  class GET_Practitioner_API {
             		given()//.log().all()
             		.baseUri(apiUrl).header("Content-Type", "application/json")
                     .header("Authorization", authtoken)  // Add the Authorization header
-                    .when().get().then().statusCode(200)//.log().all()  // Check if the status is OK
+                    .when().get().then().statusCode(200).log().all()  // Check if the status is OK
                     .extract().asString();  // Extract the response body as a string
             
             JSONObject jsonObject = new JSONObject(jsonResponse);

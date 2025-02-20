@@ -48,9 +48,13 @@ public class ChaseRequest_Practitioner_PayLoad {
 				String  Prac_Phone = Given_Prac_Phone.replaceAll("\\(|\\)", "").replace(" ", "-");
 				//String Prac_Languages 	= dataMap.get("Prac_Languages");
 				String Prac_State 			= dataMap.get("Prac_State");				
+				System.out.println(Prac_State);
 				String Prac_NPI 			= dataMap.get("Prac_NPI");
 				
-				String tempNPI 			= dataMap.get("Prac_TIN");
+				//String tempNPI 			= dataMap.get("Prac_TIN");
+				String tempNPI ="195290646";
+				System.out.println(tempNPI);
+				
 				
 				String Prac_TIN = tempNPI.length() >= 9 ? tempNPI.substring(0, 9) : tempNPI;
 				
