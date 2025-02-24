@@ -11,7 +11,7 @@ public  class GET_Practitioner_API {
 
 	   
 
-    public static ConcurrentHashMap<String, String> get_Practitioner_Data (ConcurrentHashMap<String, String> dataMap, String practitionerId, String authtoken, String env) {
+    public static ConcurrentHashMap<String, String> get_Practitioner_Data (ConcurrentHashMap<String, String> dataMap, String practitionerId, String authtoken, String env, int count) {
         try {
         	System.out.println(COLORS.RED+"Getting the data for the Practitioner with Friendly ID: "+practitionerId+COLORS.RESET);
             String apiUrl="";             String resource = "";      
@@ -87,17 +87,16 @@ public  class GET_Practitioner_API {
 				RestAssured.baseURI = PropertiesFileReader.getAPIProperty("QA_chaseRequest_url")+PropertiesFileReader.getAPIProperty("QA_chaseRequest_resource");	
 			}
 								
-			
+			for(int i =0;i<count;i++)
+			{
 			given()//.log().all()
 			.header("Content-Type", "application/json").header("Authorization", authtoken)
 					.body(APIs_PayLoads.ChaseRequest_Practitioner_PayLoad.PractitionerPayLoad(dataMap, env))
 					.when().post(resource)
 					.then().log().body(true).assertThat().statusCode(202)//.log().all()
-					.extract().response().jsonPath();
-      		
-			
+					.extract().response().jsonPath(); 		
 			System.out.println(COLORS.BLUE+"************************Create Chase Request Successfully*******************"+COLORS.RESET);
-			
+			}
         }
         catch (Exception e) {
             e.printStackTrace();

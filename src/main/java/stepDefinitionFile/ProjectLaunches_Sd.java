@@ -16,7 +16,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.BeforeTest;
 import factory.Constants;
-import factory.ReadDataFromExcel;
+import factory.*;
 import io.cucumber.java.*;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
@@ -54,7 +54,7 @@ public class ProjectLaunches_Sd {
 		HashMap<String,String> testData;	
 		@Then("^Read ExcelData from projectLaunchSheet  for  (.+)$")
 		public HashMap<String, String> ReadExcelSheetDataFromSheet( String TestCaseID) {		
-			testData = ReadDataFromExcel.getExcelData("preLaunch", TestCaseID);
+			testData = getExcelData.UI_Sheet_Data("preLaunch", TestCaseID);
 			return testData;		
 		}
 	

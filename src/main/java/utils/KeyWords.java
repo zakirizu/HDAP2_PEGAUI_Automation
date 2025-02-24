@@ -23,9 +23,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-
-import factory.ReadDataFromExcel;
 import pages.Common_Functions_Pg;
+import factory.*;
 
 
 public class KeyWords {
@@ -136,7 +135,7 @@ public class KeyWords {
 	
 	
 	public HashMap<String, String> getTestData( String TestCaseID) {
-		testData = ReadDataFromExcel.getExcelData("createRG", TestCaseID);
+		testData = getExcelData.UI_Sheet_Data("createRG", TestCaseID);
 		return testData;				
 	}
 	

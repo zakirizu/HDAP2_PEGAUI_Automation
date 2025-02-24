@@ -22,7 +22,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.BeforeTest;
 import factory.Constants;
-import factory.ReadDataFromExcel;
+import factory.*;
 import io.cucumber.java.*;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
@@ -117,7 +117,7 @@ public class Common_Functions_Sd {
 
 	@Given("^Read ExcelData from (.+) and (.+)$")
 	public HashMap<String, String> ReadExcelSheetDataFromSheet(String SheetName, String TestCaseID) {		
-		HashMap<String,String> testData = ReadDataFromExcel.getExcelData(SheetName, TestCaseID);
+		HashMap<String,String> testData = getExcelData.UI_Sheet_Data(SheetName, TestCaseID);
 		 return testData;		
 	}
 	

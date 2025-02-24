@@ -1,9 +1,5 @@
 package utils;
-import java.util.HashMap;
-
 import org.openqa.selenium.WebDriver;
-
-import factory.ReadDataFromExcel;
 import io.cucumber.java.Scenario;
 import pages.*;
 

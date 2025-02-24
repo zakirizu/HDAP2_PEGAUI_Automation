@@ -8,8 +8,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
-
-import factory.ReadDataFromExcel;
+import factory.*;
 import io.cucumber.java.Scenario;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -33,7 +32,7 @@ public class Create_RG_Sd {
 
 	@Given("^Read ExcelData from CreateRGSheet for  (.+)$")
 	public HashMap<String, String> ReadExcelSheetDataFromSheet(String TestCaseID) {
-		testData = ReadDataFromExcel.getExcelData("createRG", TestCaseID);
+		testData = getExcelData.UI_Sheet_Data("createRG", TestCaseID);
 		return testData;
 	}
 

@@ -2,7 +2,7 @@ package stepDefinitionFile;
 import java.util.HashMap;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import factory.ReadDataFromExcel;
+import factory.*;
 import io.cucumber.java.en.Then;
 import utils.DependencyInjection;
 
@@ -20,7 +20,7 @@ public class DQA_Task_Sd {
 	HashMap<String,String> testData;	
 	@Then("^Read ExcelData from DQATaskSheet  for  (.+)$")
 	public HashMap<String, String> ReadExcelSheetDataFromSheet( String TestCaseID) {		
-		testData = ReadDataFromExcel.getExcelData("DQA", TestCaseID);
+		testData = getExcelData.UI_Sheet_Data("DQA", TestCaseID);
 		return testData;		
 	}
 

@@ -1,11 +1,16 @@
 package utils_API;
+import java.util.HashMap;
 import java.util.concurrent.ConcurrentHashMap;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import factory.COLORS;
+import factory.*;
 
 
 public class Automated_TestData_Creator {
+
+	
+	int count = 1;
 	 private static final String env = "QA";
 
 	
@@ -65,11 +70,11 @@ public class Automated_TestData_Creator {
 
 				if(providerID.startsWith("F-"))
 				{
-					GET_Facility_API.get_Facility_Data(dataMap, providerID,authtoken, env );
+					GET_Facility_API.get_Facility_Data(dataMap, providerID,authtoken, env, count );
 				}
 				else if(providerID.startsWith("P-"))
 				{
-					GET_Practitioner_API.get_Practitioner_Data(dataMap, providerID,authtoken, env); 
+					GET_Practitioner_API.get_Practitioner_Data(dataMap, providerID,authtoken, env, count); 
 					
 				}
 			

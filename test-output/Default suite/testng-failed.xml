@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="utils_API.Automated_TestData_Creator">
+      <class name="utils_API.Automated_TestData_Creator_TEST">
         <methods>
-          <include name="processDataAndGenerateOutput" invocation-numbers="0"/>
+          <include name="processDataAndGenerateOutput"/>
         </methods>
-      </class> <!-- utils_API.Automated_TestData_Creator -->
+      </class> <!-- utils_API.Automated_TestData_Creator_TEST -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

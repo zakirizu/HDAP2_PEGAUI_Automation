@@ -1,8 +1,10 @@
 package stepDefinitionFile;
 import static io.restassured.RestAssured.given;
 import org.apache.commons.lang3.StringUtils;
+
+import factory.getExcelData;
+
 import java.util.HashMap;
-import factory.ReadDataFromExcel;
 import io.cucumber.java.en.Given;
 import io.restassured.RestAssured;
 import utils.PropertiesFileReader;
@@ -22,7 +24,7 @@ public class API_Sd {
 	
 	@Given("^Read ExcelData from API_Sheet for  (.+)$")
 	public HashMap<String, String> ReadExcelSheetDataFromSheet(String TestCaseID) {
-		testData = ReadDataFromExcel.getExcelData("API", TestCaseID);
+		testData = getExcelData.UI_Sheet_Data("API", TestCaseID);
 		System.out.println("ZR");
 		System.out.println(testData);
 		return testData;
@@ -123,7 +125,7 @@ public class API_Sd {
 	        } else {
 	        	    authtoken = Generate_OAuth2.Token(env); 
 	            System.out.println("Taking Auth_Token from API");
-	            ReadDataFromExcel.storeDataInExcel("API", authtoken);
+	            getExcelData.UI_Sheet_Data("API", authtoken);
 	            System.out.println("Storing Auth_Token in Excel Sheet");
 	        }
 
@@ -167,7 +169,7 @@ public class API_Sd {
 	        } else {
 	       	    authtoken = Generate_OAuth2.Token(env); 
 	            System.out.println("Taking Auth_Token from API");
-	            ReadDataFromExcel.storeDataInExcel("API", authtoken);
+	            getExcelData.Write_UI_Sheet_Data(subAccountID, cotivitClaimNumber);
 	            System.out.println("Storing Auth_Token in Excel Sheet");
 	        }
 
@@ -208,7 +210,7 @@ public class API_Sd {
 	        } else {
 	       	    authtoken = Generate_OAuth2.Token(env); 
 	            System.out.println("Taking Auth_Token from API");
-	            ReadDataFromExcel.storeDataInExcel("API", authtoken);
+	            getExcelData.UI_Sheet_Data("API", authtoken);
 	            System.out.println("Storing Auth_Token in Excel Sheet");
 	        }
 

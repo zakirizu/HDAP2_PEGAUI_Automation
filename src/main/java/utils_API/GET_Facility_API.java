@@ -15,7 +15,7 @@ public class GET_Facility_API {
 
 
 
-    public static ConcurrentHashMap<String, String> get_Facility_Data(ConcurrentHashMap<String, String> dataMap, String facilityId, String authtoken, String env) {    	
+    public static ConcurrentHashMap<String, String> get_Facility_Data(ConcurrentHashMap<String, String> dataMap, String facilityId, String authtoken, String env, int count) {    	
     	String apiUrl= "";
     	String resource = "";
         try {
@@ -93,16 +93,16 @@ public class GET_Facility_API {
 		
 		System.out.println(COLORS.RED+"NOTE:  if RG/Provider has multiple values to any Attribute Then we are taking the first one into account."+COLORS.RESET);
 		
+		for(int i=0;i<count;i++)
+		{
 		
 		given()//.log().all()
 		.header("Content-Type", "application/json").header("Authorization", authtoken)
 				.body(APIs_PayLoads.ChaseRequest_Facility_PayLoad.FacilityPayLoad(dataMap, env))
 				.when().post(resource)
 				.then().log().body(true).assertThat().statusCode(202).extract().response().jsonPath();
-        
-     
 		System.out.println(COLORS.PURPLE+"************************Create Chase Request Successfully*******************"+COLORS.RESET);
-      		
+		}	
       		
         return dataMap;
     }
