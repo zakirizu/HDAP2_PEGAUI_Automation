@@ -6,7 +6,7 @@ import factory.COLORS;
 
 
 public class Automated_TestData_Creator {
-	 private static final String env = "UAT";
+	 private static final String env = "QA";
 
 	
 	    
@@ -19,8 +19,9 @@ public class Automated_TestData_Creator {
 	        	{
 	
 //Valid Set Of Data	   
-	        	{"RG-36015","P-195206464425"}
-	       // {"RG-31017", "P-134669792725"},
+		        {"RG-36024", "P-196212245725"}, 	
+	        //	{"RG-36015","P-195206464425"}
+	         //{"RG-31017", "P-134669792725"},
 			//{"RG-36010", "P-134669792725"},
 			//{"RG-35022", "P-157855884725"},	
 			//{"RG-20002", "P-388412033222"},	        	
@@ -39,8 +40,8 @@ public class Automated_TestData_Creator {
 	    	return new Object[][] 
 	    	 {
 //Valid Set Of Data For UAT
-				//{"RG-10002", "P-354531020225"}
-				{"RG-11006","P-388412088777"}
+				{"RG-10002", "P-354531020225"}
+				//{"RG-11006","P-388412088777"}
 	    	      };
 	        	}
 	        	
@@ -49,7 +50,7 @@ public class Automated_TestData_Creator {
 	    }
 
 		
-	@Test(dataProvider = env , invocationCount =1)
+	@Test(dataProvider = env , invocationCount =5)
 	public void processDataAndGenerateOutput(String requestGroup, String providerId) {	
 			System.out.println();
 			System.out.println(COLORS.GREEN+"Creating the Test Data in " +COLORS.RED+env+COLORS.GREEN+" Environment. If you want to change the Environment, Kindly stop and update the 'Env' Variable Under the API Properiets File"+COLORS.RESET);
