@@ -95,7 +95,8 @@ public  class GET_Practitioner_API {
 					.body(APIs_PayLoads.ChaseRequest_Practitioner_PayLoad.PractitionerPayLoad(dataMap, env))
 					.when().post(resource)
 					.then().log().body(true).assertThat().statusCode(202)//.log().all()
-					.extract().response().jsonPath(); 		
+					.extract().response().jsonPath(); 	
+			Thread.sleep(200);
 			//System.out.println(COLORS.BLUE+"************************Create Chase Request Successfully*******************"+COLORS.RESET);
 			}
         }
