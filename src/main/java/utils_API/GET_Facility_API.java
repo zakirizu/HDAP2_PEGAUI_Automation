@@ -20,21 +20,17 @@ public class GET_Facility_API {
     	String resource = "";
         try {
         	System.out.println(COLORS.RED+"Getting the data for the Facility with Friendly ID: "+facilityId+COLORS.RESET);
-        	
-        	//String env = PropertiesFileReader.getAPIProperty("env");
         	if(env.equalsIgnoreCase("UAT"))
         	{
         		String url = PropertiesFileReader.getAPIProperty("UAT_getFacility");
-        			apiUrl = url+facilityId;
+        		apiUrl = url+facilityId;
         	}
         	else
         	{
         		String url = PropertiesFileReader.getAPIProperty("QA_getFacility");
     			apiUrl = url+facilityId;
         	}
-        	
-
-            // Fetch response from the API
+        	// Fetch response from the API
             String jsonString = 
             		given()//.log().all()
             		.baseUri(apiUrl).header("Content-Type", "application/json")
@@ -44,14 +40,10 @@ public class GET_Facility_API {
             
             // Create a JSONObject from the string
             JSONObject jsonObject = new JSONObject(jsonString);
-            String name = jsonObject.getString("Name");
-            dataMap.put("Faci_Name", name);            
-            String tin = jsonObject.getString("TIN");
-            dataMap.put("Faci_TIN", tin);            
-            String npi = jsonObject.getString("NPI"); 
-            dataMap.put("Faci_NPI", npi);      
-            String phone = jsonObject.getString("Phone");
-            dataMap.put("Faci_Phone", phone);
+            String name = jsonObject.getString("Name");            dataMap.put("Faci_Name", name);            
+            String tin = jsonObject.getString("TIN");            dataMap.put("Faci_TIN", tin);            
+            String npi = jsonObject.getString("NPI");             dataMap.put("Faci_NPI", npi);      
+            String phone = jsonObject.getString("Phone");            dataMap.put("Faci_Phone", phone);
 
 
             // Read Addresses array

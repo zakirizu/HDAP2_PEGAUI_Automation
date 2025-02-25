@@ -32,7 +32,7 @@ public  class GET_Practitioner_API {
             		given()//.log().all()
             		.baseUri(apiUrl).header("Content-Type", "application/json")
                     .header("Authorization", authtoken)  // Add the Authorization header
-                    .when().get().then().statusCode(200).log().all()  // Check if the status is OK
+                    .when().get().then().statusCode(200)//.log().all()  // Check if the status is OK
                     .extract().asString();  // Extract the response body as a string
             
             JSONObject jsonObject = new JSONObject(jsonResponse);
@@ -87,15 +87,16 @@ public  class GET_Practitioner_API {
 				RestAssured.baseURI = PropertiesFileReader.getAPIProperty("QA_chaseRequest_url")+PropertiesFileReader.getAPIProperty("QA_chaseRequest_resource");	
 			}
 								
-			for(int i =0;i<count;i++)
+			for(int i =1;i<=count;i++)
 			{
+			System.out.println(COLORS.BLUE+i+".)"+"************************Pushing Chase Request to AWS*******************"+COLORS.RESET);
 			given()//.log().all()
 			.header("Content-Type", "application/json").header("Authorization", authtoken)
 					.body(APIs_PayLoads.ChaseRequest_Practitioner_PayLoad.PractitionerPayLoad(dataMap, env))
 					.when().post(resource)
 					.then().log().body(true).assertThat().statusCode(202)//.log().all()
 					.extract().response().jsonPath(); 		
-			System.out.println(COLORS.BLUE+"************************Create Chase Request Successfully*******************"+COLORS.RESET);
+			//System.out.println(COLORS.BLUE+"************************Create Chase Request Successfully*******************"+COLORS.RESET);
 			}
         }
         catch (Exception e) {

@@ -2,12 +2,18 @@ package stepDefinitionFile;
 import static io.restassured.RestAssured.given;
 import org.apache.commons.lang3.StringUtils;
 
+import factory.COLORS;
 import factory.getExcelData;
 
 import java.util.HashMap;
+import java.util.concurrent.ConcurrentHashMap;
+
 import io.cucumber.java.en.Given;
 import io.restassured.RestAssured;
 import utils.PropertiesFileReader;
+import utils_API.GET_Facility_API;
+import utils_API.GET_Practitioner_API;
+import utils_API.GET_RequestGroup_API;
 import utils_API.Generate_OAuth2;
 
 
@@ -21,15 +27,49 @@ public class API_Sd {
 	static String chartType = PropertiesFileReader.getAPIProperty("ChartType");
 	static String DOS = PropertiesFileReader.getAPIProperty("DateOfStart");
 	static String DOE = PropertiesFileReader.getAPIProperty("DateOfEnd");
+	ConcurrentHashMap<String, String> dataMap; 
 	
 	@Given("^Read ExcelData from API_Sheet for  (.+)$")
 	public HashMap<String, String> ReadExcelSheetDataFromSheet(String TestCaseID) {
-		testData = getExcelData.UI_Sheet_Data("API", TestCaseID);
-		System.out.println("ZR");
-		System.out.println(testData);
-		return testData;
+	testData = getExcelData.API_Sheet_Data("ChaseData", TestCaseID);
+	System.out.println(testData);
+	return testData;
+	}
+	
+	@Given("^Get the Data from the Request Group$")
+	public void GettheDatafromtheRequestGroup() {
+		String requestGroup 	= testData.get("RGID");
+		String env 					= testData.get("Environment");
+		String accountID 			= testData.get("AccountID");
+		String subAccountID 	= testData.get("SubAccountID");
+		System.out.println();
+		System.out.println(COLORS.GREEN+"Creating the Test Data in " +COLORS.RED+env+COLORS.GREEN+" Environment. If you want to change the Environment, Kindly stop and update the 'Env' Variable Under the API Properiets File"+COLORS.RESET);
+		String authtoken = Generate_OAuth2.Token(env); 
+		ConcurrentHashMap<String, String> dataMap = new ConcurrentHashMap<>();
+		dataMap.put("accountID", accountID);
+		dataMap.put("subAccountID", subAccountID);
+		GET_RequestGroup_API.get_RequestGroup_Data(dataMap, requestGroup,authtoken, env);		
+	}
+	
+	
+	@Given("^Get the Data from the Provider$")
+	public void GettheDatafromtheProvider() {
+		String providerID 		= testData.get("ProviderID");
+		String tempCount 		= testData.get("Count");
+		int count 						= Integer.parseInt(tempCount);
+		dataMap = new ConcurrentHashMap<>();
+		if(providerID.startsWith("F-"))
+		{
+			GET_Facility_API.get_Facility_Data(dataMap, providerID,authtoken, env , count);
+		}
+		else if(providerID.startsWith("P-"))
+		{
+			GET_Practitioner_API.get_Practitioner_Data(dataMap, providerID,authtoken, env, count); 
+			
+		}
 		
 	}
+	
 
 
 

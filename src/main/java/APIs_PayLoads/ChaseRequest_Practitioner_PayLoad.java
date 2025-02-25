@@ -8,9 +8,10 @@ public class ChaseRequest_Practitioner_PayLoad {
 		 public static  String PractitionerPayLoad(ConcurrentHashMap<String, String> dataMap, String env) {
 		 //General Data
 		 String cotivitClaimNumber = stepDefinitionFile.Common_Functions_Sd.currentDateTimeMilliSeconds();
-		 String accountID= ""; String subAccountID="";
+		 String accountID=  dataMap.get("accountID");
+		 String subAccountID=dataMap.get("subAccountID");
      	 //String env = PropertiesFileReader.getAPIProperty("env");
-     	 
+     	 /*
      			if(env.equalsIgnoreCase("UAT"))
      			{
      				 accountID = PropertiesFileReader.getAPIProperty("UAT_AccountID");    
@@ -21,16 +22,16 @@ public class ChaseRequest_Practitioner_PayLoad {
      				 accountID = PropertiesFileReader.getAPIProperty("QA_AccountID");    
      				 subAccountID = PropertiesFileReader.getAPIProperty("QA_SubAccountID");	 
      			}
-
+*/
     	 		 	 
 		 //RG Details from Map
 		 String RG_intendedUse	 = dataMap.get("RG_ProjectTypes");// 
-		 String RG_AuditType			 = dataMap.get("RG_AuditTypes");//
+		 String RG_AuditType		 = dataMap.get("RG_AuditTypes");//
 		 String RG_CharTypes 		= dataMap.get("RG_ChartTypes");//
-		 String RG_DOS 						= dataMap.get("RG_startDate");//
-		 String RG_DOE 						= dataMap.get("RG_endDate");//
-		 String RG_FName 				= dataMap.get("RG_firstName");//
-		 String RG_LName 				= dataMap.get("RG_lastName");//
+		 String RG_DOS 				= dataMap.get("RG_startDate");//
+		 String RG_DOE 				= dataMap.get("RG_endDate");//
+		 String RG_FName 			= dataMap.get("RG_firstName");//
+		 String RG_LName 			= dataMap.get("RG_lastName");//
 		 
 		 
 		
@@ -48,12 +49,10 @@ public class ChaseRequest_Practitioner_PayLoad {
 				String  Prac_Phone = Given_Prac_Phone.replaceAll("\\(|\\)", "").replace(" ", "-");
 				//String Prac_Languages 	= dataMap.get("Prac_Languages");
 				String Prac_State 			= dataMap.get("Prac_State");				
-				System.out.println(Prac_State);
-				String Prac_NPI 			= dataMap.get("Prac_NPI");
-				
+				String Prac_NPI 			= dataMap.get("Prac_NPI");				
 				//String tempNPI 			= dataMap.get("Prac_TIN");
 				String tempNPI ="195290646";
-				System.out.println(tempNPI);
+			
 				
 				
 				String Prac_TIN = tempNPI.length() >= 9 ? tempNPI.substring(0, 9) : tempNPI;
