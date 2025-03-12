@@ -26,6 +26,7 @@ public class ChaseRequest_Practitioner_PayLoad {
     	 		 	 
 		 //RG Details from Map
 		 String RG_intendedUse	 = dataMap.get("RG_ProjectTypes");// 
+		// String RG_intendedUse ="RCA";
 		 String RG_AuditType		 = dataMap.get("RG_AuditTypes");//
 		 String RG_CharTypes 		= dataMap.get("RG_ChartTypes");//
 		 String RG_DOS 				= dataMap.get("RG_startDate");//

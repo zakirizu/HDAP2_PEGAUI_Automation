@@ -8,8 +8,7 @@ import factory.COLORS;
 import factory.*;
 
 public class Automated_TestData_Creator {
-
-
+	
 	@Test(dataProvider = "testData")
 	public void processDataAndGenerateOutput(String testCaseID ) {	
 		String SheetName 		="ChaseData";	
@@ -30,9 +29,7 @@ public class Automated_TestData_Creator {
 		
 		String authtoken = Generate_OAuth2.Token(env);			
 		GET_RequestGroup_API.get_RequestGroup_Data(dataMap, requestGroup,authtoken, env);
-  
-
-				if(providerID.startsWith("F-"))
+  				if(providerID.startsWith("F-"))
 				{
 					GET_Facility_API.get_Facility_Data(dataMap, providerID,authtoken, env , count);
 				}
@@ -41,16 +38,12 @@ public class Automated_TestData_Creator {
 					GET_Practitioner_API.get_Practitioner_Data(dataMap, providerID,authtoken, env, count); 
 					
 				}
-		}
-	
+		}	
     @DataProvider(name = "testData")
     public Object[][] provideData() {
         return new Object[][] {
-            {"set1"},
-            {"set2"},
-           // {"set3"},
-           // {"set4"},
-           // {"set5"}
+            {"set2"}
+       
         };
     }
 	
