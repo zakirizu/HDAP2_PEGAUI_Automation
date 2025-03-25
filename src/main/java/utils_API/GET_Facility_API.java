@@ -25,11 +25,18 @@ public class GET_Facility_API {
         		String url = PropertiesFileReader.getAPIProperty("UAT_getFacility");
         		apiUrl = url+facilityId;
         	}
-        	else
+        	else if(env.equalsIgnoreCase("QA"))
         	{
         		String url = PropertiesFileReader.getAPIProperty("QA_getFacility");
     			apiUrl = url+facilityId;
         	}
+        	else
+        	{
+        		String url = PropertiesFileReader.getAPIProperty("DEV_getFacility");
+    			apiUrl = url+facilityId;
+        	}
+        	
+        	
         	// Fetch response from the API
             String jsonString = 
             		given()//.log().all()

@@ -40,7 +40,7 @@ public  class GET_Practitioner_API {
            
             
             dataMap.put("Prac_FirstName" , jsonObject.getString("FirstName"));
-            dataMap.put("Prac_LastName" , jsonObject.getString("LastName"));
+             dataMap.put("Prac_LastName" , jsonObject.getString("LastName"));
             //dataMap.put("Prac_Gender", jsonObject.getString("Gender"));
             //dataMap.put("Prac_DOB" , jsonObject.getString("DOB"));
            // dataMap.put("Prac_Email" , jsonObject.getString("Email"));

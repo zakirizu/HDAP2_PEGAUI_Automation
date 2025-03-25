@@ -1,7 +1,6 @@
 package utils_API;
 import java.util.HashMap;
 import java.util.concurrent.ConcurrentHashMap;
-
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import factory.COLORS;
@@ -42,9 +41,8 @@ public class Automated_TestData_Creator {
     @DataProvider(name = "testData")
     public Object[][] provideData() {
         return new Object[][] {
-            {"set2"}
-       
-        };
+            {"UAT21"}
+              };
     }
 	
 }

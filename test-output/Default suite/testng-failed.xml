@@ -5,7 +5,7 @@
     <classes>
       <class name="utils_API.Automated_TestData_Creator">
         <methods>
-          <include name="processDataAndGenerateOutput" invocation-numbers="1"/>
+          <include name="processDataAndGenerateOutput" invocation-numbers="0"/>
         </methods>
       </class> <!-- utils_API.Automated_TestData_Creator -->
     </classes>
