@@ -7,6 +7,14 @@ import factory.COLORS;
 import factory.*;
 
 public class Automated_TestData_Creator {
+
+	@DataProvider(name = "testData")
+    public Object[][] provideData() {
+        return new Object[][] {
+            {"QASet7"}
+              
+        };
+    }
 	
 	@Test(dataProvider = "testData")
 	public void processDataAndGenerateOutput(String testCaseID ) {	
@@ -15,9 +23,9 @@ public class Automated_TestData_Creator {
 		String requestGroup 	= testData.get("RGID");
 		String providerID 		= testData.get("ProviderID");
 		String tempCount 		= testData.get("Count");
-		int count 						= Integer.parseInt(tempCount);
-		String env 					= testData.get("Environment");
-		String accountID 			= testData.get("AccountID");
+		int count 				= Integer.parseInt(tempCount);
+		String env 				= testData.get("Environment");
+		String accountID 		= testData.get("AccountID");
 		String subAccountID 	= testData.get("SubAccountID");
 		ConcurrentHashMap<String, String> dataMap = new ConcurrentHashMap<>();
 		dataMap.put("accountID", accountID);
@@ -28,6 +36,7 @@ public class Automated_TestData_Creator {
 		
 		String authtoken = Generate_OAuth2.Token(env);			
 		GET_RequestGroup_API.get_RequestGroup_Data(dataMap, requestGroup,authtoken, env);
+		
   				if(providerID.startsWith("F-"))
 				{
 					GET_Facility_API.get_Facility_Data(dataMap, providerID,authtoken, env , count);
@@ -38,11 +47,6 @@ public class Automated_TestData_Creator {
 					
 				}
 		}	
-    @DataProvider(name = "testData")
-    public Object[][] provideData() {
-        return new Object[][] {
-            {"UAT21"}
-              };
-    }
+
 	
 }

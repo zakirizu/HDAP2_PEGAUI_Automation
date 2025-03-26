@@ -1,68 +1,47 @@
 package APIs_PayLoads;
 
+import java.util.Random;
 import java.util.concurrent.ConcurrentHashMap;
+import factory.*;
 
 import utils.PropertiesFileReader;
 
 public class ChaseRequest_Practitioner_PayLoad {
 		 public static  String PractitionerPayLoad(ConcurrentHashMap<String, String> dataMap, String env) {
-		 //General Data
+			 
+	//Random Name Generation		 
+			 Random random = new Random();
+			 String randomFirstName = Constants.firstNames_list.get(random.nextInt(Constants.firstNames_list.size()));
+			 String randomLastName = Constants.lastNames_list.get(random.nextInt(Constants.lastNames_list.size()));
+			 
+	//General Data
 		 String cotivitClaimNumber = stepDefinitionFile.Common_Functions_Sd.currentDateTimeMilliSeconds();
 		 String accountID=  dataMap.get("accountID");
-		 String subAccountID=dataMap.get("subAccountID");
-     	 //String env = PropertiesFileReader.getAPIProperty("env");
-     	 /*
-     			if(env.equalsIgnoreCase("UAT"))
-     			{
-     				 accountID = PropertiesFileReader.getAPIProperty("UAT_AccountID");    
-     				 subAccountID = PropertiesFileReader.getAPIProperty("UAT_SubAccountID");	 
-     			}
-     			else
-     			{
-     				 accountID = PropertiesFileReader.getAPIProperty("QA_AccountID");    
-     				 subAccountID = PropertiesFileReader.getAPIProperty("QA_SubAccountID");	 
-     			}
-*/
-    	 		 	 
-		 //RG Details from Map
+		 String subAccountID=  dataMap.get("subAccountID");
+ 	//RG Details from Map
 		 String RG_intendedUse	 = dataMap.get("RG_ProjectTypes");// 
-		// String RG_intendedUse ="RCA";
 		 String RG_AuditType		 = dataMap.get("RG_AuditTypes");//
 		 String RG_CharTypes 		= dataMap.get("RG_ChartTypes");//
 		 String RG_DOS 				= dataMap.get("RG_startDate");//
-		 String RG_DOE 				= dataMap.get("RG_endDate");//
-		 String RG_FName 			= dataMap.get("RG_firstName");//
-		 String RG_LName 			= dataMap.get("RG_lastName");//
-		 
-		 
-		
-		 
-		 //Practitioner Data
-		 		//String Prac_DOB 				= dataMap.get("Prac_DOB");
-				String Prac_Street 			= dataMap.get("Prac_Street");
-				String Prac_LastName 	= dataMap.get("Prac_LastName");
-				String Prac_City 				= dataMap.get("Prac_City");
-				//String Prac_Email 			= dataMap.get("Prac_Email");
+   //Practitioner Data
+		 		String Prac_Street 			= dataMap.get("Prac_Street");
+				String Prac_LastName 		= dataMap.get("Prac_LastName");
+				String Prac_City 			= dataMap.get("Prac_City");
 				String Prac_FirstName 	= dataMap.get("Prac_FirstName");
 				String Prac_PostalCode	= dataMap.get("Prac_PostalCode");
-				//String Prac_Gender 		= dataMap.get("Prac_Gender");
 				String Given_Prac_Phone 			= dataMap.get("Prac_Phone");
 				String  Prac_Phone = Given_Prac_Phone.replaceAll("\\(|\\)", "").replace(" ", "-");
-				//String Prac_Languages 	= dataMap.get("Prac_Languages");
 				String Prac_State 			= dataMap.get("Prac_State");				
 				String Prac_NPI 			= dataMap.get("Prac_NPI");				
-				//String tempNPI 			= dataMap.get("Prac_TIN");
 				String tempNPI ="195290646";
-			
-				
-				
 				String Prac_TIN = tempNPI.length() >= 9 ? tempNPI.substring(0, 9) : tempNPI;
-				
-			//	String Prac_TIN = 
-				
-				
 				String given_Prac_FAX 			= dataMap.get("Prac_FAX").replaceAll("\\D", "");
-	            String Prac_FAX = given_Prac_FAX.substring(0, 3) + "-" +given_Prac_FAX.substring(3, 6) + "-" + given_Prac_FAX.substring(6); 
+	            String Prac_FAX = given_Prac_FAX.substring(0, 3) + "-" +given_Prac_FAX.substring(3, 6) + "-" + given_Prac_FAX.substring(6);
+				//String Prac_Languages 	= dataMap.get("Prac_Languages");
+				//String Prac_Gender 		= dataMap.get("Prac_Gender");
+				//String Prac_Email 			= dataMap.get("Prac_Email");
+				//String Prac_DOB 				= dataMap.get("Prac_DOB");
+				//String tempNPI 			= dataMap.get("Prac_TIN");
 
 		String payLoad = "{\r\n"
 				+ "    \"ChaseRequest\": {\r\n"
@@ -121,8 +100,8 @@ public class ChaseRequest_Practitioner_PayLoad {
 				+ "        \"Members\": [\r\n"
 				+ "            {\r\n"
 				+ "                \"Member\": {\r\n"
-				+ "                  \"LastName\": \"Phi\",\r\n"
-				+ "                 \"FirstName\": \"Team\",\r\n"
+				+ "                  \"LastName\": \""+randomLastName+"\",\r\n"
+				+ "                 \"FirstName\": \""+randomFirstName+"\",\r\n"
 				+ "                    \"Address1\": \"048 Hinton Loop Apt. 872\",\r\n"
 				+ "                    \"Address2\": \"Apt. 736\",\r\n"
 				+ "                    \"City\": \"Kathleenside\",\r\n"
@@ -141,8 +120,8 @@ public class ChaseRequest_Practitioner_PayLoad {
 				+ "            },\r\n"
 				+ "            {\r\n"
 				+ "                \"Member\": {\r\n"
-				+ "                    \"LastName\": \"Phi\",\r\n"
-				+ "                    \"FirstName\": \"Qui\",\r\n"
+				+ "                    \"LastName\": \""+randomLastName+"\",\r\n"
+				+ "                    \"FirstName\": \""+randomFirstName+"\",\r\n"
 				+ "                    \"Address1\": \"644 Rachel Ridge Apt. 945\",\r\n"
 				+ "                    \"Address2\": \"Suite 660\",\r\n"
 				+ "                    \"City\": \"East Victoriaborough\",\r\n"

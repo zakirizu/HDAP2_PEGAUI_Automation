@@ -1,6 +1,9 @@
 package factory;
 
 import java.io.File;
+import java.util.Arrays;
+import java.util.List;
+
 import utils.PropertiesFileReader;
 
 
@@ -16,4 +19,10 @@ public interface Constants {
 	String REPORTS       		= PROJECT_PATH + File.separator + "Reports"+ File.separator ;
 	String env       					= PropertiesFileReader.getAPIProperty("env");
 	String Environment			= PropertiesFileReader.getUIProperty("Env");
+	List<String> firstNames_list = Arrays.asList("Alice", "Bob", "Charlie", "David", "Emma", "Fiona", "George", "Hannah", "Ian", "Jack",
+            									"Karen", "Liam", "Mia", "Nathan", "Olivia", "Paul", "Quinn", "Rachel", "Samuel", "Tina",
+            									"James", "Lucas", "Mason", "Noah", "Oliver", "Ava", "Benjamin", "Chloe", "Dylan", "Ella",
+            									"Henry", "Grace", "Jackson", "Leo", "Madison", "Nathaniel", "Owen", "Penelope", "Ryan", "Zoe");
+	List<String> lastNames_list = Arrays.asList("Smith", "Johnson", "Williams", "Brown", "Jones", "Garcia", "Miller", "Davis", "Rodriguez", "Martinez","Hernandez", "Lopez", "Gonzalez", "Wilson", "Anderson", "Thomas", "Taylor", "Moore", "Jackson", "Martin",
+	            "Lee", "Perez", "Thompson", "White", "Harris");
 }

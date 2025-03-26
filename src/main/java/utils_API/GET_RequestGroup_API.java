@@ -9,16 +9,6 @@ import static io.restassured.RestAssured.given;
 
 public class GET_RequestGroup_API {
 
-    private static String[] generateUKName() {
-        List<String> firstNames = Arrays.asList("Oliver", "George", "Harry", "Jack", "Jacob", "Charlie", "Thomas", "James", "William", "Joshua");
-        List<String> lastNames = Arrays.asList("Smith", "Jones", "Taylor", "Brown", "Williams", "Wilson", "Evans","Thomas", "Johnson", "Roberts");
-        Random random = new Random();
-        String firstName = firstNames.get(random.nextInt(firstNames.size()));
-        String lastName = lastNames.get(random.nextInt(lastNames.size()));
-
-        return new String[] { firstName, lastName };
-    }
-
     public static ConcurrentHashMap<String, String> get_RequestGroup_Data(ConcurrentHashMap<String, String> dataMap, String rgId, String authtoken, String env) {
     	System.out.println("Selected Environment is : "+env);
   		System.out.println(COLORS.BLUE+"NOTE:  If RG/Provider has multiple values to any Attribute Then we are taking the first one into account. Also"+COLORS.RESET);
@@ -62,8 +52,8 @@ public class GET_RequestGroup_API {
 
             
             // Read Clients array
-         //   JSONArray clients = jsonObject.getJSONArray("ClientIDs");// Work in QA
-            JSONArray clients = jsonObject.getJSONArray("Clients");
+            JSONArray clients = jsonObject.getJSONArray("ClientIDs");// Work in QA
+         //   JSONArray clients = jsonObject.getJSONArray("Clients");
             //System.out.println("\nClients:");
             for (int i = 0; i < clients.length(); i++) {
                 JSONObject client = clients.getJSONObject(i);
