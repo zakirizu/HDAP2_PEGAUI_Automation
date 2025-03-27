@@ -52,8 +52,8 @@ public class GET_RequestGroup_API {
 
             
             // Read Clients array
-            JSONArray clients = jsonObject.getJSONArray("ClientIDs");// Work in QA
-         //   JSONArray clients = jsonObject.getJSONArray("Clients");
+          JSONArray clients = jsonObject.getJSONArray("ClientIDs");// Work in QA
+         //JSONArray clients = jsonObject.getJSONArray("Clients");
             //System.out.println("\nClients:");
             for (int i = 0; i < clients.length(); i++) {
                 JSONObject client = clients.getJSONObject(i);

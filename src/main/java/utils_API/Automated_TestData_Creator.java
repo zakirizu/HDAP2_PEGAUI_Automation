@@ -11,8 +11,9 @@ public class Automated_TestData_Creator {
 	@DataProvider(name = "testData")
     public Object[][] provideData() {
         return new Object[][] {
-            {"QASet7"}
-              
+            {"QASet8"}
+         //   {"QASet9"}
+            
         };
     }
 	
